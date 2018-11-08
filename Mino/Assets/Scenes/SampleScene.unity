@@ -214,9 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01045c56d93fd7b4996f1780eb7ec870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_walkingSpeed: 25
-  m_sneakingSpeed: 10
-  m_jumpSpeed: 10
+  m_cameraSensitivity: 20
 --- !u!54 &157942185
 Rigidbody:
   m_ObjectHideFlags: 0
