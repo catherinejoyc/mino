@@ -21,6 +21,6 @@ public class InventoryManager : MonoBehaviour {
             Debug.Log("InventoryManager already exists!");
     }
 
-    public int Stones;
+    public int stones;
     
 }

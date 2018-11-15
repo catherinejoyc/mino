@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 920ed6498c595cc43b682151a191c754
+guid: 01045c56d93fd7b4996f1780eb7ec870
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_pref_stone: {fileID: 1933059935894412, guid: 9a560c39b72e0e74e818dab70ac4b6e3,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
