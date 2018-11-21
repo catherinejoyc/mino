@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - x
+  - Interactable
+  - Box
+  - Ladder
   layers:
   - Default
   - TransparentFX
@@ -17,7 +21,7 @@ TagManager:
   - Wall
   - Player
   - NotDrawable
-  - 
+  - Ground
   - 
   - 
   - 

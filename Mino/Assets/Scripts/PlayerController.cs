@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
     public float m_cameraSensitivity = 100f;
 
     bool m_isGrounded;
+    //public LayerMask ground;
 
     //stone related
     public GameObject m_pref_stone;
@@ -26,6 +27,9 @@ public class PlayerController : MonoBehaviour {
     public float maxDistanceToWall;
     float chalk_startTime = 0;
     public LayerMask notDrawable;
+
+    //interact
+    public GameObject currentObjectHolding = null;
 
     private void Awake()
     {
@@ -59,6 +63,7 @@ public class PlayerController : MonoBehaviour {
         }
         #endregion
 
+        #region Chalk
         //Use Chalk
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -74,8 +79,26 @@ public class PlayerController : MonoBehaviour {
             else
             {
                 //delete X
+                Debug.Log("delete");
+                DeleteX();
             }
         }
+        #endregion
+
+        #region Interact
+        if (Input.GetMouseButtonDown(0))
+        {
+            // currently empty-handed
+            if (currentObjectHolding == null)
+            {
+                PickUp();
+            }
+            else
+            {
+                Place();
+            }
+        }
+        #endregion
     }
 
     void FixedUpdate () {
@@ -103,12 +126,17 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        m_isGrounded = true;
+        //if (other.gameObject.layer == ground)
+            m_isGrounded = true;
+
+        //Keyfragment
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
-        m_isGrounded = false;
+        //if (other.gameObject.layer == ground)
+            m_isGrounded = false;
     }
 
     #region Shoot Stone
@@ -139,6 +167,53 @@ public class PlayerController : MonoBehaviour {
                 GameObject x = Instantiate(sprite_chalk, hit.point, Quaternion.LookRotation(-hit.normal));
                 x.transform.rotation = hit.transform.rotation;
             }
+        }
+    }
+
+    private void DeleteX()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position + transform.up * 0.5f, transform.TransformDirection(Vector3.forward), out hit, maxDistanceToWall))
+        {
+            Debug.Log(hit.collider.name);
+            // delete X
+            if (hit.collider.gameObject.CompareTag("x"))
+            {
+                Destroy(hit.collider.gameObject);
+            }
+        }
+    }
+    #endregion
+
+    #region Interact
+    void PickUp()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxDistanceToWall))
+        {
+            // pick up
+            if (hit.collider.gameObject.CompareTag("Ladder") || hit.collider.gameObject.CompareTag("Box"))
+            {
+                currentObjectHolding = hit.collider.gameObject;
+                currentObjectHolding.SetActive(false);
+            }
+        }
+    }
+
+    void Place()
+    {
+        // ladder + water
+        if (currentObjectHolding.CompareTag("Ladder"))
+        {
+            // Place ladder over river
+        }
+        else
+        {
+            // Place box infront of you
+            currentObjectHolding.transform.position = transform.position + transform.forward;
+            currentObjectHolding.SetActive(true);
+
+            currentObjectHolding = null;
         }
     }
     #endregion

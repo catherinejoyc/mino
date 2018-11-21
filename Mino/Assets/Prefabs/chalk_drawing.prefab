@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 65795687777368854}
   m_Layer: 11
   m_Name: chalk_drawing
-  m_TagString: Untagged
+  m_TagString: x
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ BoxCollider:
   m_GameObject: {fileID: 1388239020272898}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.13, y: 3.73, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
