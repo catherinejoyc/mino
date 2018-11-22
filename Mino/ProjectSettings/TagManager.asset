@@ -8,6 +8,7 @@ TagManager:
   - Interactable
   - Box
   - Ladder
+  - WaterBorder
   layers:
   - Default
   - TransparentFX

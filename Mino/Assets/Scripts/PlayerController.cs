@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour {
     Rigidbody m_rb;
     GameObject m_go;
 
+    //checkpoint
+    public Vector3 m_lastCheckpoint;
+
     Vector3 m_playerInput;
 
     public float m_walkingSpeed = 25f;
@@ -31,10 +34,18 @@ public class PlayerController : MonoBehaviour {
     //interact
     public GameObject currentObjectHolding = null;
 
+    //toxic water and ladders
+    public GameObject waterBorder = null;
+
     private void Awake()
     {
         m_rb = GetComponent<Rigidbody>();
         m_go = this.gameObject;
+    }
+
+    private void Start()
+    {
+        m_lastCheckpoint = transform.position;
     }
 
     private void Update()
@@ -129,14 +140,23 @@ public class PlayerController : MonoBehaviour {
         //if (other.gameObject.layer == ground)
             m_isGrounded = true;
 
-        //Keyfragment
-        
+        //Toxic water and ladders
+        if (other.CompareTag("WaterBorder"))
+        {
+            waterBorder = other.gameObject;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         //if (other.gameObject.layer == ground)
             m_isGrounded = false;
+
+        //Toxic water and ladders
+        if (other.CompareTag("WaterBorder"))
+        {
+            waterBorder = null;
+        }
     }
 
     #region Shoot Stone
@@ -205,7 +225,14 @@ public class PlayerController : MonoBehaviour {
         // ladder + water
         if (currentObjectHolding.CompareTag("Ladder"))
         {
-            // Place ladder over river
+            // Place ladder over river if possible
+            if (waterBorder != null)
+            {
+                waterBorder.GetComponent<WaterBorderBehaviour>().ActivateLadder();
+                currentObjectHolding = null;
+            }
+            else
+                Debug.Log("Can't place ladder here!");
         }
         else
         {
@@ -218,8 +245,14 @@ public class PlayerController : MonoBehaviour {
     }
     #endregion
 
-    void Die()
+    public void Die()
     {
         //Spawn on last checkpoint
+        transform.position = m_lastCheckpoint;
+    }
+
+    public void SetCheckpoint(Vector3 _pos)
+    {
+        m_lastCheckpoint = _pos;
     }
 }

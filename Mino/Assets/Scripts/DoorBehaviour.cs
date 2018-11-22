@@ -10,11 +10,18 @@ public class DoorBehaviour : MonoBehaviour {
     Vector3 m_openStatePos;
 
     bool m_isOpening = false;
+
     public bool m_unlocked = false;
 
-	// Use this for initialization
-	void Start () {
+    //Checkpoint
+    Vector3 m_checkpoint;
+
+    // Use this for initialization
+    void Start () {
         m_openStatePos = new Vector3(transform.position.x, m_moveUp, transform.position.z);
+
+        //Checkpoint
+        m_checkpoint = new Vector3(transform.position.x, 0.5f, transform.position.z);
     }
 	
 	// Update is called once per frame
@@ -28,6 +35,9 @@ public class DoorBehaviour : MonoBehaviour {
         if (other.gameObject.name == "Player" && m_unlocked)
         {
             m_isOpening = true;
+
+            //set new checkpoint
+            other.gameObject.GetComponent<PlayerController>().SetCheckpoint(m_checkpoint);
         }
     }
 
