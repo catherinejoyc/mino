@@ -5,15 +5,17 @@ using UnityEngine;
 public class KeyBehaviour : MonoBehaviour {
 
     public GameObject[] keyfragments = new GameObject[3];
+    public DoorBehaviour door;
     public int keyCount = 0;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void AddKeyCount()
+    {
+        keyCount++;
+
+        if(keyCount == 3)
+        {
+            //activate door
+            door.UnlockDoor();
+        }
+    }
 }

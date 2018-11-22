@@ -217,4 +217,9 @@ public class PlayerController : MonoBehaviour {
         }
     }
     #endregion
+
+    void Die()
+    {
+        //Spawn on last checkpoint
+    }
 }
