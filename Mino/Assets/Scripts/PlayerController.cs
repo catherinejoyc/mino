@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 
     //groundcheck
     bool m_isGrounded;
+    public LayerMask m_groundLayer;
     //public LayerMask ground;
 
     //stone related
@@ -77,8 +78,6 @@ public class PlayerController : MonoBehaviour {
         //untere Grenze 0.25
         //obere Grenze -0.10
         #endregion
-
-        //Groundcheck
 
         #region Shoot Stones
         //Shoot Stones
@@ -140,6 +139,17 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate () {
         m_playerInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
+        //Groundcheck
+        if (Physics.CheckSphere(new Vector3(m_rb.position.x, m_rb.position.y - 0.65f,m_rb.transform.position.z), 0.45f, m_groundLayer))
+        {
+            //is grounded
+            m_isGrounded = true;
+        }
+        else
+        {
+            m_isGrounded = false;
+        }
+
         //Run and sneak
         if (Input.GetKey(KeyCode.LeftShift))
             m_rb.AddRelativeForce(m_playerInput * m_sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
@@ -155,6 +165,7 @@ public class PlayerController : MonoBehaviour {
         {
             m_rb.AddForce(new Vector3(0, m_inAirGravity, 0));
         }
+
 
         //Sound
         //je schneller desto lauter
@@ -175,7 +186,7 @@ public class PlayerController : MonoBehaviour {
     private void OnTriggerExit(Collider other)
     {
         //if (other.gameObject.layer == ground)
-            m_isGrounded = false;
+            //m_isGrounded = false;
 
         //Toxic water and ladders
         if (other.CompareTag("WaterBorder"))
@@ -279,5 +290,10 @@ public class PlayerController : MonoBehaviour {
     public void SetCheckpoint(Vector3 _pos)
     {
         m_lastCheckpoint = _pos;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(new Vector3(transform.position.x, transform.position.y - 0.65f, transform.position.z), 0.45f);
     }
 }

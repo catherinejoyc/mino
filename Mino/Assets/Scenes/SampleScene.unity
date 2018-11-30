@@ -262,6 +262,9 @@ MonoBehaviour:
   m_jumpSpeed: 10
   m_inAirGravity: -25
   m_cameraSensitivity: 100
+  m_groundLayer:
+    serializedVersion: 2
+    m_Bits: 4096
   m_pref_stone: {fileID: 1933059935894412, guid: 9a560c39b72e0e74e818dab70ac4b6e3,
     type: 2}
   sprite_chalk: {fileID: 1388239020272898, guid: 9ad9e53bb7fdacf43bbd0eb23da9e9d7,
