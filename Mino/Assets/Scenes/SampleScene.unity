@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_sneakingSpeed: 10
   m_jumpSpeed: 10
   m_inAirGravity: -25
-  m_cameraSensitivity: 20
+  m_cameraSensitivity: 100
   m_pref_stone: {fileID: 1933059935894412, guid: 9a560c39b72e0e74e818dab70ac4b6e3,
     type: 2}
   sprite_chalk: {fileID: 1388239020272898, guid: 9ad9e53bb7fdacf43bbd0eb23da9e9d7,

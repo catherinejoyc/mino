@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     Rigidbody m_rb;
     GameObject m_go;
+    Camera m_cam;
 
     //checkpoint
     public Vector3 m_lastCheckpoint;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour {
     public float m_inAirGravity = -25f;
     public float m_cameraSensitivity = 100f;
 
+    //groundcheck
     bool m_isGrounded;
     //public LayerMask ground;
 
@@ -41,6 +43,9 @@ public class PlayerController : MonoBehaviour {
     {
         m_rb = GetComponent<Rigidbody>();
         m_go = this.gameObject;
+        m_cam = GetComponentInChildren<Camera>();
+
+        Cursor.visible = false;
     }
 
     private void Start()
@@ -50,8 +55,30 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
+        #region Move Camera
         //Look around
         m_go.transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * m_cameraSensitivity * Time.deltaTime, 0));
+
+
+        if (m_cam.transform.rotation.x > -0.10f && m_cam.transform.rotation.x < 0.25f)
+            m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * m_cameraSensitivity * Time.deltaTime, 0));
+        if (m_cam.transform.rotation.x <= -0.10f) //if stopping point is reached
+        {
+            //only rotate downwards
+            if (-Input.GetAxis("Mouse Y") > 0)
+                m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * m_cameraSensitivity * Time.deltaTime, 0));
+        }
+        else if (m_cam.transform.rotation.x >= 0.25f)
+        {
+            //only rotate upwards
+            if (-Input.GetAxis("Mouse Y") < 0)
+                m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * m_cameraSensitivity * Time.deltaTime, 0));
+        }
+        //untere Grenze 0.25
+        //obere Grenze -0.10
+        #endregion
+
+        //Groundcheck
 
         #region Shoot Stones
         //Shoot Stones
@@ -63,13 +90,11 @@ public class PlayerController : MonoBehaviour {
         {
             if ((Time.time - stone_startTime) < 0.2f)  //shoot if the player pressed the button for a short time
             {
-                Debug.Log("Shoot");
                 ShootStone();
             }
             else
             {
                 CollectStone(); //collect stones
-                Debug.Log("Collect");
             }
         }
         #endregion
@@ -138,7 +163,7 @@ public class PlayerController : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         //if (other.gameObject.layer == ground)
-            m_isGrounded = true;
+            //m_isGrounded = true;
 
         //Toxic water and ladders
         if (other.CompareTag("WaterBorder"))
