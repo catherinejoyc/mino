@@ -312,9 +312,4 @@ public class PlayerController : MonoBehaviour {
     {
         m_lastCheckpoint = _pos;
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(new Vector3(transform.position.x, transform.position.y - 0.65f, transform.position.z), 0.45f);
-    }
 }
