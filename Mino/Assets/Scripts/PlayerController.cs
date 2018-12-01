@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour {
     public GameObject sprite_chalk;
     public float maxDistanceToWall;
     float chalk_startTime = 0;
-    public LayerMask notDrawable;
 
     //interact
     public GameObject currentObjectHolding = null;
@@ -106,17 +105,20 @@ public class PlayerController : MonoBehaviour {
         }
         if (Input.GetKeyUp(KeyCode.Q))
         {
-            if ((Time.time - chalk_startTime) < 0.2f) //draw x if the player pressed the button for a short time
+            if (currentObjectHolding == null)
             {
-                Debug.Log("draw X");
-                DrawX();
+                if ((Time.time - chalk_startTime) < 0.2f) //draw x if the player pressed the button for a short time
+                {
+                    DrawX();
+                }
+                else
+                {
+                    //delete X
+                    DeleteX();
+                }
             }
             else
-            {
-                //delete X
-                Debug.Log("delete");
-                DeleteX();
-            }
+                Debug.Log("Can't draw while holding something!");
         }
         #endregion
 
@@ -133,6 +135,13 @@ public class PlayerController : MonoBehaviour {
                 Place();
             }
         }
+
+        // hold object in front of player
+        if (currentObjectHolding != null)
+        {
+            currentObjectHolding.transform.position = Vector3.MoveTowards(currentObjectHolding.transform.position, transform.position + transform.forward * 1.5f, Time.deltaTime * 5f);
+            currentObjectHolding.transform.rotation = this.transform.rotation;
+        }            
         #endregion
     }
 
@@ -173,9 +182,6 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.gameObject.layer == ground)
-            //m_isGrounded = true;
-
         //Toxic water and ladders
         if (other.CompareTag("WaterBorder"))
         {
@@ -185,9 +191,6 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        //if (other.gameObject.layer == ground)
-            //m_isGrounded = false;
-
         //Toxic water and ladders
         if (other.CompareTag("WaterBorder"))
         {
@@ -215,21 +218,25 @@ public class PlayerController : MonoBehaviour {
     private void DrawX()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position + transform.up * 0.5f, transform.TransformDirection(Vector3.forward), out hit, maxDistanceToWall))
+        if (Physics.Raycast(transform.position + transform.up * 0.5f, m_cam.transform.TransformVector(Vector3.forward), out hit, maxDistanceToWall))
         {
             // Add Sprite on wall
-            if (hit.collider.gameObject.layer != notDrawable)
+            if (!hit.collider.gameObject.CompareTag("x"))
             {
                 GameObject x = Instantiate(sprite_chalk, hit.point, Quaternion.LookRotation(-hit.normal));
                 x.transform.rotation = hit.transform.rotation;
             }
+            else
+                Debug.Log("You can't draw here!");
         }
+        else
+            Debug.Log("No wall detected. Try going closer.");
     }
 
     private void DeleteX()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position + transform.up * 0.5f, transform.TransformDirection(Vector3.forward), out hit, maxDistanceToWall))
+        if (Physics.Raycast(transform.position + transform.up * 0.5f, m_cam.transform.TransformVector(Vector3.forward), out hit, maxDistanceToWall))
         {
             Debug.Log(hit.collider.name);
             // delete X
@@ -245,13 +252,18 @@ public class PlayerController : MonoBehaviour {
     void PickUp()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxDistanceToWall))
+        if (Physics.Raycast(transform.position + transform.up * 0.5f, m_cam.transform.TransformVector(Vector3.forward), out hit, maxDistanceToWall))
         {
             // pick up
             if (hit.collider.gameObject.CompareTag("Ladder") || hit.collider.gameObject.CompareTag("Box"))
             {
                 currentObjectHolding = hit.collider.gameObject;
-                currentObjectHolding.SetActive(false);
+
+                //currentObjectHolding.SetActive(false);
+
+                // hold object in hand
+                currentObjectHolding.transform.parent = this.transform;
+                currentObjectHolding.GetComponent<Rigidbody>().useGravity = false;                
             }
         }
     }
@@ -264,7 +276,14 @@ public class PlayerController : MonoBehaviour {
             // Place ladder over river if possible
             if (waterBorder != null)
             {
-                waterBorder.GetComponent<WaterBorderBehaviour>().ActivateLadder();
+                GameObject ladder = waterBorder.GetComponent<WaterBorderBehaviour>().ActivateLadder();
+
+                // place ladder correctly
+                ladder.transform.position = new Vector3(transform.position.x, ladder.transform.position.y, ladder.transform.position.z);
+
+                // destroy ladder in hand
+                currentObjectHolding.transform.parent = null;
+                currentObjectHolding.SetActive(false);
                 currentObjectHolding = null;
             }
             else
@@ -273,9 +292,11 @@ public class PlayerController : MonoBehaviour {
         else
         {
             // Place box infront of you
-            currentObjectHolding.transform.position = transform.position + transform.forward;
-            currentObjectHolding.SetActive(true);
+            //currentObjectHolding.transform.position = transform.position + transform.forward;
+            //currentObjectHolding.SetActive(true);
 
+            currentObjectHolding.transform.parent = null;
+            currentObjectHolding.GetComponent<Rigidbody>().useGravity = true;
             currentObjectHolding = null;
         }
     }
