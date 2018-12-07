@@ -16,7 +16,7 @@ public class PlayerSoundScript : MonoBehaviour {
      * Kisten/Leitern platzieren
      * Rascheln im Gebüsch/andere Pflanzen)
     */
-    UnityEvent m_PlayRunningFootstep = new UnityEvent();
+    public UnityEvent m_PlayRunningFootstep = new UnityEvent();
    
 
     /* Leise Geräusche:
@@ -24,7 +24,7 @@ public class PlayerSoundScript : MonoBehaviour {
      * ---
      * Steinchen aufprallen (von der Decke und vom Spieler geworfen)
     */
-    UnityEvent m_PlaySneakingFootstep = new UnityEvent();
+    public UnityEvent m_PlaySneakingFootstep = new UnityEvent();
 
     private void Awake()
     {
@@ -40,9 +40,15 @@ public class PlayerSoundScript : MonoBehaviour {
             //play Footstep every few sec
             if (Time.time > lastStepTime + stepIntervall)
             {
-                //Play Events
-                m_PlayRunningFootstep.Invoke();
-
+                if (Input.GetKey(KeyCode.LeftShift)) //sneaking
+                {
+                    m_PlaySneakingFootstep.Invoke();
+                }
+                else //running
+                {
+                    //Play Events
+                    m_PlayRunningFootstep.Invoke();
+                }
                 lastStepTime = Time.time;
             }
         }

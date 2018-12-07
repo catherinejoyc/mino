@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -198,6 +199,15 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Enemy contact
+        if (collision.collider.name == "Player")
+        {
+            Die();
+        }
+    }
+
     #region Shoot Stone
     private void ShootStone()
     {
@@ -306,6 +316,9 @@ public class PlayerController : MonoBehaviour {
     {
         //Spawn on last checkpoint
         transform.position = m_lastCheckpoint;
+
+        //Reset level
+        //SceneManager.LoadScene();
     }
 
     public void SetCheckpoint(Vector3 _pos)
