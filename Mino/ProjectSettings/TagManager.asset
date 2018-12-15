@@ -9,6 +9,7 @@ TagManager:
   - Box
   - Ladder
   - WaterBorder
+  - Enemy
   layers:
   - Default
   - TransparentFX

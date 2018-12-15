@@ -14,19 +14,19 @@ public class PlayerController : MonoBehaviour {
 
     Vector3 m_playerInput;
 
-    public float m_walkingSpeed = 25f;
-    public float m_sneakingSpeed = 10f;
-    public float m_jumpSpeed = 10f;
-    public float m_inAirGravity = -25f;
-    public float m_cameraSensitivity = 100f;
+    public float walkingSpeed = 25f;
+    public float sneakingSpeed = 10f;
+    public float jumpSpeed = 10f;
+    public float inAirGravity = -25f;
+    public float cameraSensitivity = 100f;
 
     //groundcheck
     bool m_isGrounded;
-    public LayerMask m_groundLayer;
+    public LayerMask groundLayer;
     //public LayerMask ground;
 
     //stone related
-    public GameObject m_pref_stone;
+    public GameObject pref_stone;
     float stone_startTime = 0;
 
     //chalk related
@@ -58,22 +58,22 @@ public class PlayerController : MonoBehaviour {
     {
         #region Move Camera
         //Look around
-        m_go.transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * m_cameraSensitivity * Time.deltaTime, 0));
+        m_go.transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime, 0));
 
 
         if (m_cam.transform.rotation.x > -0.10f && m_cam.transform.rotation.x < 0.25f)
-            m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * m_cameraSensitivity * Time.deltaTime, 0));
+            m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime, 0));
         if (m_cam.transform.rotation.x <= -0.10f) //if stopping point is reached
         {
             //only rotate downwards
             if (-Input.GetAxis("Mouse Y") > 0)
-                m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * m_cameraSensitivity * Time.deltaTime, 0));
+                m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime, 0));
         }
         else if (m_cam.transform.rotation.x >= 0.25f)
         {
             //only rotate upwards
             if (-Input.GetAxis("Mouse Y") < 0)
-                m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * m_cameraSensitivity * Time.deltaTime, 0));
+                m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime, 0));
         }
         //untere Grenze 0.25
         //obere Grenze -0.10
@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour {
         m_playerInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         //Groundcheck
-        if (Physics.CheckSphere(new Vector3(m_rb.position.x, m_rb.position.y - 0.65f,m_rb.transform.position.z), 0.45f, m_groundLayer))
+        if (Physics.CheckSphere(new Vector3(m_rb.position.x, m_rb.position.y - 0.65f,m_rb.transform.position.z), 0.45f, groundLayer))
         {
             //is grounded
             m_isGrounded = true;
@@ -162,18 +162,18 @@ public class PlayerController : MonoBehaviour {
 
         //Run and sneak
         if (Input.GetKey(KeyCode.LeftShift))
-            m_rb.AddRelativeForce(m_playerInput * m_sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
+            m_rb.AddRelativeForce(m_playerInput * sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
         else
-            m_rb.AddRelativeForce(m_playerInput * m_walkingSpeed * Time.deltaTime, ForceMode.Impulse);
+            m_rb.AddRelativeForce(m_playerInput * walkingSpeed * Time.deltaTime, ForceMode.Impulse);
 
         //Jump
         if (Input.GetKeyDown(KeyCode.Space) && m_isGrounded)
-            m_rb.AddForce(new Vector3(0, m_jumpSpeed, 0), ForceMode.Impulse);
+            m_rb.AddForce(new Vector3(0, jumpSpeed, 0), ForceMode.Impulse);
         
         //Gravity in air
         if (!m_isGrounded)
         {
-            m_rb.AddForce(new Vector3(0, m_inAirGravity, 0));
+            m_rb.AddForce(new Vector3(0, inAirGravity, 0));
         }
 
 
@@ -202,7 +202,7 @@ public class PlayerController : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         //Enemy contact
-        if (collision.collider.name == "Player")
+        if (collision.collider.CompareTag("Enemy"))
         {
             Die();
         }
@@ -213,7 +213,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (InventoryManager.MyInstance.stones >= 1)
         {
-            Instantiate(m_pref_stone, transform.position + transform.forward * 0.56f + transform.right * 0.2f + transform.up * 0.5f, transform.rotation);
+            Instantiate(pref_stone, transform.position + transform.forward * 0.56f + transform.right * 0.2f + transform.up * 0.5f, transform.rotation);
             InventoryManager.MyInstance.stones--;
         }
     }

@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 136502808631710814}
   - component: {fileID: 114515784332995832}
   - component: {fileID: 54632116744754834}
+  - component: {fileID: 114537742088066832}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -191,21 +192,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_lastCheckpoint: {x: 0, y: 0, z: 0}
-  m_walkingSpeed: 25
-  m_sneakingSpeed: 10
-  m_jumpSpeed: 10
-  m_inAirGravity: -25
-  m_cameraSensitivity: 100
-  m_groundLayer:
+  walkingSpeed: 25
+  sneakingSpeed: 10
+  jumpSpeed: 10
+  inAirGravity: -25
+  cameraSensitivity: 100
+  groundLayer:
     serializedVersion: 2
     m_Bits: 4096
-  m_pref_stone: {fileID: 1933059935894412, guid: 9a560c39b72e0e74e818dab70ac4b6e3,
-    type: 2}
+  pref_stone: {fileID: 1933059935894412, guid: 9a560c39b72e0e74e818dab70ac4b6e3, type: 2}
   sprite_chalk: {fileID: 1388239020272898, guid: 9ad9e53bb7fdacf43bbd0eb23da9e9d7,
     type: 2}
   maxDistanceToWall: 2
   currentObjectHolding: {fileID: 0}
   waterBorder: {fileID: 0}
+--- !u!114 &114537742088066832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958085047044498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b394889e91e804842b08ef475a4f0cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stepIntervall: 0.5
+  m_PlayRunningFootstep:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_PlaySneakingFootstep:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!136 &136502808631710814
 CapsuleCollider:
   m_ObjectHideFlags: 1
