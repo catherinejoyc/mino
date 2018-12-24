@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour {
     public Image TutorialScreen;
     public Slider VolumeIndicator; //Audio!!!
     public Text keyFragments;
+    public Text stonecount;
     public Text time;
 
     private static UIManager m_myInstance;

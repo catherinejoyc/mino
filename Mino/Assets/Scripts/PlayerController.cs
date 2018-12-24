@@ -211,16 +211,16 @@ public class PlayerController : MonoBehaviour {
     #region Shoot Stone
     private void ShootStone()
     {
-        if (InventoryManager.MyInstance.stones >= 1)
+        if (InventoryManager.MyInstance.Stones >= 1)
         {
             Instantiate(pref_stone, transform.position + transform.forward * 0.56f + transform.right * 0.2f + transform.up * 0.5f, transform.rotation);
-            InventoryManager.MyInstance.stones--;
+            InventoryManager.MyInstance.Stones--;
         }
     }
 
     private void CollectStone()
     {
-        InventoryManager.MyInstance.stones++;
+        InventoryManager.MyInstance.Stones++;
     }
     #endregion
 

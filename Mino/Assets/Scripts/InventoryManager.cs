@@ -21,6 +21,17 @@ public class InventoryManager : MonoBehaviour {
             Debug.Log("InventoryManager already exists!");
     }
 
-    public int stones;
-    
+    private int stones;
+    public int Stones
+    {
+        get
+        {
+            return stones;
+        }
+        set
+        {
+            stones = value;
+            UIManager.MyInstance.stonecount.text = stones.ToString();
+        }
+    }
 }
