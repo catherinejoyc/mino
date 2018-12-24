@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour {
 
     public Image TutorialScreen;
     public Slider VolumeIndicator; //Audio!!!
+    public Text keyFragments;
     public Text time;
 
     private static UIManager m_myInstance;
@@ -24,5 +25,11 @@ public class UIManager : MonoBehaviour {
             m_myInstance = this;
         else
             Debug.Log("UIManager already exists!");
+    }
+
+    public void ResetUI()
+    {
+        keyFragments.enabled = false;
+        TutorialScreen.enabled = false;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorBehaviour : MonoBehaviour {
 
@@ -13,15 +14,15 @@ public class DoorBehaviour : MonoBehaviour {
 
     public bool m_unlocked = false;
 
-    //Checkpoint
-    Vector3 m_checkpoint;
+    //Checkpoint (nicht mehr nötig)
+    //Vector3 m_checkpoint;
 
     // Use this for initialization
     void Start () {
         m_openStatePos = new Vector3(transform.position.x, m_moveUp, transform.position.z);
 
         //Checkpoint
-        m_checkpoint = new Vector3(transform.position.x, 0.5f, transform.position.z);
+        //m_checkpoint = new Vector3(transform.position.x, 0.5f, transform.position.z);
     }
 	
 	// Update is called once per frame
@@ -36,8 +37,10 @@ public class DoorBehaviour : MonoBehaviour {
         {
             m_isOpening = true;
 
-            //set new checkpoint
-            other.gameObject.GetComponent<PlayerController>().SetCheckpoint(m_checkpoint);
+            //next Level
+            GameManager.MyInstance.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+            //set new checkpoint (nicht mehr nötig)
+            //other.gameObject.GetComponent<PlayerController>().SetCheckpoint(m_checkpoint);
         }
     }
 

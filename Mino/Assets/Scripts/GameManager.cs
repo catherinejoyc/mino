@@ -33,15 +33,16 @@ public class GameManager : MonoBehaviour {
         if (remainingTime <= 0)
         {
             int lvl = SceneManager.GetActiveScene().buildIndex;
-            RestartLevel(lvl);
+            LoadLevel(lvl);
         }
     }
 
-    void RestartLevel(int lvlIndex) //Event draus machen?
+    public void LoadLevel(int lvlIndex) //Event draus machen?
     {
-        print("Reset!");
+        //Reset all UI elements
+        UIManager.MyInstance.ResetUI();
 
-        //Reset Level
+        //Load Level
         SceneManager.LoadScene(lvlIndex);
     }
 }

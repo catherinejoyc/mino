@@ -11,6 +11,8 @@ public class KeyBehaviour : MonoBehaviour {
     public void AddKeyCount()
     {
         keyCount++;
+        UIManager.MyInstance.keyFragments.enabled = true;
+        UIManager.MyInstance.keyFragments.text = keyCount.ToString();
 
         if(keyCount == 3)
         {

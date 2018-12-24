@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour {
     GameObject m_go;
     Camera m_cam;
 
-    //checkpoint
-    public Vector3 m_lastCheckpoint;
+    //checkpoint (nicht mehr nötig)
+    //public Vector3 m_lastCheckpoint;
 
     Vector3 m_playerInput;
 
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Start()
     {
-        m_lastCheckpoint = transform.position;
+        //m_lastCheckpoint = transform.position;
     }
 
     private void Update()
@@ -315,14 +315,14 @@ public class PlayerController : MonoBehaviour {
     public void Die()
     {
         //Spawn on last checkpoint
-        transform.position = m_lastCheckpoint;
+        //transform.position = m_lastCheckpoint;
 
         //Reset level
-        //SceneManager.LoadScene();
+        GameManager.MyInstance.LoadLevel(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void SetCheckpoint(Vector3 _pos)
-    {
-        m_lastCheckpoint = _pos;
-    }
+    //public void SetCheckpoint(Vector3 _pos)
+    //{
+    //    m_lastCheckpoint = _pos;
+    //}
 }
