@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -26,16 +27,21 @@ public class GameManager : MonoBehaviour {
     private void Update()
     {
         //Time Countdown
-        float remainingTime = timeOutInSeconds - Time.time;
+        float remainingTime = timeOutInSeconds - Time.timeSinceLevelLoad;
         UIManager.MyInstance.time.text = remainingTime.ToString("0");
 
         if (remainingTime <= 0)
-            GameOver();
-
+        {
+            int lvl = SceneManager.GetActiveScene().buildIndex;
+            RestartLevel(lvl);
+        }
     }
 
-    void GameOver() //Event drauß machen?
+    void RestartLevel(int lvlIndex) //Event draus machen?
     {
-        print("GameOver!");
+        print("Reset!");
+
+        //Reset Level
+        SceneManager.LoadScene(lvlIndex);
     }
 }
