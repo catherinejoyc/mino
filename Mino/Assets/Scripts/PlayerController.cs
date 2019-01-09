@@ -60,7 +60,6 @@ public class PlayerController : MonoBehaviour {
         //Look around
         m_go.transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime, 0));
 
-
         if (m_cam.transform.rotation.x > -0.10f && m_cam.transform.rotation.x < 0.25f)
             m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime, 0));
         if (m_cam.transform.rotation.x <= -0.10f) //if stopping point is reached
@@ -81,11 +80,11 @@ public class PlayerController : MonoBehaviour {
 
         #region Shoot Stones
         //Shoot Stones
-        if (Input.GetMouseButtonDown(1))
+        if (/*Input.GetMouseButtonDown(1) || */Input.GetButtonDown("Fire2"))
         {
             stone_startTime = Time.time;
         }
-        if (Input.GetMouseButtonUp(1))
+        if (/*Input.GetMouseButtonUp(1) || */Input.GetButtonUp("Fire2"))
         {
             if ((Time.time - stone_startTime) < 0.2f)  //shoot if the player pressed the button for a short time
             {
@@ -100,11 +99,11 @@ public class PlayerController : MonoBehaviour {
 
         #region Chalk
         //Use Chalk
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (/*Input.GetKeyDown(KeyCode.Q) || */Input.GetButtonDown("Fire3"))
         {
             chalk_startTime = Time.time;
         }
-        if (Input.GetKeyUp(KeyCode.Q))
+        if (/*Input.GetKeyUp(KeyCode.Q) ||*/ Input.GetButtonDown("Fire3"))
         {
             if (currentObjectHolding == null)
             {
@@ -124,7 +123,7 @@ public class PlayerController : MonoBehaviour {
         #endregion
 
         #region Interact
-        if (Input.GetMouseButtonDown(0))
+        if (/*Input.GetMouseButtonDown(0) || */Input.GetButtonDown("Fire1"))
         {
             // currently empty-handed
             if (currentObjectHolding == null)
