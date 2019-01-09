@@ -5,7 +5,7 @@ using UnityEngine;
 public class KeyBehaviour : MonoBehaviour {
 
     public GameObject[] keyfragments = new GameObject[3];
-    public DoorBehaviour door;
+    public KeyDoorBehaviour door;
     public int keyCount = 0;
 
     public void AddKeyCount()

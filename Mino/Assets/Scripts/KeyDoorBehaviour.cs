@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DoorBehaviour : MonoBehaviour {
+public class KeyDoorBehaviour : MonoBehaviour {
 
     public float m_speed = 1;
     public float m_moveUp = 4;

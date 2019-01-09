@@ -191,7 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01045c56d93fd7b4996f1780eb7ec870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_lastCheckpoint: {x: 0, y: 0, z: 0}
   walkingSpeed: 25
   sneakingSpeed: 10
   jumpSpeed: 10
