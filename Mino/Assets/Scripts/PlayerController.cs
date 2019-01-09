@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
 
     Rigidbody m_rb;
     GameObject m_go;
-    Camera m_cam;
+    public Camera m_cam;
 
     //checkpoint (nicht mehr nötig)
     //public Vector3 m_lastCheckpoint;
@@ -30,9 +30,9 @@ public class PlayerController : MonoBehaviour {
     float stone_startTime = 0;
 
     //chalk related
-    public GameObject sprite_chalk;
+    //public GameObject sprite_chalk;
     public float maxDistanceToWall;
-    float chalk_startTime = 0;
+    //float chalk_startTime = 0;
 
     //interact
     public GameObject currentObjectHolding = null;
@@ -94,31 +94,6 @@ public class PlayerController : MonoBehaviour {
             {
                 CollectStone(); //collect stones
             }
-        }
-        #endregion
-
-        #region Chalk
-        //Use Chalk
-        if (/*Input.GetKeyDown(KeyCode.Q) || */Input.GetButtonDown("Fire3"))
-        {
-            chalk_startTime = Time.time;
-        }
-        if (/*Input.GetKeyUp(KeyCode.Q) ||*/ Input.GetButtonDown("Fire3"))
-        {
-            if (currentObjectHolding == null)
-            {
-                if ((Time.time - chalk_startTime) < 0.2f) //draw x if the player pressed the button for a short time
-                {
-                    DrawX();
-                }
-                else
-                {
-                    //delete X
-                    DeleteX();
-                }
-            }
-            else
-                Debug.Log("Can't draw while holding something!");
         }
         #endregion
 
@@ -220,40 +195,6 @@ public class PlayerController : MonoBehaviour {
     private void CollectStone()
     {
         InventoryManager.MyInstance.Stones++;
-    }
-    #endregion
-
-    #region Chalk
-    private void DrawX()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position + transform.up * 0.5f, m_cam.transform.TransformVector(Vector3.forward), out hit, maxDistanceToWall))
-        {
-            // Add Sprite on wall
-            if (!hit.collider.gameObject.CompareTag("x"))
-            {
-                GameObject x = Instantiate(sprite_chalk, hit.point, Quaternion.LookRotation(-hit.normal));
-                x.transform.rotation = hit.transform.rotation;
-            }
-            else
-                Debug.Log("You can't draw here!");
-        }
-        else
-            Debug.Log("No wall detected. Try going closer.");
-    }
-
-    private void DeleteX()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position + transform.up * 0.5f, m_cam.transform.TransformVector(Vector3.forward), out hit, maxDistanceToWall))
-        {
-            Debug.Log(hit.collider.name);
-            // delete X
-            if (hit.collider.gameObject.CompareTag("x"))
-            {
-                Destroy(hit.collider.gameObject);
-            }
-        }
     }
     #endregion
 
