@@ -17,6 +17,7 @@ public class BaseEnemyScript : MonoBehaviour {
     //patrol
     public Transform[] points;
     private int m_destPoint = 0;
+    public float waitSeconds = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -51,8 +52,10 @@ public class BaseEnemyScript : MonoBehaviour {
 
         // Choose the next destination point when the agent gets
         // close to the current one.
-        if (!m_agent.pathPending && m_agent.remainingDistance < 0.5f && m_idle)
+        if (!m_agent.pathPending && m_agent.remainingDistance < 0.5f/* && m_idle*/)
+        {
             GotoNextPoint();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -102,17 +105,29 @@ public class BaseEnemyScript : MonoBehaviour {
         {
             if (hit.collider.name == "Player")
             {
+                // wait x seconds before attack               
+                m_agent.isStopped = true;
                 m_agent.SetDestination(m_player.transform.position); //Track Player
+                Invoke("Go", waitSeconds);
             }
             else //if ()
             {
+
             }
         }
     }
 
     void TrackSoundThroughWalls()
     {
-        m_agent.SetDestination(m_player.transform.position);
+        // wait x seconds before attack
+        m_agent.isStopped = true;
+        m_agent.SetDestination(m_player.transform.position); //Track Player
+        Invoke("Go", waitSeconds);
+    }
+
+    void Go()
+    {
+        m_agent.isStopped = false;
     }
     #endregion
 
@@ -123,8 +138,11 @@ public class BaseEnemyScript : MonoBehaviour {
         if (points.Length == 0)
             return;
 
+        m_agent.isStopped = true;
+
         // Set the agent to go to the currently selected destination.
         m_agent.destination = points[m_destPoint].position;
+        Invoke("Go", waitSeconds);
 
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
