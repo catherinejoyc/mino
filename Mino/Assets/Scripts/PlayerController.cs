@@ -116,8 +116,10 @@ public class PlayerController : MonoBehaviour {
         {
             currentObjectHolding.transform.position = Vector3.MoveTowards(currentObjectHolding.transform.position, transform.position + transform.forward * 1.5f, Time.deltaTime * 5f);
             currentObjectHolding.transform.rotation = this.transform.rotation;
-        }            
+        }
         #endregion
+
+        print(m_playerInput);
     }
 
     void FixedUpdate () {
@@ -135,13 +137,13 @@ public class PlayerController : MonoBehaviour {
         }
 
         //Run and sneak
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetButton("Sneaking"))
             m_rb.AddRelativeForce(m_playerInput * sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
         else
             m_rb.AddRelativeForce(m_playerInput * walkingSpeed * Time.deltaTime, ForceMode.Impulse);
 
         //Jump
-        if (Input.GetKeyDown(KeyCode.Space) && m_isGrounded)
+        if (Input.GetButtonDown("Jump") && m_isGrounded)
             m_rb.AddForce(new Vector3(0, jumpSpeed, 0), ForceMode.Impulse);
         
         //Gravity in air

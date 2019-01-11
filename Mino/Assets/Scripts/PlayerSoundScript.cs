@@ -57,15 +57,14 @@ public class PlayerSoundScript : MonoBehaviour {
     public AudioSource audioSource;
     public AudioClip footstepInBush;
     public AudioClip footstepOnStone;
+    public AudioClip footstepOnGravel;
     void PlayRunningFootstep()
     {
-        print("Footstep");
         audioSource.Play();
         
     }
     void PlaySneakingFootstep()
     {
-        print("Sneak");
         audioSource.Play();
     }
 }
