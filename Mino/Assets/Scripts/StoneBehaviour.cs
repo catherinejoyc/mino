@@ -6,10 +6,12 @@ public class StoneBehaviour : MonoBehaviour {
 
     public Rigidbody m_rb;
     float m_startTime;
+    AudioSource m_audioSource;
 
     private void Awake()
     {
         m_startTime = Time.time;
+        m_audioSource = GetComponent<AudioSource>();
     }
 
     void FixedUpdate () {
@@ -18,6 +20,16 @@ public class StoneBehaviour : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.name != "Player")
+        {
+            print(collision.collider.name);
+            m_audioSource.Play();
+            Invoke("Die", 1);
+        }
+    }
+
+    void Die()
     {
         Destroy(gameObject);
     }
