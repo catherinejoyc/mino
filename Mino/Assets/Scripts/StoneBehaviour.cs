@@ -28,7 +28,6 @@ public class StoneBehaviour : MonoBehaviour {
     {
         if (collision.collider.name != "Player")
         {
-            print(collision.collider.name);
             m_playStoneSoundEvent.Invoke();
             m_playStoneSoundEvent.RemoveAllListeners();
             Invoke("Die", 1);

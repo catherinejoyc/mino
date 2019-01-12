@@ -27,6 +27,7 @@ public class UndergroundSound : MonoBehaviour {
         {
             m_Player.GetComponent<PlayerSoundScript>().ChangeFootstep(UnderGroundIndex);
         }
+
     }
 
     private void OnTriggerExit(Collider other)
