@@ -22,6 +22,9 @@ public class SpiderScript : MonoBehaviour {
     //stone related
     GameObject tempstone;
 
+    //aggro sound
+    public EnemySoundScript sound;
+
     // Use this for initialization
     void Start()
     {
@@ -160,6 +163,10 @@ public class SpiderScript : MonoBehaviour {
                 // wait x seconds before attack               
                 m_agent.isStopped = true;
                 m_agent.SetDestination(m_player.transform.position); //Track Player
+
+                //aggro sound
+                sound.PlayAggroSound();
+
                 //Invoke("Go", waitSeconds);
                 Go();
             }
@@ -175,6 +182,10 @@ public class SpiderScript : MonoBehaviour {
         // wait x seconds before attack
         m_agent.isStopped = true;
         m_agent.SetDestination(m_player.transform.position); //Track Player
+
+        //aggro sound
+        sound.PlayAggroSound();
+
         //Invoke("Go", waitSeconds);
         Go();
     }

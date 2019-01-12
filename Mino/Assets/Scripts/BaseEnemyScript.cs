@@ -22,6 +22,9 @@ public class BaseEnemyScript : MonoBehaviour {
     //stone related
     GameObject tempstone;
 
+    //aggro sound
+    public EnemySoundScript sound;
+
 	// Use this for initialization
 	void Start () {
         m_agent = GetComponent<NavMeshAgent>();
@@ -119,7 +122,12 @@ public class BaseEnemyScript : MonoBehaviour {
                     // wait x seconds before attack               
                     m_agent.isStopped = true;
                     m_agent.SetDestination(m_player.transform.position); //Track Player
+
+                    //aggro sound
+                    sound.PlayAggroSound();
+
                     Invoke("Go", waitSeconds);
+
                 }
             }
         }
@@ -143,6 +151,10 @@ public class BaseEnemyScript : MonoBehaviour {
         // wait x seconds before attack
         m_agent.isStopped = true;
         m_agent.SetDestination(m_player.transform.position); //Track Player
+
+        //aggro sound
+        sound.PlayAggroSound();
+
         Invoke("Go", waitSeconds);
     }
 

@@ -27,7 +27,10 @@ public class UndergroundSound : MonoBehaviour {
         {
             m_Player.GetComponent<PlayerSoundScript>().ChangeFootstep(UnderGroundIndex);
         }
-
+        else if(other.GetComponent<EnemySoundScript>() != null)
+        {
+            other.GetComponent<EnemySoundScript>().ChangeFootstep(UnderGroundIndex);
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -35,6 +38,10 @@ public class UndergroundSound : MonoBehaviour {
         if (other.GetComponent<PlayerSoundScript>() != null)
         {
             m_Player.GetComponent<PlayerSoundScript>().ChangeFootstep(0);
+        }
+        else if (other.GetComponent<EnemySoundScript>() != null)
+        {
+            other.GetComponent<EnemySoundScript>().ChangeFootstep(UnderGroundIndex);
         }
     }
 }

@@ -16,11 +16,15 @@ public class EnemySoundScript : MonoBehaviour {
     public AudioClip footstepOnStone;
     public AudioClip footstepOnGravel;
 
+    public AudioSource aggroSound;
+
     UnityEvent m_playFootstep = new UnityEvent();
 
     // Use this for initialization
     void Awake () {
         m_agent = GetComponent<NavMeshAgent>();
+
+        m_playFootstep.AddListener(PlayFootStep);
 	}
 
 	// Update is called once per frame
@@ -38,6 +42,31 @@ public class EnemySoundScript : MonoBehaviour {
 
     void PlayFootStep()
     {
+        audioSource.Play();
+    }
 
+    public void ChangeFootstep(int underGround)
+    {
+        switch (underGround)
+        {
+            case 1:
+                audioSource.clip = footstepOnStone;
+                break;
+            case 2:
+                audioSource.clip = footstepOnGravel;
+                break;
+            case 3:
+                audioSource.clip = footstepInBush;
+                break;
+            default:
+                audioSource.clip = footstepOnStone;
+                break;
+        }
+    }
+
+    public void PlayAggroSound()
+    {
+        if (!aggroSound.isPlaying)
+            aggroSound.Play();
     }
 }
