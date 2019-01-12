@@ -60,11 +60,31 @@ public class PlayerSoundScript : MonoBehaviour {
     public AudioClip footstepOnGravel;
     void PlayRunningFootstep()
     {
-        audioSource.Play();
-        
+        audioSource.Play();       
     }
     void PlaySneakingFootstep()
     {
         audioSource.Play();
+    }
+
+    public void ChangeFootstep(int underGround)
+    {
+        switch(underGround)
+        {
+            case 1:
+                audioSource.clip = footstepOnStone;
+                break;
+            case 2:
+                audioSource.clip = footstepOnGravel;
+                break;
+            case 3:
+                audioSource.clip = footstepInBush;
+                break;
+            default:
+                audioSource.clip = footstepOnStone;
+                break;
+
+        }
+
     }
 }
