@@ -19,6 +19,9 @@ public class SpiderScript : MonoBehaviour {
     private int m_destPoint = 0;
     public float waitSeconds = 0;
 
+    //stone related
+    GameObject tempstone;
+
     // Use this for initialization
     void Start()
     {
@@ -111,6 +114,12 @@ public class SpiderScript : MonoBehaviour {
             //Add Listener
             m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.AddListener(TrackSound);
         }
+        //Steinchen
+        if (other.GetComponent<StoneBehaviour>() != null)
+        {
+            tempstone = other.gameObject;
+            other.GetComponent<StoneBehaviour>().m_playStoneSoundEvent.AddListener(TrackStoneSound);
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -168,6 +177,14 @@ public class SpiderScript : MonoBehaviour {
         m_agent.SetDestination(m_player.transform.position); //Track Player
         //Invoke("Go", waitSeconds);
         Go();
+    }
+
+    void TrackStoneSound()
+    {
+        // wait x seconds before attack
+        m_agent.isStopped = true;
+        m_agent.SetDestination(tempstone.transform.position); //Track Player
+        Invoke("Go", waitSeconds);
     }
 
     void Go()

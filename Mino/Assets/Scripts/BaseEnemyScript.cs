@@ -19,6 +19,9 @@ public class BaseEnemyScript : MonoBehaviour {
     private int m_destPoint = 0;
     public float waitSeconds = 0;
 
+    //stone related
+    GameObject tempstone;
+
 	// Use this for initialization
 	void Start () {
         m_agent = GetComponent<NavMeshAgent>();
@@ -33,7 +36,7 @@ public class BaseEnemyScript : MonoBehaviour {
         {
             m_currDistanceToPlayer = Vector3.Distance(m_player.transform.position, transform.position);
 
-            if (m_currDistanceToPlayer <= 3 && !m_IsCloseToPlayer) //distance to player closer than 3 m
+            if (m_currDistanceToPlayer <= 1 && !m_IsCloseToPlayer) //distance to player closer than 1 m
             {
                 //Add listener to loud noises (TrackPlayerThroughWalls) and quiet noises (TrackPlayer)
                 m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.AddListener(TrackSoundThroughWalls);
@@ -41,7 +44,7 @@ public class BaseEnemyScript : MonoBehaviour {
 
                 m_IsCloseToPlayer = true;
             }
-            else if (m_currDistanceToPlayer > 3 && m_IsCloseToPlayer) //distance is bigger than 3 m
+            else if (m_currDistanceToPlayer > 1 && m_IsCloseToPlayer) //distance is bigger than 1 m
             {
                 m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.RemoveListener(TrackSoundThroughWalls);
                 m_player.GetComponent<PlayerSoundScript>().m_PlaySneakingFootstep.RemoveListener(TrackSound);
@@ -67,6 +70,12 @@ public class BaseEnemyScript : MonoBehaviour {
 
             //Add Listener
             m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.AddListener(TrackSound);
+        }
+        //Steinchen
+        if (other.GetComponent<StoneBehaviour>() != null)
+        {
+            tempstone = other.gameObject;
+            other.GetComponent<StoneBehaviour>().m_playStoneSoundEvent.AddListener(TrackStoneSound);
         }
     }
 
@@ -101,20 +110,32 @@ public class BaseEnemyScript : MonoBehaviour {
     void TrackSound() //Track sound if no wall is inbetween
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position + transform.up * 0.5f, m_player.transform.position - transform.position, out hit, m_maxDistanceToPlayer)) //Check if wall is between player and self
+        if (m_player!= null)
         {
-            if (hit.collider.name == "Player")
+            if (Physics.Raycast(transform.position + transform.up * 0.5f, m_player.transform.position - transform.position, out hit, m_maxDistanceToPlayer)) //Check if wall is between player and self
             {
-                // wait x seconds before attack               
-                m_agent.isStopped = true;
-                m_agent.SetDestination(m_player.transform.position); //Track Player
-                Invoke("Go", waitSeconds);
-            }
-            else //if ()
-            {
-
+                if (hit.collider.name == "Player")
+                {
+                    // wait x seconds before attack               
+                    m_agent.isStopped = true;
+                    m_agent.SetDestination(m_player.transform.position); //Track Player
+                    Invoke("Go", waitSeconds);
+                }
             }
         }
+        //else if (stonePos != null)
+        //{
+        //    if (Physics.Raycast(transform.position + transform.up * 0.5f, stonePos - transform.position, out hit, m_maxDistanceToPlayer)) //Check if wall is between player and self
+        //    {
+        //        if (hit.collider.GetComponent<StoneBehaviour>() != null)
+        //        {
+        //            // wait x seconds before attack               
+        //            m_agent.isStopped = true;
+        //            m_agent.SetDestination(stonePos); //Track Player
+        //            Invoke("Go", waitSeconds);
+        //        }
+        //    }
+        //}
     }
 
     void TrackSoundThroughWalls()
@@ -122,6 +143,14 @@ public class BaseEnemyScript : MonoBehaviour {
         // wait x seconds before attack
         m_agent.isStopped = true;
         m_agent.SetDestination(m_player.transform.position); //Track Player
+        Invoke("Go", waitSeconds);
+    }
+
+    void TrackStoneSound()
+    {
+        // wait x seconds before attack
+        m_agent.isStopped = true;
+        m_agent.SetDestination(tempstone.transform.position); //Track Player
         Invoke("Go", waitSeconds);
     }
 

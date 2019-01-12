@@ -7,6 +7,7 @@ public class PlayerSoundScript : MonoBehaviour {
 
     PlayerController m_player;
     public float stepIntervall;
+    float sneakingStepIntervall;
     float lastStepTime;
 
     /* Laute Geräusche:
@@ -31,6 +32,8 @@ public class PlayerSoundScript : MonoBehaviour {
         //Add PlayAudio to Events
         m_PlayRunningFootstep.AddListener(PlayRunningFootstep);
         m_PlaySneakingFootstep.AddListener(PlaySneakingFootstep);
+
+        sneakingStepIntervall = stepIntervall * 2;
     }
 
     private void Update()
@@ -38,18 +41,23 @@ public class PlayerSoundScript : MonoBehaviour {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             //play Footstep every few sec
-            if (Time.time > lastStepTime + stepIntervall)
+            if (Input.GetButton("Sneaking"))
             {
-                if (Input.GetKey(KeyCode.LeftShift)) //sneaking
+                if (Time.time > lastStepTime + sneakingStepIntervall)
                 {
                     m_PlaySneakingFootstep.Invoke();
+
+                    lastStepTime = Time.time;
                 }
-                else //running
+            }
+            else
+            {
+                if (Time.time > lastStepTime + stepIntervall)
                 {
-                    //Play Events
                     m_PlayRunningFootstep.Invoke();
+
+                    lastStepTime = Time.time;
                 }
-                lastStepTime = Time.time;
             }
         }
     }
@@ -60,10 +68,12 @@ public class PlayerSoundScript : MonoBehaviour {
     public AudioClip footstepOnGravel;
     void PlayRunningFootstep()
     {
-        audioSource.Play();       
+        audioSource.volume = 1f;
+        audioSource.Play();      
     }
     void PlaySneakingFootstep()
     {
+        audioSource.volume = 0.5f;
         audioSource.Play();
     }
 

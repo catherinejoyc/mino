@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class StoneBehaviour : MonoBehaviour {
 
@@ -8,10 +9,14 @@ public class StoneBehaviour : MonoBehaviour {
     float m_startTime;
     AudioSource m_audioSource;
 
+    public UnityEvent m_playStoneSoundEvent = new UnityEvent();
+
     private void Awake()
     {
         m_startTime = Time.time;
         m_audioSource = GetComponent<AudioSource>();
+
+        m_playStoneSoundEvent.AddListener(PlaySound);
     }
 
     void FixedUpdate () {
@@ -24,7 +29,8 @@ public class StoneBehaviour : MonoBehaviour {
         if (collision.collider.name != "Player")
         {
             print(collision.collider.name);
-            m_audioSource.Play();
+            m_playStoneSoundEvent.Invoke();
+            m_playStoneSoundEvent.RemoveAllListeners();
             Invoke("Die", 1);
         }
     }
@@ -32,5 +38,10 @@ public class StoneBehaviour : MonoBehaviour {
     void Die()
     {
         Destroy(gameObject);
+    }
+
+    void PlaySound()
+    {
+        m_audioSource.Play();
     }
 }
