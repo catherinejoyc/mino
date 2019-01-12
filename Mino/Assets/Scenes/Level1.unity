@@ -810,6 +810,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -1517,6 +1521,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &62025816
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224719467350149680, guid: 79a0244ba7b23eb47b2c69508b85b63e,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518852872717410, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 210.56702
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518852872717410, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 96.43973
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518852872717410, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.842119
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518852872717410, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518852872717410, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518852872717410, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518852872717410, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518852872717410, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &63053845
 Prefab:
   m_ObjectHideFlags: 0
@@ -2675,6 +2726,16 @@ Prefab:
       propertyPath: stepIntervall
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 114515784332995832, guid: 93ad068101c5c334c8dda52bf643a671,
+        type: 2}
+      propertyPath: walkingSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114515784332995832, guid: 93ad068101c5c334c8dda52bf643a671,
+        type: 2}
+      propertyPath: sneakingSpeed
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93ad068101c5c334c8dda52bf643a671, type: 2}
   m_IsPrefabAsset: 0
@@ -2991,6 +3052,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -3747,6 +3812,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -4631,6 +4700,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -4887,6 +4960,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -5135,6 +5212,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -7595,6 +7676,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -8157,6 +8242,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -8262,6 +8351,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -9618,6 +9711,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -10358,6 +10455,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -10652,6 +10753,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -11285,6 +11390,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -13267,6 +13376,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -14283,6 +14396,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -14412,6 +14529,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -14854,6 +14975,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -15207,6 +15332,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -15324,6 +15453,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -15847,6 +15980,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -19133,6 +19270,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -20402,6 +20543,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -20553,6 +20698,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -20734,6 +20883,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -21554,6 +21707,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -21664,6 +21821,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 114238481923336614, guid: 1a47b31672f4fdb4e99b867cbb36ebf7,
+        type: 2}
+      propertyPath: chalkScript
+      value: 
+      objectReference: {fileID: 762897075}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a47b31672f4fdb4e99b867cbb36ebf7, type: 2}
   m_IsPrefabAsset: 0
@@ -22160,6 +22322,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -22328,6 +22494,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -22754,6 +22924,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -22762,6 +22936,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d,
     type: 3}
   m_PrefabInternal: {fileID: 758798950}
+--- !u!114 &762897075 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114205848596395974, guid: 93ad068101c5c334c8dda52bf643a671,
+    type: 2}
+  m_PrefabInternal: {fileID: 97380278}
+  m_Script: {fileID: 11500000, guid: 8d1cb13911a30384f95a479a29384847, type: 3}
 --- !u!1 &763643216 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 0289482c04671184ba6f5bbbb93e9e89,
@@ -23415,6 +23595,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -23532,6 +23716,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -25237,6 +25425,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -26596,6 +26788,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -27451,6 +27647,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -28060,6 +28260,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ef64d6423ff154f489db005312aad9a3, type: 2}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -28506,6 +28710,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -29155,6 +29363,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -29343,6 +29555,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -29460,6 +29676,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -32089,6 +32309,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -33069,6 +33293,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -33470,6 +33698,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -34203,6 +34435,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -34257,6 +34493,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -34313,6 +34553,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -34367,6 +34611,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -34575,6 +34823,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -34996,6 +35248,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -36832,6 +37088,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -36886,6 +37146,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -38170,6 +38434,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -39077,6 +39345,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -40043,6 +40315,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -40148,6 +40424,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -40419,6 +40699,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -43650,6 +43934,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -44104,6 +44392,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -45336,6 +45628,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -45805,6 +46101,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -46989,6 +47289,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -47043,6 +47347,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -47110,6 +47418,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -48370,6 +48682,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (77)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -48602,6 +48918,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -49469,6 +49789,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -49940,6 +50264,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -49994,6 +50322,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -50735,6 +51067,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -51688,6 +52024,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -52559,6 +52899,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -52994,6 +53338,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -54060,6 +54408,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -55089,6 +55441,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -55172,6 +55528,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -56679,6 +57039,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -57595,6 +57959,10 @@ Prefab:
       propertyPath: m_Name
       value: wand_Klein (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -57826,6 +58194,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -58133,6 +58505,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -58566,6 +58942,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0100000035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
@@ -59366,6 +59746,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0100000035
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
   m_IsPrefabAsset: 0
@@ -60075,6 +60459,10 @@ Prefab:
     - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
       propertyPath: m_Name
       value: wand_Klein (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d, type: 3}

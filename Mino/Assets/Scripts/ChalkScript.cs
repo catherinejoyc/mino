@@ -53,7 +53,7 @@ public class ChalkScript : MonoBehaviour {
             // Add Sprite on wall
             if (!hit.collider.gameObject.CompareTag("x"))
             {
-                GameObject x = Instantiate(sprite_chalk, hit.point, Quaternion.LookRotation(-hit.normal));
+                GameObject x = Instantiate(sprite_chalk, hit.point, Quaternion.LookRotation(-hit.normal)); //hit.collider.gameObject.transform.rotation * Quaternion.Euler(0,180,0)
                 x.transform.rotation = hit.transform.rotation;
             }
             else

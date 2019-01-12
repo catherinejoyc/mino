@@ -14,11 +14,11 @@ public class PlayerController : MonoBehaviour {
 
     Vector3 m_playerInput;
 
-    public float walkingSpeed = 25f;
-    public float sneakingSpeed = 10f;
-    public float jumpSpeed = 10f;
-    public float inAirGravity = -25f;
-    public float cameraSensitivity = 100f;
+    public float walkingSpeed;
+    public float sneakingSpeed;
+    public float jumpSpeed;
+    public float inAirGravity;
+    public float cameraSensitivity;
 
     //groundcheck
     bool m_isGrounded;
@@ -118,8 +118,6 @@ public class PlayerController : MonoBehaviour {
             currentObjectHolding.transform.rotation = this.transform.rotation;
         }
         #endregion
-
-        print(m_playerInput);
     }
 
     void FixedUpdate () {
