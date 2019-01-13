@@ -1545,11 +1545,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 224719467350149680, guid: 79a0244ba7b23eb47b2c69508b85b63e,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4518852872717410, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 210.56702
@@ -1581,6 +1576,11 @@ Prefab:
     - target: {fileID: 4518852872717410, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
       propertyPath: m_RootOrder
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 224719467350149680, guid: 79a0244ba7b23eb47b2c69508b85b63e,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
@@ -2775,41 +2775,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
-        type: 2}
-      propertyPath: stepIntervall
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114515784332995832, guid: 93ad068101c5c334c8dda52bf643a671,
-        type: 2}
-      propertyPath: walkingSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114515784332995832, guid: 93ad068101c5c334c8dda52bf643a671,
-        type: 2}
-      propertyPath: sneakingSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 82167825091415624, guid: 93ad068101c5c334c8dda52bf643a671,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: f0e86016e766c504391c5f192e77734d, type: 3}
-    - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
-        type: 2}
-      propertyPath: footstepInBush
-      value: 
-      objectReference: {fileID: 8300000, guid: 8acd11c20c479bd41841ee7d1a04fc97, type: 3}
-    - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
-        type: 2}
-      propertyPath: footstepOnGravel
-      value: 
-      objectReference: {fileID: 8300000, guid: 1de5ea3f963b80a488ac186fba409228, type: 3}
-    - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
-        type: 2}
-      propertyPath: footstepOnStone
-      value: 
-      objectReference: {fileID: 8300000, guid: f0e86016e766c504391c5f192e77734d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93ad068101c5c334c8dda52bf643a671, type: 2}
   m_IsPrefabAsset: 0

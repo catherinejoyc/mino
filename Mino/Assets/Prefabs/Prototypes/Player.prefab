@@ -191,7 +191,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1de5ea3f963b80a488ac186fba409228, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0e86016e766c504391c5f192e77734d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -304,8 +304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_cam: {fileID: 0}
-  walkingSpeed: 25
-  sneakingSpeed: 10
+  walkingSpeed: 15
+  sneakingSpeed: 7
   jumpSpeed: 10
   inAirGravity: -25
   cameraSensitivity: 100
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b394889e91e804842b08ef475a4f0cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepIntervall: 0.5
+  stepIntervall: 0.4
   m_PlayRunningFootstep:
     m_PersistentCalls:
       m_Calls: []
@@ -339,8 +339,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   audioSource: {fileID: 82167825091415624}
-  footstepInBush: {fileID: 0}
-  footstepOnStone: {fileID: 8300000, guid: ce8dbd6b8fa1ba440a80107b8d1f417c, type: 3}
+  footstepInBush: {fileID: 8300000, guid: 8acd11c20c479bd41841ee7d1a04fc97, type: 3}
+  footstepOnStone: {fileID: 8300000, guid: f0e86016e766c504391c5f192e77734d, type: 3}
+  footstepOnGravel: {fileID: 8300000, guid: 1de5ea3f963b80a488ac186fba409228, type: 3}
 --- !u!136 &136502808631710814
 CapsuleCollider:
   m_ObjectHideFlags: 1
