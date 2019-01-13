@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114882692800718860}
   - component: {fileID: 82296464172624188}
   - component: {fileID: 114840159782439160}
+  - component: {fileID: 54291447917103654}
   m_Layer: 0
   m_Name: Hagi
   m_TagString: Enemy
@@ -119,6 +120,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1091572483181690}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54291447917103654
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1091572483181690}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!82 &82064966846865778
 AudioSource:
   m_ObjectHideFlags: 1
@@ -322,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepIntervall: 0.8
   audioSource: {fileID: 82296464172624188}
-  footstepInBush: {fileID: 8300000, guid: e6ad97adf92964b44a497ac54defcaa4, type: 3}
+  footstepInBush: {fileID: 8300000, guid: 8acd11c20c479bd41841ee7d1a04fc97, type: 3}
   footstepOnStone: {fileID: 8300000, guid: f0e86016e766c504391c5f192e77734d, type: 3}
   footstepOnGravel: {fileID: 8300000, guid: 1de5ea3f963b80a488ac186fba409228, type: 3}
   aggroSound: {fileID: 82064966846865778}
