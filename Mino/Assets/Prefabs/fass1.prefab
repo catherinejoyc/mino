@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23731989844595166}
   - component: {fileID: 65609727081263198}
   - component: {fileID: 54867446419105608}
+  - component: {fileID: 65730412572892952}
   m_Layer: 0
   m_Name: fass1
   m_TagString: Box
@@ -37,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1700190986788696}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.12, y: -1.6, z: 8.4}
-  m_LocalScale: {x: 0.3055957, y: 0.40969896, z: 0.3055957}
+  m_LocalPosition: {x: 8.3, y: -1.6, z: -0.49}
+  m_LocalScale: {x: 0.3056, y: 0.40969998, z: 0.3056}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,6 +102,18 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &65609727081263198
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1700190986788696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.25841, y: 1.9109287, z: 2.2680852}
+  m_Center: {x: -0.00851351, y: 0.010504901, z: 0}
+--- !u!65 &65730412572892952
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
