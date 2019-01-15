@@ -25,6 +25,11 @@ public class BaseEnemyScript : MonoBehaviour {
     //aggro sound
     public EnemySoundScript sound;
 
+    //sprite
+    public SpriteRenderer aggroSprite;
+    float startTimeSprite = 0;
+    public float cooldownSprite;
+
 	// Use this for initialization
 	void Start () {
         m_agent = GetComponent<NavMeshAgent>();
@@ -61,6 +66,13 @@ public class BaseEnemyScript : MonoBehaviour {
         if (!m_agent.pathPending && m_agent.remainingDistance < 0.5f/* && m_idle*/)
         {
             GotoNextPoint();
+        }
+
+        //Aggro Sprite
+        if (startTimeSprite <= Time.deltaTime + cooldownSprite)
+        {
+            aggroSprite.gameObject.transform.LookAt(FindObjectOfType<PlayerController>().transform);
+            aggroSprite.enabled = false;
         }
     }
 
@@ -125,25 +137,15 @@ public class BaseEnemyScript : MonoBehaviour {
 
                     //aggro sound
                     sound.PlayAggroSound();
+                    //show aggro Sprite
+                    aggroSprite.enabled = true;
+                    startTimeSprite = Time.deltaTime;
 
                     Invoke("Go", waitSeconds);
 
                 }
             }
         }
-        //else if (stonePos != null)
-        //{
-        //    if (Physics.Raycast(transform.position + transform.up * 0.5f, stonePos - transform.position, out hit, m_maxDistanceToPlayer)) //Check if wall is between player and self
-        //    {
-        //        if (hit.collider.GetComponent<StoneBehaviour>() != null)
-        //        {
-        //            // wait x seconds before attack               
-        //            m_agent.isStopped = true;
-        //            m_agent.SetDestination(stonePos); //Track Player
-        //            Invoke("Go", waitSeconds);
-        //        }
-        //    }
-        //}
     }
 
     void TrackSoundThroughWalls()
@@ -154,15 +156,18 @@ public class BaseEnemyScript : MonoBehaviour {
 
         //aggro sound
         sound.PlayAggroSound();
+        //show aggro Sprite
+        aggroSprite.enabled = true;
+        startTimeSprite = Time.deltaTime;
 
         Invoke("Go", waitSeconds);
     }
 
     void TrackStoneSound()
     {
-        // wait x seconds before attack
+        // wait x seconds before go
         m_agent.isStopped = true;
-        m_agent.SetDestination(tempstone.transform.position); //Track Player
+        m_agent.SetDestination(tempstone.transform.position);
         Invoke("Go", waitSeconds);
     }
 

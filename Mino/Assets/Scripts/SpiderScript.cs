@@ -24,6 +24,10 @@ public class SpiderScript : MonoBehaviour {
 
     //aggro sound
     public EnemySoundScript sound;
+    //sprite
+    public SpriteRenderer aggroSprite;
+    float startTimeSprite = 0;
+    public float cooldownSprite;
 
     // Use this for initialization
     void Start()
@@ -66,6 +70,7 @@ public class SpiderScript : MonoBehaviour {
             {
                 fallingInvoked = true;
                 m_agent.isStopped = true;
+
                 Invoke("FallDown", waitSeconds);
             }
             else
@@ -93,18 +98,13 @@ public class SpiderScript : MonoBehaviour {
             }
         }
 
-            
-        //if (m_agent.baseOffset == 1) //spider on ground
-        //    BackUp();
 
-        //else if (backingUp) //backing up
-        //{
-        //    t += Time.deltaTime * attackSpeed;
-        //    m_agent.baseOffset = (Mathf.Lerp(7, 1, t));
-
-        //    if (m_agent.baseOffset == 7)
-        //        backingUp = false;
-        //}
+        //Aggro Sprite
+        if (startTimeSprite <= Time.deltaTime + cooldownSprite)
+        {
+            aggroSprite.gameObject.transform.LookAt(FindObjectOfType<PlayerController>().transform);
+            aggroSprite.enabled = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -166,13 +166,12 @@ public class SpiderScript : MonoBehaviour {
 
                 //aggro sound
                 sound.PlayAggroSound();
+                //show aggro Sprite
+                aggroSprite.enabled = true;
+                startTimeSprite = Time.deltaTime;
 
                 //Invoke("Go", waitSeconds);
                 Go();
-            }
-            else //if ()
-            {
-
             }
         }
     }
@@ -185,6 +184,9 @@ public class SpiderScript : MonoBehaviour {
 
         //aggro sound
         sound.PlayAggroSound();
+        //show aggro Sprite
+        aggroSprite.enabled = true;
+        startTimeSprite = Time.deltaTime;
 
         //Invoke("Go", waitSeconds);
         Go();
