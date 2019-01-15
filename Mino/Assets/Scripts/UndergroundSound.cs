@@ -23,13 +23,17 @@ public class UndergroundSound : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerSoundScript>() != null)
-        {
-            m_Player.GetComponent<PlayerSoundScript>().ChangeFootstep(UnderGroundIndex);
-        }
         if(other.CompareTag("Enemy"))
         {
             other.GetComponent<EnemySoundScript>().ChangeFootstep(UnderGroundIndex);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.GetComponent<PlayerSoundScript>() != null)
+        {
+            m_Player.GetComponent<PlayerSoundScript>().ChangeFootstep(UnderGroundIndex);
         }
     }
 

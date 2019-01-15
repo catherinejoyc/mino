@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour {
 
     public float timeOutInSeconds; //in sec
 
+
+    PlayerSoundScript m_playerSound;
+
+
     private static GameManager m_myInstance;
     public static GameManager MyInstance
     {
@@ -22,6 +26,10 @@ public class GameManager : MonoBehaviour {
             m_myInstance = this;
         else
             Debug.Log("GameManager already exists!");
+
+
+        m_playerSound = FindObjectOfType<PlayerSoundScript>();
+
     }
 
     private void Update()

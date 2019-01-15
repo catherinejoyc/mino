@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -59,7 +60,11 @@ public class PlayerSoundScript : MonoBehaviour {
                     lastStepTime = Time.time;
                 }
             }
+
+            UIManager.MyInstance.VolumeIndicator.value = audioSource.volume;
         }
+        else
+            UIManager.MyInstance.VolumeIndicator.value = 0;
     }
 
     public AudioSource audioSource;
@@ -68,13 +73,29 @@ public class PlayerSoundScript : MonoBehaviour {
     public AudioClip footstepOnGravel;
     void PlayRunningFootstep()
     {
-        audioSource.volume = 1f;
-        audioSource.Play();      
+        if (audioSource.clip == footstepInBush)// if in bush
+        {
+            audioSource.volume = 1;
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.volume = 0.8f;
+            audioSource.Play();
+        }
     }
     void PlaySneakingFootstep()
     {
-        audioSource.volume = 0.5f;
-        audioSource.Play();
+        if (audioSource.clip == footstepInBush)// if in bush
+        {
+            audioSource.volume = 0.8f;
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.volume = 0.5f;
+            audioSource.Play();
+        }
     }
 
     public void ChangeFootstep(int underGround)

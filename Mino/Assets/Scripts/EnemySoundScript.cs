@@ -42,7 +42,16 @@ public class EnemySoundScript : MonoBehaviour {
 
     void PlayFootStep()
     {
-        audioSource.Play();
+        if (audioSource.clip == footstepInBush)// if in bush
+        {
+            audioSource.volume = 1f;
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.volume = 0.8f;
+            audioSource.Play();
+        }
     }
 
     public void ChangeFootstep(int underGround)
