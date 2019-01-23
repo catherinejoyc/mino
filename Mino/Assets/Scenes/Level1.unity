@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26076,11 +26076,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2342290dc8582e14987c32dd9a1fa24f, type: 2}
   m_IsPrefabAsset: 0
---- !u!4 &880806228 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4581008206035348, guid: 2342290dc8582e14987c32dd9a1fa24f,
-    type: 2}
-  m_PrefabInternal: {fileID: 880806227}
 --- !u!1001 &884521645
 Prefab:
   m_ObjectHideFlags: 0
@@ -28605,64 +28600,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4161427974090384, guid: 81022f54f34681d4b9a5ff07148611fe,
     type: 2}
   m_PrefabInternal: {fileID: 959885681}
---- !u!1001 &960134863
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 880806228}
-    m_Modifications:
-    - target: {fileID: 4805155894946810, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805155894946810, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805155894946810, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805155894946810, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805155894946810, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805155894946810, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805155894946810, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805155894946810, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805155894946810, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.4721977
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805155894946810, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.47219813
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805155894946810, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.47219813
-      objectReference: {fileID: 0}
-    - target: {fileID: 1610657351805466, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-      propertyPath: m_Name
-      value: Gegnerschatten (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 32e95f1334aa6114fa13f0f4ed3f843f, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1001 &961716841
 Prefab:
   m_ObjectHideFlags: 0
@@ -49870,6 +49807,10 @@ Prefab:
     - target: {fileID: 1091572483181690, guid: 2342290dc8582e14987c32dd9a1fa24f, type: 2}
       propertyPath: m_Name
       value: Hagi (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329827679242564, guid: 2342290dc8582e14987c32dd9a1fa24f, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2342290dc8582e14987c32dd9a1fa24f, type: 2}
