@@ -37,8 +37,9 @@ public class KeyDoorBehaviour : MonoBehaviour {
         {
             m_isOpening = true;
 
-            //next Level
-            GameManager.MyInstance.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+            //next Level if not last level
+            if (SceneManager.GetActiveScene().buildIndex != 2)
+                GameManager.MyInstance.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
             //set new checkpoint (nicht mehr nötig)
             //other.gameObject.GetComponent<PlayerController>().SetCheckpoint(m_checkpoint);
         }
