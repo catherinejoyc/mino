@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958085047044498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: -1, z: 0}
+  m_LocalPosition: {x: 0.32407796, y: -1, z: 0.008222103}
   m_LocalScale: {x: 0.55733657, y: 0.55733657, z: 0.55733657}
   m_Children:
   - {fileID: 4431120344307724}
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958085047044498}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d1cb13911a30384f95a479a29384847, type: 3}
   m_Name: 
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_cam: {fileID: 0}
   walkingSpeed: 15
   sneakingSpeed: 7
-  jumpSpeed: 5
+  jumpSpeed: 10
   inAirGravity: -25
   cameraSensitivity: 100
   groundLayer:
