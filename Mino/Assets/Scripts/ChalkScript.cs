@@ -24,7 +24,7 @@ public class ChalkScript : MonoBehaviour {
         {
             chalk_startTime = Time.time;
         }
-        if (/*Input.GetKeyUp(KeyCode.Q) ||*/ Input.GetButtonDown("Fire3"))
+        if (/*Input.GetKeyUp(KeyCode.Q) ||*/ Input.GetButtonUp("Fire3"))
         {
             if (player.currentObjectHolding == null)
             {
@@ -53,8 +53,7 @@ public class ChalkScript : MonoBehaviour {
             // Add Sprite on wall
             if (!hit.collider.gameObject.CompareTag("x"))
             {
-                GameObject x = Instantiate(sprite_chalk, hit.point, Quaternion.LookRotation(-hit.normal)); //hit.collider.gameObject.transform.rotation * Quaternion.Euler(0,180,0)
-                x.transform.rotation = hit.transform.rotation;
+                GameObject x = Instantiate(sprite_chalk, hit.point, Quaternion.FromToRotation(-Vector3.forward, hit.normal)); //hit.collider.gameObject.transform.rotation * Quaternion.Euler(0,180,0) //Quaternion.LookRotation(-hit.normal)
             }
             else
                 Debug.Log("You can't draw here!");
