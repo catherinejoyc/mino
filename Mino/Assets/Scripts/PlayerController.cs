@@ -228,9 +228,6 @@ public class PlayerController : MonoBehaviour {
             {
                 GameObject ladder = waterBorder.GetComponent<WaterBorderBehaviour>().ActivateLadder();
 
-                // place ladder correctly
-                //ladder.transform.position = new Vector3(transform.position.x, ladder.transform.position.y, ladder.transform.position.z);
-
                 // destroy ladder in hand
                 currentObjectHolding.transform.parent = null;
                 currentObjectHolding.SetActive(false);
