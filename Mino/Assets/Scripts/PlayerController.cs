@@ -52,30 +52,29 @@ public class PlayerController : MonoBehaviour {
     private void Start()
     {
         //m_lastCheckpoint = transform.position;
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
     {
-        #region Move Camera
-        //Look around
-        m_go.transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime, 0));
 
-        if (m_cam.transform.rotation.x > -0.10f && m_cam.transform.rotation.x < 0.25f)
-            m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime, 0));
-        if (m_cam.transform.rotation.x <= -0.10f) //if stopping point is reached
+
+        #region Move Camera
+
+        float gk = m_cam.transform.forward.y;
+        float alpha = -(Mathf.Acos(gk) * Mathf.Rad2Deg - 90);
+
+        //Look around
+        m_go.transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime);
+
+        float mouseInput = Input.GetAxis("Mouse Y");
+
+        float maxAngle = 20;
+        if ((mouseInput > 0 && alpha < maxAngle) || (mouseInput < 0 && alpha > -maxAngle))
         {
-            //only rotate downwards
-            if (-Input.GetAxis("Mouse Y") > 0)
-                m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime, 0));
+            m_cam.transform.Rotate(Vector3.right * -mouseInput * cameraSensitivity * Time.deltaTime);
         }
-        else if (m_cam.transform.rotation.x >= 0.25f)
-        {
-            //only rotate upwards
-            if (-Input.GetAxis("Mouse Y") < 0)
-                m_cam.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime, 0));
-        }
-        //untere Grenze 0.25
-        //obere Grenze -0.10
         #endregion
 
         #region Shoot Stones
