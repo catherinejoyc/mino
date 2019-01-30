@@ -6,6 +6,9 @@ public class PressurePlate : MonoBehaviour {
 
     public PressureDoor door;
 
+    [Tooltip("Particle Script (optional)")]
+    public ParticleScript particleScript;
+
     int m_activePressurePoints = 0;
 
     private void OnCollisionEnter(Collision collision)
@@ -14,6 +17,10 @@ public class PressurePlate : MonoBehaviour {
         {
             m_activePressurePoints++;
             door.UnlockDoor();
+
+            //start secParticleSys
+            if (particleScript != null)
+                particleScript.StartSecParticleSys();
         }
     }
 
@@ -23,7 +30,12 @@ public class PressurePlate : MonoBehaviour {
         {
             m_activePressurePoints--;
             if (m_activePressurePoints == 0)
+            {
                 door.CloseDoor();
+                //stop secParticleSys
+                if (particleScript != null)
+                    particleScript.StopSecParticleSys();
+            }
         }
     }
 }
