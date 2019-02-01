@@ -10,8 +10,8 @@ public class ParticleScript : MonoBehaviour {
 
     ParticleSystem.MinMaxCurve speed;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         firstParticleSys.Play();
 
         speed = secParticleSys.main.startSpeed;
