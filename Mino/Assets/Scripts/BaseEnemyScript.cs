@@ -14,7 +14,16 @@ public class BaseEnemyScript : MonoBehaviour {
     float m_currDistanceToPlayer;
     bool m_IsCloseToPlayer = false;
 
-    //patrol
+    //States
+    enum State
+    {
+        Idle,
+        Alert,
+        Hunt,
+        Attack
+    }
+
+    //Idle
     public Transform[] points;
     private int m_destPoint = 0;
     public float waitSeconds = 0;
