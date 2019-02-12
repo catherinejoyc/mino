@@ -218,13 +218,27 @@ MonoBehaviour:
         ObjectType: 7
   EventWwu:
   - Guid: '{1BA305F7-2B70-4C37-AABC-887CD819E702}'
-    m_lastTimePart2: -1999205146
-    m_lastTimePsrt1: 211422110
+    m_lastTimePart2: -1999204082
+    m_lastTimePsrt1: -1081271440
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
-    List: []
+    List:
+    - Guid: 9267fd5a15d58d4b8e4e9aca44765676
+      ID: -732608328
+      Name: Play_Hagi_footsteps_grass
+      Path: Default Work Unit\Play_Hagi_footsteps_grass
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_footsteps_grass
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   ExpandedItems:
   - /MinoWwise
+  - /MinoWwise/Events
+  - /MinoWwise/Events/Default Work Unit
   RtpcWwu:
   - Guid: '{F8AD97F4-2CDF-4753-A863-CAC1087CEEF7}'
     m_lastTimePart2: -1999205146
