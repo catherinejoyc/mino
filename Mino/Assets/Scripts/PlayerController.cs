@@ -79,11 +79,11 @@ public class PlayerController : MonoBehaviour {
 
         #region Shoot Stones
         //Shoot Stones
-        if (/*Input.GetMouseButtonDown(1) || */Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2"))
         {
             stone_startTime = Time.time;
         }
-        if (/*Input.GetMouseButtonUp(1) || */Input.GetButtonUp("Fire2"))
+        if (Input.GetButtonUp("Fire2"))
         {
             if ((Time.time - stone_startTime) < 0.2f)  //shoot if the player pressed the button for a short time
             {

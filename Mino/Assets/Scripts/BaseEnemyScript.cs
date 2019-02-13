@@ -22,11 +22,16 @@ public class BaseEnemyScript : MonoBehaviour {
         Hunt,
         Attack
     }
+    State currState;
 
     //Idle
     public Transform[] points;
     private int m_destPoint = 0;
     public float waitSeconds = 0;
+
+    //Alert
+    float alertStartTime;
+    public float alertStateDuration;
 
     //stone related
     GameObject tempstone;
@@ -70,11 +75,28 @@ public class BaseEnemyScript : MonoBehaviour {
             }
         }
 
-        // Choose the next destination point when the agent gets
-        // close to the current one.
-        if (!m_agent.pathPending && m_agent.remainingDistance < 0.5f/* && m_idle*/)
+        //Behaviour
+        switch (currState)
         {
-            GotoNextPoint();
+            case State.Idle:
+                // Choose the next destination point when the agent gets
+                // close to the current one.
+                if (!m_agent.pathPending && m_agent.remainingDistance < 0.5f/* && m_idle*/)
+                {
+                    GoToNextPoint();
+                }
+                break;
+            case State.Alert:
+                //Go back to Idle after alertStateDuration
+                if (alertStartTime + alertStateDuration <= Time.time)
+                {
+
+                }
+                break;
+            case State.Hunt:
+                break;
+            case State.Attack:
+                break;
         }
 
         //Aggro Sprite
@@ -87,6 +109,7 @@ public class BaseEnemyScript : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        #region old
         if (other.name == "Player") //player enters trigger
         {
             m_player = other.gameObject;
@@ -101,10 +124,41 @@ public class BaseEnemyScript : MonoBehaviour {
             tempstone = other.gameObject;
             other.GetComponent<StoneBehaviour>().m_playStoneSoundEvent.AddListener(TrackStoneSound);
         }
+        #endregion
+
+        // --- New SoundSystem
+        if (other.GetComponent<SoundScript>() != null)
+        {
+            //Add UpdateAggroState to SoundEvent of target
+            other.GetComponent<SoundScript>().m_SoundEvent.AddListener(UpdateAggroState);
+        }
+    }
+
+    //Update States
+    void UpdateAggroState()
+    {
+        if (currState == State.Idle)
+        {
+            UpdateAlertState();
+        }
+        else if (currState == State.Alert)
+        {
+            currState = State.Hunt;
+        }
+    }
+    void UpdateAlertState()
+    {
+        currState = State.Alert;
+        alertStartTime = Time.time;
+    }
+    void UpdateIdleState()
+    {
+        currState = State.Idle;
     }
 
     private void OnTriggerExit(Collider other)
     {
+        #region old
         if (other.name == "Player") //player out of hearing range
         {
             //Remove Listener
@@ -113,10 +167,17 @@ public class BaseEnemyScript : MonoBehaviour {
 
             m_player = null;
         }
+        #endregion
+
+        // --- New SoundSystem
+        if (other.GetComponent<SoundScript>() != null)
+        {
+            //Add UpdateAggroState to SoundEvent of target
+            other.GetComponent<SoundScript>().m_SoundEvent.RemoveListener(UpdateAggroState);
+        }
     }
 
-
-    #region Track Sound
+    #region Track Sound (old)
     /* Laute Geräusche:
     * Laufen
     * Landen nach Springen
@@ -179,15 +240,10 @@ public class BaseEnemyScript : MonoBehaviour {
         m_agent.SetDestination(tempstone.transform.position);
         Invoke("Go", waitSeconds);
     }
-
-    void Go()
-    {
-        m_agent.isStopped = false;
-    }
     #endregion
 
     #region Patrol
-    void GotoNextPoint()
+    void GoToNextPoint()
     {
         // returns if no points have been set up
         if (points.Length == 0)
@@ -202,6 +258,10 @@ public class BaseEnemyScript : MonoBehaviour {
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
         m_destPoint = (m_destPoint + 1) % points.Length;
+    }
+    void Go()
+    {
+        m_agent.isStopped = false;
     }
     #endregion
 }
