@@ -399,9 +399,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepIntervall: 0.8
   audioSource: {fileID: 82296464172624188}
-  footstepInBush: {fileID: 8300000, guid: 1009330d262bd3d4bbb31e1c55b5c477, type: 3}
-  footstepOnStone: {fileID: 8300000, guid: 4edaf44bbb2464845b2a60bec246f6b3, type: 3}
-  footstepOnGravel: {fileID: 8300000, guid: afc2de1b599589849a4b3856fee1520d, type: 3}
+  footstepEvent:
+    ID: -732608328
+    valueGuid: 9267fd5a15d58d4b8e4e9aca44765676
   aggroSound: {fileID: 82064966846865778}
 --- !u!114 &114882692800718860
 MonoBehaviour:
@@ -419,6 +419,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   waitSeconds: 0
+  alertStateDuration: 0
   sound: {fileID: 114840159782439160}
   aggroSprite: {fileID: 212577250822465814}
   cooldownSprite: 1

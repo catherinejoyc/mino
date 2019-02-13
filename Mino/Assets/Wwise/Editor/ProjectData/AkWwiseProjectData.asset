@@ -237,8 +237,8 @@ MonoBehaviour:
       minDuration: 0
   ExpandedItems:
   - /MinoWwise
-  - /MinoWwise/Events
-  - /MinoWwise/Events/Default Work Unit
+  - /MinoWwise/SoundBanks
+  - /MinoWwise/SoundBanks/Default Work Unit
   RtpcWwu:
   - Guid: '{F8AD97F4-2CDF-4753-A863-CAC1087CEEF7}'
     m_lastTimePart2: -1999205146
