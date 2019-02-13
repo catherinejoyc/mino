@@ -12,9 +12,10 @@ public class EnemySoundScript : MonoBehaviour {
 
     //sound
     public AudioSource audioSource;
-    public AudioClip footstepInBush;
-    public AudioClip footstepOnStone;
-    public AudioClip footstepOnGravel;
+    //public AudioClip footstepInBush;
+    //public AudioClip footstepOnStone;
+    //public AudioClip footstepOnGravel;
+    public AK.Wwise.Event footstepEvent;
 
     public AudioSource aggroSound;
 
@@ -42,35 +43,37 @@ public class EnemySoundScript : MonoBehaviour {
 
     void PlayFootStep()
     {
-        if (audioSource.clip == footstepInBush)// if in bush
-        {
-            audioSource.volume = 1f;
-            audioSource.Play();
-        }
-        else
-        {
-            audioSource.volume = 0.8f;
-            audioSource.Play();
-        }
+        //if (audioSource.clip == footstepInBush)// if in bush
+        //{
+        //    audioSource.volume = 1f;
+        //    audioSource.Play();
+        //}
+        //else
+        //{
+        //    audioSource.volume = 0.8f;
+        //    audioSource.Play();
+        //}
+
+        footstepEvent.Post(this.gameObject);
     }
 
     public void ChangeFootstep(int underGround)
     {
-        switch (underGround)
-        {
-            case 1:
-                audioSource.clip = footstepOnStone;
-                break;
-            case 2:
-                audioSource.clip = footstepOnGravel;
-                break;
-            case 3:
-                audioSource.clip = footstepInBush;
-                break;
-            default:
-                audioSource.clip = footstepOnStone;
-                break;
-        }
+        //switch (underGround)
+        //{
+        //    case 1:
+        //        audioSource.clip = footstepOnStone;
+        //        break;
+        //    case 2:
+        //        audioSource.clip = footstepOnGravel;
+        //        break;
+        //    case 3:
+        //        audioSource.clip = footstepInBush;
+        //        break;
+        //    default:
+        //        audioSource.clip = footstepOnStone;
+        //        break;
+        //}
     }
 
     public void PlayAggroSound()
