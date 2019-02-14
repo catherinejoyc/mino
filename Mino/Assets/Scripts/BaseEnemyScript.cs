@@ -90,10 +90,11 @@ public class BaseEnemyScript : MonoBehaviour {
                 //Go back to Idle after alertStateDuration
                 if (alertStartTime + alertStateDuration <= Time.time)
                 {
-
+                    UpdateIdleState();
                 }
                 break;
             case State.Hunt:
+                //Go to point of Sound
                 break;
             case State.Attack:
                 break;
@@ -135,7 +136,7 @@ public class BaseEnemyScript : MonoBehaviour {
     }
 
     //Update States
-    void UpdateAggroState()
+    void UpdateAggroState(Vector3 pos)
     {
         if (currState == State.Idle)
         {
@@ -143,16 +144,33 @@ public class BaseEnemyScript : MonoBehaviour {
         }
         else if (currState == State.Alert)
         {
-            currState = State.Hunt;
+            UpdateHuntState(pos);
         }
     }
     void UpdateAlertState()
     {
-        currState = State.Alert;
+        //start alert
         alertStartTime = Time.time;
+
+        //stop movement
+        m_agent.isStopped = true;
+
+        currState = State.Alert;
+    }
+    void UpdateHuntState(Vector3 pos)
+    {
+        //check maxDistance and actual distance to sound
+        float currDistance = Vector3.Distance(pos, this.transform.position);
+        if (currDistance <= m_maxDistanceToPlayer)
+        {
+            //Go into Hunt State
+            currState = State.Hunt;
+        }
     }
     void UpdateIdleState()
     {
+        //continue patrol
+        m_agent.isStopped = true;
         currState = State.Idle;
     }
 
