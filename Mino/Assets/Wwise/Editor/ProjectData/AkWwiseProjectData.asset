@@ -184,8 +184,8 @@ MonoBehaviour:
         ObjectType: 15
   AuxBusWwu:
   - Guid: '{0B42F357-7073-4512-85BF-905D310E6DE3}'
-    m_lastTimePart2: -1999204340
-    m_lastTimePsrt1: -1464806245
+    m_lastTimePart2: -1999203530
+    m_lastTimePsrt1: -268671777
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List:
@@ -202,24 +202,24 @@ MonoBehaviour:
         ObjectType: 1
   BankWwu:
   - Guid: '{3B973840-8C60-4F06-BCC6-7C8ABF33C1F5}'
-    m_lastTimePart2: -1999203938
-    m_lastTimePsrt1: 2128844376
+    m_lastTimePart2: -1999203506
+    m_lastTimePsrt1: 994135511
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
-    - Guid: 2d8204f0d950e743aa8b0e6b53aafefc
-      ID: 293243665
-      Name: MinoSoundbank
-      Path: Default Work Unit\MinoSoundbank
+    - Guid: 7a1969754557bd41a25a52b3b2d31348
+      ID: 1949491649
+      Name: MinoSoundbankNew
+      Path: Default Work Unit\MinoSoundbankNew
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: MinoSoundbank
+      - ElementName: MinoSoundbankNew
         ObjectType: 7
   EventWwu:
   - Guid: '{1BA305F7-2B70-4C37-AABC-887CD819E702}'
-    m_lastTimePart2: -1999204082
-    m_lastTimePsrt1: -1081271440
+    m_lastTimePart2: -1999203530
+    m_lastTimePsrt1: 1392634397
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -232,13 +232,11 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Hagi_footsteps_grass
         ObjectType: 3
-      maxAttenuation: 0
+      maxAttenuation: 60
       maxDuration: 0
       minDuration: 0
   ExpandedItems:
   - /MinoWwise
-  - /MinoWwise/Events
-  - /MinoWwise/Events/Default Work Unit
   RtpcWwu:
   - Guid: '{F8AD97F4-2CDF-4753-A863-CAC1087CEEF7}'
     m_lastTimePart2: -1999205146
