@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3562358968	Play_Hagi_footsteps_grass			\Default Work Unit\Play_Hagi_footsteps_grass	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	414668148	Hagi_footsteps_grass	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_stampfen_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footsteps_grass		155820
+
