@@ -57,28 +57,30 @@ public class BaseEnemyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        #region old
-        if (m_player != null && !m_idle) //get distance between player and enemy
-        {
-            m_currDistanceToPlayer = Vector3.Distance(m_player.transform.position, transform.position);
+        #region [old] change from soundTracking Player sneaking and running
+        //if (m_player != null && !m_idle) //get distance between player and enemy
+        //{
+        //    m_currDistanceToPlayer = Vector3.Distance(m_player.transform.position, transform.position);
 
-            if (m_currDistanceToPlayer <= 1 && !m_IsCloseToPlayer) //distance to player closer than 1 m
-            {
-                //Add listener to loud noises(TrackPlayerThroughWalls) and quiet noises(TrackPlayer)
-                m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.AddListener(TrackSoundThroughWalls);
-                m_player.GetComponent<PlayerSoundScript>().m_PlaySneakingFootstep.AddListener(TrackSound);
+        //    if (m_currDistanceToPlayer <= 1 && !m_IsCloseToPlayer) //distance to player closer than 1 m
+        //    {
+        //        //Add listener to loud noises(TrackPlayerThroughWalls) and quiet noises(TrackPlayer)
+        //        m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.AddListener(TrackSoundThroughWalls);
+        //        m_player.GetComponent<PlayerSoundScript>().m_PlaySneakingFootstep.AddListener(TrackSound);
 
-                m_IsCloseToPlayer = true;
-            }
-            else if (m_currDistanceToPlayer > 1 && m_IsCloseToPlayer) //distance is bigger than 1 m
-            {
-                m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.RemoveListener(TrackSoundThroughWalls);
-                m_player.GetComponent<PlayerSoundScript>().m_PlaySneakingFootstep.RemoveListener(TrackSound);
+        //        m_IsCloseToPlayer = true;
+        //    }
+        //    else if (m_currDistanceToPlayer > 1 && m_IsCloseToPlayer) //distance is bigger than 1 m
+        //    {
+        //        m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.RemoveListener(TrackSoundThroughWalls);
+        //        m_player.GetComponent<PlayerSoundScript>().m_PlaySneakingFootstep.RemoveListener(TrackSound);
 
-                m_IsCloseToPlayer = false;
-            }
-        }
+        //        m_IsCloseToPlayer = false;
+        //    }
+        //}
         #endregion
+
+        Debug.Log(currState.ToString());
 
         //Behaviour
         switch (currState)
@@ -166,8 +168,12 @@ public class BaseEnemyScript : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Attack
-        Attack();
+        //if colliding with something hittable eg. Player or Boxes
+        if (collision.collider.GetComponent<IHittable>() != null)
+        {
+            //Attack
+            Attack();
+        }
     }
 
     //Update States
