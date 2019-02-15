@@ -202,8 +202,8 @@ MonoBehaviour:
         ObjectType: 1
   BankWwu:
   - Guid: '{3B973840-8C60-4F06-BCC6-7C8ABF33C1F5}'
-    m_lastTimePart2: -1999204339
-    m_lastTimePsrt1: 580702421
+    m_lastTimePart2: -1999203938
+    m_lastTimePsrt1: 2128844376
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -237,8 +237,8 @@ MonoBehaviour:
       minDuration: 0
   ExpandedItems:
   - /MinoWwise
-  - /MinoWwise/SoundBanks
-  - /MinoWwise/SoundBanks/Default Work Unit
+  - /MinoWwise/Events
+  - /MinoWwise/Events/Default Work Unit
   RtpcWwu:
   - Guid: '{F8AD97F4-2CDF-4753-A863-CAC1087CEEF7}'
     m_lastTimePart2: -1999205146
