@@ -10,7 +10,7 @@ public class ToxicWaterBehaviour : MonoBehaviour {
     {
         if (other.gameObject.name == "Player")
         {
-            other.GetComponent<PlayerController>().Die();
+            other.GetComponent<PlayerController>().ReactToHit();
         }
     }
 

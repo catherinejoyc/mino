@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour, IHittable {
 
     Rigidbody m_rb;
     GameObject m_go;
@@ -248,7 +248,7 @@ public class PlayerController : MonoBehaviour {
     }
     #endregion
 
-    public void Die()
+    public void ReactToHit()
     {
         //Spawn on last checkpoint
         //transform.position = m_lastCheckpoint;
