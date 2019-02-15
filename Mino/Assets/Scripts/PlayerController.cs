@@ -174,11 +174,11 @@ public class PlayerController : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Enemy contact
-        if (collision.collider.CompareTag("Enemy"))
-        {
-            Die();
-        }
+        ////Enemy contact
+        //if (collision.collider.CompareTag("Enemy"))
+        //{
+        //    Die();
+        //}
     }
 
     #region Shoot Stone

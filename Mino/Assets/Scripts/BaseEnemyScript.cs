@@ -33,6 +33,9 @@ public class BaseEnemyScript : MonoBehaviour {
     float alertStartTime;
     public float alertStateDuration;
 
+    //Attack
+    public float attackRange;
+
     //stone related
     GameObject tempstone;
 
@@ -54,6 +57,7 @@ public class BaseEnemyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        #region old
         if (m_player != null && !m_idle) //get distance between player and enemy
         {
             m_currDistanceToPlayer = Vector3.Distance(m_player.transform.position, transform.position);
@@ -74,6 +78,7 @@ public class BaseEnemyScript : MonoBehaviour {
                 m_IsCloseToPlayer = false;
             }
         }
+        #endregion
 
         //Behaviour
         switch (currState)
@@ -94,7 +99,11 @@ public class BaseEnemyScript : MonoBehaviour {
                 }
                 break;
             case State.Hunt:
-                //Go to point of Sound
+                // if close to the current one (and no collision detected)
+                if (!m_agent.pathPending && m_agent.remainingDistance < 0.5f/* && m_idle*/)
+                {
+                    Attack();
+                }
                 break;
             case State.Attack:
                 break;
@@ -127,53 +136,13 @@ public class BaseEnemyScript : MonoBehaviour {
         }
         #endregion
 
-        // --- New SoundSystem
+        // --- New Sound Tracking System
         if (other.GetComponent<SoundScript>() != null)
         {
             //Add UpdateAggroState to SoundEvent of target
             other.GetComponent<SoundScript>().m_SoundEvent.AddListener(UpdateAggroState);
         }
     }
-
-    //Update States
-    void UpdateAggroState(Vector3 pos)
-    {
-        if (currState == State.Idle)
-        {
-            UpdateAlertState();
-        }
-        else if (currState == State.Alert)
-        {
-            UpdateHuntState(pos);
-        }
-    }
-    void UpdateAlertState()
-    {
-        //start alert
-        alertStartTime = Time.time;
-
-        //stop movement
-        m_agent.isStopped = true;
-
-        currState = State.Alert;
-    }
-    void UpdateHuntState(Vector3 pos)
-    {
-        //check maxDistance and actual distance to sound
-        float currDistance = Vector3.Distance(pos, this.transform.position);
-        if (currDistance <= m_maxDistanceToPlayer)
-        {
-            //Go into Hunt State
-            currState = State.Hunt;
-        }
-    }
-    void UpdateIdleState()
-    {
-        //continue patrol
-        m_agent.isStopped = true;
-        currState = State.Idle;
-    }
-
     private void OnTriggerExit(Collider other)
     {
         #region old
@@ -194,6 +163,88 @@ public class BaseEnemyScript : MonoBehaviour {
             other.GetComponent<SoundScript>().m_SoundEvent.RemoveListener(UpdateAggroState);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Attack
+        Attack();
+    }
+
+    //Update States
+    void UpdateAggroState(Vector3 pos)
+    {
+        if (currState == State.Idle)
+        {
+            UpdateAlertState();
+        }
+        else if (currState == State.Alert)
+        {
+            UpdateHuntState(pos);
+        }
+    }
+    void UpdateAlertState()
+    {
+        //start alert
+        alertStartTime = Time.time;
+
+        //stop movement
+        Stop();
+
+        currState = State.Alert;
+    }
+    void UpdateHuntState(Vector3 pos)
+    {
+        //check maxDistance and actual distance to sound
+        float currDistance = Vector3.Distance(pos, this.transform.position);
+        if (currDistance <= m_maxDistanceToPlayer)
+        {
+            //Go into Hunt State
+            currState = State.Hunt;
+
+            m_agent.SetDestination(pos); //Track Sound
+
+            #region old
+            //aggro sound
+            sound.PlayAggroSound();
+            #endregion
+
+            //show aggro Sprite ONLY if near player
+            //aggroSprite.enabled = true;
+            //startTimeSprite = Time.deltaTime;
+
+            Go();
+        }
+    }
+    void Attack()
+    {
+        currState = State.Attack;
+        Stop();
+
+        //Play Roar
+
+        //Raycast in front of Enemy
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, attackRange))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            Debug.Log("Did Hit");
+            
+            //React to hit
+            if(hit.collider.GetComponent<IHittable>() != null)
+            {
+                hit.collider.GetComponent<IHittable>().ReactToHit();
+            }
+
+            UpdateIdleState();
+        }
+    }
+    void UpdateIdleState()
+    {
+        //continue patrol
+        Go();
+        currState = State.Idle;
+    }
+
 
     #region Track Sound (old)
     /* Laute Geräusche:
@@ -280,6 +331,10 @@ public class BaseEnemyScript : MonoBehaviour {
     void Go()
     {
         m_agent.isStopped = false;
+    }
+    void Stop()
+    {
+        m_agent.isStopped = true;
     }
     #endregion
 }
