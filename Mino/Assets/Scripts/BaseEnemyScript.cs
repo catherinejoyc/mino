@@ -58,26 +58,26 @@ public class BaseEnemyScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         #region old
-        //if (m_player != null && !m_idle) //get distance between player and enemy
-        //{
-        //    m_currDistanceToPlayer = Vector3.Distance(m_player.transform.position, transform.position);
+        if (m_player != null && !m_idle) //get distance between player and enemy
+        {
+            m_currDistanceToPlayer = Vector3.Distance(m_player.transform.position, transform.position);
 
-        //    if (m_currDistanceToPlayer <= 1 && !m_IsCloseToPlayer) //distance to player closer than 1 m
-        //    {
-        //        Add listener to loud noises (TrackPlayerThroughWalls) and quiet noises (TrackPlayer)
-        //        m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.AddListener(TrackSoundThroughWalls);
-        //        m_player.GetComponent<PlayerSoundScript>().m_PlaySneakingFootstep.AddListener(TrackSound);
+            if (m_currDistanceToPlayer <= 1 && !m_IsCloseToPlayer) //distance to player closer than 1 m
+            {
+                //Add listener to loud noises(TrackPlayerThroughWalls) and quiet noises(TrackPlayer)
+                m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.AddListener(TrackSoundThroughWalls);
+                m_player.GetComponent<PlayerSoundScript>().m_PlaySneakingFootstep.AddListener(TrackSound);
 
-        //        m_IsCloseToPlayer = true;
-        //    }
-        //    else if (m_currDistanceToPlayer > 1 && m_IsCloseToPlayer) //distance is bigger than 1 m
-        //    {
-        //        m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.RemoveListener(TrackSoundThroughWalls);
-        //        m_player.GetComponent<PlayerSoundScript>().m_PlaySneakingFootstep.RemoveListener(TrackSound);
+                m_IsCloseToPlayer = true;
+            }
+            else if (m_currDistanceToPlayer > 1 && m_IsCloseToPlayer) //distance is bigger than 1 m
+            {
+                m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.RemoveListener(TrackSoundThroughWalls);
+                m_player.GetComponent<PlayerSoundScript>().m_PlaySneakingFootstep.RemoveListener(TrackSound);
 
-        //        m_IsCloseToPlayer = false;
-        //    }
-        //}
+                m_IsCloseToPlayer = false;
+            }
+        }
         #endregion
 
         //Behaviour
@@ -120,20 +120,20 @@ public class BaseEnemyScript : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         #region old
-        //if (other.name == "Player") //player enters trigger
-        //{
-        //    m_player = other.gameObject;
-        //    m_idle = false;
+        if (other.name == "Player") //player enters trigger
+        {
+            m_player = other.gameObject;
+            m_idle = false;
 
-        //    //Add Listener
-        //    m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.AddListener(TrackSound);
-        //}
-        ////Steinchen
-        //if (other.GetComponent<StoneBehaviour>() != null)
-        //{
-        //    tempstone = other.gameObject;
-        //    other.GetComponent<StoneBehaviour>().m_playStoneSoundEvent.AddListener(TrackStoneSound);
-        //}
+            //Add Listener
+            m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.AddListener(TrackSound);
+        }
+        //Steinchen
+        if (other.GetComponent<StoneBehaviour>() != null)
+        {
+            tempstone = other.gameObject;
+            other.GetComponent<StoneBehaviour>().m_playStoneSoundEvent.AddListener(TrackStoneSound);
+        }
         #endregion
 
         // --- New Sound Tracking System
@@ -146,14 +146,14 @@ public class BaseEnemyScript : MonoBehaviour {
     private void OnTriggerExit(Collider other)
     {
         #region old
-        //if (other.name == "Player") //player out of hearing range
-        //{
-        //    //Remove Listener
-        //    m_idle = true;
-        //    m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.RemoveListener(TrackSound);
+        if (other.name == "Player") //player out of hearing range
+        {
+            //Remove Listener
+            m_idle = true;
+            m_player.GetComponent<PlayerSoundScript>().m_PlayRunningFootstep.RemoveListener(TrackSound);
 
-        //    m_player = null;
-        //}
+            m_player = null;
+        }
         #endregion
 
         // --- New SoundSystem
@@ -247,54 +247,54 @@ public class BaseEnemyScript : MonoBehaviour {
 
 
     #region Track Sound (old)
-    //void TrackSound() //Track sound if no wall is inbetween
-    //{
-    //    RaycastHit hit;
-    //    if (m_player!= null)
-    //    {
-    //        if (Physics.Raycast(transform.position + transform.up * 0.5f, m_player.transform.position - transform.position, out hit, m_maxDistanceToPlayer)) //Check if wall is between player and self
-    //        {
-    //            if (hit.collider.name == "Player")
-    //            {
-    //                // wait x seconds before attack               
-    //                m_agent.isStopped = true;
-    //                m_agent.SetDestination(m_player.transform.position); //Track Player
+    void TrackSound() //Track sound if no wall is inbetween
+    {
+        RaycastHit hit;
+        if (m_player != null)
+        {
+            if (Physics.Raycast(transform.position + transform.up * 0.5f, m_player.transform.position - transform.position, out hit, m_maxDistanceToPlayer)) //Check if wall is between player and self
+            {
+                if (hit.collider.name == "Player")
+                {
+                    // wait x seconds before attack               
+                    m_agent.isStopped = true;
+                    m_agent.SetDestination(m_player.transform.position); //Track Player
 
-    //                //aggro sound
-    //                sound.PlayAggroSound();
-    //                //show aggro Sprite
-    //                aggroSprite.enabled = true;
-    //                startTimeSprite = Time.deltaTime;
+                    //aggro sound
+                    sound.PlayAggroSound();
+                    //show aggro Sprite
+                    aggroSprite.enabled = true;
+                    startTimeSprite = Time.deltaTime;
 
-    //                Invoke("Go", waitSeconds);
+                    Invoke("Go", waitSeconds);
 
-    //            }
-    //        }
-    //    }
-    //}
+                }
+            }
+        }
+    }
 
-    //void TrackSoundThroughWalls()
-    //{
-    //    // wait x seconds before attack
-    //    m_agent.isStopped = true;
-    //    m_agent.SetDestination(m_player.transform.position); //Track Player
+    void TrackSoundThroughWalls()
+    {
+        // wait x seconds before attack
+        m_agent.isStopped = true;
+        m_agent.SetDestination(m_player.transform.position); //Track Player
 
-    //    //aggro sound
-    //    sound.PlayAggroSound();
-    //    //show aggro Sprite
-    //    aggroSprite.enabled = true;
-    //    startTimeSprite = Time.deltaTime;
+        //aggro sound
+        sound.PlayAggroSound();
+        //show aggro Sprite
+        aggroSprite.enabled = true;
+        startTimeSprite = Time.deltaTime;
 
-    //    Invoke("Go", waitSeconds);
-    //}
+        Invoke("Go", waitSeconds);
+    }
 
-    //void TrackStoneSound()
-    //{
-    //    // wait x seconds before go
-    //    m_agent.isStopped = true;
-    //    m_agent.SetDestination(tempstone.transform.position);
-    //    Invoke("Go", waitSeconds);
-    //}
+    void TrackStoneSound()
+    {
+        // wait x seconds before go
+        m_agent.isStopped = true;
+        m_agent.SetDestination(tempstone.transform.position);
+        Invoke("Go", waitSeconds);
+    }
     #endregion
 
     #region Patrol
