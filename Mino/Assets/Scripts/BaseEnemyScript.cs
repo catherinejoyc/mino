@@ -80,8 +80,6 @@ public class BaseEnemyScript : MonoBehaviour {
         //}
         #endregion
 
-        Debug.Log(currState.ToString());
-
         //Behaviour
         switch (currState)
         {

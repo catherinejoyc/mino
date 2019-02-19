@@ -15,7 +15,7 @@ public class SoundScript : MonoBehaviour {
     public AK.Wwise.Event sound;
     // Sound Type
     public SoundType m_soundType;
-    public SoundPriority soundValues;
+    private SoundPriority soundValues;
     //max hearing distance (for enemy)
     float m_maxDistance;
 
