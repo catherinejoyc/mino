@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerSoundScript : SoundScript {
+public class PlayerSoundScript : MonoBehaviour {
 
     PlayerController m_player;
     public float stepIntervall;
@@ -22,6 +22,7 @@ public class PlayerSoundScript : SoundScript {
         //m_PlaySneakingFootstep.AddListener(PlaySneakingFootstep);
 
         sneakingStepIntervall = stepIntervall * 2;
+
     }
 
     private void Update()
@@ -34,7 +35,7 @@ public class PlayerSoundScript : SoundScript {
                 if (Time.time > lastStepTime + sneakingStepIntervall)
                 {
                     //[old] m_PlaySneakingFootstep.Invoke();
-                    m_SoundEvent.Invoke(this.transform.position);
+                    //m_SoundEvent.Invoke(this.transform.position);
 
                     lastStepTime = Time.time;
                 }
@@ -44,7 +45,7 @@ public class PlayerSoundScript : SoundScript {
                 if (Time.time > lastStepTime + stepIntervall)
                 {
                     //[old] m_PlayRunningFootstep.Invoke();
-                    m_SoundEvent.Invoke(this.transform.position);
+                    //m_SoundEvent.Invoke(this.transform.position);
 
                     lastStepTime = Time.time;
                 }
