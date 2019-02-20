@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class MyFloatEvent : UnityEvent<Vector3> //vector3 is position of sound
+public class MyFloatEvent : UnityEvent<Vector3, float> //vector3 is position of sound
 {
 }
 
@@ -77,7 +77,7 @@ public class SoundScript : MonoBehaviour {
     //m_SoundEvent.Invoke(this.transform.position); //Invoke Event with position of this Sound
 
     //Aufruf im Script mit m_SoundEvent.Invoke(this.transform.position)
-    protected void PlaySound(Vector3 pos)
+    protected void PlaySound(Vector3 pos, float maxDistance)
     {
         sound.Post(this.gameObject);
         Debug.Log("Sound posted @" + this.gameObject.name);

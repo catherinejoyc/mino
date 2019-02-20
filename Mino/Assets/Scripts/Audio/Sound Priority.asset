@@ -17,7 +17,7 @@ MonoBehaviour:
   activatedPressurePlate: 1
   movingBush: 1
   movingOnGravel: 1
-  movingOnStone: 1
+  movingOnStone: 3
   movingOnGrass: 1
   hardStoneImpact: 1
   softStoneImpact: 1

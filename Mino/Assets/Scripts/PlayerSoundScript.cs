@@ -35,7 +35,7 @@ public class PlayerSoundScript : SoundScript {
                 if (Time.time > lastStepTime + sneakingStepIntervall)
                 {
                     //[old] m_PlaySneakingFootstep.Invoke();
-                    m_SoundEvent.Invoke(this.transform.position);
+                    m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
 
                     lastStepTime = Time.time;
                 }
@@ -45,7 +45,7 @@ public class PlayerSoundScript : SoundScript {
                 if (Time.time > lastStepTime + stepIntervall)
                 {
                     //[old] m_PlayRunningFootstep.Invoke();
-                    m_SoundEvent.Invoke(this.transform.position);
+                    m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
 
                     lastStepTime = Time.time;
                 }
