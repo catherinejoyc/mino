@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -53980,6 +53980,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4161427974090384, guid: 81022f54f34681d4b9a5ff07148611fe,
     type: 2}
   m_PrefabInternal: {fileID: 1885891652}
+--- !u!1 &1886287330 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1958085047044498, guid: 93ad068101c5c334c8dda52bf643a671,
+    type: 2}
+  m_PrefabInternal: {fileID: 97380278}
+--- !u!114 &1886287331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886287330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b7a29683dad674c8b0b6fbf136e8ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SoundEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  sound:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+  m_soundType: 6
+  soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
+  stepIntervall: 0.4
 --- !u!1001 &1886499508
 Prefab:
   m_ObjectHideFlags: 0
