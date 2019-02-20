@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2676,92 +2676,92 @@ Prefab:
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: m_soundType
-      value: 11
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.ID
-      value: -1094541827
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[0]
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[1]
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[2]
-      value: 153
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[3]
-      value: 239
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[4]
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[5]
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[6]
-      value: 175
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[7]
-      value: 79
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[8]
-      value: 166
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[9]
-      value: 74
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[10]
-      value: 81
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[11]
-      value: 116
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[12]
-      value: 117
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[13]
-      value: 155
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[14]
-      value: 17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: sound.valueGuid.Array.data[15]
-      value: 107
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 81234484568519294, guid: 93ad068101c5c334c8dda52bf643a671, type: 2}
@@ -53980,32 +53980,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4161427974090384, guid: 81022f54f34681d4b9a5ff07148611fe,
     type: 2}
   m_PrefabInternal: {fileID: 1885891652}
---- !u!1 &1886287330 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1958085047044498, guid: 93ad068101c5c334c8dda52bf643a671,
-    type: 2}
-  m_PrefabInternal: {fileID: 97380278}
---- !u!114 &1886287331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1886287330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2b7a29683dad674c8b0b6fbf136e8ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SoundEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  sound:
-    ID: -1094541827
-    valueGuid: 050e99ef14c8af4fa64a5174759b116b
-  m_soundType: 6
-  soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
-  stepIntervall: 0.4
 --- !u!1001 &1886499508
 Prefab:
   m_ObjectHideFlags: 0

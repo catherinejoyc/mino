@@ -76,41 +76,9 @@ public class SoundScript : MonoBehaviour {
     //every few steps
     //m_SoundEvent.Invoke(this.transform.position); //Invoke Event with position of this Sound
 
-    public float stepIntervall;
-    float sneakingStepIntervall;
-    float lastStepTime;
-    private void Update()
-    {
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-        {
-            //play Footstep every few sec
-            if (Input.GetButton("Sneaking"))
-            {
-                if (Time.time > lastStepTime + sneakingStepIntervall)
-                {
-                    //[old] m_PlaySneakingFootstep.Invoke();
-                    //m_SoundEvent.Invoke(this.transform.position);
-                    PlaySound(this.transform.position);
-                    lastStepTime = Time.time;
-                }
-            }
-            else
-            {
-                if (Time.time > lastStepTime + stepIntervall)
-                {
-                    //[old] m_PlayRunningFootstep.Invoke();
-                    //m_SoundEvent.Invoke(this.transform.position);
-                    PlaySound(this.transform.position);
-                    lastStepTime = Time.time;
-                }
-            }
-        }
-    }
-
     //Aufruf im Script mit m_SoundEvent.Invoke(this.transform.position)
     protected void PlaySound(Vector3 pos)
     {
-        Debug.Log("Posting Sound @" + this.gameObject.name);
         sound.Post(this.gameObject);
         Debug.Log("Sound posted @" + this.gameObject.name);
     }
