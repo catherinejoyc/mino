@@ -218,8 +218,8 @@ MonoBehaviour:
         ObjectType: 7
   EventWwu:
   - Guid: '{1BA305F7-2B70-4C37-AABC-887CD819E702}'
-    m_lastTimePart2: -1999203530
-    m_lastTimePsrt1: 1392634397
+    m_lastTimePart2: -1999202552
+    m_lastTimePsrt1: -257137395
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -232,7 +232,19 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Hagi_footsteps_grass
         ObjectType: 3
-      maxAttenuation: 60
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 050e99ef14c8af4fa64a5174759b116b
+      ID: -1094541827
+      Name: Play_Player_Footsteps_walk_stone
+      Path: Default Work Unit\Play_Player_Footsteps_walk_stone
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Player_Footsteps_walk_stone
+        ObjectType: 3
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
   ExpandedItems:
