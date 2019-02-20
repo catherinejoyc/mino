@@ -2660,12 +2660,23 @@ Prefab:
     - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 82167825091415624, guid: 93ad068101c5c334c8dda52bf643a671,
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
+        type: 2}
+      propertyPath: soundValues
+      value: 
+      objectReference: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03,
+        type: 2}
+    - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
+        type: 2}
+      propertyPath: m_soundType
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 81234484568519294, guid: 93ad068101c5c334c8dda52bf643a671, type: 2}
@@ -30809,30 +30820,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4161427974090384, guid: 81022f54f34681d4b9a5ff07148611fe,
     type: 2}
   m_PrefabInternal: {fileID: 1038635185}
---- !u!1 &1039532425 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1958085047044498, guid: 93ad068101c5c334c8dda52bf643a671,
-    type: 2}
-  m_PrefabInternal: {fileID: 97380278}
---- !u!114 &1039532426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1039532425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2b7a29683dad674c8b0b6fbf136e8ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SoundEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  sound:
-    ID: 0
-    valueGuid: 00000000000000000000000000000000
-  m_soundType: 11
 --- !u!1001 &1040169856
 Prefab:
   m_ObjectHideFlags: 0

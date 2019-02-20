@@ -4,35 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerSoundScript : MonoBehaviour {
+public class PlayerSoundScript : SoundScript {
 
     PlayerController m_player;
     public float stepIntervall;
     float sneakingStepIntervall;
     float lastStepTime;
 
-    /* Laute Geräusche:
-     * Laufen
-     * Landen nach Springen
-     * ---
-     * Kisten/Leitern platzieren
-     * Rascheln im Gebüsch/andere Pflanzen)
-    */
-    public UnityEvent m_PlayRunningFootstep = new UnityEvent();
-   
-
-    /* Leise Geräusche:
-     * Schleichen
-     * ---
-     * Steinchen aufprallen (von der Decke und vom Spieler geworfen)
-    */
-    public UnityEvent m_PlaySneakingFootstep = new UnityEvent();
+    //[old]
+    //public UnityEvent m_PlayRunningFootstep = new UnityEvent();  
+    //public UnityEvent m_PlaySneakingFootstep = new UnityEvent();
 
     private void Awake()
     {
-        //Add PlayAudio to Events
-        m_PlayRunningFootstep.AddListener(PlayRunningFootstep);
-        m_PlaySneakingFootstep.AddListener(PlaySneakingFootstep);
+        //[old] Add PlayAudio to Events
+        //m_PlayRunningFootstep.AddListener(PlayRunningFootstep);
+        //m_PlaySneakingFootstep.AddListener(PlaySneakingFootstep);
 
         sneakingStepIntervall = stepIntervall * 2;
     }
@@ -46,7 +33,8 @@ public class PlayerSoundScript : MonoBehaviour {
             {
                 if (Time.time > lastStepTime + sneakingStepIntervall)
                 {
-                    m_PlaySneakingFootstep.Invoke();
+                    //[old] m_PlaySneakingFootstep.Invoke();
+                    m_SoundEvent.Invoke(this.transform.position);
 
                     lastStepTime = Time.time;
                 }
@@ -55,7 +43,8 @@ public class PlayerSoundScript : MonoBehaviour {
             {
                 if (Time.time > lastStepTime + stepIntervall)
                 {
-                    m_PlayRunningFootstep.Invoke();
+                    //[old] m_PlayRunningFootstep.Invoke();
+                    m_SoundEvent.Invoke(this.transform.position);
 
                     lastStepTime = Time.time;
                 }

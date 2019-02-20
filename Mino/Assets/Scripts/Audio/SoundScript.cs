@@ -15,12 +15,13 @@ public class SoundScript : MonoBehaviour {
     public AK.Wwise.Event sound;
     // Sound Type
     public SoundType m_soundType;
-    private SoundPriority soundValues;
+    public SoundPriority soundValues;
     //max hearing distance (for enemy)
-    float m_maxDistance;
+    protected float m_maxDistance;
 
     private void Start()
     {
+        print("SoundScript implementiert; " + this.gameObject.name);
         m_SoundEvent.AddListener(PlaySound);
 
         // set value to maxDistance
@@ -65,15 +66,17 @@ public class SoundScript : MonoBehaviour {
             case SoundType.UseChalk:
                 m_maxDistance = soundValues.useChalk;
                 break;
+            default:
+                Debug.LogError("No SoundType chosen! " + this.gameObject.name);
+                break;
         }
     }
 
-    private void Update()
-    {
-        //every few steps
-        m_SoundEvent.Invoke(this.transform.position); //Invoke Event with position of this Sound
-    }
+    //private void Update()
+    //every few steps
+    //m_SoundEvent.Invoke(this.transform.position); //Invoke Event with position of this Sound
 
+    //Aufruf im Script mit m_SoundEvent.Invoke(this.transform.position)
     void PlaySound(Vector3 pos)
     {
         sound.Post(this.gameObject);
