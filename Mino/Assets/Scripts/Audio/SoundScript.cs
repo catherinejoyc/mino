@@ -90,7 +90,7 @@ public class SoundScript : MonoBehaviour {
                 {
                     //[old] m_PlaySneakingFootstep.Invoke();
                     //m_SoundEvent.Invoke(this.transform.position);
-
+                    PlaySound(this.transform.position);
                     lastStepTime = Time.time;
                 }
             }
@@ -100,7 +100,7 @@ public class SoundScript : MonoBehaviour {
                 {
                     //[old] m_PlayRunningFootstep.Invoke();
                     //m_SoundEvent.Invoke(this.transform.position);
-
+                    PlaySound(this.transform.position);
                     lastStepTime = Time.time;
                 }
             }
