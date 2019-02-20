@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_HAGI_FOOTSTEPS_GRASS = 3562358968U;
+        static const AkUniqueID PLAY_INTERACTABLES_DRUCKPLATTE = 3364721325U;
         static const AkUniqueID PLAY_PLAYER_FOOTSTEPS_WALK_STONE = 3200425469U;
     } // namespace EVENTS
 
