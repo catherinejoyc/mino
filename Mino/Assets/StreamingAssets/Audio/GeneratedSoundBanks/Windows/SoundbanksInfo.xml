@@ -22,6 +22,7 @@
 			<Path>MinoSoundbankNew.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3562358968" Name="Play_Hagi_footsteps_grass" ObjectPath="\Events\Default Work Unit\Play_Hagi_footsteps_grass" MaxAttenuation="60.000000"/>
+				<Event Id="3200425469" Name="Play_Player_Footsteps_walk_stone" ObjectPath="\Events\Default Work Unit\Play_Player_Footsteps_walk_stone"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="414668148" Language="SFX">

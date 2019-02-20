@@ -1,5 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
+	3200425469	Play_Player_Footsteps_walk_stone			\Default Work Unit\Play_Player_Footsteps_walk_stone	
 	3562358968	Play_Hagi_footsteps_grass			\Default Work Unit\Play_Hagi_footsteps_grass	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	600266243	Wwise Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Footsteps\Player_Footsteps_walk_stone\testFootstep\Wwise Tone Generator	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	414668148	Hagi_footsteps_grass	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_stampfen_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footstep\Hagi_footsteps_grass		155820
