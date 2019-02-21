@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4431120344307724}
   - component: {fileID: 20265214578673180}
-  - component: {fileID: 81234484568519294}
   - component: {fileID: 114489500700611916}
   - component: {fileID: 114235077234724028}
   m_Layer: 2
@@ -178,20 +177,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!81 &81234484568519294
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1442035596090314}
-  m_Enabled: 0
 --- !u!82 &82167825091415624
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958085047044498}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f0e86016e766c504391c5f192e77734d, type: 3}
@@ -385,17 +377,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b394889e91e804842b08ef475a4f0cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SoundEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  sound:
+    ID: -1094541827
+    valueGuid: 050e99ef14c8af4fa64a5174759b116b
+  m_soundType: 6
+  soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   stepIntervall: 0.4
-  m_PlayRunningFootstep:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  m_PlaySneakingFootstep:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   audioSource: {fileID: 82167825091415624}
   footstepInBush: {fileID: 8300000, guid: 8acd11c20c479bd41841ee7d1a04fc97, type: 3}
   footstepOnStone: {fileID: 8300000, guid: f0e86016e766c504391c5f192e77734d, type: 3}

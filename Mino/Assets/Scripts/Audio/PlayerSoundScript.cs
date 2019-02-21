@@ -11,9 +11,13 @@ public class PlayerSoundScript : SoundScript {
     float sneakingStepIntervall;
     float lastStepTime;
 
-    //[old]
-    //public UnityEvent m_PlayRunningFootstep = new UnityEvent();  
-    //public UnityEvent m_PlaySneakingFootstep = new UnityEvent();
+    [Header("Volume, that is shown in UI (VolumeIndicator) [0-1]")]
+    //Volume (fake Volume, is just for gameplay)
+    float volume;
+    public float sneakingVolume;
+
+    //Switches
+    public AK.Wwise.Switch surfaceDirt;
 
     private void Awake()
     {
@@ -34,24 +38,24 @@ public class PlayerSoundScript : SoundScript {
             {
                 if (Time.time > lastStepTime + sneakingStepIntervall)
                 {
-                    //[old] m_PlaySneakingFootstep.Invoke();
                     m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
 
                     lastStepTime = Time.time;
+
+                    volume = 
                 }
             }
             else
             {
                 if (Time.time > lastStepTime + stepIntervall)
                 {
-                    //[old] m_PlayRunningFootstep.Invoke();
                     m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
 
                     lastStepTime = Time.time;
                 }
             }
 
-            UIManager.MyInstance.VolumeIndicator.value = audioSource.volume;
+            UIManager.MyInstance.VolumeIndicator.value = volume;
         }
         else
             UIManager.MyInstance.VolumeIndicator.value = 0;
@@ -106,6 +110,5 @@ public class PlayerSoundScript : SoundScript {
                 break;
 
         }
-
     }
 }
