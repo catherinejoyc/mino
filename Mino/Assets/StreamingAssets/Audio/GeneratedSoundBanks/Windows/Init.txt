@@ -27,8 +27,10 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	1379507219	AuxiliaryBus			\Default Work Unit\Master Audio Bus\AuxiliaryBus	
+	3454339767	AuxBus_reflect			\Default Work Unit\Master Audio Bus\AuxBus_reflect	
 
 Effect plug-ins	ID	Name	Type				Notes
+	243379636	Reflect	Wwise Reflect			
 	602546716	Room_Large	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes

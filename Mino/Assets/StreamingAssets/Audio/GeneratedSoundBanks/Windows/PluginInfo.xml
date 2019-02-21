@@ -3,6 +3,7 @@
 	<Plugins>
 		<Plugin Name="Wwise Tone Generator" ID="6684674" DLL="AkToneGen"/>
 		<Plugin Name="Wwise RoomVerb" ID="7733251" DLL="AkRoomVerb"/>
+		<Plugin Name="Wwise Reflect" ID="11206659" DLL="AkReflect"/>
 		<Plugin Name="System" ID="11403271" DLL="DefaultSink"/>
 		<Plugin Name="No Output" ID="11862023" DLL="DefaultSink"/>
 		<Plugin Name="Wwise Motion" ID="33226759" DLL="AkMotion"/>

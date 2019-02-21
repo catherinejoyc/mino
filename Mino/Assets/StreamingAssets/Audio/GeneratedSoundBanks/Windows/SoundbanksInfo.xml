@@ -21,7 +21,7 @@
 			<ShortName>MinoSoundbankNew</ShortName>
 			<Path>MinoSoundbankNew.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3562358968" Name="Play_Hagi_footsteps_grass" ObjectPath="\Events\Default Work Unit\Play_Hagi_footsteps_grass" MaxAttenuation="60.000000"/>
+				<Event Id="3562358968" Name="Play_Hagi_footsteps_grass" ObjectPath="\Events\Default Work Unit\Play_Hagi_footsteps_grass" MaxAttenuation="25.000000"/>
 				<Event Id="3364721325" Name="Play_Interactables_Druckplatte" ObjectPath="\Events\Default Work Unit\Play_Interactables_Druckplatte" MaxAttenuation="60.000000"/>
 				<Event Id="3200425469" Name="Play_Player_Footsteps_walk_stone" ObjectPath="\Events\Default Work Unit\Play_Player_Footsteps_walk_stone"/>
 			</IncludedEvents>
