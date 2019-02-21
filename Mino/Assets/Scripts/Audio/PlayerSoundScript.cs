@@ -4,6 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+enum Underground
+{
+    Stone,
+    Gravel,
+    Grass
+}
+
 public class PlayerSoundScript : SoundScript {
 
     PlayerController m_player;
@@ -11,20 +18,28 @@ public class PlayerSoundScript : SoundScript {
     float sneakingStepIntervall;
     float lastStepTime;
 
-    [Header("Volume, that is shown in UI (VolumeIndicator) [0-1]")]
+
     //Volume (fake Volume, is just for gameplay)
     float volume;
-    public float sneakingVolume;
+    Underground currUnderground;
 
-    //Switches
-    public AK.Wwise.Switch surfaceDirt;
+    [Header("Volume, that is shown in UI [0-1]")]
+    [Header("sneaking volumes")]
+    public float sVolume_Stone;
+    public float sVolume_Gravel;
+    public float sVolume_Grass;
+    [Header("running volumes")]
+    public float rVolume_Stone;
+    public float rVolume_Gravel;
+    public float rVolume_Grass;
+
+    [Header("Ak Switches")]//Switches
+    public AK.Wwise.Switch surfaceStone;
+    public AK.Wwise.Switch surfaceGravel;
+    public AK.Wwise.Switch surfaceGrass;
 
     private void Awake()
     {
-        //[old] Add PlayAudio to Events
-        //m_PlayRunningFootstep.AddListener(PlayRunningFootstep);
-        //m_PlaySneakingFootstep.AddListener(PlaySneakingFootstep);
-
         sneakingStepIntervall = stepIntervall * 2;
 
     }
@@ -38,17 +53,49 @@ public class PlayerSoundScript : SoundScript {
             {
                 if (Time.time > lastStepTime + sneakingStepIntervall)
                 {
+                    //Check underground and update volume
+                    switch(currUnderground)
+                    {
+                        case Underground.Stone:
+                            volume = sVolume_Stone;
+                            break;
+                        case Underground.Gravel:
+                            volume = sVolume_Gravel;
+                            break;
+                        case Underground.Grass:
+                            volume = sVolume_Grass;
+                            break;
+                        default:
+                            volume = sVolume_Stone;
+                            break;
+                    }
+
                     m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
 
                     lastStepTime = Time.time;
-
-                    volume = 
                 }
             }
             else
             {
                 if (Time.time > lastStepTime + stepIntervall)
                 {
+                    //Check underground and update volume
+                    switch (currUnderground)
+                    {
+                        case Underground.Stone:
+                            volume = rVolume_Stone;
+                            break;
+                        case Underground.Gravel:
+                            volume = rVolume_Gravel;
+                            break;
+                        case Underground.Grass:
+                            volume = rVolume_Grass;
+                            break;
+                        default:
+                            volume = rVolume_Stone;
+                            break;
+                    }
+
                     m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
 
                     lastStepTime = Time.time;
@@ -61,52 +108,26 @@ public class PlayerSoundScript : SoundScript {
             UIManager.MyInstance.VolumeIndicator.value = 0;
     }
 
-    public AudioSource audioSource;
-    public AudioClip footstepInBush;
-    public AudioClip footstepOnStone;
-    public AudioClip footstepOnGravel;
-    void PlayRunningFootstep()
-    {
-        if (audioSource.clip == footstepInBush)// if in bush
-        {
-            audioSource.volume = 1;
-            audioSource.Play();
-        }
-        else
-        {
-            audioSource.volume = 0.8f;
-            audioSource.Play();
-        }
-    }
-    void PlaySneakingFootstep()
-    {
-        if (audioSource.clip == footstepInBush)// if in bush
-        {
-            audioSource.volume = 0.8f;
-            audioSource.Play();
-        }
-        else
-        {
-            audioSource.volume = 0.5f;
-            audioSource.Play();
-        }
-    }
-
     public void ChangeFootstep(int underGround)
     {
+        //set switches and currUnderground
         switch(underGround)
         {
-            case 1:
-                audioSource.clip = footstepOnStone;
+            case 1: //stone
+                surfaceStone.SetValue(this.gameObject);
+                currUnderground = Underground.Stone;
                 break;
-            case 2:
-                audioSource.clip = footstepOnGravel;
+            case 2: //gravel
+                surfaceGravel.SetValue(this.gameObject);
+                currUnderground = Underground.Gravel;
                 break;
-            case 3:
-                audioSource.clip = footstepInBush;
+            case 3: //grass
+                surfaceGrass.SetValue(this.gameObject);
+                currUnderground = Underground.Grass;
                 break;
-            default:
-                audioSource.clip = footstepOnStone;
+            default: //stone
+                surfaceStone.SetValue(this.gameObject);
+                currUnderground = Underground.Stone;
                 break;
 
         }
