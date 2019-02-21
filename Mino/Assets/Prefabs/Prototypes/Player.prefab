@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958085047044498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.99, y: -1, z: 0}
+  m_LocalPosition: {x: 2, y: -1, z: 0}
   m_LocalScale: {x: 0.55733657, y: 0.55733657, z: 0.55733657}
   m_Children:
   - {fileID: 4431120344307724}
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958085047044498}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b394889e91e804842b08ef475a4f0cd4, type: 3}
   m_Name: 
@@ -387,10 +387,27 @@ MonoBehaviour:
   m_soundType: 6
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   stepIntervall: 0.4
-  audioSource: {fileID: 82167825091415624}
-  footstepInBush: {fileID: 8300000, guid: 8acd11c20c479bd41841ee7d1a04fc97, type: 3}
-  footstepOnStone: {fileID: 8300000, guid: f0e86016e766c504391c5f192e77734d, type: 3}
-  footstepOnGravel: {fileID: 8300000, guid: 1de5ea3f963b80a488ac186fba409228, type: 3}
+  sVolume_Stone: 0.25
+  sVolume_Gravel: 0.25
+  sVolume_Grass: 0.5
+  rVolume_Stone: 0.75
+  rVolume_Gravel: 0.75
+  rVolume_Grass: 0.9
+  surfaceStone:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+    groupGuid: 00000000000000000000000000000000
+    groupID: 0
+  surfaceGravel:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+    groupGuid: 00000000000000000000000000000000
+    groupID: 0
+  surfaceGrass:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+    groupGuid: 00000000000000000000000000000000
+    groupID: 0
 --- !u!136 &136502808631710814
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -32730,16 +32730,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
-        type: 2}
-      propertyPath: sneakingVolume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114537742088066832, guid: 93ad068101c5c334c8dda52bf643a671,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93ad068101c5c334c8dda52bf643a671, type: 2}
   m_IsPrefabAsset: 0

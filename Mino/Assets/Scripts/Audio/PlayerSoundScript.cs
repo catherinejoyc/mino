@@ -12,8 +12,6 @@ enum Underground
 }
 
 public class PlayerSoundScript : SoundScript {
-
-    PlayerController m_player;
     public float stepIntervall;
     float sneakingStepIntervall;
     float lastStepTime;
@@ -41,7 +39,6 @@ public class PlayerSoundScript : SoundScript {
     private void Awake()
     {
         sneakingStepIntervall = stepIntervall * 2;
-
     }
 
     private void Update()

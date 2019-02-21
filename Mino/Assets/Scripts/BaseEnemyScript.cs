@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum State
+{
+    Idle,
+    Alert,
+    Hunt,
+    Attack
+}
+
 public class BaseEnemyScript : MonoBehaviour {
 
     NavMeshAgent m_agent;
 
-    //States
-    enum State
-    {
-        Idle,
-        Alert,
-        Hunt,
-        Attack
-    }
-    State currState = State.Idle;
+    public State currState = State.Idle;
 
     //Idle
     public Transform[] points;
