@@ -202,8 +202,8 @@ MonoBehaviour:
         ObjectType: 1
   BankWwu:
   - Guid: '{3B973840-8C60-4F06-BCC6-7C8ABF33C1F5}'
-    m_lastTimePart2: -1999203506
-    m_lastTimePsrt1: 994135511
+    m_lastTimePart2: -1999202532
+    m_lastTimePsrt1: -1290483339
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -218,8 +218,8 @@ MonoBehaviour:
         ObjectType: 7
   EventWwu:
   - Guid: '{1BA305F7-2B70-4C37-AABC-887CD819E702}'
-    m_lastTimePart2: -1999202552
-    m_lastTimePsrt1: -257137395
+    m_lastTimePart2: -1999202532
+    m_lastTimePsrt1: -1458411654
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -231,6 +231,18 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Play_Hagi_footsteps_grass
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 9a12ec8fc371b941865f4eaf96f94b0e
+      ID: -930245971
+      Name: Play_Interactables_Druckplatte
+      Path: Default Work Unit\Play_Interactables_Druckplatte
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Interactables_Druckplatte
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -249,6 +261,8 @@ MonoBehaviour:
       minDuration: 0
   ExpandedItems:
   - /MinoWwise
+  - /MinoWwise/Events
+  - /MinoWwise/Events/Default Work Unit
   RtpcWwu:
   - Guid: '{F8AD97F4-2CDF-4753-A863-CAC1087CEEF7}'
     m_lastTimePart2: -1999205146
