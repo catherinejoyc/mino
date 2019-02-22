@@ -213,8 +213,8 @@ MonoBehaviour:
         ObjectType: 1
   BankWwu:
   - Guid: '{3B973840-8C60-4F06-BCC6-7C8ABF33C1F5}'
-    m_lastTimePart2: -1999202532
-    m_lastTimePsrt1: -1290483339
+    m_lastTimePart2: -1999202111
+    m_lastTimePsrt1: -2095404931
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -229,19 +229,55 @@ MonoBehaviour:
         ObjectType: 7
   EventWwu:
   - Guid: '{1BA305F7-2B70-4C37-AABC-887CD819E702}'
-    m_lastTimePart2: -1999202532
-    m_lastTimePsrt1: -1458411654
+    m_lastTimePart2: -1999202111
+    m_lastTimePsrt1: -2008556666
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
-    - Guid: 9267fd5a15d58d4b8e4e9aca44765676
-      ID: -732608328
-      Name: Play_Hagi_footsteps_grass
-      Path: Default Work Unit\Play_Hagi_footsteps_grass
+    - Guid: e71faa712a726341af86b44f9c3f688a
+      ID: 1165667864
+      Name: Play_Hagi_alert
+      Path: Default Work Unit\Play_Hagi_alert
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Hagi_footsteps_grass
+      - ElementName: Play_Hagi_alert
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 1a44df8601f0434e9c607e43f0a7d689
+      ID: 678858674
+      Name: Play_Hagi_attack
+      Path: Default Work Unit\Play_Hagi_attack
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_attack
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 2cacd73433d66846a278d3ca181908e1
+      ID: 537072619
+      Name: Play_Hagi_footsteps
+      Path: Default Work Unit\Play_Hagi_footsteps
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_footsteps
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: b8d4aa3740a7ea4dacb652e9a83664ac
+      ID: 2126903937
+      Name: Play_Hagi_hunt
+      Path: Default Work Unit\Play_Hagi_hunt
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_hunt
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -272,11 +308,11 @@ MonoBehaviour:
       minDuration: 0
   ExpandedItems:
   - /MinoWwise
-  - /MinoWwise/Auxiliary Busses
-  - /MinoWwise/Auxiliary Busses/Default Work Unit
-  - /MinoWwise/Auxiliary Busses/Default Work Unit/Master Audio Bus
   - /MinoWwise/Events
   - /MinoWwise/Events/Default Work Unit
+  - /MinoWwise/Switches
+  - /MinoWwise/Switches/Default Work Unit
+  - /MinoWwise/Switches/Default Work Unit/Groundtextures
   RtpcWwu:
   - Guid: '{F8AD97F4-2CDF-4753-A863-CAC1087CEEF7}'
     m_lastTimePart2: -1999205146
@@ -413,11 +449,36 @@ MonoBehaviour:
     List: []
   SwitchWwu:
   - Guid: '{A3CAE896-1DE5-4930-BCB8-A0D39DC6D124}'
-    m_lastTimePart2: -1999205146
-    m_lastTimePsrt1: 211641983
+    m_lastTimePart2: -1999202107
+    m_lastTimePsrt1: -1943959573
     ParentPhysicalPath: 
     PhysicalPath: Switches\Default Work Unit.wwu
-    List: []
+    List:
+    - Guid: f37bccc70b3f9e4eb7d0b5d77f96fb50
+      ID: 478119480
+      Name: Groundtextures
+      Path: Default Work Unit\Groundtextures
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Groundtextures
+        ObjectType: 11
+      ValueGuids:
+      - bytes: 7f87351818ab154e9b2ccc85760b7f8e
+      - bytes: eb693a0db5b907448d818aa45c70ddad
+      - bytes: e01f902eedaf494bb0e0525142304989
+      ValueIcons:
+      - ElementName: surfaceGrass
+        ObjectType: 10
+      - ElementName: surfaceGravel
+        ObjectType: 10
+      - ElementName: surfaceStone
+        ObjectType: 10
+      valueIDs: 88804eb26fa89c3b7df164a0
+      values:
+      - surfaceGrass
+      - surfaceGravel
+      - surfaceStone
   TriggerWwu:
   - Guid: '{A2E053D9-63EF-4E58-9258-C5CAF64E7D01}'
     m_lastTimePart2: -1999205146
