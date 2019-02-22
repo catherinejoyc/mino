@@ -22352,11 +22352,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4689219538827172, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.70710576
       objectReference: {fileID: 0}
     - target: {fileID: 4689219538827172, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.70710784
       objectReference: {fileID: 0}
     - target: {fileID: 4689219538827172, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
       propertyPath: m_RootOrder
@@ -22378,6 +22378,19 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0066299997
       objectReference: {fileID: 0}
+    - target: {fileID: 1898092215362574, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689219538827172, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: destroyedMesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 2689e78b21ae9e244abbadd197f12698, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
   m_IsPrefabAsset: 0

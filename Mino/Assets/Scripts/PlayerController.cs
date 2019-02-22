@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour, IHittable {
 
     //interact
     public GameObject currentObjectHolding = null;
+    bool isPushingBox = false;
 
     //toxic water and ladders
     public GameObject waterBorder = null;
@@ -97,25 +98,27 @@ public class PlayerController : MonoBehaviour, IHittable {
         #endregion
 
         #region Interact
-        if (/*Input.GetMouseButtonDown(0) || */Input.GetButtonDown("Fire1"))
+        if (/*Input.GetMouseButtonDown(0) || */Input.GetButton("Fire1"))
         {
             // currently empty-handed
             if (currentObjectHolding == null)
             {
-                PickUp();
+                //[old] PickUp();
+                Push();
             }
-            else
-            {
-                Place();
-            }
+        }
+        else if (currentObjectHolding != null)
+        {
+            //[old] Place();
+            StopPushing();
         }
 
-        // hold object in front of player
-        if (currentObjectHolding != null)
-        {
-            currentObjectHolding.transform.position = Vector3.MoveTowards(currentObjectHolding.transform.position, transform.position + transform.forward * 1.5f, Time.deltaTime * 5f);
-            currentObjectHolding.transform.rotation = this.transform.rotation;
-        }
+        //// hold object in front of player
+        //if (currentObjectHolding != null)
+        //{
+        //    currentObjectHolding.transform.position = Vector3.MoveTowards(currentObjectHolding.transform.position, transform.position + transform.forward * 1.5f, Time.deltaTime * 5f);
+        //    currentObjectHolding.transform.rotation = this.transform.rotation;
+        //}
         #endregion
     }
 
@@ -134,7 +137,7 @@ public class PlayerController : MonoBehaviour, IHittable {
         }
 
         //Run and sneak
-        if (Input.GetButton("Sneaking"))
+        if (Input.GetButton("Sneaking") || isPushingBox)
             m_rb.AddRelativeForce(m_playerInput * sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
         else
             m_rb.AddRelativeForce(m_playerInput * walkingSpeed * Time.deltaTime, ForceMode.Impulse);
@@ -156,20 +159,20 @@ public class PlayerController : MonoBehaviour, IHittable {
 
     private void OnTriggerEnter(Collider other)
     {
-        //Toxic water and ladders
-        if (other.CompareTag("WaterBorder"))
-        {
-            waterBorder = other.gameObject;
-        }
+        ////Toxic water and ladders
+        //if (other.CompareTag("WaterBorder"))
+        //{
+        //    waterBorder = other.gameObject;
+        //}
     }
 
     private void OnTriggerExit(Collider other)
     {
-        //Toxic water and ladders
-        if (other.CompareTag("WaterBorder"))
-        {
-            waterBorder = null;
-        }
+        ////Toxic water and ladders
+        //if (other.CompareTag("WaterBorder"))
+        //{
+        //    waterBorder = null;
+        //}
     }
 
     #region Shoot Stone
@@ -189,35 +192,75 @@ public class PlayerController : MonoBehaviour, IHittable {
     #endregion
 
     #region Interact
-    void PickUp()
+    void Push()
     {
+        //push with hands against box (animate)
+
+        //push/pull box in facing direction
         RaycastHit hit;
-        if (Physics.Raycast(transform.position + transform.up * 0.5f, m_cam.transform.TransformVector(Vector3.forward), out hit, maxDistanceToWall))
+        if (Physics.Raycast(transform.position /*+ transform.up * 0.5f*/, m_cam.transform.TransformVector(Vector3.forward), out hit, 0.5f))
         {
-            // pick up
-            if (hit.collider.gameObject.CompareTag("Ladder") || hit.collider.gameObject.CompareTag("Box"))
+            if (hit.collider.gameObject.CompareTag("Box"))
             {
                 currentObjectHolding = hit.collider.gameObject;
 
-                //currentObjectHolding.SetActive(false);
-
-                // hold object in hand
+                //parent box to player
                 currentObjectHolding.transform.parent = this.transform;
-                currentObjectHolding.GetComponent<Rigidbody>().useGravity = false;                
+                //currentObjectHolding.GetComponent<Rigidbody>().isKinematic = true;
+                currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+                //slow player
+                isPushingBox = true;
             }
         }
+
+        //PlayEvent
     }
 
-    void Place()
+    void StopPushing()
     {
-        // Place box infront of you
-        //currentObjectHolding.transform.position = transform.position + transform.forward;
-        //currentObjectHolding.SetActive(true);
+        //hide hands again (animate)
 
+        //de-parent box
+        //currentObjectHolding.GetComponent<Rigidbody>().isKinematic = false;
+        currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         currentObjectHolding.transform.parent = null;
-        currentObjectHolding.GetComponent<Rigidbody>().useGravity = true;
         currentObjectHolding = null;
+        //de-slow player
+        isPushingBox = false;
+
+        //StopEvent
     }
+
+    #region [old] pick up box
+    //void PickUp()
+    //{
+    //    RaycastHit hit;
+    //    if (Physics.Raycast(transform.position + transform.up * 0.5f, m_cam.transform.TransformVector(Vector3.forward), out hit, maxDistanceToWall))
+    //    {
+    //        // pick up
+    //        if (hit.collider.gameObject.CompareTag("Ladder") || hit.collider.gameObject.CompareTag("Box"))
+    //        {
+    //            currentObjectHolding = hit.collider.gameObject;
+
+    //            //currentObjectHolding.SetActive(false);
+
+    //            // hold object in hand
+    //            currentObjectHolding.transform.parent = this.transform;
+    //            currentObjectHolding.GetComponent<Rigidbody>().useGravity = false;                
+    //        }
+    //    }
+    //}
+    //void Place()
+    //{
+    //    // Place box infront of you
+    //    //currentObjectHolding.transform.position = transform.position + transform.forward;
+    //    //currentObjectHolding.SetActive(true);
+
+    //    currentObjectHolding.transform.parent = null;
+    //    currentObjectHolding.GetComponent<Rigidbody>().useGravity = true;
+    //    currentObjectHolding = null;
+    //}
+    #endregion
     #endregion
 
     public void ReactToHit()
