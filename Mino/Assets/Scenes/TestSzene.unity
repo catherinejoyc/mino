@@ -778,8 +778,8 @@ MonoBehaviour:
     valueGuid: 7a1969754557bd41a25a52b3b2d31348
     name: MinoSoundbankNew
   myEvent:
-    ID: 537072619
-    valueGuid: 2cacd73433d66846a278d3ca181908e1
+    ID: 86685327
+    valueGuid: af884fea453a9240b93484ec8ad9fccf
 --- !u!114 &435695012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1112,12 +1112,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   sound:
-    ID: 537072619
-    valueGuid: 2cacd73433d66846a278d3ca181908e1
+    ID: 86685327
+    valueGuid: af884fea453a9240b93484ec8ad9fccf
   m_soundType: 0
   soundValues: {fileID: 0}
   m_enemy: {fileID: 1036750891}
-  stepIntervall: 2
+  stepIntervall: 1
   surfaceStone:
     ID: -1303478136
     valueGuid: 7f87351818ab154e9b2ccc85760b7f8e
