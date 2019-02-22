@@ -22,10 +22,8 @@ public class PlayerSoundScript : SoundScript {
     Underground currUnderground;
 
     [Header("Volume, that is shown in UI [0-1]")]
-    [Header("sneaking volumes")]
-    public float sVolume_Stone;
-    public float sVolume_Gravel;
-    public float sVolume_Grass;
+    [Header("sneaking volume")]
+    public float sVolume;
     [Header("running volumes")]
     public float rVolume_Stone;
     public float rVolume_Gravel;
@@ -50,22 +48,8 @@ public class PlayerSoundScript : SoundScript {
             {
                 if (Time.time > lastStepTime + sneakingStepIntervall)
                 {
-                    //Check underground and update volume
-                    switch(currUnderground)
-                    {
-                        case Underground.Stone:
-                            volume = sVolume_Stone;
-                            break;
-                        case Underground.Gravel:
-                            volume = sVolume_Gravel;
-                            break;
-                        case Underground.Grass:
-                            volume = sVolume_Grass;
-                            break;
-                        default:
-                            volume = sVolume_Stone;
-                            break;
-                    }
+                    //update volume
+                    volume = sVolume;
 
                     m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressurePlate : MonoBehaviour {
+public class PressurePlate : SoundScript {
 
     public PressureDoor door;
 
@@ -21,6 +21,9 @@ public class PressurePlate : MonoBehaviour {
             //start secParticleSys
             if (particleScript != null)
                 particleScript.StartSecParticleSys();
+
+            //Post Sound PlayEvent
+            m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
         }
     }
 

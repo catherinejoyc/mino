@@ -74,9 +74,9 @@ public class SoundScript : MonoBehaviour {
 
     //private void Update()
     //every few steps
-    //m_SoundEvent.Invoke(this.transform.position); //Invoke Event with position of this Sound
+    //m_SoundEvent.Invoke(this.transform.position, m_maxDistance); //Invoke Event with position of this Sound and maxDistance
 
-    //Aufruf im Script mit m_SoundEvent.Invoke(this.transform.position)
+    //Aufruf im Script mit m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
     protected void PlaySound(Vector3 pos, float maxDistance)
     {
         sound.Post(this.gameObject);

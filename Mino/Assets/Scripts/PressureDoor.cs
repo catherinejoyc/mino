@@ -2,10 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressureDoor : MonoBehaviour {
+public class PressureDoor : SoundScript {
 
-    public float m_speed = 1;
-    public float m_moveUp = 4;
+    //Stop Events
+    public AK.Wwise.Event stopEvent;
+    //Switch (Open and Closing)
+    public AK.Wwise.Switch stateOpening;
+    public AK.Wwise.Switch stateClosing;
+
+
+    public float m_speed;
+    public float m_moveUp;
 
     Vector3 m_openStatePos;
     Vector3 m_closedStatePos;
@@ -29,18 +36,36 @@ public class PressureDoor : MonoBehaviour {
     void Update()
     {
         if (m_isOpening)
+        {
             transform.position = Vector3.MoveTowards(transform.position, m_openStatePos, m_speed * Time.deltaTime);
+
+            if (transform.position == m_openStatePos) //if already open
+                stopEvent.Post(this.gameObject);
+        }
         else
+        {
             transform.position = Vector3.MoveTowards(transform.position, m_closedStatePos, m_speed * Time.deltaTime);
+
+            if (transform.position == m_closedStatePos) //if already closed
+                stopEvent.Post(this.gameObject);
+        }
     }
 
     public void UnlockDoor()
     {
         m_isOpening = true;
+        //Set Switch on opening
+        stateOpening.SetValue(this.gameObject);
+        //post Sound Event
+        m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
     }
 
     public void CloseDoor()
     {
         m_isOpening = false;
+        //Set Switch on closing
+        stateClosing.SetValue(this.gameObject);
+        //post Sound Event
+        m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
     }
 }

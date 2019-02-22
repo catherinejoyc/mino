@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class KeyDoorBehaviour : MonoBehaviour {
+public class KeyDoorBehaviour : SoundScript {
 
-    public float m_speed = 1;
-    public float m_moveUp = 4;
+    public float m_speed;
+    public float m_moveUp;
 
     Vector3 m_openStatePos;
 
@@ -25,10 +25,14 @@ public class KeyDoorBehaviour : MonoBehaviour {
         //m_checkpoint = new Vector3(transform.position.x, 0.5f, transform.position.z);
     }
 	
-	// Update is called once per frame
 	void Update () {
         if (m_isOpening)
+        {
             transform.position = Vector3.MoveTowards(transform.position, m_openStatePos, m_speed * Time.deltaTime);
+
+            //post Sound Event
+            m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

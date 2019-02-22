@@ -210,32 +210,13 @@ public class PlayerController : MonoBehaviour, IHittable {
 
     void Place()
     {
-        // ladder + water
-        if (currentObjectHolding.CompareTag("Ladder"))
-        {
-            // Place ladder over river if possible
-            if (waterBorder != null)
-            {
-                GameObject ladder = waterBorder.GetComponent<WaterBorderBehaviour>().ActivateLadder();
+        // Place box infront of you
+        //currentObjectHolding.transform.position = transform.position + transform.forward;
+        //currentObjectHolding.SetActive(true);
 
-                // destroy ladder in hand
-                currentObjectHolding.transform.parent = null;
-                currentObjectHolding.SetActive(false);
-                currentObjectHolding = null;
-            }
-            else
-                Debug.Log("Can't place ladder here!");
-        }
-        else
-        {
-            // Place box infront of you
-            //currentObjectHolding.transform.position = transform.position + transform.forward;
-            //currentObjectHolding.SetActive(true);
-
-            currentObjectHolding.transform.parent = null;
-            currentObjectHolding.GetComponent<Rigidbody>().useGravity = true;
-            currentObjectHolding = null;
-        }
+        currentObjectHolding.transform.parent = null;
+        currentObjectHolding.GetComponent<Rigidbody>().useGravity = true;
+        currentObjectHolding = null;
     }
     #endregion
 

@@ -149,7 +149,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1133983674772468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5542636, y: -6.153, z: 9.555}
+  m_LocalPosition: {x: 0.728323, y: -4.6044054, z: 11.008098}
   m_LocalScale: {x: 1.2241, y: 0.061205, z: 1.2241}
   m_Children:
   - {fileID: 4782918375581576}
@@ -176,7 +176,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1666383252535528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.0542636, y: 4.168613, z: -1.5794525}
+  m_LocalPosition: {x: 17.271677, y: 2.6044054, z: 0.991902}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4923364144152638}
@@ -219,13 +219,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1664162191063334}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.5542636, y: -4.668613, z: 6.5794525}
-  m_LocalScale: {x: 2.0492, y: 3.04436, z: 0.52741}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.63, y: -3.1044054, z: 4.2}
+  m_LocalScale: {x: 1.8099066, y: 2.98072, z: 0.37302}
   m_Children: []
   m_Father: {fileID: 4624666300654132}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!23 &23088782140980556
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -373,6 +373,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267a9b564c1ee794d8abd330a3129d8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SoundEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  sound:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+  m_soundType: 3
+  soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   door: {fileID: 114150176923379766}
   particleScript: {fileID: 114821236654898016}
 --- !u!198 &198676162127700326
