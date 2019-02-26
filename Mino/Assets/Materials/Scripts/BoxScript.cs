@@ -10,7 +10,7 @@ public class BoxScript : MonoBehaviour, IHittable {
     Renderer m_renderer;
     MeshFilter m_meshFilter;
     public Material scratchedMat;
-    public Mesh destroyedMesh;
+    public GameObject destroyedBox;
 
     private void Start()
     {
@@ -26,7 +26,14 @@ public class BoxScript : MonoBehaviour, IHittable {
             //particle system
 
             //change mesh
-            m_meshFilter.mesh = destroyedMesh;
+            Instantiate(destroyedBox, this.transform);
+            m_renderer.enabled = false;
+            //change collider
+            BoxCollider b = this.GetComponent<Collider>() as BoxCollider;
+            if (b != null)
+            {
+                b.size = new Vector3(0.1f, 10f, 10f);
+            }
 
             //Destroy(this.gameObject);
         }
