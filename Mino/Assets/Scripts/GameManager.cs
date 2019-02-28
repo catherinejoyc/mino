@@ -43,6 +43,19 @@ public class GameManager : MonoBehaviour {
             int lvl = SceneManager.GetActiveScene().buildIndex;
             LoadLevel(lvl);
         }
+
+        // --- Pause
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
     }
 
     public void LoadLevel(int lvlIndex) //Event draus machen?
@@ -52,5 +65,32 @@ public class GameManager : MonoBehaviour {
 
         //Load Level
         SceneManager.LoadScene(lvlIndex);
+    }
+
+    // --- Pause
+    public bool gameIsPaused = false;
+
+    public void Pause()
+    {
+        UIManager.MyInstance.ingameUI.SetActive(false);
+        UIManager.MyInstance.pauseUI.SetActive(true);
+
+        Cursor.visible = true;
+
+        Time.timeScale = 0f;
+        gameIsPaused = true;
+    }
+
+    public void Resume()
+    {
+        print("RESUME");
+
+        UIManager.MyInstance.ingameUI.SetActive(true);
+        UIManager.MyInstance.pauseUI.SetActive(false);
+
+        Cursor.visible = false;
+
+        Time.timeScale = 1f;
+        gameIsPaused = false;
     }
 }
