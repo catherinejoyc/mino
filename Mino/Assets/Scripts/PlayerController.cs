@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour, IHittable {
 
     //interact
     public GameObject currentObjectHolding = null;
-    bool isPushingBox = false;
+    public bool isPushingBox = false;
 
     //toxic water and ladders
     public GameObject waterBorder = null;
@@ -67,14 +67,17 @@ public class PlayerController : MonoBehaviour, IHittable {
         float alpha = -(Mathf.Acos(gk) * Mathf.Rad2Deg - 90);
 
         //Look around
-        m_go.transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime);
-
-        float mouseInput = Input.GetAxis("Mouse Y");
-
-        float maxAngle = 20;
-        if ((mouseInput > 0 && alpha < maxAngle) || (mouseInput < 0 && alpha > -maxAngle))
+        if (!isPushingBox) //if not pushing something
         {
-            m_cam.transform.Rotate(Vector3.right * -mouseInput * cameraSensitivity * Time.deltaTime);
+            m_go.transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime);
+
+            float mouseInput = Input.GetAxis("Mouse Y");
+
+            float maxAngle = 20;
+            if ((mouseInput > 0 && alpha < maxAngle) || (mouseInput < 0 && alpha > -maxAngle))
+            {
+                m_cam.transform.Rotate(Vector3.right * -mouseInput * cameraSensitivity * Time.deltaTime);
+            }
         }
         #endregion
 
@@ -204,8 +207,9 @@ public class PlayerController : MonoBehaviour, IHittable {
             {
                 currentObjectHolding = hit.collider.gameObject;
 
-                //parent box to player
+                //parent box to player and hold it in front of you
                 currentObjectHolding.transform.parent = this.transform;
+                currentObjectHolding.transform.Translate(0, 0, 0.2f * Time.deltaTime, this.gameObject.transform);
                 //currentObjectHolding.GetComponent<Rigidbody>().isKinematic = true;
                 currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
                 //slow player

@@ -16,6 +16,8 @@ public class PlayerSoundScript : SoundScript {
     float sneakingStepIntervall;
     float lastStepTime;
 
+    //PlayerController
+    PlayerController player;
 
     //Volume (fake Volume, is just for gameplay)
     float volume;
@@ -37,6 +39,7 @@ public class PlayerSoundScript : SoundScript {
     private void Awake()
     {
         sneakingStepIntervall = stepIntervall * 2;
+        player = GetComponent<PlayerController>();
     }
 
     private void Update()
@@ -82,11 +85,14 @@ public class PlayerSoundScript : SoundScript {
                     lastStepTime = Time.time;
                 }
             }
-
-            UIManager.MyInstance.VolumeIndicator.value = volume;
+            if (!player.isPushingBox)
+                UIManager.MyInstance.VolumeIndicator.value = volume;
         }
         else
-            UIManager.MyInstance.VolumeIndicator.value = 0;
+        {
+            if (!player.isPushingBox)
+                UIManager.MyInstance.VolumeIndicator.value = 0;
+        }
     }
 
     //public void ChangeFootstep(int underGround)

@@ -12,6 +12,8 @@ public class BoxScript : SoundScript, IHittable {
     public AK.Wwise.Event ScratchPlayEvent;
     public AK.Wwise.Event DestroyedPlayEvent;
 
+    public float movingBoxVol;
+
     //Materials
     Renderer m_renderer;
     MeshFilter m_meshFilter;
@@ -26,10 +28,14 @@ public class BoxScript : SoundScript, IHittable {
 
     private void Update()
     {
-        if (GetComponentInParent<PlayerController>() != null && !isMoving) //check if player is currently holding box
+        if (GetComponentInParent<PlayerController>() != null) //check if player is currently holding box
         {
-            StartMovingSound();
-            isMoving = true;
+            if (!isMoving)
+            {
+                StartMovingSound();
+                isMoving = true;
+            }
+            UIManager.MyInstance.VolumeIndicator.value = movingBoxVol;
         }
         else if (isMoving)
         {
