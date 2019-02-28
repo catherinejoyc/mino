@@ -80,6 +80,6 @@ public class SoundScript : MonoBehaviour {
     protected void PlaySound(Vector3 pos, float maxDistance)
     {
         sound.Post(this.gameObject);
-        Debug.Log("Sound posted @" + this.gameObject.name);
+        //Debug.Log("Sound posted @" + this.gameObject.name);
     }
 }

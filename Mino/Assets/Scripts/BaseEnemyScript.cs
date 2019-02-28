@@ -58,16 +58,16 @@ public class BaseEnemyScript : MonoBehaviour {
                 break;
             case State.Alert:
                 //Go back to Idle after alertStateDuration
-                Debug.Log("ALERT");
+                //Debug.Log("ALERT");
                 if (alertStartTime + alertStateDuration <= Time.time)
                 {
                     UpdateIdleState();
-                    Debug.Log("Nothing there...");
+                    //Debug.Log("Nothing there...");
                 }
                 break;
             case State.Hunt:
                 // if close to the current one (and no collision detected)
-                Debug.Log("Hunting...");
+                //Debug.Log("Hunting...");
                 if (!m_agent.pathPending && m_agent.remainingDistance < 0.5f/* && m_idle*/)
                 {
                     Attack();

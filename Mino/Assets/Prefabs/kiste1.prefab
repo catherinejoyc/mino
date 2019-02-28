@@ -124,5 +124,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1a8c9d9287ff74dbd36c623349928c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SoundEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  sound:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+  m_soundType: 1
+  soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
+  stopSoundEvent:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+  ScratchPlayEvent:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+  DestroyedPlayEvent:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
   scratchedMat: {fileID: 2100000, guid: 9b114695a53d1194981357897de16c63, type: 2}
-  destroyedMesh: {fileID: 4300000, guid: 2689e78b21ae9e244abbadd197f12698, type: 3}
+  destroyedBox: {fileID: 1123389731954516, guid: 1c261664ea44ae9409bf41b1748232d5,
+    type: 2}
