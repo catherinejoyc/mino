@@ -184,8 +184,8 @@ MonoBehaviour:
         ObjectType: 15
   AuxBusWwu:
   - Guid: '{0B42F357-7073-4512-85BF-905D310E6DE3}'
-    m_lastTimePart2: -1999202262
-    m_lastTimePsrt1: 320469875
+    m_lastTimePart2: -1999200895
+    m_lastTimePsrt1: -975687344
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List:
@@ -213,8 +213,8 @@ MonoBehaviour:
         ObjectType: 1
   BankWwu:
   - Guid: '{3B973840-8C60-4F06-BCC6-7C8ABF33C1F5}'
-    m_lastTimePart2: -1999202111
-    m_lastTimePsrt1: -2095404931
+    m_lastTimePart2: -1999202098
+    m_lastTimePsrt1: -1682878391
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -229,8 +229,8 @@ MonoBehaviour:
         ObjectType: 7
   EventWwu:
   - Guid: '{1BA305F7-2B70-4C37-AABC-887CD819E702}'
-    m_lastTimePart2: -1999202111
-    m_lastTimePsrt1: -2008556666
+    m_lastTimePart2: -1999200903
+    m_lastTimePsrt1: -2008066835
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -258,14 +258,14 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - Guid: 2cacd73433d66846a278d3ca181908e1
-      ID: 537072619
-      Name: Play_Hagi_footsteps
-      Path: Default Work Unit\Play_Hagi_footsteps
+    - Guid: af884fea453a9240b93484ec8ad9fccf
+      ID: 86685327
+      Name: Play_Hagi_footstepsNew
+      Path: Default Work Unit\Play_Hagi_footstepsNew
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Hagi_footsteps
+      - ElementName: Play_Hagi_footstepsNew
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -291,6 +291,18 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Interactables_Druckplatte
         ObjectType: 3
+      maxAttenuation: 60
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 3b20cf6e7c15e145b194b5f0b2570974
+      ID: 98439365
+      Name: Play_Player_footsteps
+      Path: Default Work Unit\Play_Player_footsteps
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Player_footsteps
+        ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -308,11 +320,9 @@ MonoBehaviour:
       minDuration: 0
   ExpandedItems:
   - /MinoWwise
-  - /MinoWwise/Events
-  - /MinoWwise/Events/Default Work Unit
-  - /MinoWwise/Switches
-  - /MinoWwise/Switches/Default Work Unit
-  - /MinoWwise/Switches/Default Work Unit/Groundtextures
+  - /MinoWwise/Auxiliary Busses
+  - /MinoWwise/Auxiliary Busses/Default Work Unit
+  - /MinoWwise/Auxiliary Busses/Default Work Unit/Master Audio Bus
   RtpcWwu:
   - Guid: '{F8AD97F4-2CDF-4753-A863-CAC1087CEEF7}'
     m_lastTimePart2: -1999205146
