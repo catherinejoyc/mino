@@ -89,28 +89,28 @@ public class PlayerSoundScript : SoundScript {
             UIManager.MyInstance.VolumeIndicator.value = 0;
     }
 
-    public void ChangeFootstep(int underGround)
-    {
-        //set switches and currUnderground
-        switch(underGround)
-        {
-            case 1: //stone
-                surfaceStone.SetValue(this.gameObject);
-                currUnderground = Underground.Stone;
-                break;
-            case 2: //gravel
-                surfaceGravel.SetValue(this.gameObject);
-                currUnderground = Underground.Gravel;
-                break;
-            case 3: //grass
-                surfaceGrass.SetValue(this.gameObject);
-                currUnderground = Underground.Grass;
-                break;
-            default: //stone
-                surfaceStone.SetValue(this.gameObject);
-                currUnderground = Underground.Stone;
-                break;
+    //public void ChangeFootstep(int underGround)
+    //{
+    //    //set switches and currUnderground
+    //    switch(underGround)
+    //    {
+    //        case 1: //stone
+    //            surfaceStone.SetValue(this.gameObject);
+    //            currUnderground = Underground.Stone;
+    //            break;
+    //        case 2: //gravel
+    //            surfaceGravel.SetValue(this.gameObject);
+    //            currUnderground = Underground.Gravel;
+    //            break;
+    //        case 3: //grass
+    //            surfaceGrass.SetValue(this.gameObject);
+    //            currUnderground = Underground.Grass;
+    //            break;
+    //        default: //stone
+    //            surfaceStone.SetValue(this.gameObject);
+    //            currUnderground = Underground.Stone;
+    //            break;
 
-        }
-    }
+    //    }
+    //}
 }

@@ -44,7 +44,7 @@ public class BoxScript : SoundScript, IHittable {
         if (damaged)
         {
             //play destroyed sound
-            m_soundType = SoundType.DestroyedBox;
+            ChangeSoundType(SoundType.DestroyedBox);
             DestroyedPlayEvent.Post(this.gameObject);
 
             //particle system (perfomance issues)
@@ -64,7 +64,7 @@ public class BoxScript : SoundScript, IHittable {
         else
         {
             //play scratched sound
-            m_soundType = SoundType.DestroyedBox;
+            ChangeSoundType(SoundType.DestroyedBox);
             ScratchPlayEvent.Post(this.gameObject);
 
             //Change Normal Map + damaged
@@ -76,7 +76,7 @@ public class BoxScript : SoundScript, IHittable {
 
     public void StartMovingSound()
     {
-        m_soundType = SoundType.MovingBox;
+        ChangeSoundType(SoundType.MovingBox);
         m_SoundEvent.Invoke(transform.position, m_maxDistance);
     }
 }

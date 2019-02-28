@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 54632116744754834}
   - component: {fileID: 114537742088066832}
   - component: {fileID: 114205848596395974}
-  - component: {fileID: 82167825091415624}
   - component: {fileID: 114276471924618896}
   m_Layer: 10
   m_Name: Player
@@ -177,101 +176,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!82 &82167825091415624
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1958085047044498}
-  m_Enabled: 0
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f0e86016e766c504391c5f192e77734d, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &114205848596395974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -387,25 +291,25 @@ MonoBehaviour:
   m_soundType: 6
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   stepIntervall: 0.4
-  sVolume: 0
+  sVolume: 0.1
   rVolume_Stone: 0.75
   rVolume_Gravel: 0.75
   rVolume_Grass: 0.9
   surfaceStone:
-    ID: 0
-    valueGuid: 00000000000000000000000000000000
-    groupGuid: 00000000000000000000000000000000
-    groupID: 0
+    ID: -1603997315
+    valueGuid: e01f902eedaf494bb0e0525142304989
+    groupGuid: f37bccc70b3f9e4eb7d0b5d77f96fb50
+    groupID: 478119480
   surfaceGravel:
-    ID: 0
-    valueGuid: 00000000000000000000000000000000
-    groupGuid: 00000000000000000000000000000000
-    groupID: 0
+    ID: 1000122479
+    valueGuid: eb693a0db5b907448d818aa45c70ddad
+    groupGuid: f37bccc70b3f9e4eb7d0b5d77f96fb50
+    groupID: 478119480
   surfaceGrass:
-    ID: 0
-    valueGuid: 00000000000000000000000000000000
-    groupGuid: 00000000000000000000000000000000
-    groupID: 0
+    ID: -1303478136
+    valueGuid: 7f87351818ab154e9b2ccc85760b7f8e
+    groupGuid: f37bccc70b3f9e4eb7d0b5d77f96fb50
+    groupID: 478119480
 --- !u!136 &136502808631710814
 CapsuleCollider:
   m_ObjectHideFlags: 1
