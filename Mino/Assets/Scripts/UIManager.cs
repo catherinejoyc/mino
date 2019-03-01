@@ -39,4 +39,8 @@ public class UIManager : MonoBehaviour {
 
     //PAUSE
     public GameObject pauseUI;
+
+    //DEATH
+    public GameObject deathScreen;
+    
 }

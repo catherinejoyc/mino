@@ -271,9 +271,23 @@ public class PlayerController : MonoBehaviour, IHittable {
     {
         //Spawn on last checkpoint
         //transform.position = m_lastCheckpoint;
+        GameManager.MyInstance.Pause();
 
-        //Reset level
-        GameManager.MyInstance.LoadLevel(SceneManager.GetActiveScene().buildIndex);
+        //Death Screen
+        GameManager.MyInstance.dead = true;
+
+        Cursor.lockState = CursorLockMode.Confined;
+
+        UIManager.MyInstance.ingameUI.SetActive(false);
+        UIManager.MyInstance.pauseUI.SetActive(false);
+        UIManager.MyInstance.deathScreen.SetActive(true);
+
+        Cursor.visible = true;
+
+        Time.timeScale = 0f;
+        GameManager.MyInstance.gameIsPaused = true;
+
+        print(Cursor.lockState);
     }
 
     //public void SetCheckpoint(Vector3 _pos)
