@@ -126,7 +126,10 @@ public class PlayerController : MonoBehaviour, IHittable {
     }
 
     void FixedUpdate () {
-        m_playerInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (isPushingBox) //if pushing a box, only move forward and backwards
+            m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
+        else
+            m_playerInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         //Groundcheck
         if (Physics.CheckSphere(new Vector3(m_rb.position.x, m_rb.position.y - 0.65f,m_rb.transform.position.z), 0.45f, groundLayer))

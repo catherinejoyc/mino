@@ -112,7 +112,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: acfffb64bdab15a4cb6355378b28ef7b, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: a079a767248aaab41ba1d9ced31b82a7, type: 2}
 --- !u!1 &1923117 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5f5fe5d22a8a80b4585270ad5111ef6d,
@@ -3509,18 +3509,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 24
       objectReference: {fileID: 0}
-    - target: {fileID: 4147987089802702, guid: 0dadb7f4caaba8c47acc44e58270f75a, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.76907784
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147987089802702, guid: 0dadb7f4caaba8c47acc44e58270f75a, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147987089802702, guid: 0dadb7f4caaba8c47acc44e58270f75a, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.67505
-      objectReference: {fileID: 0}
     - target: {fileID: 1814788689962004, guid: 0dadb7f4caaba8c47acc44e58270f75a, type: 2}
       propertyPath: m_Name
       value: Gitterwand (1)
@@ -4216,7 +4204,8 @@ Prefab:
       propertyPath: m_Name
       value: Gitterwand (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 208653752741903500, guid: 0dadb7f4caaba8c47acc44e58270f75a, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 0dadb7f4caaba8c47acc44e58270f75a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &213931404
@@ -31079,6 +31068,11 @@ Prefab:
       propertyPath: m_Name
       value: Gitterwand (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 208653752741903500, guid: 0dadb7f4caaba8c47acc44e58270f75a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dadb7f4caaba8c47acc44e58270f75a, type: 2}
   m_IsPrefabAsset: 0
@@ -41167,6 +41161,10 @@ Prefab:
     - target: {fileID: 4923364144152638, guid: d819dcd50a2beb140a0e0215223906a6, type: 2}
       propertyPath: m_LocalPosition.y
       value: -3.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308659351645006, guid: d819dcd50a2beb140a0e0215223906a6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.163
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d819dcd50a2beb140a0e0215223906a6, type: 2}
