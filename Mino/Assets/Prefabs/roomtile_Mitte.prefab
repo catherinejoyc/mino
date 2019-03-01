@@ -22,12 +22,12 @@ GameObject:
   - component: {fileID: 33528594906557572}
   - component: {fileID: 23616717061595292}
   - component: {fileID: 64133999401368018}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: roomtile_Mitte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4509835742588046
 Transform:
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1106391307053070}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 2}
+  m_LocalPosition: {x: -5.6509123, y: -7.7556934, z: -0.54237616}
   m_LocalScale: {x: 0.02, y: 0.04, z: 0.02}
   m_Children: []
   m_Father: {fileID: 0}

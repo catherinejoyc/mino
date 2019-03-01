@@ -21,12 +21,13 @@ GameObject:
   - component: {fileID: 4974082026991172}
   - component: {fileID: 33009048727561892}
   - component: {fileID: 23515946745820338}
-  m_Layer: 0
+  - component: {fileID: 64734409528289074}
+  m_Layer: 12
   m_Name: roomtile_Seite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4974082026991172
 Transform:
@@ -34,13 +35,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1714082518539394}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 12.445, y: 0.742, z: -3.666}
-  m_LocalScale: {x: 0.02, y: 0.04, z: 0.02}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -5.6509123, y: -7.7556934, z: 1.4576238}
+  m_LocalScale: {x: 0.020000007, y: 0.04, z: 0.020000007}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!23 &23515946745820338
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -82,4 +83,18 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1714082518539394}
+  m_Mesh: {fileID: 4300000, guid: 10477905b4c531d4c8e6fd6804e33c14, type: 3}
+--- !u!64 &64734409528289074
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1714082518539394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 10477905b4c531d4c8e6fd6804e33c14, type: 3}
