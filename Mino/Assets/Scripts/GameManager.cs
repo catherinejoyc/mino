@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour {
 
     public void Resume()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
 
         UIManager.MyInstance.ingameUI.SetActive(true);
         UIManager.MyInstance.pauseUI.SetActive(false);

@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour, IHittable {
             m_rb.AddRelativeForce(m_playerInput * walkingSpeed * Time.deltaTime, ForceMode.Impulse);
 
         //Jump
-        if (Input.GetButtonDown("Jump") && m_isGrounded)
+        if (Input.GetButtonDown("Jump") && m_isGrounded && !isPushingBox)
             m_rb.AddForce(new Vector3(0, jumpSpeed, 0), ForceMode.Impulse);
         
         //Gravity in air
