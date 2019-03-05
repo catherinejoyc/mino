@@ -291,7 +291,7 @@ MonoBehaviour:
   m_soundType: 6
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   stepIntervall: 0.4
-  sVolume: 0.1
+  sVolume: 0.3
   rVolume_Stone: 0.75
   rVolume_Gravel: 0.75
   rVolume_Grass: 0.9

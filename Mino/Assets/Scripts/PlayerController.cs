@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour, IHittable {
 
     //interact
     public GameObject currentObjectHolding = null;
-    bool isPushingBox = false;
+    public bool isPushingBox = false;
 
     //toxic water and ladders
     public GameObject waterBorder = null;
@@ -67,14 +67,17 @@ public class PlayerController : MonoBehaviour, IHittable {
         float alpha = -(Mathf.Acos(gk) * Mathf.Rad2Deg - 90);
 
         //Look around
-        m_go.transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime);
-
-        float mouseInput = Input.GetAxis("Mouse Y");
-
-        float maxAngle = 20;
-        if ((mouseInput > 0 && alpha < maxAngle) || (mouseInput < 0 && alpha > -maxAngle))
+        if (!isPushingBox) //if not pushing something
         {
-            m_cam.transform.Rotate(Vector3.right * -mouseInput * cameraSensitivity * Time.deltaTime);
+            m_go.transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime);
+
+            float mouseInput = Input.GetAxis("Mouse Y");
+
+            float maxAngle = 20;
+            if ((mouseInput > 0 && alpha < maxAngle) || (mouseInput < 0 && alpha > -maxAngle))
+            {
+                m_cam.transform.Rotate(Vector3.right * -mouseInput * cameraSensitivity * Time.deltaTime);
+            }
         }
         #endregion
 
@@ -123,7 +126,10 @@ public class PlayerController : MonoBehaviour, IHittable {
     }
 
     void FixedUpdate () {
-        m_playerInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (isPushingBox) //if pushing a box, only move forward and backwards
+            m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
+        else
+            m_playerInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         //Groundcheck
         if (Physics.CheckSphere(new Vector3(m_rb.position.x, m_rb.position.y - 0.65f,m_rb.transform.position.z), 0.45f, groundLayer))
@@ -204,8 +210,9 @@ public class PlayerController : MonoBehaviour, IHittable {
             {
                 currentObjectHolding = hit.collider.gameObject;
 
-                //parent box to player
+                //parent box to player and hold it in front of you
                 currentObjectHolding.transform.parent = this.transform;
+                currentObjectHolding.transform.Translate(0, 0, 0.2f * Time.deltaTime, this.gameObject.transform);
                 //currentObjectHolding.GetComponent<Rigidbody>().isKinematic = true;
                 currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
                 //slow player
@@ -267,9 +274,22 @@ public class PlayerController : MonoBehaviour, IHittable {
     {
         //Spawn on last checkpoint
         //transform.position = m_lastCheckpoint;
+        //GameManager.MyInstance.Pause();
 
-        //Reset level
-        GameManager.MyInstance.LoadLevel(SceneManager.GetActiveScene().buildIndex);
+        //Death Screen
+        GameManager.MyInstance.dead = true;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        UIManager.MyInstance.ingameUI.SetActive(false);
+        UIManager.MyInstance.pauseUI.SetActive(false);
+        UIManager.MyInstance.deathScreen.SetActive(true);
+
+        Time.timeScale = 0f;
+        GameManager.MyInstance.gameIsPaused = true;
+
+        print(Cursor.lockState);
     }
 
     //public void SetCheckpoint(Vector3 _pos)

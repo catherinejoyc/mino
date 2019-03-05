@@ -142,6 +142,7 @@ MonoBehaviour:
   DestroyedPlayEvent:
     ID: 0
     valueGuid: 00000000000000000000000000000000
+  movingBoxVol: 0.9
   scratchedMat: {fileID: 2100000, guid: 9b114695a53d1194981357897de16c63, type: 2}
   destroyedBox: {fileID: 1123389731954516, guid: 1c261664ea44ae9409bf41b1748232d5,
     type: 2}

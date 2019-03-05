@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GrahlScript : MonoBehaviour {
 
+    public int endLevelIndex;
+
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(0);
+        //Endscreen
+        SceneManager.LoadScene(endLevelIndex);
+        
     }
 }

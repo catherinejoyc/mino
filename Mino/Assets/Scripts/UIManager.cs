@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
+    //INGAME
+    public GameObject ingameUI;
     public Image TutorialScreen;
     public Slider VolumeIndicator; //Audio!!!
     public Text keyFragments;
@@ -35,5 +37,10 @@ public class UIManager : MonoBehaviour {
         TutorialScreen.enabled = false;
     }
 
+    //PAUSE
+    public GameObject pauseUI;
+
+    //DEATH
+    public GameObject deathScreen;
     
 }
