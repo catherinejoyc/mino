@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114840159782439160}
   - component: {fileID: 54291447917103654}
   - component: {fileID: 114207954798311826}
+  - component: {fileID: 114749633816240530}
   m_Layer: 0
   m_Name: Hagi
   m_TagString: Enemy
@@ -365,7 +366,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f0e86016e766c504391c5f192e77734d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -470,6 +471,32 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &114749633816240530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1091572483181690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bebf3e401146afe44b6d7cf2cbad7124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reflectAuxBus:
+    ID: -840627529
+    valueGuid: 2c7ea41b7fdf504da793883ebf08760b
+  reflectionMaxPathLength: 1000
+  reflectionsAuxBusGain: 1
+  reflectionsOrder: 2
+  roomReverbAuxBusGain: 1
+  diffractionMaxEdges: 0
+  diffractionMaxPaths: 0
+  diffractionMaxPathLength: 0
+  drawFirstOrderReflections: 1
+  drawSecondOrderReflections: 1
+  drawHigherOrderReflections: 0
+  drawGeometricDiffraction: 0
+  drawSoundPropagation: 0
 --- !u!114 &114840159782439160
 MonoBehaviour:
   m_ObjectHideFlags: 1
