@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour, IHittable {
     //interact
     public GameObject currentObjectHolding = null;
     public bool isPushingBox = false;
+    bool boxPathIsBlocked;
 
     //toxic water and ladders
     public GameObject waterBorder = null;
@@ -109,6 +110,22 @@ public class PlayerController : MonoBehaviour, IHittable {
                 //[old] PickUp();
                 Push();
             }
+            else
+            {
+                print(boxPathIsBlocked);
+                //check path in front of box
+                //https://stackoverflow.com/questions/24563085/raycast-but-ignore-yourself
+                //https://docs.unity3d.com/ScriptReference/Physics.RaycastAll.html
+                Vector3 playerFrwd = m_cam.transform.TransformDirection(Vector3.forward) * 0.1f;
+                Debug.DrawRay(currentObjectHolding.transform.position, playerFrwd, Color.cyan, 0.1f);
+                if (Physics.Raycast(currentObjectHolding.transform.position, playerFrwd))
+                {
+                    //stop Movement forward
+                    boxPathIsBlocked = true;
+                }
+                else
+                    boxPathIsBlocked = false;
+            }
         }
         else if (currentObjectHolding != null)
         {
@@ -127,12 +144,22 @@ public class PlayerController : MonoBehaviour, IHittable {
 
     void FixedUpdate () {
         if (isPushingBox) //if pushing a box, only move forward and backwards
-            m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
+        {
+            if (boxPathIsBlocked) //if path is blocked, only move backwards
+            {
+                if (Input.GetAxis("Vertical") < 0)
+                    m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
+            }
+            else
+            {
+                m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
+            }
+        }
         else
             m_playerInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         //Groundcheck
-        if (Physics.CheckSphere(new Vector3(m_rb.position.x, m_rb.position.y - 0.65f,m_rb.transform.position.z), 0.45f, groundLayer))
+        if (Physics.CheckSphere(new Vector3(m_rb.position.x, m_rb.position.y - 0.5f,m_rb.transform.position.z), 0.2f, groundLayer))
         {
             //is grounded
             m_isGrounded = true;
@@ -213,8 +240,8 @@ public class PlayerController : MonoBehaviour, IHittable {
                 //parent box to player and hold it in front of you
                 currentObjectHolding.transform.parent = this.transform;
                 currentObjectHolding.transform.Translate(0, 0, 0.2f * Time.deltaTime, this.gameObject.transform);
-                //currentObjectHolding.GetComponent<Rigidbody>().isKinematic = true;
                 currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+
                 //slow player
                 isPushingBox = true;
             }
@@ -290,6 +317,12 @@ public class PlayerController : MonoBehaviour, IHittable {
         GameManager.MyInstance.gameIsPaused = true;
 
         print(Cursor.lockState);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(new Vector3(m_rb.position.x, m_rb.position.y - 0.5f, m_rb.transform.position.z), 0.2f);
     }
 
     //public void SetCheckpoint(Vector3 _pos)
