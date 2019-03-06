@@ -25,49 +25,49 @@
 				<Event Id="678858674" Name="Play_Hagi_attack" ObjectPath="\Events\Default Work Unit\Play_Hagi_attack"/>
 				<Event Id="86685327" Name="Play_Hagi_footstepsNew" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstepsNew"/>
 				<Event Id="2126903937" Name="Play_Hagi_hunt" ObjectPath="\Events\Default Work Unit\Play_Hagi_hunt"/>
-				<Event Id="3364721325" Name="Play_Interactables_Druckplatte" ObjectPath="\Events\Default Work Unit\Play_Interactables_Druckplatte" MaxAttenuation="60.000000"/>
+				<Event Id="3364721325" Name="Play_Interactables_Druckplatte" ObjectPath="\Events\Default Work Unit\Play_Interactables_Druckplatte" MaxAttenuation="15.000000"/>
 				<Event Id="3200425469" Name="Play_Player_Footsteps_walk_stone" ObjectPath="\Events\Default Work Unit\Play_Player_Footsteps_walk_stone"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="262194520" Language="SFX">
-					<ShortName>Playersteps_Steinplatte1.wav</ShortName>
-					<Path>SFX\Playersteps_Steinplatte1_56D34C19.wem</Path>
-				</File>
-				<File Id="407300280" Language="SFX">
-					<ShortName>Playersteps_Steinplatte7.wav</ShortName>
-					<Path>SFX\Playersteps_Steinplatte7_56D34C19.wem</Path>
+				<File Id="113292309" Language="SFX">
+					<ShortName>Playersteps_Steinplatte2.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte2_56D34C19.wem</Path>
 				</File>
 				<File Id="414668148" Language="SFX">
 					<ShortName>Hagibaer_stampfen.wav</ShortName>
 					<Path>SFX\Hagibaer_stampfen_56D34C19.wem</Path>
 				</File>
-				<File Id="455342182" Language="SFX">
-					<ShortName>Playersteps_Steinplatte3.wav</ShortName>
-					<Path>SFX\Playersteps_Steinplatte3_56D34C19.wem</Path>
-				</File>
-				<File Id="487133129" Language="SFX">
-					<ShortName>Playersteps_Steinplatte8.wav</ShortName>
-					<Path>SFX\Playersteps_Steinplatte8_56D34C19.wem</Path>
-				</File>
-				<File Id="743734816" Language="SFX">
+				<File Id="540530326" Language="SFX">
 					<ShortName>Playersteps_Steinplatte5.wav</ShortName>
 					<Path>SFX\Playersteps_Steinplatte5_56D34C19.wem</Path>
 				</File>
-				<File Id="751783896" Language="SFX">
+				<File Id="560640513" Language="SFX">
+					<ShortName>Playersteps_Steinplatte3.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte3_56D34C19.wem</Path>
+				</File>
+				<File Id="623796480" Language="SFX">
+					<ShortName>Playersteps_Steinplatte4.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte4_56D34C19.wem</Path>
+				</File>
+				<File Id="700226457" Language="SFX">
+					<ShortName>Playersteps_Steinplatte7.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte7_56D34C19.wem</Path>
+				</File>
+				<File Id="827126712" Language="SFX">
 					<ShortName>Playersteps_Steinplatte6.wav</ShortName>
 					<Path>SFX\Playersteps_Steinplatte6_56D34C19.wem</Path>
 				</File>
-				<File Id="881446609" Language="SFX">
-					<ShortName>Playersteps_Steinplatte2.wav</ShortName>
-					<Path>SFX\Playersteps_Steinplatte2_56D34C19.wem</Path>
+				<File Id="1008854808" Language="SFX">
+					<ShortName>Playersteps_Steinplatte8.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte8_56D34C19.wem</Path>
 				</File>
-				<File Id="983939446" Language="SFX">
+				<File Id="1025967180" Language="SFX">
 					<ShortName>Playersteps_Steinplatte9.wav</ShortName>
 					<Path>SFX\Playersteps_Steinplatte9_56D34C19.wem</Path>
 				</File>
-				<File Id="1027550962" Language="SFX">
-					<ShortName>Playersteps_Steinplatte4.wav</ShortName>
-					<Path>SFX\Playersteps_Steinplatte4_56D34C19.wem</Path>
+				<File Id="1032558954" Language="SFX">
+					<ShortName>Playersteps_Steinplatte1.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte1_56D34C19.wem</Path>
 				</File>
 				<File Id="1045887133" Language="SFX">
 					<ShortName>foundationelements_1623_paving_stone_move.wav</ShortName>
