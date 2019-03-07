@@ -319,11 +319,11 @@ public class PlayerController : MonoBehaviour, IHittable {
         print(Cursor.lockState);
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(new Vector3(m_rb.position.x, m_rb.position.y - 0.5f, m_rb.transform.position.z), 0.2f);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(new Vector3(m_rb.position.x, m_rb.position.y - 0.5f, m_rb.transform.position.z), 0.2f);
+    //}
 
     //public void SetCheckpoint(Vector3 _pos)
     //{

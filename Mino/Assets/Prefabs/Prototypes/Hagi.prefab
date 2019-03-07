@@ -166,7 +166,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1091572483181690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3, y: -1, z: 9.26}
+  m_LocalPosition: {x: -3.7182493, y: 0.5747804, z: -8.202986}
   m_LocalScale: {x: 0.5747804, y: 0.5747804, z: 0.5747804}
   m_Children:
   - {fileID: 4299767726013802}
@@ -487,7 +487,7 @@ MonoBehaviour:
     valueGuid: 2c7ea41b7fdf504da793883ebf08760b
   reflectionMaxPathLength: 1000
   reflectionsAuxBusGain: 1
-  reflectionsOrder: 2
+  reflectionsOrder: 3
   roomReverbAuxBusGain: 1
   diffractionMaxEdges: 0
   diffractionMaxPaths: 0
@@ -556,6 +556,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currState: 0
   points:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   waitSeconds: 1
