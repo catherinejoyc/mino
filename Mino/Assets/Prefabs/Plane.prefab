@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 23877514795307366}
   - component: {fileID: 65988822779375378}
   - component: {fileID: 114759546573341970}
-  m_Layer: 0
+  - component: {fileID: 114106367523360146}
+  m_Layer: 12
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416619824619126}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.338006, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 14.45, y: -5.99, z: -6.54}
+  m_LocalScale: {x: 0.27534, y: 0.27534, z: 0.28907946}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -97,6 +98,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 3.33, z: 3.96}
   m_Center: {x: 0, y: 0.61, z: -2.93}
+--- !u!114 &114106367523360146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416619824619126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741fc3e24a933b84db4a3940d4aaf0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7f422d6
+  useOtherObject: 1
+  groupID: 478119480
+  valueID: 1000122479
+  groupGuid: f37bccc70b3f9e4eb7d0b5d77f96fb50
+  valueGuid: eb693a0db5b907448d818aa45c70ddad
 --- !u!114 &114759546573341970
 MonoBehaviour:
   m_ObjectHideFlags: 1
