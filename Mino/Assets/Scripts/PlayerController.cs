@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour, IHittable {
     public float cameraSensitivity;
 
     //groundcheck
-    bool m_isGrounded;
+    public bool m_isGrounded;
     public LayerMask groundLayer;
     //public LayerMask ground;
 

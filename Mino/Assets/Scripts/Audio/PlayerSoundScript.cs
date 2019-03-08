@@ -36,6 +36,13 @@ public class PlayerSoundScript : SoundScript {
     public AK.Wwise.Switch surfaceGravel;
     public AK.Wwise.Switch surfaceGrass;
 
+    public AK.Wwise.Switch walking;
+    public AK.Wwise.Switch sneaking;
+    public AK.Wwise.Switch land;
+
+    //land
+    bool isLanding = false;
+
     private void Awake()
     {
         sneakingStepIntervall = stepIntervall * 2;
@@ -44,11 +51,25 @@ public class PlayerSoundScript : SoundScript {
 
     private void Update()
     {
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        //land
+        if (!player.m_isGrounded) //in air
+        {
+            isLanding = true;
+        }
+        else if (isLanding) //grounded again
+        {
+            land.SetValue(gameObject);
+            isLanding = false;
+        }
+
+        if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && player.m_isGrounded)
         {
             //play Footstep every few sec
             if (Input.GetButton("Sneaking"))
             {
+                //update switch
+                sneaking.SetValue(gameObject);
+
                 if (Time.time > lastStepTime + sneakingStepIntervall)
                 {
                     //update volume
@@ -61,6 +82,8 @@ public class PlayerSoundScript : SoundScript {
             }
             else
             {
+                //update switch
+                walking.SetValue(gameObject);
                 if (Time.time > lastStepTime + stepIntervall)
                 {
                     //Check underground and update volume
