@@ -333,6 +333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196c4bdd35aeebc488f9c1048699eb59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screen: {fileID: 1871966812}
+  spr_zeitdruck: {fileID: 0}
 --- !u!4 &347972689
 Transform:
   m_ObjectHideFlags: 0

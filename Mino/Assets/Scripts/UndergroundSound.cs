@@ -27,6 +27,10 @@ public class UndergroundSound : MonoBehaviour {
         {
             other.GetComponent<EnemySoundScript>().ChangeFootstep(UnderGroundIndex);
         }
+        else if (other.CompareTag("Box"))
+        {
+            other.GetComponent<BoxScript>().ChangeMovingSound(UnderGroundIndex);
+        }
     }
 
     private void OnTriggerStay(Collider other)

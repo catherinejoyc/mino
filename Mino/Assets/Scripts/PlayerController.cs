@@ -112,19 +112,36 @@ public class PlayerController : MonoBehaviour, IHittable {
             }
             else
             {
-                print(boxPathIsBlocked);
                 //check path in front of box
                 //https://stackoverflow.com/questions/24563085/raycast-but-ignore-yourself
                 //https://docs.unity3d.com/ScriptReference/Physics.RaycastAll.html
-                Vector3 playerFrwd = m_cam.transform.TransformDirection(Vector3.forward) * 0.1f;
-                Debug.DrawRay(currentObjectHolding.transform.position, playerFrwd, Color.cyan, 0.1f);
-                if (Physics.Raycast(currentObjectHolding.transform.position, playerFrwd))
+
+                //check every hit
+                RaycastHit[] hits;
+                Vector3 playerFrwd = m_cam.transform.TransformDirection(Vector3.forward);
+
+                hits = Physics.RaycastAll(currentObjectHolding.transform.position, playerFrwd, 0.5f);
+                for (int i = 0; i < hits.Length; i++)
                 {
-                    //stop Movement forward
-                    boxPathIsBlocked = true;
+                    RaycastHit hit = hits[i];
+                    if (!hit.collider.CompareTag("Box") && !hit.collider.isTrigger) //if hit anything other than the box itself
+                    {
+                        boxPathIsBlocked = true;
+                        break;
+                    }
+                    else
+                        boxPathIsBlocked = false;
                 }
-                else
-                    boxPathIsBlocked = false;
+
+                //Vector3 playerFrwd = m_cam.transform.TransformDirection(Vector3.forward) * 0.1f;
+                Debug.DrawRay(currentObjectHolding.transform.position, playerFrwd, Color.cyan, 0.1f);
+                //if (Physics.Raycast(currentObjectHolding.transform.position, playerFrwd))
+                //{
+                //    //stop Movement forward
+                //    boxPathIsBlocked = true;
+                //}
+                //else
+                //    boxPathIsBlocked = false;
             }
         }
         else if (currentObjectHolding != null)
@@ -146,7 +163,12 @@ public class PlayerController : MonoBehaviour, IHittable {
         if (isPushingBox) //if pushing a box, only move forward and backwards
         {
             if (boxPathIsBlocked) //if path is blocked, only move backwards
-            {
+            {   
+                if (Input.GetAxis("Vertical") > 0)
+                {
+                    m_playerInput = new Vector3(0, 0, 0);
+                }
+
                 if (Input.GetAxis("Vertical") < 0)
                     m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
             }
@@ -188,24 +210,6 @@ public class PlayerController : MonoBehaviour, IHittable {
 
         //Sound
         //je schneller desto lauter
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        ////Toxic water and ladders
-        //if (other.CompareTag("WaterBorder"))
-        //{
-        //    waterBorder = other.gameObject;
-        //}
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        ////Toxic water and ladders
-        //if (other.CompareTag("WaterBorder"))
-        //{
-        //    waterBorder = null;
-        //}
     }
 
     #region Shoot Stone
@@ -261,48 +265,15 @@ public class PlayerController : MonoBehaviour, IHittable {
         currentObjectHolding = null;
         //de-slow player
         isPushingBox = false;
+        //de block path
+        boxPathIsBlocked = false;
 
         //StopEvent
     }
-
-    #region [old] pick up box
-    //void PickUp()
-    //{
-    //    RaycastHit hit;
-    //    if (Physics.Raycast(transform.position + transform.up * 0.5f, m_cam.transform.TransformVector(Vector3.forward), out hit, maxDistanceToWall))
-    //    {
-    //        // pick up
-    //        if (hit.collider.gameObject.CompareTag("Ladder") || hit.collider.gameObject.CompareTag("Box"))
-    //        {
-    //            currentObjectHolding = hit.collider.gameObject;
-
-    //            //currentObjectHolding.SetActive(false);
-
-    //            // hold object in hand
-    //            currentObjectHolding.transform.parent = this.transform;
-    //            currentObjectHolding.GetComponent<Rigidbody>().useGravity = false;                
-    //        }
-    //    }
-    //}
-    //void Place()
-    //{
-    //    // Place box infront of you
-    //    //currentObjectHolding.transform.position = transform.position + transform.forward;
-    //    //currentObjectHolding.SetActive(true);
-
-    //    currentObjectHolding.transform.parent = null;
-    //    currentObjectHolding.GetComponent<Rigidbody>().useGravity = true;
-    //    currentObjectHolding = null;
-    //}
-    #endregion
     #endregion
 
     public void ReactToHit()
     {
-        //Spawn on last checkpoint
-        //transform.position = m_lastCheckpoint;
-        //GameManager.MyInstance.Pause();
-
         //Death Screen
         GameManager.MyInstance.dead = true;
 
@@ -318,15 +289,4 @@ public class PlayerController : MonoBehaviour, IHittable {
 
         print(Cursor.lockState);
     }
-
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawWireSphere(new Vector3(m_rb.position.x, m_rb.position.y - 0.5f, m_rb.transform.position.z), 0.2f);
-    //}
-
-    //public void SetCheckpoint(Vector3 _pos)
-    //{
-    //    m_lastCheckpoint = _pos;
-    //}
 }
