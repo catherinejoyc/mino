@@ -184,8 +184,8 @@ MonoBehaviour:
         ObjectType: 15
   AuxBusWwu:
   - Guid: '{0B42F357-7073-4512-85BF-905D310E6DE3}'
-    m_lastTimePart2: -1999200895
-    m_lastTimePsrt1: -975687344
+    m_lastTimePart2: -1999199520
+    m_lastTimePsrt1: -251517585
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List:
@@ -229,8 +229,8 @@ MonoBehaviour:
         ObjectType: 7
   EventWwu:
   - Guid: '{1BA305F7-2B70-4C37-AABC-887CD819E702}'
-    m_lastTimePart2: -1999200903
-    m_lastTimePsrt1: -2008066835
+    m_lastTimePart2: -1999199285
+    m_lastTimePsrt1: -1912802175
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -267,7 +267,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Hagi_footstepsNew
         ObjectType: 3
-      maxAttenuation: 0
+      maxAttenuation: 20
       maxDuration: 0
       minDuration: 0
     - Guid: b8d4aa3740a7ea4dacb652e9a83664ac
@@ -291,7 +291,31 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Interactables_Druckplatte
         ObjectType: 3
-      maxAttenuation: 60
+      maxAttenuation: 15
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 3808ab19e5fca64f8fa4b4dd1a2623d7
+      ID: 1540274354
+      Name: Play_Interactables_Kisten
+      Path: Default Work Unit\Play_Interactables_Kisten
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Interactables_Kisten
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: ffff5a3efec87b46828ce8eea872c658
+      ID: 946651205
+      Name: Play_Interactables_Kistens
+      Path: Default Work Unit\Play_Interactables_Kistens
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Interactables_Kistens
+        ObjectType: 3
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - Guid: 3b20cf6e7c15e145b194b5f0b2570974
@@ -318,10 +342,59 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: 3f156a5f0fcbd0459132c3ebb72ab40e
+      ID: 634024223
+      Name: Play_Player_jumps
+      Path: Default Work Unit\Play_Player_jumps
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Player_jumps
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 83dfce4a966d0f478ca817aace0d1654
+      ID: 1646878680
+      Name: Play_Player_sneak
+      Path: Default Work Unit\Play_Player_sneak
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Player_sneak
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 7d0bf2bd4a5bcb469f5a72c9596c7c52
+      ID: -1278895308
+      Name: Stop_Interactables_Kisten
+      Path: Default Work Unit\Stop_Interactables_Kisten
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Interactables_Kisten
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: c9178202ab06eb4e8a7b4101c9fba685
+      ID: 873681583
+      Name: Stop_Interactables_Kistens
+      Path: Default Work Unit\Stop_Interactables_Kistens
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Interactables_Kistens
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   ExpandedItems:
   - /MinoWwise
-  - /MinoWwise/Events
-  - /MinoWwise/Events/Default Work Unit
+  - /MinoWwise/Switches
+  - /MinoWwise/Switches/Default Work Unit
+  - /MinoWwise/Switches/Default Work Unit/Groundtextures
   RtpcWwu:
   - Guid: '{F8AD97F4-2CDF-4753-A863-CAC1087CEEF7}'
     m_lastTimePart2: -1999205146
