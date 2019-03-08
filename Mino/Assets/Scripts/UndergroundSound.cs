@@ -5,8 +5,8 @@ using UnityEngine;
 public class UndergroundSound : MonoBehaviour {
 
     GameObject m_Player;
-    [Header("Choose UnderGroundIndex 1 = Stone, 2 = Gravel, 3 = Bush")]
-    [Tooltip("1 = Stone, 2 = Gravel, 3 = Bush")]
+    [Header("1 = Stone, 2 = Gravel, 3 = Grass, 4 = Bush")]
+    [Tooltip("1 = Stone, 2 = Gravel, 3 = Grass, 4 = Bush")]
     public int UnderGroundIndex;
 
     private void Awake()

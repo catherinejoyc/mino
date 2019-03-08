@@ -3,20 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class StoneBehaviour : MonoBehaviour {
+public class StoneBehaviour : SoundScript {
 
     public Rigidbody m_rb;
     float m_startTime;
-    AudioSource m_audioSource;
-
-    public UnityEvent m_playStoneSoundEvent = new UnityEvent();
 
     private void Awake()
     {
         m_startTime = Time.time;
-        m_audioSource = GetComponent<AudioSource>();
-
-        m_playStoneSoundEvent.AddListener(PlaySound);
     }
 
     void FixedUpdate () {
@@ -26,21 +20,29 @@ public class StoneBehaviour : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.name != "Player")
+        if (collision.collider.name != "Player") //ignore player...
         {
-            m_playStoneSoundEvent.Invoke();
-            m_playStoneSoundEvent.RemoveAllListeners();
-            Invoke("Die", 1);
+            //if other underground
+            if (collision.collider.GetComponent<UndergroundSound>() != null)
+            {
+                if (collision.collider.GetComponent<UndergroundSound>().UnderGroundIndex != 3) //if any other ground than grass
+                {
+                    m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+                    m_SoundEvent.RemoveAllListeners();
+                    Invoke("Die", 1);
+                }
+            }
+            else
+            {
+                m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+                m_SoundEvent.RemoveAllListeners();
+                Invoke("Die", 1);
+            }
         }
     }
 
     void Die()
     {
         Destroy(gameObject);
-    }
-
-    void PlaySound()
-    {
-        m_audioSource.Play();
     }
 }

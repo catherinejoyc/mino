@@ -208,6 +208,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4756762112dc14ab2550637d60972e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SoundEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  sound:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+  m_soundType: 8
+  soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   m_rb: {fileID: 54711161266936402}
 --- !u!135 &135511272851647682
 SphereCollider:
