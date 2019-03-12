@@ -166,7 +166,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1091572483181690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7182493, y: 0.5747804, z: -8.202986}
+  m_LocalPosition: {x: -4.3, y: -1, z: 9.26}
   m_LocalScale: {x: 0.5747804, y: 0.5747804, z: 0.5747804}
   m_Children:
   - {fileID: 4299767726013802}
@@ -485,7 +485,7 @@ MonoBehaviour:
   reflectAuxBus:
     ID: -840627529
     valueGuid: 2c7ea41b7fdf504da793883ebf08760b
-  reflectionMaxPathLength: 1000
+  reflectionMaxPathLength: 10
   reflectionsAuxBusGain: 1
   reflectionsOrder: 3
   roomReverbAuxBusGain: 1
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_soundType: 0
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   m_enemy: {fileID: 114882692800718860}
-  stepIntervall: 2
+  stepIntervall: 1.5
   surfaceStone:
     ID: -1603997315
     valueGuid: e01f902eedaf494bb0e0525142304989
@@ -556,7 +556,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currState: 0
   points:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

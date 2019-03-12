@@ -10,6 +10,7 @@ public class EnemySoundScript : SoundScript {
     NavMeshAgent m_agent;
     public float stepIntervall;
     float lastStepTime;
+    float maxDistance;
 
     Underground currUnderground;
     [Header("Ak Switches")]//Switches
@@ -29,6 +30,9 @@ public class EnemySoundScript : SoundScript {
 
 	// Update is called once per frame
 	void Update () {
+
+        maxDistance = AkSoundEngine.GetMaxRadius(this.gameObject);
+
         if (!m_agent.isStopped) //walking
         {
             if (Time.time > lastStepTime + stepIntervall)
@@ -79,5 +83,13 @@ public class EnemySoundScript : SoundScript {
     public void PlayAttackSound()
     {
         playAttack.Post(this.gameObject);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, maxDistance);
+
+
     }
 }
