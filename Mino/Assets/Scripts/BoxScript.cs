@@ -15,11 +15,11 @@ public class BoxScript : SoundScript, IHittable {
     public float movingBoxVol;
 
     //underground
-    Underground currUnderground;
     [Header("Ak Switches")]//Switches
     public AK.Wwise.Switch surfaceStone;
     public AK.Wwise.Switch surfaceGravel;
     public AK.Wwise.Switch surfaceGrass;
+    public AK.Wwise.Switch surfaceBush;
 
     //Materials
     Renderer m_renderer;
@@ -95,24 +95,23 @@ public class BoxScript : SoundScript, IHittable {
 
     public void ChangeMovingSound(int underGround)
     {
-        //set switches and currUnderground
+        //set switches
         switch (underGround)
         {
             case 1: //stone
                 surfaceStone.SetValue(this.gameObject);
-                currUnderground = Underground.Stone;
                 break;
             case 2: //gravel
                 surfaceGravel.SetValue(this.gameObject);
-                currUnderground = Underground.Gravel;
                 break;
             case 3: //grass
                 surfaceGrass.SetValue(this.gameObject);
-                currUnderground = Underground.Grass;
+                break;
+            case 4: //bush
+                surfaceBush.SetValue(this.gameObject);
                 break;
             default: //stone
                 surfaceStone.SetValue(this.gameObject);
-                currUnderground = Underground.Stone;
                 break;
 
         }

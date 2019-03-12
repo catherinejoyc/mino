@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 20265214578673180}
   - component: {fileID: 114489500700611916}
   - component: {fileID: 114235077234724028}
+  - component: {fileID: 114372738161072592}
   m_Layer: 2
   m_Name: Main Camera
   m_TagString: Untagged
@@ -71,14 +72,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958085047044498}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.99, y: -1, z: 0}
+  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: -2.6, y: -1, z: 4.87}
   m_LocalScale: {x: 0.55733657, y: 0.55733657, z: 0.55733657}
   m_Children:
   - {fileID: 4431120344307724}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!20 &20265214578673180
 Camera:
   m_ObjectHideFlags: 1
@@ -99,7 +100,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -233,6 +234,17 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &114372738161072592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1442035596090314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271b7a442215e3348a2ddeeda6bf2164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114489500700611916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,12 +275,14 @@ MonoBehaviour:
   jumpSpeed: 5
   inAirGravity: -25
   cameraSensitivity: 100
+  m_isGrounded: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 4096
   pref_stone: {fileID: 1933059935894412, guid: 9a560c39b72e0e74e818dab70ac4b6e3, type: 2}
   maxDistanceToWall: 2
   currentObjectHolding: {fileID: 0}
+  isPushingBox: 0
   waterBorder: {fileID: 0}
 --- !u!114 &114537742088066832
 MonoBehaviour:
@@ -286,15 +300,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   sound:
-    ID: -1094541827
-    valueGuid: 050e99ef14c8af4fa64a5174759b116b
+    ID: 98439365
+    valueGuid: 3b20cf6e7c15e145b194b5f0b2570974
   m_soundType: 6
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   stepIntervall: 0.4
   sVolume: 0.3
+  sInBushVolume: 0.5
   rVolume_Stone: 0.75
   rVolume_Gravel: 0.75
   rVolume_Grass: 0.9
+  rVolume_Bush: 1
   surfaceStone:
     ID: -1603997315
     valueGuid: e01f902eedaf494bb0e0525142304989
@@ -310,6 +326,26 @@ MonoBehaviour:
     valueGuid: 7f87351818ab154e9b2ccc85760b7f8e
     groupGuid: f37bccc70b3f9e4eb7d0b5d77f96fb50
     groupID: 478119480
+  surfaceBush:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+    groupGuid: 00000000000000000000000000000000
+    groupID: 0
+  walking:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+    groupGuid: 00000000000000000000000000000000
+    groupID: 0
+  sneaking:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+    groupGuid: 00000000000000000000000000000000
+    groupID: 0
+  land:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+    groupGuid: 00000000000000000000000000000000
+    groupID: 0
 --- !u!136 &136502808631710814
 CapsuleCollider:
   m_ObjectHideFlags: 1

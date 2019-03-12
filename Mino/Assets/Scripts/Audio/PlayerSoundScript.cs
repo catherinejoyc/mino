@@ -8,7 +8,8 @@ enum Underground
 {
     Stone,
     Gravel,
-    Grass
+    Grass,
+    Bush
 }
 
 public class PlayerSoundScript : SoundScript {
@@ -26,15 +27,18 @@ public class PlayerSoundScript : SoundScript {
     [Header("Volume, that is shown in UI [0-1]")]
     [Header("sneaking volume")]
     public float sVolume;
+    public float sInBushVolume;
     [Header("running volumes")]
     public float rVolume_Stone;
     public float rVolume_Gravel;
     public float rVolume_Grass;
+    public float rVolume_Bush;
 
     [Header("Ak Switches")]//Switches
     public AK.Wwise.Switch surfaceStone;
     public AK.Wwise.Switch surfaceGravel;
     public AK.Wwise.Switch surfaceGrass;
+    public AK.Wwise.Switch surfaceBush;
 
     public AK.Wwise.Switch walking;
     public AK.Wwise.Switch sneaking;
@@ -43,10 +47,18 @@ public class PlayerSoundScript : SoundScript {
     //land
     bool isLanding = false;
 
+    //Occlusion RTPC
+    BaseEnemyScript[] ar_allEnemies;
+    BaseEnemyScript[] ar_closeEnemies;
+    public AK.Wwise.RTPC occlusionRTPC;
+    public float maxHearingDistance;
+
     private void Awake()
     {
         sneakingStepIntervall = stepIntervall * 2;
         player = GetComponent<PlayerController>();
+
+        ar_allEnemies = FindObjectsOfType<BaseEnemyScript>();           
     }
 
     private void Update()
@@ -73,7 +85,10 @@ public class PlayerSoundScript : SoundScript {
                 if (Time.time > lastStepTime + sneakingStepIntervall)
                 {
                     //update volume
-                    volume = sVolume;
+                    if (currUnderground == Underground.Bush)
+                        volume = sInBushVolume;
+                    else
+                        volume = sVolume;
 
                     m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
 
@@ -98,6 +113,9 @@ public class PlayerSoundScript : SoundScript {
                         case Underground.Grass:
                             volume = rVolume_Grass;
                             break;
+                        case Underground.Bush:
+                            volume = rVolume_Bush;
+                            break;
                         default:
                             volume = rVolume_Stone;
                             break;
@@ -116,30 +134,48 @@ public class PlayerSoundScript : SoundScript {
             if (!player.isPushingBox)
                 UIManager.MyInstance.VolumeIndicator.value = 0;
         }
+
+        for (int i = 0; i < ar_allEnemies.Length; i++)
+        {
+            if (Vector3.Distance(ar_allEnemies[i].transform.position, this.transform.position) <= maxHearingDistance)
+            {
+                //OcclusionRaycast
+            }
+        }
     }
 
-    //public void ChangeFootstep(int underGround)
-    //{
-    //    //set switches and currUnderground
-    //    switch(underGround)
-    //    {
-    //        case 1: //stone
-    //            surfaceStone.SetValue(this.gameObject);
-    //            currUnderground = Underground.Stone;
-    //            break;
-    //        case 2: //gravel
-    //            surfaceGravel.SetValue(this.gameObject);
-    //            currUnderground = Underground.Gravel;
-    //            break;
-    //        case 3: //grass
-    //            surfaceGrass.SetValue(this.gameObject);
-    //            currUnderground = Underground.Grass;
-    //            break;
-    //        default: //stone
-    //            surfaceStone.SetValue(this.gameObject);
-    //            currUnderground = Underground.Stone;
-    //            break;
+    public void ChangeFootstep(int underGround)
+    {
+        //set switches and currUnderground
+        switch (underGround)
+        {
+            case 1: //stone
+                surfaceStone.SetValue(this.gameObject);
+                currUnderground = Underground.Stone;
+                break;
+            case 2: //gravel
+                surfaceGravel.SetValue(this.gameObject);
+                currUnderground = Underground.Gravel;
+                break;
+            case 3: //grass
+                surfaceGrass.SetValue(this.gameObject);
+                currUnderground = Underground.Grass;
+                break;
+            case 4: //bush
+                surfaceBush.SetValue(this.gameObject);
+                currUnderground = Underground.Bush;
+                break;
+            default: //stone
+                surfaceStone.SetValue(this.gameObject);
+                currUnderground = Underground.Stone;
+                break;
 
-    //    }
-    //}
+        }
+    }
+
+    void CastOcclusionRays(Vector3 emitter_Pos)
+    {
+        //cast straight to each emitter(enemy)
+        
+    }
 }
