@@ -19,6 +19,8 @@ public class PlayerSoundScript : SoundScript {
 
     //PlayerController
     PlayerController player;
+    //Camera
+    Camera m_cam;
 
     //Volume (fake Volume, is just for gameplay)
     float volume;
@@ -57,6 +59,7 @@ public class PlayerSoundScript : SoundScript {
     {
         sneakingStepIntervall = stepIntervall * 2;
         player = GetComponent<PlayerController>();
+        m_cam = GetComponentInChildren<Camera>();
 
         ar_allEnemies = FindObjectsOfType<BaseEnemyScript>();           
     }
@@ -135,6 +138,8 @@ public class PlayerSoundScript : SoundScript {
                 UIManager.MyInstance.VolumeIndicator.value = 0;
         }
 
+
+        //
         for (int i = 0; i < ar_allEnemies.Length; i++)
         {
             if (Vector3.Distance(ar_allEnemies[i].transform.position, this.transform.position) <= maxHearingDistance)
@@ -175,7 +180,52 @@ public class PlayerSoundScript : SoundScript {
 
     void CastOcclusionRays(Vector3 emitter_Pos)
     {
-        //cast straight to each emitter(enemy)
-        
+        float hits = 0;
+
+        //cast from player to emitter(enemy)
+        Debug.DrawRay(this.transform.position, emitter_Pos - transform.position);
+        if (Physics.Raycast(this.transform.position, emitter_Pos - transform.position))
+            hits++;
+        //cast from player to leftside-emitter
+        Vector3 leftsideEmitter = emitter_Pos - m_cam.transform.right;
+        Debug.DrawRay(leftsideEmitter, transform.position - leftsideEmitter);
+        if (Physics.Raycast(leftsideEmitter, transform.position - leftsideEmitter))
+            hits++;
+        //cast from player to righthside-emitter
+        Vector3 rightsideEmitter = emitter_Pos + m_cam.transform.right;
+        Debug.DrawRay(rightsideEmitter, transform.position - rightsideEmitter);
+        if (Physics.Raycast(rightsideEmitter, transform.position - rightsideEmitter))
+            hits++;
+
+        //cast from leftside-player to emitter
+        Vector3 leftsidePlayer = transform.position-m_cam.transform.right;
+        Debug.DrawRay(leftsidePlayer, emitter_Pos - leftsidePlayer);
+        if (Physics.Raycast(leftsidePlayer, emitter_Pos - leftsidePlayer))
+            hits++;
+        //cast from leftside-player to leftside-emitter
+        Debug.DrawRay(leftsidePlayer, leftsideEmitter - leftsidePlayer);
+        if (Physics.Raycast(leftsidePlayer, leftsideEmitter - leftsidePlayer))
+            hits++;
+        //cast from leftside-player to rightside-emitter
+
+
+
+        //cast from rightside-player to emitter
+        Vector3 rightsidePlayer = transform.position + m_cam.transform.right;
+        Debug.DrawRay(rightsidePlayer, emitter_Pos - rightsidePlayer);
+        if (Physics.Raycast(rightsidePlayer, emitter_Pos - rightsidePlayer))
+            hits++;
+
+
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        //CastOcclusionRays
+        if (other.CompareTag("Enemy"))
+        {
+            CastOcclusionRays(other.transform.position);
+        }
     }
 }
