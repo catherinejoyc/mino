@@ -229,8 +229,8 @@ MonoBehaviour:
         ObjectType: 7
   EventWwu:
   - Guid: '{1BA305F7-2B70-4C37-AABC-887CD819E702}'
-    m_lastTimePart2: -1999199285
-    m_lastTimePsrt1: -1912802175
+    m_lastTimePart2: -1999198091
+    m_lastTimePsrt1: 121993997
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -362,6 +362,30 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Play_Player_sneak
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: d31b6a9127f81c45a25b83c7465a1fdb
+      ID: -1844784786
+      Name: Play_Player_Steinchen_aufheben
+      Path: Default Work Unit\Play_Player_Steinchen_aufheben
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Player_Steinchen_aufheben
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: f7e77af022b4c24ea5ccf1b5e15e6479
+      ID: 1735280649
+      Name: Play_Player_Steinchen_schiessen
+      Path: Default Work Unit\Play_Player_Steinchen_schiessen
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Player_Steinchen_schiessen
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
