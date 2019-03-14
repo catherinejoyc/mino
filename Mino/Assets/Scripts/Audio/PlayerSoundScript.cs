@@ -183,71 +183,52 @@ public class PlayerSoundScript : SoundScript {
 
     void CastOcclusionRays(Vector3 emitter_Pos)
     {
-        RaycastHit hit;
         float hits = 0;
 
         //cast from player to emitter(enemy)
         Debug.DrawRay(this.transform.position, emitter_Pos - transform.position);
-        if (Physics.Raycast(this.transform.position, emitter_Pos - transform.position, out hit, maxHearingDistance)) //, rayCastLayer
-        {
+        if (Physics.Raycast(this.transform.position, emitter_Pos - transform.position, Vector3.Distance(emitter_Pos, transform.position), rayCastLayer)) //, rayCastLayer
             hits++;
-        }
         //cast from player to leftside-emitter
         Vector3 leftsideEmitter = emitter_Pos - m_cam.transform.right;
         Debug.DrawRay(leftsideEmitter, transform.position - leftsideEmitter);
-        if (Physics.Raycast(leftsideEmitter, transform.position - leftsideEmitter, out hit, maxHearingDistance))
-        {
+        if (Physics.Raycast(leftsideEmitter, transform.position - leftsideEmitter, Vector3.Distance(leftsideEmitter, transform.position), rayCastLayer))
             hits++;
-        }
         //cast from player to righthside-emitter
         Vector3 rightsideEmitter = emitter_Pos + m_cam.transform.right;
         Debug.DrawRay(rightsideEmitter, transform.position - rightsideEmitter);
-        if (Physics.Raycast(rightsideEmitter, transform.position - rightsideEmitter, out hit, maxHearingDistance))
-        {
+        if (Physics.Raycast(rightsideEmitter, transform.position - rightsideEmitter, Vector3.Distance(rightsideEmitter, transform.position), rayCastLayer))
             hits++;
-        }
 
         //cast from leftside-player to emitter
         Vector3 leftsidePlayer = transform.position-m_cam.transform.right;
         Debug.DrawRay(leftsidePlayer, emitter_Pos - leftsidePlayer);
-        if (Physics.Raycast(leftsidePlayer, emitter_Pos - leftsidePlayer, out hit, maxHearingDistance))
-        {
+        if (Physics.Raycast(leftsidePlayer, emitter_Pos - leftsidePlayer, Vector3.Distance(emitter_Pos, leftsidePlayer), rayCastLayer))
             hits++;
-        }
         //cast from leftside-player to leftside-emitter
         Debug.DrawRay(leftsidePlayer, leftsideEmitter - leftsidePlayer);
-        if (Physics.Raycast(leftsidePlayer, leftsideEmitter - leftsidePlayer, out hit, maxHearingDistance))
-        {
+        if (Physics.Raycast(leftsidePlayer, leftsideEmitter - leftsidePlayer, Vector3.Distance(leftsideEmitter, leftsidePlayer), rayCastLayer))
             hits++;
-        }
         //cast from leftside-player to rightside-emitter
         Debug.DrawRay(leftsidePlayer, rightsideEmitter - leftsidePlayer);
-        if (Physics.Raycast(leftsidePlayer, rightsideEmitter - leftsidePlayer, out hit, maxHearingDistance))
-        {
+        if (Physics.Raycast(leftsidePlayer, rightsideEmitter - leftsidePlayer, Vector3.Distance(rightsideEmitter, leftsidePlayer), rayCastLayer))
             hits++;
-        }
 
         //cast from rightside-player to emitter
         Vector3 rightsidePlayer = transform.position + m_cam.transform.right;
         Debug.DrawRay(rightsidePlayer, emitter_Pos - rightsidePlayer);
-        if (Physics.Raycast(rightsidePlayer, emitter_Pos - rightsidePlayer, out hit, maxHearingDistance))
-        {
+        if (Physics.Raycast(rightsidePlayer, emitter_Pos - rightsidePlayer, Vector3.Distance(emitter_Pos, rightsidePlayer), rayCastLayer))
             hits++;
-        }
         //cast from rightside-player to leftside-emitter
         Debug.DrawRay(rightsidePlayer, leftsideEmitter - rightsidePlayer);
-        if (Physics.Raycast(rightsidePlayer, leftsideEmitter - rightsidePlayer, out hit, maxHearingDistance))
-        {
+        if (Physics.Raycast(rightsidePlayer, leftsideEmitter - rightsidePlayer, Vector3.Distance(leftsideEmitter, rightsidePlayer), rayCastLayer))
             hits++;
-        }
         //cast from rightside-player to rightside-emitter
         Debug.DrawRay(rightsidePlayer, rightsideEmitter - rightsidePlayer);
-        if (Physics.Raycast(rightsidePlayer, rightsideEmitter - rightsidePlayer, out hit, maxHearingDistance))
-        {
+        if (Physics.Raycast(rightsidePlayer, rightsideEmitter - rightsidePlayer, Vector3.Distance(rightsideEmitter, rightsidePlayer), rayCastLayer))
             hits++;
-        }
 
-        print(Time.time + "; " + hits);
+        occlusionRTPC.SetValue(this.gameObject, hits);
     }
 
     private void OnTriggerStay(Collider other)
