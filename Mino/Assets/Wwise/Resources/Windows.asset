@@ -84,8 +84,8 @@ MonoBehaviour:
     m_LowerEngineMemoryCutoffThreshold: 1
     m_NumberOfRefillsInVoice: 4
     m_SpatialAudioSettings:
-      m_PoolSize: 4194304
-      m_MaxSoundPropagationDepth: 8
+      m_PoolSize: 33554432
+      m_MaxSoundPropagationDepth: 4
       m_DiffractionFlags: -1
   AdvancedSettings:
     m_IOMemorySize: 2097152
@@ -95,8 +95,8 @@ MonoBehaviour:
     m_PrepareEventMemoryPoolID: -1
     m_EnableGameSyncPreparation: 0
     m_ContinuousPlaybackLookAhead: 1
-    m_MonitorPoolSize: 262144
-    m_MonitorQueuePoolSize: 65536
+    m_MonitorPoolSize: 524288
+    m_MonitorQueuePoolSize: 131072
     m_MaximumHardwareTimeoutMs: 1000
     m_SpatialAudioSettings:
       m_DiffractionShadowAttenuationFactor: 0

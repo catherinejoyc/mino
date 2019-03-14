@@ -5113,7 +5113,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 300668712}
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &308896001
 Prefab:
   m_ObjectHideFlags: 0
@@ -5757,7 +5757,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 334528427}
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &337231848
 Prefab:
   m_ObjectHideFlags: 0
@@ -14020,12 +14020,22 @@ Prefab:
     - target: {fileID: 114749633816240530, guid: 2342290dc8582e14987c32dd9a1fa24f,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114749633816240530, guid: 2342290dc8582e14987c32dd9a1fa24f,
         type: 2}
       propertyPath: reflectionsOrder
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114749633816240530, guid: 2342290dc8582e14987c32dd9a1fa24f,
+        type: 2}
+      propertyPath: drawSecondOrderReflections
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114749633816240530, guid: 2342290dc8582e14987c32dd9a1fa24f,
+        type: 2}
+      propertyPath: drawFirstOrderReflections
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2342290dc8582e14987c32dd9a1fa24f, type: 2}
@@ -14762,7 +14772,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 589481347}
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &595820744
 Prefab:
   m_ObjectHideFlags: 0
@@ -29263,7 +29273,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1559915240}
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1560944654
 Prefab:
   m_ObjectHideFlags: 0
