@@ -49,6 +49,10 @@
 					<ShortName>Hagibaer_Fs_Kiesel4.wav</ShortName>
 					<Path>SFX\Hagibaer_Fs_Kiesel4_56D34C19.wem</Path>
 				</File>
+				<File Id="251180683" Language="SFX">
+					<ShortName>Hagibaer_Fs_Busch5.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Busch5_56D34C19.wem</Path>
+				</File>
 				<File Id="257925673" Language="SFX">
 					<ShortName>Hagibaer_schnaufen.wav</ShortName>
 					<Path>SFX\Hagibaer_schnaufen_56D34C19.wem</Path>
@@ -68,6 +72,10 @@
 				<File Id="316147558" Language="SFX">
 					<ShortName>Hagibaer_Fs_Steinplatte5.wav</ShortName>
 					<Path>SFX\Hagibaer_Fs_Steinplatte5_56D34C19.wem</Path>
+				</File>
+				<File Id="339132533" Language="SFX">
+					<ShortName>Hagibaer_Fs_Busch6.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Busch6_56D34C19.wem</Path>
 				</File>
 				<File Id="419385542" Language="SFX">
 					<ShortName>Hagibaer_Fs_Gras5.wav</ShortName>
@@ -97,6 +105,10 @@
 					<ShortName>Hagibaer_Bruellen1.wav</ShortName>
 					<Path>SFX\Hagibaer_Bruellen1_56D34C19.wem</Path>
 				</File>
+				<File Id="555090275" Language="SFX">
+					<ShortName>Hagibaer_Fs_Busch2.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Busch2_56D34C19.wem</Path>
+				</File>
 				<File Id="560640513" Language="SFX">
 					<ShortName>Playersteps_Steinplatte3.wav</ShortName>
 					<Path>SFX\Playersteps_Steinplatte3_56D34C19.wem</Path>
@@ -104,6 +116,10 @@
 				<File Id="572589371" Language="SFX">
 					<ShortName>Hagibaer_Fs_Gras3.wav</ShortName>
 					<Path>SFX\Hagibaer_Fs_Gras3_56D34C19.wem</Path>
+				</File>
+				<File Id="591463247" Language="SFX">
+					<ShortName>Hagibaer_Fs_Busch3.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Busch3_56D34C19.wem</Path>
 				</File>
 				<File Id="604355001" Language="SFX">
 					<ShortName>Hagibaer_Fs_Kiesel6.wav</ShortName>
@@ -133,9 +149,17 @@
 					<ShortName>Playersteps_Steinplatte6.wav</ShortName>
 					<Path>SFX\Playersteps_Steinplatte6_56D34C19.wem</Path>
 				</File>
+				<File Id="830863003" Language="SFX">
+					<ShortName>Hagibaer_Fs_Busch1.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Busch1_56D34C19.wem</Path>
+				</File>
 				<File Id="833086724" Language="SFX">
 					<ShortName>Hagibaer_Fs_Steinplatte2.wav</ShortName>
 					<Path>SFX\Hagibaer_Fs_Steinplatte2_56D34C19.wem</Path>
+				</File>
+				<File Id="863715270" Language="SFX">
+					<ShortName>Hagibaer_Fs_Busch4.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Busch4_56D34C19.wem</Path>
 				</File>
 				<File Id="888033596" Language="SFX">
 					<ShortName>Hagibaer_Fs_Kiesel2.wav</ShortName>

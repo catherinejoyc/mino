@@ -13,6 +13,10 @@ Switch	ID	Name	Switch Group			Notes
 	1000122479	surfaceGravel	Groundtextures			
 	2690969981	surfaceStone	Groundtextures			
 	2991489160	surfaceGrass	Groundtextures			
+	3916613861	surfaceBusch	Groundtextures			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2554442747	rtpcOcclusion			\Default Work Unit\rtpcOcclusion	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	989071842	Wwise Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Interactables_Druckplatte\pling\Wwise Tone Generator	
@@ -23,11 +27,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	158972996	Hagibaer_Fs_Gras6	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Gras6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_grass\Hagibaer_Fs_Gras6		281980
 	230146194	Hagibaer_Fs_Gras8	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Gras8_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_grass\Hagibaer_Fs_Gras8		274756
 	247212520	Hagibaer_Fs_Kiesel4	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Kiesel4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_gravel\Hagibaer_Fs_Kiesel4		233848
+	251180683	Hagibaer_Fs_Busch5	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Busch5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_busch\Hagibaer_Fs_Busch5		266904
 	257925673	Hagibaer_schnaufen	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_schnaufen_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_alert\Hagibaer_schnaufen		613200
 	265067354	Hagibaer_Fs_Steinplatte3	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Steinplatte3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_stone\Hagibaer_Fs_Steinplatte3		138984
 	280341370	Hagibaer_Fs_Gras7	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Gras7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_grass\Hagibaer_Fs_Gras7		262728
 	285240051	Hagibaer_Fs_Steinplatte6	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Steinplatte6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_stone\Hagibaer_Fs_Steinplatte6		165400
 	316147558	Hagibaer_Fs_Steinplatte5	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Steinplatte5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_stone\Hagibaer_Fs_Steinplatte5		150060
+	339132533	Hagibaer_Fs_Busch6	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Busch6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_busch\Hagibaer_Fs_Busch6		263888
 	419385542	Hagibaer_Fs_Gras5	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Gras5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_grass\Hagibaer_Fs_Gras5		260720
 	427898294	Hagibaer_Fs_Gras4	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Gras4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_grass\Hagibaer_Fs_Gras4		196048
 	466367313	Hagibaer_Fs_Steinplatte7	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Steinplatte7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_stone\Hagibaer_Fs_Steinplatte7		175632
@@ -35,8 +41,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	540530326	Playersteps_Steinplatte5	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Steinplatte5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_stone\Playersteps_Steinplatte5		88108
 	541830790	Hagibaer_Fs_Gras1	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Gras1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_grass\Hagibaer_Fs_Gras1		211284
 	552032150	Hagibaer_Bruellen1	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Bruellen1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_attack\Hagibaer_Bruellen1		1218032
+	555090275	Hagibaer_Fs_Busch2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Busch2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_busch\Hagibaer_Fs_Busch2		250320
 	560640513	Playersteps_Steinplatte3	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Steinplatte3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_stone\Playersteps_Steinplatte3		93792
 	572589371	Hagibaer_Fs_Gras3	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Gras3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_grass\Hagibaer_Fs_Gras3		179464
+	591463247	Hagibaer_Fs_Busch3	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Busch3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_busch\Hagibaer_Fs_Busch3		278964
 	604355001	Hagibaer_Fs_Kiesel6	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Kiesel6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_gravel\Hagibaer_Fs_Kiesel6		184824
 	605201416	Hagibaer_Fs_Steinplatte1	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Steinplatte1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_stone\Hagibaer_Fs_Steinplatte1		102080
 	623796480	Playersteps_Steinplatte4	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Steinplatte4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_stone\Playersteps_Steinplatte4		96756
@@ -44,7 +52,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	739625425	Hagibaer_Bruellen3	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Bruellen3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_hunt\Hagibaer_Bruellen3		397144
 	819379860	Hagibaer_Fs_Steinplatte4	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Steinplatte4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_stone\Hagibaer_Fs_Steinplatte4		132592
 	827126712	Playersteps_Steinplatte6	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Steinplatte6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_stone\Playersteps_Steinplatte6		90412
+	830863003	Hagibaer_Fs_Busch1	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Busch1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_busch\Hagibaer_Fs_Busch1		259364
 	833086724	Hagibaer_Fs_Steinplatte2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Steinplatte2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_stone\Hagibaer_Fs_Steinplatte2		112136
+	863715270	Hagibaer_Fs_Busch4	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Busch4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_busch\Hagibaer_Fs_Busch4		251828
 	888033596	Hagibaer_Fs_Kiesel2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Kiesel2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_gravel\Hagibaer_Fs_Kiesel2		231300
 	892222868	Hagibaer_Fs_Gras2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Gras2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_grass\Hagibaer_Fs_Gras2		191904
 	967327612	Hagibaer_Bruellen2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Bruellen2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_hunt\Hagibaer_Bruellen2		1034864
