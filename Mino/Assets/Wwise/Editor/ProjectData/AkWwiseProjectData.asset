@@ -243,7 +243,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Hagi_alert
         ObjectType: 3
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: 0
       minDuration: 0
     - Guid: 1a44df8601f0434e9c607e43f0a7d689
@@ -255,7 +255,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Hagi_attack
         ObjectType: 3
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: 0
       minDuration: 0
     - Guid: af884fea453a9240b93484ec8ad9fccf
@@ -267,7 +267,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Hagi_footstepsNew
         ObjectType: 3
-      maxAttenuation: 20
+      maxAttenuation: 10
       maxDuration: 0
       minDuration: 0
     - Guid: b8d4aa3740a7ea4dacb652e9a83664ac
@@ -279,7 +279,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Hagi_hunt
         ObjectType: 3
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: 0
       minDuration: 0
     - Guid: 9a12ec8fc371b941865f4eaf96f94b0e
@@ -397,11 +397,20 @@ MonoBehaviour:
   - /MinoWwise/Switches/Default Work Unit/Groundtextures
   RtpcWwu:
   - Guid: '{F8AD97F4-2CDF-4753-A863-CAC1087CEEF7}'
-    m_lastTimePart2: -1999205146
-    m_lastTimePsrt1: 211701959
+    m_lastTimePart2: -1999198514
+    m_lastTimePsrt1: -2086003291
     ParentPhysicalPath: 
     PhysicalPath: Game Parameters\Default Work Unit.wwu
-    List: []
+    List:
+    - Guid: 6d648ecbcc12ea4687b4afa88738cfa5
+      ID: -1740524549
+      Name: rtpcOcclusion
+      Path: Default Work Unit\rtpcOcclusion
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: rtpcOcclusion
+        ObjectType: 13
   - Guid: '{D7135222-D1DB-42D0-ADC0-930743567776}'
     m_lastTimePart2: -1999235109
     m_lastTimePsrt1: -1922445808
@@ -531,8 +540,8 @@ MonoBehaviour:
     List: []
   SwitchWwu:
   - Guid: '{A3CAE896-1DE5-4930-BCB8-A0D39DC6D124}'
-    m_lastTimePart2: -1999202107
-    m_lastTimePsrt1: -1943959573
+    m_lastTimePart2: -1999198327
+    m_lastTimePsrt1: 1337382720
     ParentPhysicalPath: 
     PhysicalPath: Switches\Default Work Unit.wwu
     List:
@@ -546,18 +555,22 @@ MonoBehaviour:
       - ElementName: Groundtextures
         ObjectType: 11
       ValueGuids:
+      - bytes: 033afbdad99c8e428e4a948e61a3ad2a
       - bytes: 7f87351818ab154e9b2ccc85760b7f8e
       - bytes: eb693a0db5b907448d818aa45c70ddad
       - bytes: e01f902eedaf494bb0e0525142304989
       ValueIcons:
+      - ElementName: surfaceBusch
+        ObjectType: 10
       - ElementName: surfaceGrass
         ObjectType: 10
       - ElementName: surfaceGravel
         ObjectType: 10
       - ElementName: surfaceStone
         ObjectType: 10
-      valueIDs: 88804eb26fa89c3b7df164a0
+      valueIDs: e5c872e988804eb26fa89c3b7df164a0
       values:
+      - surfaceBusch
       - surfaceGrass
       - surfaceGravel
       - surfaceStone
