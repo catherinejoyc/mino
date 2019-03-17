@@ -23,6 +23,9 @@ public class EnemySoundScript : SoundScript {
     public AK.Wwise.Event playHuntState;
     public AK.Wwise.Event playAttack;
 
+    //Occlusion RTPC
+    public AK.Wwise.RTPC occlusionRTPC;
+
     // Use this for initialization
     void Awake () {
         m_agent = GetComponent<NavMeshAgent>();
@@ -88,7 +91,5 @@ public class EnemySoundScript : SoundScript {
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, maxDistance);
-
-
     }
 }
