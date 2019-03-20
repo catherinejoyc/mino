@@ -166,7 +166,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1091572483181690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.168028, y: -5.4252195, z: -6.3493485}
+  m_LocalPosition: {x: -4.3, y: -1, z: 9.26}
   m_LocalScale: {x: 0.5747804, y: 0.5747804, z: 0.5747804}
   m_Children:
   - {fileID: 4299767726013802}
@@ -548,6 +548,9 @@ MonoBehaviour:
   playAttack:
     ID: 678858674
     valueGuid: 1a44df8601f0434e9c607e43f0a7d689
+  occlusionRTPC:
+    ID: -1740524549
+    valueGuid: 6d648ecbcc12ea4687b4afa88738cfa5
 --- !u!114 &114882692800718860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -561,8 +564,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currState: 0
   points:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
