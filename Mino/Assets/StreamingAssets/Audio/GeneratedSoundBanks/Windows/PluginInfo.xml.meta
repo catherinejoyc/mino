@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Mino/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/PluginInfo.xml.meta
 guid: 49d5ba02f7d14604d9f4ef7ca0bf9898
+=======
+guid: b25be9630ff9df7418d0c67d2c86b2e6
+>>>>>>> 2f24603d7bad0ff626bab0b50bb372c7214753e7:Mino/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/PluginInfo.xml.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
