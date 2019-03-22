@@ -17245,25 +17245,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4835528505354128, guid: cde53f2a33d355342b42324d3a3064e0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.5525882
-      objectReference: {fileID: 0}
     - target: {fileID: 1946176389324350, guid: cde53f2a33d355342b42324d3a3064e0, type: 2}
       propertyPath: m_Name
       value: Busch (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4835528505354128, guid: cde53f2a33d355342b42324d3a3064e0, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4835528505354128, guid: cde53f2a33d355342b42324d3a3064e0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.17685
-      objectReference: {fileID: 0}
-    - target: {fileID: 4835528505354128, guid: cde53f2a33d355342b42324d3a3064e0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.1915851
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cde53f2a33d355342b42324d3a3064e0, type: 2}
@@ -22690,9 +22674,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4835528505354128, guid: cde53f2a33d355342b42324d3a3064e0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.203
+    - target: {fileID: 1946176389324350, guid: cde53f2a33d355342b42324d3a3064e0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cde53f2a33d355342b42324d3a3064e0, type: 2}
