@@ -166,7 +166,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1091572483181690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3, y: -1, z: 9.26}
+  m_LocalPosition: {x: 21.168028, y: -5.4252195, z: -6.3493485}
   m_LocalScale: {x: 0.5747804, y: 0.5747804, z: 0.5747804}
   m_Children:
   - {fileID: 4299767726013802}
@@ -487,7 +487,7 @@ MonoBehaviour:
     valueGuid: 2c7ea41b7fdf504da793883ebf08760b
   reflectionMaxPathLength: 10
   reflectionsAuxBusGain: 1
-  reflectionsOrder: 2
+  reflectionsOrder: 1
   roomReverbAuxBusGain: 1
   diffractionMaxEdges: 0
   diffractionMaxPaths: 0
@@ -583,7 +583,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 10
   m_Center: {x: 0.20836328, y: -0.29347226, z: -0.065421335}
 --- !u!136 &136221474389781812
 CapsuleCollider:

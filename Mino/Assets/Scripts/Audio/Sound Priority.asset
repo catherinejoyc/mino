@@ -11,16 +11,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2edd5de599eba741a32eec739fc6932, type: 3}
   m_Name: Sound Priority
   m_EditorClassIdentifier: 
-  destroyedBox: 7
-  movingBox: 6.5
-  movingDoor: 6
-  activatedPressurePlate: 5.5
-  movingBush: 5
-  movingOnGravel: 3
-  movingOnStone: 2
-  movingOnGrass: 1.5
-  hardStoneImpact: 1
-  softStoneImpact: 2.5
-  pickUpStone: 0.5
-  sneaking: 1
-  useChalk: 0.7
+  destroyedBox: 10
+  movingBox: 7
+  movingDoor: 7
+  activatedPressurePlate: 5
+  movingBush: 10
+  movingOnGravel: 7
+  movingOnStone: 7
+  movingOnGrass: 6
+  hardStoneImpact: 5
+  softStoneImpact: 3
+  pickUpStone: 1
+  sneaking: 5
+  useChalk: 1
