@@ -129,7 +129,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   sound:
-    ID: -1319871180
+    ID: 0
     valueGuid: 92feca12e6577343b375dbc8ab377b2f
   m_soundType: 1
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
@@ -137,10 +137,10 @@ MonoBehaviour:
     ID: -1278895308
     valueGuid: 7d0bf2bd4a5bcb469f5a72c9596c7c52
   ScratchPlayEvent:
-    ID: 1279939955
+    ID: 0
     valueGuid: 3828ec4640c2324ebbac81b1a24d2c78
   DestroyedPlayEvent:
-    ID: -1611909749
+    ID: 0
     valueGuid: 5f90b3a13e24834f8ef6eac93d5f4dba
   movingBoxVol: 0.9
   surfaceStone:
