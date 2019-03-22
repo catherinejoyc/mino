@@ -129,19 +129,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   sound:
-    ID: 1540274354
-    valueGuid: 3808ab19e5fca64f8fa4b4dd1a2623d7
+    ID: -1319871180
+    valueGuid: 92feca12e6577343b375dbc8ab377b2f
   m_soundType: 1
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   stopSoundEvent:
     ID: -1278895308
     valueGuid: 7d0bf2bd4a5bcb469f5a72c9596c7c52
   ScratchPlayEvent:
-    ID: 0
-    valueGuid: 00000000000000000000000000000000
+    ID: 1279939955
+    valueGuid: 3828ec4640c2324ebbac81b1a24d2c78
   DestroyedPlayEvent:
-    ID: 0
-    valueGuid: 00000000000000000000000000000000
+    ID: -1611909749
+    valueGuid: 5f90b3a13e24834f8ef6eac93d5f4dba
   movingBoxVol: 0.9
   surfaceStone:
     ID: -1603997315
@@ -156,6 +156,11 @@ MonoBehaviour:
   surfaceGrass:
     ID: -1303478136
     valueGuid: 7f87351818ab154e9b2ccc85760b7f8e
+    groupGuid: f37bccc70b3f9e4eb7d0b5d77f96fb50
+    groupID: 478119480
+  surfaceBush:
+    ID: -378353435
+    valueGuid: 033afbdad99c8e428e4a948e61a3ad2a
     groupGuid: f37bccc70b3f9e4eb7d0b5d77f96fb50
     groupID: 478119480
   scratchedMat: {fileID: 2100000, guid: 9b114695a53d1194981357897de16c63, type: 2}
