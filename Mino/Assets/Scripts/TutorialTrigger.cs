@@ -7,15 +7,15 @@ public class TutorialTrigger : MonoBehaviour {
 
     public Sprite TutorialScreen;
     bool m_active = false;
-    float coolDownTime = 2;
-    float coolDownStart;
+    //float coolDownTime = 2;
+    //float coolDownStart;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "Player")
         {
             //set Cooldownstart
-            coolDownStart = Time.time;
+            //coolDownStart = Time.time;
 
             UIManager.MyInstance.TutorialScreen.sprite = TutorialScreen;
             UIManager.MyInstance.TutorialScreen.enabled = true;
@@ -23,14 +23,22 @@ public class TutorialTrigger : MonoBehaviour {
         }
     }
 
-    private void Update()
+    private void OnTriggerExit(Collider other)
     {
-        if (m_active && Time.time > coolDownStart + coolDownTime)
-        {
-            UIManager.MyInstance.TutorialScreen.enabled = false;
+        UIManager.MyInstance.TutorialScreen.enabled = false;
 
-            //deactivate Tutorial Trigger
-            this.gameObject.SetActive(false);
-        }
+        //deactivate Tutorial Trigger
+        //this.gameObject.SetActive(false);
     }
+
+    //private void Update()
+    //{
+        //if (m_active && Time.time > coolDownStart + coolDownTime)
+        //{
+        //    UIManager.MyInstance.TutorialScreen.enabled = false;
+
+        //    //deactivate Tutorial Trigger
+        //    this.gameObject.SetActive(false);
+        //}
+    //}
 }

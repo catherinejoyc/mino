@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour, IHittable {
 
     public float walkingSpeed;
     public float sneakingSpeed;
+    public float boxMovingSpeed;
     public float jumpSpeed;
     public float inAirGravity;
     public float cameraSensitivity;
@@ -192,10 +193,18 @@ public class PlayerController : MonoBehaviour, IHittable {
         }
 
         //Run and sneak
-        if (Input.GetButton("Sneaking") || isPushingBox)
-            m_rb.AddRelativeForce(m_playerInput * sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
+        if (isPushingBox)
+        {
+            m_rb.AddRelativeForce(m_playerInput * boxMovingSpeed * Time.deltaTime, ForceMode.Impulse);
+        }
         else
-            m_rb.AddRelativeForce(m_playerInput * walkingSpeed * Time.deltaTime, ForceMode.Impulse);
+        {
+            if (Input.GetButton("Sneaking"))
+                m_rb.AddRelativeForce(m_playerInput * sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
+            else
+                m_rb.AddRelativeForce(m_playerInput * walkingSpeed * Time.deltaTime, ForceMode.Impulse);
+        }
+
 
         //Jump
         if (Input.GetButtonDown("Jump") && m_isGrounded && !isPushingBox)

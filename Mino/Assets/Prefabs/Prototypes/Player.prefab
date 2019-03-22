@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 114537742088066832}
   - component: {fileID: 114205848596395974}
   - component: {fileID: 114276471924618896}
+  - component: {fileID: 135001959180663102}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -72,8 +73,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958085047044498}
-  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.7071079}
-  m_LocalPosition: {x: 26.91, y: -4.91, z: -3.01}
+  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: 3.08, y: -1, z: -0.03}
   m_LocalScale: {x: 0.55733657, y: 0.55733657, z: 0.55733657}
   m_Children:
   - {fileID: 4431120344307724}
@@ -272,6 +273,7 @@ MonoBehaviour:
   m_cam: {fileID: 0}
   walkingSpeed: 15
   sneakingSpeed: 7
+  boxMovingSpeed: 10
   jumpSpeed: 7
   inAirGravity: -25
   cameraSensitivity: 100
@@ -305,11 +307,11 @@ MonoBehaviour:
   m_soundType: 6
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   sneakingPlayEvent:
-    ID: 0
-    valueGuid: 00000000000000000000000000000000
+    ID: 1646878680
+    valueGuid: 83dfce4a966d0f478ca817aace0d1654
   landPlayEvent:
-    ID: 0
-    valueGuid: 00000000000000000000000000000000
+    ID: 634024223
+    valueGuid: 3f156a5f0fcbd0459132c3ebb72ab40e
   _sneakingEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -321,7 +323,7 @@ MonoBehaviour:
   stepIntervall: 0.4
   rayCastLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4608
   sVolume: 0.3
   sInBushVolume: 0.5
   rVolume_Stone: 0.75
@@ -348,7 +350,19 @@ MonoBehaviour:
     valueGuid: 033afbdad99c8e428e4a948e61a3ad2a
     groupGuid: f37bccc70b3f9e4eb7d0b5d77f96fb50
     groupID: 478119480
-  maxHearingDistance: 0
+  maxHearingDistance: 10
+--- !u!135 &135001959180663102
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958085047044498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136502808631710814
 CapsuleCollider:
   m_ObjectHideFlags: 1
