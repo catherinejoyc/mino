@@ -161,6 +161,8 @@ public class PlayerController : MonoBehaviour, IHittable {
     }
 
     void FixedUpdate () {
+
+        //m_playerInput
         if (isPushingBox) //if pushing a box, only move forward and backwards
         {
             if (boxPathIsBlocked) //if path is blocked, only move backwards
@@ -195,7 +197,10 @@ public class PlayerController : MonoBehaviour, IHittable {
         //Run and sneak
         if (isPushingBox)
         {
-            m_rb.AddRelativeForce(m_playerInput * boxMovingSpeed * Time.deltaTime, ForceMode.Impulse);
+            if (Input.GetButton("Sneaking"))
+                m_rb.AddRelativeForce(m_playerInput * sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
+            else
+                m_rb.AddRelativeForce(m_playerInput * boxMovingSpeed * Time.deltaTime, ForceMode.Impulse);
         }
         else
         {
