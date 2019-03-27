@@ -41,11 +41,22 @@ public class KeyDoorBehaviour : SoundScript {
         {
             m_isOpening = true;
 
-            //next Level
-            GameManager.MyInstance.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+            //fade to black
+            UIManager.MyInstance._fadeScreen.gameObject.SetActive(true);
+            UIManager.MyInstance.FadeToBlack();
+
+            //after blend load next level
+            Invoke("LoadNextLevel", 1);
+
             //set new checkpoint (nicht mehr nötig)
             //other.gameObject.GetComponent<PlayerController>().SetCheckpoint(m_checkpoint);
         }
+    }
+
+    void LoadNextLevel()
+    {
+        //next Level
+        GameManager.MyInstance.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void UnlockDoor()

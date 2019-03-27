@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4683197913698440}
+  - component: {fileID: 114108188048542778}
   m_Layer: 0
   m_Name: Fackel
   m_TagString: Untagged
@@ -168,8 +169,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1137087490463288}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.075956, y: -5.204896, z: -4.8939953}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 2.343, y: 3.665, z: 2.079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4397473574258500}
@@ -179,7 +180,7 @@ Transform:
   - {fileID: 4682137687901490}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4880154488340858
 Transform:
   m_ObjectHideFlags: 1
@@ -314,6 +315,26 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114108188048542778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1137087490463288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b896d5bba4d336c468b57a50bb40a918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SoundEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  sound:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+  m_soundType: 13
+  soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
 --- !u!198 &198332998330135716
 ParticleSystem:
   m_ObjectHideFlags: 1

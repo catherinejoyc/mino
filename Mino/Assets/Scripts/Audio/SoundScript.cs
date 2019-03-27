@@ -21,7 +21,7 @@ public class SoundScript : MonoBehaviour {
 
     private void Start()
     {
-        Debug.Log("SoundScript implementiert; " + this.gameObject.name);
+        //Debug.Log("SoundScript implementiert; " + this.gameObject.name);
         m_SoundEvent.AddListener(PlaySound);
 
         // set value to maxDistance
@@ -65,6 +65,9 @@ public class SoundScript : MonoBehaviour {
                 break;
             case SoundType.UseChalk:
                 m_maxDistance = soundValues.useChalk;
+                break;
+            case SoundType.EnvironmentSound:
+                m_maxDistance = soundValues.environmentSound;
                 break;
             default:
                 Debug.LogError("No SoundType chosen! " + this.gameObject.name);

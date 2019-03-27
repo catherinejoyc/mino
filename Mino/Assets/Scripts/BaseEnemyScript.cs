@@ -160,7 +160,7 @@ public class BaseEnemyScript : MonoBehaviour {
     }
     void Attack()
     {
-        Debug.Log("ATTACKING");
+        //Debug.Log("ATTACKING");
         currState = State.Attack;
         Stop();
 

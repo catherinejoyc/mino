@@ -29,11 +29,13 @@ public class UIManager : MonoBehaviour {
         else
             Debug.Log("UIManager already exists!");
 
+        ResetUI();
+        FadeFromBlack();
     }
 
     public void ResetUI()
     {
-        keyFragments.enabled = false;
+        keyFragments.text = "0/0";
         TutorialScreen.enabled = false;
     }
 
@@ -42,5 +44,16 @@ public class UIManager : MonoBehaviour {
 
     //DEATH
     public GameObject deathScreen;
+
+    //FADE
+    public Animator _fadeScreen;
+    public void FadeToBlack()
+    {
+        _fadeScreen.SetTrigger("fadeToBlack");
+    }
+    public void FadeFromBlack()
+    {
+        _fadeScreen.SetTrigger("fadeFromBlack");
+    }
     
 }

@@ -20,7 +20,7 @@ public class SoundPriority : ScriptableObject {
     [Header("value is the max hearing distance for enemy (the higher the louder)")]
     // Note: if another sound is added, also add a type for it down below and in SoundScript.cs
     // Don't forget to update the value in the Scriptable Object!
-    //currently 13 sounds
+    //currently 14 sounds
     #region sound values
     [Tooltip("happens when an enemy destroys the box")]
     public float destroyedBox;
@@ -60,12 +60,15 @@ public class SoundPriority : ScriptableObject {
 
     [Tooltip("sound of chalk (drawing/erase)")]
     public float useChalk;
+
+    [Tooltip("environmental sounds, like torches etc.")]
+    public float environmentSound;
     #endregion
 }
 
 // Type of sound
 // Note: if another Type is added, also add a value for it up there and in SoundScript.cs
-public enum SoundType //currently 13 Types
+public enum SoundType //currently 14 Types
 {
     DestroyedBox,
     MovingBox,
@@ -79,5 +82,6 @@ public enum SoundType //currently 13 Types
     SoftStoneImpact,
     PickUpStone,
     Sneaking,
-    UseChalk
+    UseChalk,
+    EnvironmentSound
 }

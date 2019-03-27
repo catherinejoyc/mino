@@ -12,7 +12,7 @@ public class KeyBehaviour : MonoBehaviour {
     {
         keyCount++;
         UIManager.MyInstance.keyFragments.enabled = true;
-        UIManager.MyInstance.keyFragments.text = keyCount.ToString();
+        UIManager.MyInstance.keyFragments.text = keyCount.ToString() + "/3";
 
         if(keyCount == 3)
         {

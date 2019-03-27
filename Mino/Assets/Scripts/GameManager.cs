@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour {
 
         if (remainingTime <= 0)
         {
-            RestartLevel();
+            TimeRunOut();
         }
 
         // --- Pause
@@ -89,6 +89,7 @@ public class GameManager : MonoBehaviour {
         UIManager.MyInstance.ingameUI.SetActive(false);
         UIManager.MyInstance.pauseUI.SetActive(true);
         UIManager.MyInstance.deathScreen.SetActive(false);
+        UIManager.MyInstance._fadeScreen.gameObject.SetActive(false);
 
         Cursor.visible = true;
 
@@ -98,7 +99,7 @@ public class GameManager : MonoBehaviour {
 
     public void Resume()
     {
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
 
         UIManager.MyInstance.ingameUI.SetActive(true);
         UIManager.MyInstance.pauseUI.SetActive(false);
@@ -114,5 +115,27 @@ public class GameManager : MonoBehaviour {
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    //Timeout
+    void TimeRunOut()
+    {
+        //Death Screen
+        dead = true;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        UIManager.MyInstance.ingameUI.SetActive(false);
+        UIManager.MyInstance.pauseUI.SetActive(false);
+        UIManager.MyInstance._fadeScreen.gameObject.SetActive(false);
+
+        //show reason of death!
+        UIManager.MyInstance.deathScreen.SetActive(true);
+
+        Time.timeScale = 0f;
+        gameIsPaused = true;
+
+        print(Cursor.lockState);
     }
 }
