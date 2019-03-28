@@ -331,8 +331,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   sound:
-    ID: 0
-    valueGuid: 00000000000000000000000000000000
+    ID: 1713645458
+    valueGuid: b585e262d659a243b6e1c38145a7c665
   m_soundType: 13
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
 --- !u!198 &198332998330135716

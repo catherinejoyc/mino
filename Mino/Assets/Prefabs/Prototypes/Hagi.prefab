@@ -166,7 +166,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1091572483181690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.168028, y: -5.4252195, z: -6.3493485}
+  m_LocalPosition: {x: -4.3, y: -1, z: 9.26}
   m_LocalScale: {x: 0.5747804, y: 0.5747804, z: 0.5747804}
   m_Children:
   - {fileID: 4299767726013802}
@@ -485,7 +485,7 @@ MonoBehaviour:
   reflectAuxBus:
     ID: -840627529
     valueGuid: 2c7ea41b7fdf504da793883ebf08760b
-  reflectionMaxPathLength: 10
+  reflectionMaxPathLength: 5
   reflectionsAuxBusGain: 1
   reflectionsOrder: 1
   roomReverbAuxBusGain: 1
@@ -569,7 +569,7 @@ MonoBehaviour:
   - {fileID: 0}
   waitSeconds: 1
   alertStateDuration: 2
-  attackRange: 2
+  attackRange: 0.5
   waitSecBeforeAttack: 1
   aggroSprite: {fileID: 212577250822465814}
   cooldownSprite: 1
