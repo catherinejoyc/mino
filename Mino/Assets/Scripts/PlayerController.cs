@@ -213,7 +213,10 @@ public class PlayerController : MonoBehaviour, IHittable {
 
         //Jump
         if (Input.GetButtonDown("Jump") && m_isGrounded && !isPushingBox)
+        {
+            //Jump
             m_rb.AddForce(new Vector3(0, jumpSpeed, 0), ForceMode.Impulse);
+        }
         
         //Gravity in air
         if (!m_isGrounded)
@@ -243,6 +246,10 @@ public class PlayerController : MonoBehaviour, IHittable {
     #endregion
 
     #region Interact
+    public float _boxXOffset;
+    public float _boxYOffset;
+    public float _boxZOffest;
+
     void Push()
     {
         //push with hands against box (animate)
@@ -257,7 +264,8 @@ public class PlayerController : MonoBehaviour, IHittable {
 
                 //parent box to player and hold it in front of you
                 currentObjectHolding.transform.parent = this.transform;
-                currentObjectHolding.transform.Translate(0, 0, 0.2f * Time.deltaTime, this.gameObject.transform);
+                //currentObjectHolding.transform.Translate(0f, 0, 0.2f * Time.deltaTime, this.gameObject.transform);
+                currentObjectHolding.transform.Translate(_boxXOffset, _boxYOffset, _boxZOffest, this.gameObject.transform);
                 currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
 
                 //slow player
