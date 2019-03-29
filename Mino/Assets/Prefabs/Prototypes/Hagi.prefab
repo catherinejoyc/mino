@@ -53,7 +53,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1509314852314994
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1760792214830026
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1829669669582252
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1091572483181690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3, y: -1, z: 9.26}
+  m_LocalPosition: {x: 21.168028, y: -5.4252195, z: -6.3493485}
   m_LocalScale: {x: 0.5747804, y: 0.5747804, z: 0.5747804}
   m_Children:
   - {fileID: 4299767726013802}
@@ -572,7 +572,7 @@ MonoBehaviour:
   attackRange: 0.5
   waitSecBeforeAttack: 1
   aggroSprite: {fileID: 212577250822465814}
-  cooldownSprite: 1
+  cooldownSprite: 2
 --- !u!135 &135923896380012252
 SphereCollider:
   m_ObjectHideFlags: 1

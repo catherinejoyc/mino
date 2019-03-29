@@ -286,8 +286,6 @@ MonoBehaviour:
   currentObjectHolding: {fileID: 0}
   isPushingBox: 0
   waterBorder: {fileID: 0}
-  _boxXOffset: 0
-  _boxYOffset: 0
   _boxZOffest: 0.1
 --- !u!114 &114537742088066832
 MonoBehaviour:

@@ -34,6 +34,7 @@ public class BaseEnemyScript : MonoBehaviour {
     public SpriteRenderer aggroSprite;
     float startTimeSprite = 0;
     public float cooldownSprite;
+    bool _showingSprite;
 
 	// Use this for initialization
 	void Start () {
@@ -49,6 +50,7 @@ public class BaseEnemyScript : MonoBehaviour {
         switch (currState)
         {
             case State.Idle:
+                _showingSprite = false;
                 // Choose the next destination point when the agent gets
                 // close to the current one.
                 if (!m_agent.pathPending && m_agent.remainingDistance < 0.5f/* && m_idle*/)
@@ -57,6 +59,7 @@ public class BaseEnemyScript : MonoBehaviour {
                 }
                 break;
             case State.Alert:
+                _showingSprite = false;
                 //Go back to Idle after alertStateDuration
                 //Debug.Log("ALERT");
                 if (alertStartTime + alertStateDuration <= Time.time)
@@ -66,23 +69,19 @@ public class BaseEnemyScript : MonoBehaviour {
                 }
                 break;
             case State.Hunt:
-                // if close to the current one (and no collision detected)
-                //Debug.Log("Hunting...");
+                _showingSprite = true;
+                // if close to the current one (and no collision detected)                
                 if (!m_agent.pathPending && m_agent.remainingDistance < 0.5f/* && m_idle*/)
                 {
                     Attack();
                 }
                 break;
             case State.Attack:
+                _showingSprite = true;
                 break;
         }
 
-        //Aggro Sprite
-        if (startTimeSprite <= Time.deltaTime + cooldownSprite)
-        {
-            aggroSprite.gameObject.transform.LookAt(FindObjectOfType<PlayerController>().transform);
-            aggroSprite.enabled = false;
-        }
+        FlickerSprite();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -151,10 +150,6 @@ public class BaseEnemyScript : MonoBehaviour {
 
             m_agent.SetDestination(pos); //Track Sound
 
-            //show aggro Sprite ONLY if near player
-            //aggroSprite.enabled = true;
-            //startTimeSprite = Time.deltaTime;
-
             Go();
         }
     }
@@ -217,6 +212,26 @@ public class BaseEnemyScript : MonoBehaviour {
     void Stop()
     {
         m_agent.isStopped = true;
+    }
+    #endregion
+
+    #region FlickerSprite
+    void FlickerSprite()
+    {
+        if (_showingSprite)
+        {
+            aggroSprite.transform.LookAt(FindObjectOfType<PlayerController>().transform.position, Vector3.up);
+            aggroSprite.enabled = false;
+            Invoke("ShowSprite", cooldownSprite);
+            aggroSprite.enabled = false;
+        }
+        else
+            aggroSprite.enabled = false;
+
+    }
+    void ShowSprite()
+    {
+        aggroSprite.enabled = true;
     }
     #endregion
 }
