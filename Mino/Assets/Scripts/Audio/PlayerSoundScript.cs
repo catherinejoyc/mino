@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-enum Underground
+public enum Underground
 {
     Stone,
     Gravel,
@@ -32,7 +32,7 @@ public class PlayerSoundScript : SoundScript {
 
     //Volume (fake Volume, is just for gameplay)
     float volume;
-    Underground currUnderground;
+    public Underground currUnderground;
 
     [Header("Volume, that is shown in UI [0-1]")]
     [Header("sneaking volume")]

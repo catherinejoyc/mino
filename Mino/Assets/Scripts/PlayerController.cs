@@ -12,7 +12,9 @@ public class PlayerController : MonoBehaviour, IHittable {
     //checkpoint (nicht mehr nötig)
     //public Vector3 m_lastCheckpoint;
 
+    //moving
     Vector3 m_playerInput;
+    bool canMove = true;
 
     public float walkingSpeed;
     public float sneakingSpeed;
@@ -87,10 +89,18 @@ public class PlayerController : MonoBehaviour, IHittable {
         //Shoot Stones
         if (Input.GetButtonDown("Fire2"))
         {
+            //stop movement and get down
+            canMove = false;
+            GetComponentInChildren<Camera>().gameObject.transform.Translate(-Vector3.up * 0.1f);
+
             stone_startTime = Time.time;
         }
         if (Input.GetButtonUp("Fire2"))
         {
+            //enable movement and go back up
+            canMove = true;
+            GetComponentInChildren<Camera>().gameObject.transform.Translate(Vector3.up * 0.1f);
+
             if ((Time.time - stone_startTime) < 0.2f)  //shoot if the player pressed the button for a short time
             {
                 ShootStone();
@@ -195,21 +205,23 @@ public class PlayerController : MonoBehaviour, IHittable {
         }
 
         //Run and sneak
-        if (isPushingBox)
+        if (canMove)
         {
-            if (Input.GetButton("Sneaking"))
-                m_rb.AddRelativeForce(m_playerInput * sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
+            if (isPushingBox)
+            {
+                if (Input.GetButton("Sneaking"))
+                    m_rb.AddRelativeForce(m_playerInput * sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
+                else
+                    m_rb.AddRelativeForce(m_playerInput * boxMovingSpeed * Time.deltaTime, ForceMode.Impulse);
+            }
             else
-                m_rb.AddRelativeForce(m_playerInput * boxMovingSpeed * Time.deltaTime, ForceMode.Impulse);
+            {
+                if (Input.GetButton("Sneaking"))
+                    m_rb.AddRelativeForce(m_playerInput * sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
+                else
+                    m_rb.AddRelativeForce(m_playerInput * walkingSpeed * Time.deltaTime, ForceMode.Impulse);
+            }
         }
-        else
-        {
-            if (Input.GetButton("Sneaking"))
-                m_rb.AddRelativeForce(m_playerInput * sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
-            else
-                m_rb.AddRelativeForce(m_playerInput * walkingSpeed * Time.deltaTime, ForceMode.Impulse);
-        }
-
 
         //Jump
         if (Input.GetButtonDown("Jump") && m_isGrounded && !isPushingBox)
@@ -241,7 +253,10 @@ public class PlayerController : MonoBehaviour, IHittable {
 
     private void CollectStone()
     {
-        InventoryManager.MyInstance.Stones++;
+        if (GetComponent<PlayerSoundScript>().currUnderground == Underground.Gravel)
+        {
+            InventoryManager.MyInstance.Stones++;
+        }
     }
     #endregion
 
