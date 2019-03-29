@@ -73,8 +73,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958085047044498}
-  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 3.08, y: -1, z: -0.03}
+  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.7071079}
+  m_LocalPosition: {x: 2.72, y: -0.74, z: -3.01}
   m_LocalScale: {x: 0.55733657, y: 0.55733657, z: 0.55733657}
   m_Children:
   - {fileID: 4431120344307724}
@@ -286,6 +286,9 @@ MonoBehaviour:
   currentObjectHolding: {fileID: 0}
   isPushingBox: 0
   waterBorder: {fileID: 0}
+  _boxXOffset: 0
+  _boxYOffset: 0
+  _boxZOffest: 0.1
 --- !u!114 &114537742088066832
 MonoBehaviour:
   m_ObjectHideFlags: 1

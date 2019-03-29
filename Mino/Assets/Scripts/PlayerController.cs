@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour, IHittable {
         #endregion
 
         #region Interact
-        if (/*Input.GetMouseButtonDown(0) || */Input.GetButton("Fire1"))
+        if (/*Input.GetMouseButtonDown(0) || */Input.GetButton("Fire1") && m_isGrounded) //only if player is grounded
         {
             // currently empty-handed
             if (currentObjectHolding == null)
@@ -246,12 +246,13 @@ public class PlayerController : MonoBehaviour, IHittable {
     #endregion
 
     #region Interact
-    public float _boxXOffset;
-    public float _boxYOffset;
-    public float _boxZOffest;
+    float _boxXOffset = 0;
+    float _boxYOffset = 0;
+    public float _boxZOffest; //0.1
 
     void Push()
     {
+
         //push with hands against box (animate)
 
         //push/pull box in facing direction
@@ -261,6 +262,9 @@ public class PlayerController : MonoBehaviour, IHittable {
             if (hit.collider.gameObject.CompareTag("Box"))
             {
                 currentObjectHolding = hit.collider.gameObject;
+
+                //freeze rotations
+                currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
 
                 //parent box to player and hold it in front of you
                 currentObjectHolding.transform.parent = this.transform;
@@ -281,7 +285,6 @@ public class PlayerController : MonoBehaviour, IHittable {
         //hide hands again (animate)
 
         //de-parent box
-        //currentObjectHolding.GetComponent<Rigidbody>().isKinematic = false;
         currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         currentObjectHolding.transform.parent = null;
         currentObjectHolding = null;

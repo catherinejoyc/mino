@@ -27,10 +27,15 @@ public class BoxScript : SoundScript, IHittable {
     public Material scratchedMat;
     public GameObject destroyedBox;
 
+    //physics
+    float _boxYPosition;
+
     private void Start()
     {
         m_renderer = GetComponent<Renderer>();
         m_meshFilter = GetComponent<MeshFilter>();
+
+        _boxYPosition = this.gameObject.transform.position.y;
     }
 
     private void Update()
@@ -48,6 +53,12 @@ public class BoxScript : SoundScript, IHittable {
         {
             stopSoundEvent.Post(this.gameObject);
             isMoving = false;
+        }
+
+        if (this.gameObject.transform.position.y < _boxYPosition)
+        {
+            //set pos back
+            this.gameObject.transform.Translate(Vector3.up*Time.deltaTime);
         }
     }
 
