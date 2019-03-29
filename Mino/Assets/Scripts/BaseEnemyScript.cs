@@ -25,10 +25,15 @@ public class BaseEnemyScript : MonoBehaviour {
     //Alert
     float alertStartTime;
     public float alertStateDuration;
+    bool alertSoundPlaying;
+
+    //Hunt
+    bool huntSoundPlaying;
 
     //Attack
     public float attackRange;
     public float waitSecBeforeAttack;
+    bool attackSoundPlaying;
 
     //sprite
     public SpriteRenderer aggroSprite;
@@ -59,6 +64,12 @@ public class BaseEnemyScript : MonoBehaviour {
                 }
                 break;
             case State.Alert:
+                if (!alertSoundPlaying) //play once
+                {
+                    GetComponent<EnemySoundScript>().PlayAlertStateSound();
+                    alertSoundPlaying = true;
+                }
+
                 _showingSprite = false;
                 //Go back to Idle after alertStateDuration
                 //Debug.Log("ALERT");
@@ -69,6 +80,12 @@ public class BaseEnemyScript : MonoBehaviour {
                 }
                 break;
             case State.Hunt:
+                if (!huntSoundPlaying) //play once
+                {
+                    GetComponent<EnemySoundScript>().PlayHuntStateSound();
+                    huntSoundPlaying = true;
+                }
+
                 _showingSprite = true;
                 // if close to the current one (and no collision detected)                
                 if (!m_agent.pathPending && m_agent.remainingDistance < 0.5f/* && m_idle*/)
@@ -77,6 +94,12 @@ public class BaseEnemyScript : MonoBehaviour {
                 }
                 break;
             case State.Attack:
+                if (!attackSoundPlaying) //play once
+                {
+                    GetComponent<EnemySoundScript>().PlayAttackSound();
+                    attackSoundPlaying = true;
+                }
+
                 _showingSprite = true;
                 break;
         }

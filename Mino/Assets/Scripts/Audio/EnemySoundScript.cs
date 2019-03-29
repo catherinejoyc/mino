@@ -29,7 +29,8 @@ public class EnemySoundScript : SoundScript {
     // Use this for initialization
     void Awake () {
         m_agent = GetComponent<NavMeshAgent>();
-	}
+        surfaceStone.SetValue(this.gameObject);
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -74,16 +75,19 @@ public class EnemySoundScript : SoundScript {
     //Play in BaseEnemyScript
     public void PlayAlertStateSound()
     {
+        print("play alert state sound");
         playAlertState.Post(this.gameObject);
     }
 
     public void PlayHuntStateSound()
     {
+        print("play hunt state sound");
         playHuntState.Post(this.gameObject);
     }
 
     public void PlayAttackSound()
     {
+        print("play alert attack sound");
         playAttack.Post(this.gameObject);
     }
 

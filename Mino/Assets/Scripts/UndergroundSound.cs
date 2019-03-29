@@ -25,7 +25,10 @@ public class UndergroundSound : MonoBehaviour {
     {
         if(other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemySoundScript>().ChangeFootstep(UnderGroundIndex);
+            if (!other.isTrigger) //ignore the trigger
+            {
+                other.GetComponent<EnemySoundScript>().ChangeFootstep(UnderGroundIndex);
+            }
         }
         else if (other.CompareTag("Box"))
         {
@@ -49,7 +52,8 @@ public class UndergroundSound : MonoBehaviour {
         }
         if(other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemySoundScript>().ChangeFootstep(0);
+            if (!other.isTrigger) //ignore the trigger
+                other.GetComponent<EnemySoundScript>().ChangeFootstep(0);
         }
     }
 }
