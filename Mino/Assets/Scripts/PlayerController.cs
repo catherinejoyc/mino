@@ -326,7 +326,5 @@ public class PlayerController : MonoBehaviour, IHittable {
 
         Time.timeScale = 0f;
         GameManager.MyInstance.gameIsPaused = true;
-
-        print(Cursor.lockState);
     }
 }

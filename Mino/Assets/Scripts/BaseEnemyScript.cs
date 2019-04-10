@@ -25,15 +25,17 @@ public class BaseEnemyScript : MonoBehaviour {
     //Alert
     float alertStartTime;
     public float alertStateDuration;
-    bool alertSoundPlaying;
+    bool alertSoundPlaying = false;
 
     //Hunt
-    bool huntSoundPlaying;
+    bool huntSoundPlaying = false;
+    Vector3 _huntDestination;
+    float _hearingDistance;
 
     //Attack
     public float attackRange;
     public float waitSecBeforeAttack;
-    bool attackSoundPlaying;
+    bool attackSoundPlaying = false;
 
     //sprite
     public SpriteRenderer aggroSprite;
@@ -64,43 +66,13 @@ public class BaseEnemyScript : MonoBehaviour {
                 }
                 break;
             case State.Alert:
-                if (!alertSoundPlaying) //play once
-                {
-                    GetComponent<EnemySoundScript>().PlayAlertStateSound();
-                    alertSoundPlaying = true;
-                }
-
-                _showingSprite = false;
-                //Go back to Idle after alertStateDuration
-                //Debug.Log("ALERT");
-                if (alertStartTime + alertStateDuration <= Time.time)
-                {
-                    UpdateIdleState();
-                    //Debug.Log("Nothing there...");
-                }
+                UpdateAlertState();
                 break;
             case State.Hunt:
-                if (!huntSoundPlaying) //play once
-                {
-                    GetComponent<EnemySoundScript>().PlayHuntStateSound();
-                    huntSoundPlaying = true;
-                }
-
-                _showingSprite = true;
-                // if close to the current one (and no collision detected)                
-                if (!m_agent.pathPending && m_agent.remainingDistance < 0.5f/* && m_idle*/)
-                {
-                    Attack();
-                }
+                UpdateHuntState(_huntDestination, _hearingDistance);
                 break;
             case State.Attack:
-                if (!attackSoundPlaying) //play once
-                {
-                    GetComponent<EnemySoundScript>().PlayAttackSound();
-                    attackSoundPlaying = true;
-                }
-
-                _showingSprite = true;
+                Attack();
                 break;
         }
 
@@ -154,13 +126,31 @@ public class BaseEnemyScript : MonoBehaviour {
     }
     void UpdateAlertState()
     {
+        currState = State.Alert;
+        _showingSprite = false;
+
         //start alert
         alertStartTime = Time.time;
 
+        //Go back to Idle after alertStateDuration
+        if (alertStartTime + alertStateDuration <= Time.time)
+        {
+            UpdateIdleState();
+        }
+
+        //play sound once
+        if (!alertSoundPlaying) //play once
+        {
+            GetComponent<EnemySoundScript>().PlayAlertStateSound();
+            //enable sounds for next play
+            huntSoundPlaying = false; 
+            attackSoundPlaying = false;
+
+            alertSoundPlaying = true;
+        }
+
         //stop movement
         Stop();
-
-        currState = State.Alert;
     }
     void UpdateHuntState(Vector3 pos, float maxDistance)
     {
@@ -168,21 +158,55 @@ public class BaseEnemyScript : MonoBehaviour {
         float currDistance = Vector3.Distance(pos, this.transform.position);
         if (currDistance <= maxDistance)
         {
-            //Go into Hunt State
+            //save parameteres in instancevariables
+            _huntDestination = pos;
+            _hearingDistance = maxDistance;
+
             currState = State.Hunt;
+
+            //play sound once
+            if (!huntSoundPlaying) //play once
+            {
+                GetComponent<EnemySoundScript>().PlayHuntStateSound();
+
+                //enable sounds for next play
+                alertSoundPlaying = false;
+                attackSoundPlaying = false;
+
+                huntSoundPlaying = true;
+            }
 
             m_agent.SetDestination(pos); //Track Sound
 
+            _showingSprite = true;
+
             Go();
+        }
+
+        // if close to the current one (and no collision detected)                
+        if (!m_agent.pathPending && m_agent.remainingDistance < 0.5f)
+        {
+            Attack();
         }
     }
     void Attack()
     {
-        //Debug.Log("ATTACKING");
         currState = State.Attack;
         Stop();
 
+        _showingSprite = true;
+
         //Play Roar
+        if (!attackSoundPlaying) //play once
+        {
+            GetComponent<EnemySoundScript>().PlayAttackSound();
+
+            //enable sounds for next play
+            huntSoundPlaying = false;
+            alertSoundPlaying = false;
+
+            attackSoundPlaying = true;
+        }
 
         //Raycast in front of Enemy
         Invoke("Hit", waitSecBeforeAttack);
@@ -208,6 +232,7 @@ public class BaseEnemyScript : MonoBehaviour {
     {
         //continue patrol
         Go();
+        GoToNextPoint();
         currState = State.Idle;
     }
 
@@ -248,7 +273,7 @@ public class BaseEnemyScript : MonoBehaviour {
             Invoke("ShowSprite", cooldownSprite);
             aggroSprite.enabled = false;
         }
-        else
+        else if (startTimeSprite < Time.time + cooldownSprite)
             aggroSprite.enabled = false;
 
     }
