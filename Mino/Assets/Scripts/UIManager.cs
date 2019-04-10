@@ -44,6 +44,24 @@ public class UIManager : MonoBehaviour {
 
     //DEATH
     public GameObject deathScreen;
+    public void ShowDeathScreen()
+    {
+        //Death Screen
+        GameManager.MyInstance.dead = true;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        UIManager.MyInstance.ingameUI.SetActive(false);
+        UIManager.MyInstance.pauseUI.SetActive(false);
+        UIManager.MyInstance._fadeScreen.gameObject.SetActive(false);
+
+        //show reason of death!
+        UIManager.MyInstance.deathScreen.SetActive(true);
+
+        Time.timeScale = 0f;
+        GameManager.MyInstance.gameIsPaused = true;
+    }
 
     //FADE
     public Animator _fadeScreen;
