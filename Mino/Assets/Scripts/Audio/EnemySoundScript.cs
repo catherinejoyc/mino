@@ -30,12 +30,12 @@ public class EnemySoundScript : SoundScript {
     void Awake () {
         m_agent = GetComponent<NavMeshAgent>();
         surfaceStone.SetValue(this.gameObject);
+
+        maxDistance = AkSoundEngine.GetMaxRadius(this.gameObject);
     }
 
 	// Update is called once per frame
 	void Update () {
-
-        maxDistance = AkSoundEngine.GetMaxRadius(this.gameObject);
 
         if (!m_agent.isStopped) //walking
         {

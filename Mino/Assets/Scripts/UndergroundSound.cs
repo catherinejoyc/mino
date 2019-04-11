@@ -23,6 +23,14 @@ public class UndergroundSound : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Enemy"))
+        {
+            if (!other.isTrigger) //ignore the trigger
+            {
+                other.GetComponent<EnemySoundScript>().ChangeFootstep(UnderGroundIndex);
+                //Debug.Log("Enemy Collider entered; " + UnderGroundIndex);
+            }
+        }
         if (other.CompareTag("Box"))
         {
             other.GetComponent<BoxScript>().ChangeMovingSound(UnderGroundIndex);
@@ -35,14 +43,7 @@ public class UndergroundSound : MonoBehaviour {
         {
             m_Player.GetComponent<PlayerSoundScript>().ChangeFootstep(UnderGroundIndex);
         }
-        if (other.CompareTag("Enemy"))
-        {
-            if (!other.isTrigger) //ignore the trigger
-            {
-                other.GetComponent<EnemySoundScript>().ChangeFootstep(UnderGroundIndex);
-                //Debug.Log("Enemy Collider entered; " + UnderGroundIndex);
-            }
-        }
+
     }
 
     private void OnTriggerExit(Collider other)
