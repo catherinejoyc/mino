@@ -314,17 +314,6 @@ public class PlayerController : MonoBehaviour, IHittable {
 
     public void ReactToHit()
     {
-        //Death Screen
-        GameManager.MyInstance.dead = true;
-
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-
-        UIManager.MyInstance.ingameUI.SetActive(false);
-        UIManager.MyInstance.pauseUI.SetActive(false);
-        UIManager.MyInstance.deathScreen.SetActive(true);
-
-        Time.timeScale = 0f;
-        GameManager.MyInstance.gameIsPaused = true;
+        UIManager.MyInstance.ShowDeathScreen();
     }
 }

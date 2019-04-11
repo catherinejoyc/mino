@@ -120,22 +120,6 @@ public class GameManager : MonoBehaviour {
     //Timeout
     void TimeRunOut()
     {
-        //Death Screen
-        dead = true;
-
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-
-        UIManager.MyInstance.ingameUI.SetActive(false);
-        UIManager.MyInstance.pauseUI.SetActive(false);
-        UIManager.MyInstance._fadeScreen.gameObject.SetActive(false);
-
-        //show reason of death!
-        UIManager.MyInstance.deathScreen.SetActive(true);
-
-        Time.timeScale = 0f;
-        gameIsPaused = true;
-
-        print(Cursor.lockState);
+        UIManager.MyInstance.ShowDeathScreen();
     }
 }
