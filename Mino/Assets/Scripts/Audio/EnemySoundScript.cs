@@ -42,7 +42,6 @@ public class EnemySoundScript : SoundScript {
             if (Time.time > lastStepTime + stepIntervall)
             {
                 m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
-
                 lastStepTime = Time.time;
             }
         }
@@ -50,7 +49,7 @@ public class EnemySoundScript : SoundScript {
 
     public void ChangeFootstep(int underGround)
     {
-        //set switches and currUnderground
+        //set switches
         switch (underGround)
         {
             case 1: //stone
@@ -68,8 +67,8 @@ public class EnemySoundScript : SoundScript {
             default: //stone
                 surfaceStone.SetValue(this.gameObject);
                 break;
-
         }
+        Debug.Log(underGround);
     }
 
     //Play in BaseEnemyScript
