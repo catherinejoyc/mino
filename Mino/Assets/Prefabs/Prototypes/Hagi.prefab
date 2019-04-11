@@ -485,9 +485,9 @@ MonoBehaviour:
   reflectAuxBus:
     ID: -840627529
     valueGuid: 2c7ea41b7fdf504da793883ebf08760b
-  reflectionMaxPathLength: 5
+  reflectionMaxPathLength: 8
   reflectionsAuxBusGain: 1
-  reflectionsOrder: 1
+  reflectionsOrder: 2
   roomReverbAuxBusGain: 1
   diffractionMaxEdges: 0
   diffractionMaxPaths: 0
