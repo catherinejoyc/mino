@@ -12233,6 +12233,11 @@ Prefab:
       propertyPath: points.Array.data[2]
       value: 
       objectReference: {fileID: 198130824}
+    - target: {fileID: 114840159782439160, guid: 2342290dc8582e14987c32dd9a1fa24f,
+        type: 2}
+      propertyPath: stepIntervall
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2342290dc8582e14987c32dd9a1fa24f, type: 2}
   m_IsPrefabAsset: 0
