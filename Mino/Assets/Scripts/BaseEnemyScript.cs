@@ -126,11 +126,14 @@ public class BaseEnemyScript : MonoBehaviour {
     }
     void UpdateAlertState()
     {
-        currState = State.Alert;
-        _showingSprite = false;
+        if (currState != State.Alert)
+        {
+            //start alert
+            alertStartTime = Time.time;
 
-        //start alert
-        alertStartTime = Time.time;
+            currState = State.Alert;
+        }
+        _showingSprite = false;
 
         //Go back to Idle after alertStateDuration
         if (alertStartTime + alertStateDuration <= Time.time)

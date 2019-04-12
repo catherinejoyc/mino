@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour {
 
     public void ResetUI()
     {
-        keyFragments.text = "0/0";
+        keyFragments.text = "0/3";
         TutorialScreen.enabled = false;
     }
 
