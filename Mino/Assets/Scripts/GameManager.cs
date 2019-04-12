@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour {
 
     PlayerSoundScript m_playerSound;
 
-
     private static GameManager m_myInstance;
     public static GameManager MyInstance
     {
