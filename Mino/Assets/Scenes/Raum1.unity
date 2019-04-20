@@ -21403,6 +21403,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade795830f01c084cbf772d29c3e0f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SoundEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  sound:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+  m_soundType: 13
+  soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   masterKey: {fileID: 358761445}
 --- !u!135 &738876295
 SphereCollider:
@@ -22168,6 +22177,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade795830f01c084cbf772d29c3e0f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SoundEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  sound:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+  m_soundType: 13
+  soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   masterKey: {fileID: 358761445}
 --- !u!135 &756846796
 SphereCollider:
@@ -44023,6 +44041,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade795830f01c084cbf772d29c3e0f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SoundEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  sound:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+  m_soundType: 13
+  soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   masterKey: {fileID: 358761445}
 --- !u!135 &1642003112
 SphereCollider:

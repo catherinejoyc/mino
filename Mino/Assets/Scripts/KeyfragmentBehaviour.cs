@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyfragmentBehaviour : MonoBehaviour {
+public class KeyfragmentBehaviour : SoundScript {
 
     public KeyBehaviour masterKey;
 
@@ -10,11 +10,18 @@ public class KeyfragmentBehaviour : MonoBehaviour {
     {
         if (other.gameObject.name == "Player")
         {
+            m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+
             //Update keycount
             masterKey.AddKeyCount();
 
-            //dissapear
-            gameObject.SetActive(false);
+            Invoke("Dissapear", 1);
         }
+    }
+
+    //dissapear
+    void Dissapear()
+    {
+        gameObject.SetActive(false);
     }
 }
