@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	634024223	Play_Player_jumps			\Default Work Unit\Play_Player_jumps	
 	678858674	Play_Hagi_attack			\Default Work Unit\Play_Hagi_attack	
 	873681583	Stop_Interactables_Kistens			\Default Work Unit\Stop_Interactables_Kistens	
+	1032010903	Play_Interactables_Schluesselfr			\Default Work Unit\Play_Interactables_Schluesselfr	
 	1097980931	testEvent			\Default Work Unit\testEvent	
 	1165667864	Play_Hagi_alert			\Default Work Unit\Play_Hagi_alert	
 	1279939955	Play_Interactables_Kiste_scratch			\Default Work Unit\Play_Interactables_Kiste_scratch	
@@ -176,6 +177,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1026384021	Playersteps_Busch7	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Busch7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_busch\Playersteps_Busch7		122708
 	1027828188	Playersteps_Steinplatte3s	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Steinplatte3s_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_sneak\Player_sneak_stone\Playersteps_Steinplatte3s		93792
 	1032558954	Playersteps_Steinplatte1	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Steinplatte1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_stone\Playersteps_Steinplatte1		95552
+	1040087310	Schluesselfragmente_einsammeln	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Schluesselfragmente_einsammeln_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Interactables_Schluesselfr\Schluesselfragmente_einsammeln		288668
 	1045254995	Playersteps_Kiesel5s	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Kiesel5s_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_sneak\Player_sneak_kiesel\Playersteps_Kiesel5s		97016
 	1047075311	Hagibaer_Fs_Kiesel5	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Kiesel5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_gravel\Hagibaer_Fs_Kiesel5		191628
 	1051016423	Playersteps_Steinplatte5s	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Steinplatte5s_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_sneak\Player_sneak_stone\Playersteps_Steinplatte5s		88108
