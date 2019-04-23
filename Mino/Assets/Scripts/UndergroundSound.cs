@@ -28,7 +28,7 @@ public class UndergroundSound : MonoBehaviour {
             if (!other.isTrigger) //ignore the trigger
             {
                 other.GetComponent<EnemySoundScript>().ChangeFootstep(UnderGroundIndex);
-                //Debug.Log("Enemy Collider entered; " + UnderGroundIndex);
+                Debug.Log("Enemy Collider entered; " + UnderGroundIndex);
             }
         }
         if (other.CompareTag("Box"))
