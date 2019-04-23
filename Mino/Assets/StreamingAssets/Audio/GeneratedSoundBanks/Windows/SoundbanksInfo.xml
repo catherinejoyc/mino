@@ -23,6 +23,7 @@
 			<IncludedEvents>
 				<Event Id="1165667864" Name="Play_Hagi_alert" ObjectPath="\Events\Default Work Unit\Play_Hagi_alert"/>
 				<Event Id="678858674" Name="Play_Hagi_attack" ObjectPath="\Events\Default Work Unit\Play_Hagi_attack"/>
+				<Event Id="879053751" Name="Play_Hagi_footsteps_raum" ObjectPath="\Events\Default Work Unit\Play_Hagi_footsteps_raum"/>
 				<Event Id="86685327" Name="Play_Hagi_footstepsNew" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstepsNew"/>
 				<Event Id="2126903937" Name="Play_Hagi_hunt" ObjectPath="\Events\Default Work Unit\Play_Hagi_hunt"/>
 				<Event Id="3364721325" Name="Play_Interactables_Druckplatte" ObjectPath="\Events\Default Work Unit\Play_Interactables_Druckplatte"/>
