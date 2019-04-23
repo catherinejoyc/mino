@@ -74,19 +74,16 @@ public class EnemySoundScript : SoundScript {
     //Play in BaseEnemyScript
     public void PlayAlertStateSound()
     {
-        Debug.Log("play alert state sound");
         playAlertState.Post(this.gameObject);
     }
 
     public void PlayHuntStateSound()
     {
-        Debug.Log("play hunt state sound");
         playHuntState.Post(this.gameObject);
     }
 
     public void PlayAttackSound()
     {
-        Debug.Log("play attack sound");
         playAttack.Post(this.gameObject);
     }
 

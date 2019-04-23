@@ -569,6 +569,7 @@ MonoBehaviour:
   - {fileID: 0}
   waitSeconds: 1
   alertStateDuration: 2
+  huntStateDuration: 0
   attackRange: 0.5
   waitSecBeforeAttack: 1
   aggroSprite: {fileID: 212577250822465814}

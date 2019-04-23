@@ -15,7 +15,7 @@ public class KeyfragmentBehaviour : SoundScript {
             //Update keycount
             masterKey.AddKeyCount();
 
-            Invoke("Dissapear", 1);
+            Invoke("Dissapear", 0.25f);
         }
     }
 

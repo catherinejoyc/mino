@@ -83,8 +83,8 @@ public class SoundScript : MonoBehaviour {
     protected void PlaySound(Vector3 pos, float maxDistance)
     {
         sound.Post(this.gameObject);
-        if (this.gameObject.CompareTag("Enemy"))
-            Debug.Log("Sound posted @" + this.gameObject.name);
+        //if (this.gameObject.CompareTag("Enemy"))
+        //    Debug.Log("Sound posted @" + this.gameObject.name);
     }
 
     protected void ChangeSoundType(SoundType type)

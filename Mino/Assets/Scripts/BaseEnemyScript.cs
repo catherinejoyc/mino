@@ -24,6 +24,7 @@ public class BaseEnemyScript : MonoBehaviour {
 
     //Alert
     float alertStartTime;
+    [Tooltip("enemy leaves alert state after x seconds")]
     public float alertStateDuration;
     bool alertSoundPlaying = false;
 
@@ -31,6 +32,9 @@ public class BaseEnemyScript : MonoBehaviour {
     bool huntSoundPlaying = false;
     Vector3 _huntDestination;
     float _hearingDistance;
+    [Tooltip("enemy leaves hunt state after x seconds")]
+    public float huntStateDuration;
+    float huntStartTime;
 
     //Attack
     public float attackRange;
@@ -126,11 +130,10 @@ public class BaseEnemyScript : MonoBehaviour {
     }
     void UpdateAlertState()
     {
+        //switch state
         if (currState != State.Alert)
         {
-            //start alert
             alertStartTime = Time.time;
-
             currState = State.Alert;
         }
         _showingSprite = false;
@@ -165,7 +168,17 @@ public class BaseEnemyScript : MonoBehaviour {
             _huntDestination = pos;
             _hearingDistance = maxDistance;
 
-            currState = State.Hunt;
+            //switch state
+            if  (currState != State.Hunt)
+            {
+                huntStartTime = Time.time;
+                currState = State.Hunt;
+            }
+            //duration check, Go back to Idle after huntStateDuration
+            if (huntStartTime + huntStateDuration <= Time.time)
+            {
+                UpdateIdleState();
+            }
 
             //play sound once
             if (!huntSoundPlaying) //play once
@@ -282,6 +295,7 @@ public class BaseEnemyScript : MonoBehaviour {
     }
     void ShowSprite()
     {
+        print("show sprite @" + this.gameObject.name);
         aggroSprite.enabled = true;
     }
     #endregion
