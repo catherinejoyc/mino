@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public float timeOutInSeconds; //in sec
+    float remainingTime;
     public bool dead = false;
 
     PlayerSoundScript m_playerSound;
@@ -29,16 +30,19 @@ public class GameManager : MonoBehaviour {
 
         m_playerSound = FindObjectOfType<PlayerSoundScript>();
 
+        //remainingTime += Time.timeSinceLevelLoad;
+        //print(remainingTime);
+        Resume();
     }
 
     private void Update()
     {
         //Time Countdown
-        float remainingTime = timeOutInSeconds - Time.timeSinceLevelLoad;
+        remainingTime = timeOutInSeconds - Time.timeSinceLevelLoad;
         UIManager.MyInstance.time.text = remainingTime.ToString("0");
 
         if (remainingTime <= 0)
-        {
+        { 
             TimeRunOut();
         }
 
@@ -61,11 +65,18 @@ public class GameManager : MonoBehaviour {
         //Reset all UI elements
         UIManager.MyInstance.ResetUI();
 
+        //Reset time
+        remainingTime = timeOutInSeconds;
+
         //Load Level
         if (lvlIndex == 0) //Main Menu
+        {
+            Debug.Log("Main Menu");
             Cursor.lockState = CursorLockMode.Confined;
+        }
         else
         {
+            Debug.Log("Resume");
             Resume();
         }
 
