@@ -17629,17 +17629,17 @@ Prefab:
     - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
         type: 2}
       propertyPath: sound.ID
-      value: 0
+      value: -1319871180
       objectReference: {fileID: 0}
     - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
         type: 2}
       propertyPath: ScratchPlayEvent.ID
-      value: 0
+      value: 1279939955
       objectReference: {fileID: 0}
     - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
         type: 2}
       propertyPath: DestroyedPlayEvent.ID
-      value: 0
+      value: -1611909749
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
@@ -26682,17 +26682,17 @@ Prefab:
     - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
         type: 2}
       propertyPath: sound.ID
-      value: 0
+      value: -1319871180
       objectReference: {fileID: 0}
     - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
         type: 2}
       propertyPath: ScratchPlayEvent.ID
-      value: 0
+      value: 1279939955
       objectReference: {fileID: 0}
     - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
         type: 2}
       propertyPath: DestroyedPlayEvent.ID
-      value: 0
+      value: -1611909749
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
@@ -31560,17 +31560,17 @@ Prefab:
     - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
         type: 2}
       propertyPath: sound.ID
-      value: 0
+      value: -1319871180
       objectReference: {fileID: 0}
     - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
         type: 2}
       propertyPath: ScratchPlayEvent.ID
-      value: 0
+      value: 1279939955
       objectReference: {fileID: 0}
     - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
         type: 2}
       propertyPath: DestroyedPlayEvent.ID
-      value: 0
+      value: -1611909749
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
