@@ -295,7 +295,6 @@ public class BaseEnemyScript : MonoBehaviour {
     }
     void ShowSprite()
     {
-        print("show sprite @" + this.gameObject.name);
         aggroSprite.enabled = true;
     }
     #endregion

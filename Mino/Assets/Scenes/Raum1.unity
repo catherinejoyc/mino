@@ -7586,7 +7586,7 @@ Prefab:
     - target: {fileID: 114170035752032182, guid: 79a0244ba7b23eb47b2c69508b85b63e,
         type: 2}
       propertyPath: timeOutInSeconds
-      value: 20
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
