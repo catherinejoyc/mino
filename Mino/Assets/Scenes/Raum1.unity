@@ -12400,6 +12400,11 @@ Prefab:
       propertyPath: reflectionMaxPathLength
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 114882692800718860, guid: 2342290dc8582e14987c32dd9a1fa24f,
+        type: 2}
+      propertyPath: huntStateDuration
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2342290dc8582e14987c32dd9a1fa24f, type: 2}
   m_IsPrefabAsset: 0
