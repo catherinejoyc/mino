@@ -28,7 +28,10 @@ public class UIManager : MonoBehaviour {
             m_myInstance = this;
         else
             Debug.Log("UIManager already exists!");
+    }
 
+    private void Start()
+    {
         ResetUI();
         FadeFromBlack();
     }
@@ -52,12 +55,12 @@ public class UIManager : MonoBehaviour {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
-        UIManager.MyInstance.ingameUI.SetActive(false);
-        UIManager.MyInstance.pauseUI.SetActive(false);
-        UIManager.MyInstance._fadeScreen.gameObject.SetActive(false);
+        ingameUI.SetActive(false);
+        pauseUI.SetActive(false);
+        _fadeScreen.gameObject.SetActive(false);
 
         //show reason of death!
-        UIManager.MyInstance.deathScreen.SetActive(true);
+        deathScreen.SetActive(true);
 
         Time.timeScale = 0f;
         GameManager.MyInstance.gameIsPaused = true;

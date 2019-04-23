@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7583,6 +7583,11 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114170035752032182, guid: 79a0244ba7b23eb47b2c69508b85b63e,
+        type: 2}
+      propertyPath: timeOutInSeconds
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
   m_IsPrefabAsset: 0
@@ -9459,6 +9464,21 @@ Prefab:
     - target: {fileID: 1898092215362574, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
       propertyPath: m_Name
       value: kiste1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: sound.ID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: ScratchPlayEvent.ID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: DestroyedPlayEvent.ID
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
@@ -13015,6 +13035,21 @@ Prefab:
     - target: {fileID: 1898092215362574, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
       propertyPath: m_Name
       value: kiste1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: sound.ID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: ScratchPlayEvent.ID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: DestroyedPlayEvent.ID
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
@@ -29185,6 +29220,21 @@ Prefab:
       propertyPath: m_Name
       value: kiste1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: sound.ID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: ScratchPlayEvent.ID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: DestroyedPlayEvent.ID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
   m_IsPrefabAsset: 0
@@ -40917,6 +40967,21 @@ Prefab:
     - target: {fileID: 1898092215362574, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
       propertyPath: m_Name
       value: kiste1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: sound.ID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: ScratchPlayEvent.ID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: DestroyedPlayEvent.ID
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
