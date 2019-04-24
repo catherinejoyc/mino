@@ -26772,7 +26772,7 @@ Prefab:
     - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
         type: 2}
       propertyPath: sound.ID
-      value: -1319871180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
         type: 2}
