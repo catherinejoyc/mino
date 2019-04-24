@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour {
         UIManager.MyInstance.ingameUI.SetActive(false);
         UIManager.MyInstance.pauseUI.SetActive(true);
         UIManager.MyInstance.deathScreen.SetActive(false);
+        //settings
         UIManager.MyInstance._fadeScreen.gameObject.SetActive(false);
 
         Cursor.visible = true;
@@ -125,6 +126,19 @@ public class GameManager : MonoBehaviour {
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    public void Settings()
+    {
+        UIManager.MyInstance.ShowSettingsScreen();
+
+        Time.timeScale = 0f;
+        gameIsPaused = true;
+    }
+    public void SetVolume(float volume)
+    {
+        //change volume in wwise
+        Debug.Log(volume);
     }
 
     //Timeout
