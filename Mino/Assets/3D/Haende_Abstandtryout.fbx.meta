@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: 5204f64ecd4bde34581620e5f084449a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Hand_Mesh1
+    100004: Hand_Mesh5
+    100006: Hand_Mesh7
+    100008: J_Daumen_1_L
+    100010: J_Daumen_1_R
+    100012: J_Daumen_2_L
+    100014: J_Daumen_2_R
+    100016: J_Daumen_3_L
+    100018: J_Daumen_3_R
+    100020: J_Ellenbogen_L
+    100022: J_Ellenbogen_R
+    100024: J_Handgelenk_L
+    100026: J_Handgelenk_R
+    100028: J_kleinerfinger_1_L
+    100030: J_kleinerfinger_1_R
+    100032: J_kleinerfinger_2_L
+    100034: J_kleinerfinger_2_R
+    100036: J_kleinerfinger_3_L
+    100038: J_kleinerfinger_3_R
+    100040: J_kleinerfinger_4_L
+    100042: J_kleinerfinger_4_R
+    100044: J_Mittelfinger_1_L
+    100046: J_Mittelfinger_1_R
+    100048: J_Mittelfinger_2_L
+    100050: J_Mittelfinger_2_R
+    100052: J_Mittelfinger_3_L
+    100054: J_Mittelfinger_3_R
+    100056: J_Mittelfinger_4_L
+    100058: J_Mittelfinger_4_R
+    100060: J_Oberarm_L
+    100062: J_Oberarm_R
+    100064: J_Ringfinger_1_L
+    100066: J_Ringfinger_1_R
+    100068: J_Ringfinger_2_L
+    100070: J_Ringfinger_2_R
+    100072: J_Ringfinger_3_L
+    100074: J_Ringfinger_3_R
+    100076: J_Ringfinger_4
+    100078: J_Ringfinger_4_L
+    100080: J_Zeigefinger_1_L
+    100082: J_Zeigefinger_1_R
+    100084: J_Zeigefinger_2_L
+    100086: J_Zeigefinger_2_R
+    100088: J_Zeigefinger_3_L
+    100090: J_Zeigefinger_3_R
+    100092: J_Zeigefinger_4_L
+    100094: J_Zeigefinger_4_R
+    100096: transform1
+    400000: //RootNode
+    400002: Hand_Mesh1
+    400004: Hand_Mesh5
+    400006: Hand_Mesh7
+    400008: J_Daumen_1_L
+    400010: J_Daumen_1_R
+    400012: J_Daumen_2_L
+    400014: J_Daumen_2_R
+    400016: J_Daumen_3_L
+    400018: J_Daumen_3_R
+    400020: J_Ellenbogen_L
+    400022: J_Ellenbogen_R
+    400024: J_Handgelenk_L
+    400026: J_Handgelenk_R
+    400028: J_kleinerfinger_1_L
+    400030: J_kleinerfinger_1_R
+    400032: J_kleinerfinger_2_L
+    400034: J_kleinerfinger_2_R
+    400036: J_kleinerfinger_3_L
+    400038: J_kleinerfinger_3_R
+    400040: J_kleinerfinger_4_L
+    400042: J_kleinerfinger_4_R
+    400044: J_Mittelfinger_1_L
+    400046: J_Mittelfinger_1_R
+    400048: J_Mittelfinger_2_L
+    400050: J_Mittelfinger_2_R
+    400052: J_Mittelfinger_3_L
+    400054: J_Mittelfinger_3_R
+    400056: J_Mittelfinger_4_L
+    400058: J_Mittelfinger_4_R
+    400060: J_Oberarm_L
+    400062: J_Oberarm_R
+    400064: J_Ringfinger_1_L
+    400066: J_Ringfinger_1_R
+    400068: J_Ringfinger_2_L
+    400070: J_Ringfinger_2_R
+    400072: J_Ringfinger_3_L
+    400074: J_Ringfinger_3_R
+    400076: J_Ringfinger_4
+    400078: J_Ringfinger_4_L
+    400080: J_Zeigefinger_1_L
+    400082: J_Zeigefinger_1_R
+    400084: J_Zeigefinger_2_L
+    400086: J_Zeigefinger_2_R
+    400088: J_Zeigefinger_3_L
+    400090: J_Zeigefinger_3_R
+    400092: J_Zeigefinger_4_L
+    400094: J_Zeigefinger_4_R
+    400096: transform1
+    2100000: Handtexture
+    4300000: Hand_Mesh5
+    4300002: Hand_Mesh7
+    9500000: //RootNode
+    13700000: Hand_Mesh5
+    13700002: Hand_Mesh7
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
