@@ -66,6 +66,21 @@ public class UIManager : MonoBehaviour {
         GameManager.MyInstance.gameIsPaused = true;
     }
 
+    //SETTINGS
+    public GameObject settingsScreen;
+    public void ShowSettingsScreen()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+
+        ingameUI.SetActive(false);
+        pauseUI.SetActive(false);
+        deathScreen.SetActive(false);
+        settingsScreen.SetActive(true);
+        _fadeScreen.gameObject.SetActive(false);
+
+        Cursor.visible = true;
+    }
+
     //FADE
     public Animator _fadeScreen;
     public void FadeToBlack()
