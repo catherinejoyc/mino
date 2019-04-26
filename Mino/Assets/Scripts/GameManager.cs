@@ -133,6 +133,8 @@ public class GameManager : MonoBehaviour {
         Application.Quit();
     }
 
+    //SETTINGS
+    public AK.Wwise.RTPC volumeRTPC;
     public void Settings()
     {
         UIManager.MyInstance.ShowSettingsScreen();
@@ -143,7 +145,7 @@ public class GameManager : MonoBehaviour {
     public void SetVolume(float volume)
     {
         //change volume in wwise
-        Debug.Log(volume);
+        volumeRTPC.SetGlobalValue(volume);
     }
     public void SetMouseSensitivity(float sensitivity)
     {
@@ -151,8 +153,6 @@ public class GameManager : MonoBehaviour {
         {
             player.GetComponent<PlayerController>().cameraSensitivity = sensitivity;          
         }
-        else
-            Debug.Log("PlayerController not found.");
     }
 
     //Timeout
