@@ -245,10 +245,6 @@
 					<ShortName>Hagibaer_Fs_Busch2.wav</ShortName>
 					<Path>SFX\Hagibaer_Fs_Busch2_56D34C19.wem</Path>
 				</File>
-				<File Id="406574737" Language="SFX">
-					<ShortName>Druckplatte.wav</ShortName>
-					<Path>SFX\Druckplatte_56D34C19.wem</Path>
-				</File>
 				<File Id="410825152" Language="SFX">
 					<ShortName>Playerjump_Gras4.wav</ShortName>
 					<Path>SFX\Playerjump_Gras4_56D34C19.wem</Path>
