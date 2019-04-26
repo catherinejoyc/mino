@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour, IHittable {
 
         #region Move Camera
 
+
         float gk = m_cam.transform.forward.y;
         float alpha = -(Mathf.Acos(gk) * Mathf.Rad2Deg - 90);
 
