@@ -34,6 +34,9 @@ Switch	ID	Name	Switch Group			Notes
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2554442747	rtpcOcclusion			\Default Work Unit\rtpcOcclusion	
 
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	93706430	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Interactables_Druckplatte\woosh\SoundSeed Air Woosh	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	40106	Playerjump_Kiesel5	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playerjump_Kiesel5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_jumps\Player_jumps_kiesel\Playerjump_Kiesel5		160924
 	2199263	Playersteps_Kiesel2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Kiesel2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_kiesel\Playersteps_Kiesel2		121256
@@ -85,7 +88,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	381985465	Playersteps_Gras4	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Gras4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_grass\Playersteps_Gras4		129160
 	404194589	Steinchen_Aufprall4	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Steinchen_Aufprall4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Steinchen\Player_Steinchen_aufprall\Steinchen_Aufprall4		141340
 	406166912	Hagibaer_Fs_Busch2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Busch2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_busch\Hagibaer_Fs_Busch2		250320
-	406574737	Druckplatte	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Druckplatte_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Interactables_Druckplatte\Druckplatte		286232
 	410825152	Playerjump_Gras4	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playerjump_Gras4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_jumps\Player_jumps_grass\Playerjump_Gras4		226588
 	419385542	Hagibaer_Fs_Gras5	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Gras5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_grass\Hagibaer_Fs_Gras5		260720
 	424749875	Playerjump_Steinplatte5	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playerjump_Steinplatte5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_jumps\Player_jumps_stone\Playerjump_Steinplatte5		239928
