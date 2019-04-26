@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
     float remainingTime;
     public bool dead = false;
 
-    PlayerSoundScript m_playerSound;
+    GameObject player;
 
     private static GameManager m_myInstance;
     public static GameManager MyInstance
@@ -27,8 +27,12 @@ public class GameManager : MonoBehaviour {
         else
             Debug.Log("GameManager already exists!");
 
+        //get player
+        if (FindObjectOfType<PlayerController>().gameObject != null)
+            player = FindObjectOfType<PlayerController>().gameObject;
+        else
+            Debug.Log("couldn't find playerController");
 
-        m_playerSound = FindObjectOfType<PlayerSoundScript>();
 
         //remainingTime += Time.timeSinceLevelLoad;
         //print(remainingTime);
@@ -115,6 +119,7 @@ public class GameManager : MonoBehaviour {
         UIManager.MyInstance.ingameUI.SetActive(true);
         UIManager.MyInstance.pauseUI.SetActive(false);
         UIManager.MyInstance.deathScreen.SetActive(false);
+        UIManager.MyInstance.settingsScreen.SetActive(false);
 
         Cursor.visible = false;
 
@@ -128,6 +133,8 @@ public class GameManager : MonoBehaviour {
         Application.Quit();
     }
 
+    //SETTINGS
+    public AK.Wwise.RTPC volumeRTPC;
     public void Settings()
     {
         UIManager.MyInstance.ShowSettingsScreen();
@@ -138,7 +145,14 @@ public class GameManager : MonoBehaviour {
     public void SetVolume(float volume)
     {
         //change volume in wwise
-        Debug.Log(volume);
+        volumeRTPC.SetGlobalValue(volume);
+    }
+    public void SetMouseSensitivity(float sensitivity)
+    {
+        if (player != null)
+        {
+            player.GetComponent<PlayerController>().cameraSensitivity = sensitivity;          
+        }
     }
 
     //Timeout
