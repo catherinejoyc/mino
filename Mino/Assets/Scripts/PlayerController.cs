@@ -45,6 +45,9 @@ public class PlayerController : MonoBehaviour, IHittable {
     //toxic water and ladders
     public GameObject waterBorder = null;
 
+    //Animator
+    public Animator playerAnimator;
+
     private void Awake()
     {
         m_rb = GetComponent<Rigidbody>();
@@ -63,7 +66,6 @@ public class PlayerController : MonoBehaviour, IHittable {
 
     private void Update()
     {
-
 
         #region Move Camera
 
@@ -118,8 +120,7 @@ public class PlayerController : MonoBehaviour, IHittable {
         {
             // currently empty-handed
             if (currentObjectHolding == null)
-            {
-                //[old] PickUp();
+            {           
                 Push();
             }
             else
@@ -176,20 +177,35 @@ public class PlayerController : MonoBehaviour, IHittable {
         //m_playerInput
         if (isPushingBox) //if pushing a box, only move forward and backwards
         {
-            if (boxPathIsBlocked) //if path is blocked, only move backwards
-            {   
-                if (Input.GetAxis("Vertical") > 0)
-                {
+            if (Input.GetAxis("Vertical") > 0) //if input is positive (forward)
+            {
+                if (boxPathIsBlocked) //not moving if path is blocked
                     m_playerInput = new Vector3(0, 0, 0);
-                }
-
-                if (Input.GetAxis("Vertical") < 0)
+                else
                     m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
             }
-            else
+            else if (Input.GetAxis("Vertical") < 0) //if input is negative (backwards)
             {
                 m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
             }
+
+            //if (boxPathIsBlocked) //if path is blocked, only move backwards
+            //{
+            //    if (Input.GetAxis("Vertical") > 0)
+            //    {
+            //        m_playerInput = new Vector3(0, 0, 0);
+            //    }
+            //    if (Input.GetAxis("Vertical") < 0)
+            //    {          
+            //        m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
+            //    }                   
+            //}
+            //else
+            //{
+            //    m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
+            //}
+
+            
         }
         else
             m_playerInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -268,9 +284,6 @@ public class PlayerController : MonoBehaviour, IHittable {
 
     void Push()
     {
-
-        //push with hands against box (animate)
-
         //push/pull box in facing direction
         RaycastHit hit;
         if (Physics.Raycast(transform.position /*+ transform.up * 0.5f*/, m_cam.transform.TransformVector(Vector3.forward), out hit, 0.5f))
@@ -278,6 +291,9 @@ public class PlayerController : MonoBehaviour, IHittable {
             if (hit.collider.gameObject.CompareTag("Box"))
             {
                 currentObjectHolding = hit.collider.gameObject;
+
+                //push with hands against box (animate)
+                playerAnimator.SetTrigger("pushBox");
 
                 //freeze rotations
                 currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
@@ -299,6 +315,7 @@ public class PlayerController : MonoBehaviour, IHittable {
     void StopPushing()
     {
         //hide hands again (animate)
+        playerAnimator.SetTrigger("hideHands");
 
         //de-parent box
         currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
