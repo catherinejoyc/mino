@@ -1313,6 +1313,9 @@ MonoBehaviour:
   timeOutInSeconds: 300
   dead: 0
   gameIsPaused: 0
+  volumeRTPC:
+    ID: -703096226
+    valueGuid: 8df50f30a662be439f961574adae18b2
 --- !u!114 &114170892101568440
 MonoBehaviour:
   m_ObjectHideFlags: 1
