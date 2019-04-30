@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour, IHittable {
         {
             //stop movement and get down
             canMove = false;
-            GetComponentInChildren<Camera>().gameObject.transform.Translate(-Vector3.up * 0.1f);
+            //GetComponentInChildren<Camera>().gameObject.transform.Translate(-Vector3.up * 0.1f);
 
             stone_startTime = Time.time;
         }
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour, IHittable {
         {
             //enable movement and go back up
             canMove = true;
-            GetComponentInChildren<Camera>().gameObject.transform.Translate(Vector3.up * 0.1f);
+            //GetComponentInChildren<Camera>().gameObject.transform.Translate(Vector3.up * 0.1f);
 
             if ((Time.time - stone_startTime) < 0.2f)  //shoot if the player pressed the button for a short time
             {
@@ -259,10 +259,14 @@ public class PlayerController : MonoBehaviour, IHittable {
     }
 
     #region Shoot Stone
+    public Animator mainCamAnimator;
     private void ShootStone()
     {
         if (InventoryManager.MyInstance.Stones >= 1)
         {
+            //throw (animate)
+            playerAnimator.SetTrigger("throwStone");
+
             Instantiate(pref_stone, transform.position + transform.forward * 0.56f + transform.right * 0.2f + transform.up * 0.5f, transform.rotation);
             InventoryManager.MyInstance.Stones--;
         }
@@ -272,6 +276,9 @@ public class PlayerController : MonoBehaviour, IHittable {
     {
         if (GetComponent<PlayerSoundScript>().currUnderground == Underground.Gravel)
         {
+            //kneel down (animate cam)
+            mainCamAnimator.SetTrigger("collectStone");
+
             InventoryManager.MyInstance.Stones++;
         }
     }
