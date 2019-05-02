@@ -437,6 +437,60 @@ MonoBehaviour:
   valueID: -1603997315
   groupGuid: f37bccc70b3f9e4eb7d0b5d77f96fb50
   valueGuid: e01f902eedaf494bb0e0525142304989
+--- !u!1 &16840598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 16840599}
+  - component: {fileID: 16840601}
+  - component: {fileID: 16840600}
+  m_Layer: 0
+  m_Name: Gegner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &16840599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 16840598}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48873854, y: 6.2944164, z: 7.29}
+  m_LocalScale: {x: 3.7375, y: 1, z: 4.0166197}
+  m_Children: []
+  m_Father: {fileID: 2032661650}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &16840600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 16840598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a61584b301811429a478bcfb565d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TutorialScreen: {fileID: 21300000, guid: 3c236e017e9085b47a0092e31ad08fad, type: 3}
+--- !u!65 &16840601
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 16840598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &18732414 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1879075206325282, guid: ff43e574502d7b84e9e7c925eb46e09e,
@@ -3010,6 +3064,60 @@ MonoBehaviour:
   valueID: -1603997315
   groupGuid: f37bccc70b3f9e4eb7d0b5d77f96fb50
   valueGuid: e01f902eedaf494bb0e0525142304989
+--- !u!1 &169725388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 169725389}
+  - component: {fileID: 169725390}
+  - component: {fileID: 169725391}
+  m_Layer: 0
+  m_Name: Gegner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &169725389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 169725388}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48873854, y: 6.2944164, z: -5.230524}
+  m_LocalScale: {x: 3.7375, y: 1, z: 4.016619}
+  m_Children: []
+  m_Father: {fileID: 2032661650}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &169725390
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 169725388}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &169725391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 169725388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a61584b301811429a478bcfb565d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TutorialScreen: {fileID: 21300000, guid: 3c236e017e9085b47a0092e31ad08fad, type: 3}
 --- !u!1001 &175233068
 Prefab:
   m_ObjectHideFlags: 0
@@ -43090,6 +43198,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4728166510415076, guid: a84974d8505f6a246a337eab9570ad09,
     type: 2}
   m_PrefabInternal: {fileID: 2031327462}
+--- !u!1 &2032661649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2032661650}
+  m_Layer: 0
+  m_Name: TutorialTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2032661650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2032661649}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.3287387, y: -7.86, z: -3.9294758}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 169725389}
+  - {fileID: 16840599}
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2036194412
 Prefab:
   m_ObjectHideFlags: 0

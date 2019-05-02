@@ -4262,6 +4262,60 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 184526561}
   m_Mesh: {fileID: 0}
+--- !u!1 &184700669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 184700670}
+  - component: {fileID: 184700672}
+  - component: {fileID: 184700671}
+  m_Layer: 0
+  m_Name: "Schl\xFCsselfragmentGefunden"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &184700670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 184700669}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.68, y: -1, z: 3.6}
+  m_LocalScale: {x: 0.73696, y: 1, z: 0.69277}
+  m_Children: []
+  m_Father: {fileID: 1045790753}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &184700671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 184700669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a61584b301811429a478bcfb565d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TutorialScreen: {fileID: 21300000, guid: 92bb1db7acef04f478302bbb6d957c12, type: 3}
+--- !u!65 &184700672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 184700669}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &187564824
 Prefab:
   m_ObjectHideFlags: 0
@@ -21715,6 +21769,7 @@ Transform:
   - {fileID: 1672105840}
   - {fileID: 1626056902}
   - {fileID: 127153347}
+  - {fileID: 184700670}
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28510,9 +28565,16 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 1753333393538908, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
       propertyPath: m_IsActive
       value: 0
+=======
+    - target: {fileID: 114170035752032182, guid: 79a0244ba7b23eb47b2c69508b85b63e,
+        type: 2}
+      propertyPath: volumeRTPC.ID
+      value: -703096226
+>>>>>>> 168b21476ee8d07b588ca29c99d16d87ca832bbd
       objectReference: {fileID: 0}
     - target: {fileID: 1010247077373684, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
       propertyPath: m_IsActive
@@ -28562,6 +28624,16 @@ Prefab:
         type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114029199198089116, guid: 79a0244ba7b23eb47b2c69508b85b63e,
+        type: 2}
+      propertyPath: m_WholeNumbers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114029199198089116, guid: 79a0244ba7b23eb47b2c69508b85b63e,
+        type: 2}
+      propertyPath: m_Value
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}

@@ -19,7 +19,7 @@ public class TutorialTrigger : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.name == "Player")
             UIManager.MyInstance.TutorialScreen.enabled = false;
     }
 }
