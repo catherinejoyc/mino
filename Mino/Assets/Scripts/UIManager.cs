@@ -8,10 +8,12 @@ public class UIManager : MonoBehaviour {
     //INGAME
     public GameObject ingameUI;
     public Image TutorialScreen;
-    public Slider VolumeIndicator; //Audio!!!
+    public Slider VolumeIndicator;
     public Text keyFragments;
     public Text stonecount;
     public Text time;
+
+    //ANIMATOR
 
     private static UIManager m_myInstance;
     public static UIManager MyInstance
@@ -70,6 +72,8 @@ public class UIManager : MonoBehaviour {
     public GameObject settingsScreen;
     public void ShowSettingsScreen()
     {
+
+
         Cursor.lockState = CursorLockMode.Confined;
 
         ingameUI.SetActive(false);
