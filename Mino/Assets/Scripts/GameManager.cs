@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public float timeOutInSeconds; //in sec
-    float remainingTime;
+    //public float timeOutInSeconds; //in sec
+    //float remainingTime;
     public bool dead = false;
 
     GameObject player;
@@ -47,13 +47,13 @@ public class GameManager : MonoBehaviour {
     private void Update()
     {
         //Time Countdown
-        remainingTime = timeOutInSeconds - Time.timeSinceLevelLoad;
-        UIManager.MyInstance.time.text = remainingTime.ToString("0");
+        //remainingTime = timeOutInSeconds - Time.timeSinceLevelLoad;
+        //UIManager.MyInstance.time.text = remainingTime.ToString("0");
 
-        if (remainingTime <= 0)
-        { 
-            TimeRunOut();
-        }
+        //if (remainingTime <= 0)
+        //{ 
+        //    TimeRunOut();
+        //}
 
         // --- Pause
         if (Input.GetKeyDown(KeyCode.Escape) &&!dead)
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour {
         UIManager.MyInstance.ResetUI();
 
         //Reset time
-        remainingTime = timeOutInSeconds;
+        //remainingTime = timeOutInSeconds;
 
         //Load Level
         if (lvlIndex == 0) //Main Menu
@@ -160,9 +160,9 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    //Timeout
-    void TimeRunOut()
-    {
-        UIManager.MyInstance.ShowDeathScreen();
-    }
+    ////Timeout
+    //void TimeRunOut()
+    //{
+    //    UIManager.MyInstance.ShowDeathScreen();
+    //}
 }

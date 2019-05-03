@@ -72,8 +72,6 @@ public class UIManager : MonoBehaviour {
     public GameObject settingsScreen;
     public void ShowSettingsScreen()
     {
-
-
         Cursor.lockState = CursorLockMode.Confined;
 
         ingameUI.SetActive(false);
