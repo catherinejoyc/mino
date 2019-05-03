@@ -48,6 +48,9 @@ public class PlayerController : MonoBehaviour, IHittable {
     //Animator
     public Animator playerAnimator;
 
+    //KistenCollider
+    public GameObject kistenCollider;
+
     private void Awake()
     {
         m_rb = GetComponent<Rigidbody>();
@@ -74,8 +77,8 @@ public class PlayerController : MonoBehaviour, IHittable {
         float alpha = -(Mathf.Acos(gk) * Mathf.Rad2Deg - 90);
 
         //Look around
-        if (!isPushingBox) //if not pushing something
-        {
+        //if (!isPushingBox) //if not pushing something
+        //{
             m_go.transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime);
 
             float mouseInput = Input.GetAxis("Mouse Y");
@@ -85,7 +88,7 @@ public class PlayerController : MonoBehaviour, IHittable {
             {
                 m_cam.transform.Rotate(Vector3.right * -mouseInput * cameraSensitivity * Time.deltaTime);
             }
-        }
+        //}
         #endregion
 
         #region Shoot Stones
@@ -123,39 +126,39 @@ public class PlayerController : MonoBehaviour, IHittable {
             {           
                 Push();
             }
-            else
-            {
-                //check path in front of box
-                //https://stackoverflow.com/questions/24563085/raycast-but-ignore-yourself
-                //https://docs.unity3d.com/ScriptReference/Physics.RaycastAll.html
+            //else
+            //{
+            //    //check path in front of box
+            //    //https://stackoverflow.com/questions/24563085/raycast-but-ignore-yourself
+            //    //https://docs.unity3d.com/ScriptReference/Physics.RaycastAll.html
 
-                //check every hit
-                RaycastHit[] hits;
-                Vector3 playerFrwd = m_cam.transform.TransformDirection(Vector3.forward);
+            //    //check every hit
+            //    RaycastHit[] hits;
+            //    Vector3 playerFrwd = m_cam.transform.TransformDirection(Vector3.forward);
 
-                hits = Physics.RaycastAll(currentObjectHolding.transform.position, playerFrwd, 0.5f);
-                for (int i = 0; i < hits.Length; i++)
-                {
-                    RaycastHit hit = hits[i];
-                    if (!hit.collider.CompareTag("Box") && !hit.collider.isTrigger) //if hit anything other than the box itself
-                    {
-                        boxPathIsBlocked = true;
-                        break;
-                    }
-                    else
-                        boxPathIsBlocked = false;
-                }
+            //    hits = Physics.RaycastAll(currentObjectHolding.transform.position, playerFrwd, 0.5f);
+            //    for (int i = 0; i < hits.Length; i++)
+            //    {
+            //        RaycastHit hit = hits[i];
+            //        if (!hit.collider.CompareTag("Box") && !hit.collider.isTrigger) //if hit anything other than the box itself
+            //        {
+            //            boxPathIsBlocked = true;
+            //            break;
+            //        }
+            //        else
+            //            boxPathIsBlocked = false;
+            //    }
 
-                //Vector3 playerFrwd = m_cam.transform.TransformDirection(Vector3.forward) * 0.1f;
-                Debug.DrawRay(currentObjectHolding.transform.position, playerFrwd, Color.cyan, 0.1f);
-                //if (Physics.Raycast(currentObjectHolding.transform.position, playerFrwd))
-                //{
-                //    //stop Movement forward
-                //    boxPathIsBlocked = true;
-                //}
-                //else
-                //    boxPathIsBlocked = false;
-            }
+            //    //Vector3 playerFrwd = m_cam.transform.TransformDirection(Vector3.forward) * 0.1f;
+            //    Debug.DrawRay(currentObjectHolding.transform.position, playerFrwd, Color.cyan, 0.1f);
+            //    //if (Physics.Raycast(currentObjectHolding.transform.position, playerFrwd))
+            //    //{
+            //    //    //stop Movement forward
+            //    //    boxPathIsBlocked = true;
+            //    //}
+            //    //else
+            //    //    boxPathIsBlocked = false;
+            //}
         }
         else if (currentObjectHolding != null)
         {
@@ -174,41 +177,41 @@ public class PlayerController : MonoBehaviour, IHittable {
 
     void FixedUpdate () {
 
-        //m_playerInput
-        if (isPushingBox) //if pushing a box, only move forward and backwards
-        {
-            if (Input.GetAxis("Vertical") > 0) //if input is positive (forward)
-            {
-                if (boxPathIsBlocked) //not moving if path is blocked
-                    m_playerInput = new Vector3(0, 0, 0);
-                else
-                    m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
-            }
-            else if (Input.GetAxis("Vertical") < 0) //if input is negative (backwards)
-            {
-                m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
-            }
+        ////m_playerInput
+        //if (isPushingBox) //if pushing a box, only move forward and backwards
+        //{
+        //    if (Input.GetAxis("Vertical") > 0) //if input is positive (forward)
+        //    {
+        //        if (boxPathIsBlocked) //not moving if path is blocked
+        //            m_playerInput = new Vector3(0, 0, 0);
+        //        else
+        //            m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
+        //    }
+        //    else if (Input.GetAxis("Vertical") < 0) //if input is negative (backwards)
+        //    {
+        //        m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
+        //    }
 
-            //if (boxPathIsBlocked) //if path is blocked, only move backwards
-            //{
-            //    if (Input.GetAxis("Vertical") > 0)
-            //    {
-            //        m_playerInput = new Vector3(0, 0, 0);
-            //    }
-            //    if (Input.GetAxis("Vertical") < 0)
-            //    {          
-            //        m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
-            //    }                   
-            //}
-            //else
-            //{
-            //    m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
-            //}
+        //    //if (boxPathIsBlocked) //if path is blocked, only move backwards
+        //    //{
+        //    //    if (Input.GetAxis("Vertical") > 0)
+        //    //    {
+        //    //        m_playerInput = new Vector3(0, 0, 0);
+        //    //    }
+        //    //    if (Input.GetAxis("Vertical") < 0)
+        //    //    {          
+        //    //        m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
+        //    //    }                   
+        //    //}
+        //    //else
+        //    //{
+        //    //    m_playerInput = new Vector3(0, 0, Input.GetAxis("Vertical"));
+        //    //}
 
             
-        }
-        else
-            m_playerInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        //}
+        //else
+        m_playerInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         //Groundcheck
         if (Physics.CheckSphere(new Vector3(m_rb.position.x, m_rb.position.y - 0.5f,m_rb.transform.position.z), 0.2f, groundLayer))
@@ -306,10 +309,16 @@ public class PlayerController : MonoBehaviour, IHittable {
                 currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
 
                 //parent box to player and hold it in front of you
+                //KISTENCOLLIDER - COLLIDER DER KISTE SELBST AUSSCHALTEN
+                currentObjectHolding.GetComponent<Collider>().enabled = false;
+
                 currentObjectHolding.transform.parent = this.transform;
                 //currentObjectHolding.transform.Translate(0f, 0, 0.2f * Time.deltaTime, this.gameObject.transform);
                 currentObjectHolding.transform.Translate(_boxXOffset, _boxYOffset, _boxZOffest, this.gameObject.transform);
                 currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+
+                //turn on KISTENCOLLIDER
+                kistenCollider.SetActive(true);
 
                 //slow player
                 isPushingBox = true;
@@ -325,13 +334,21 @@ public class PlayerController : MonoBehaviour, IHittable {
         playerAnimator.SetTrigger("hideHands");
 
         //de-parent box
+        //KISTENCOLLIDER - COLLIDER DER KISTE SELBST ANSCHALTEN
+        currentObjectHolding.GetComponent<Collider>().enabled = true;
+
         currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         currentObjectHolding.transform.parent = null;
         currentObjectHolding = null;
+
+        //turn on KISTENCOLLIDER
+        kistenCollider.SetActive(false);
+
         //de-slow player
         isPushingBox = false;
         //de block path
         boxPathIsBlocked = false;
+
 
         //StopEvent
     }
