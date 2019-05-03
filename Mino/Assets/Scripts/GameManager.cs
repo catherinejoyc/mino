@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour {
         UIManager.MyInstance.ingameUI.SetActive(false);
         UIManager.MyInstance.pauseUI.SetActive(true);
         UIManager.MyInstance.deathScreen.SetActive(false);
-        //settings
+        UIManager.MyInstance.settingsScreen.SetActive(false);
         UIManager.MyInstance._fadeScreen.gameObject.SetActive(false);
 
         Cursor.visible = true;
