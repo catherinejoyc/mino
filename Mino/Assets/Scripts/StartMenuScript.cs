@@ -45,4 +45,32 @@ public class StartMenuScript : MonoBehaviour {
         Debug.Log("Quit");
         Application.Quit();
     }
+
+    //SETTINGS
+    public AK.Wwise.RTPC volumeRTPC;
+
+    //SETTINGS.UI
+    public GameObject settingsScreen;
+
+    public void Settings()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+
+        settingsScreen.SetActive(true);
+
+        Cursor.visible = true;
+    }
+    public void SetVolume(float volume)
+    {
+        //change volume in wwise
+        volumeRTPC.SetGlobalValue(volume);
+    }
+    public void SetMouseSensitivity(float sensitivity)
+    {
+        //SZENENÜBERGREIFENDE VARIABLEN ERSTELLEN
+        //if (player != null)
+        //{
+        //    player.GetComponent<PlayerController>().cameraSensitivity = sensitivity;
+        //}
+    }
 }

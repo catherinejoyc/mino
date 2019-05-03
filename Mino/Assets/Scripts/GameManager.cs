@@ -28,10 +28,15 @@ public class GameManager : MonoBehaviour {
             Debug.Log("GameManager already exists!");
 
         //get player
-        if (FindObjectOfType<PlayerController>().gameObject != null)
+        try
+        {       
             player = FindObjectOfType<PlayerController>().gameObject;
-        else
+        }
+        catch
+        {
             Debug.Log("couldn't find playerController");
+        }
+            
 
 
         //remainingTime += Time.timeSinceLevelLoad;
