@@ -84,6 +84,18 @@ public class UIManager : MonoBehaviour {
 
         Cursor.visible = true;
     }
+    public void HideSettingsScreen()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+
+        ingameUI.SetActive(false);
+        pauseUI.SetActive(true);
+        deathScreen.SetActive(false);
+        settingsScreen.SetActive(false);
+
+
+        Cursor.visible = true;
+    }
 
     //FADE
     public Animator _fadeScreen;

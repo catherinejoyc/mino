@@ -49,8 +49,26 @@ public class StartMenuScript : MonoBehaviour {
     //SETTINGS
     public AK.Wwise.RTPC volumeRTPC;
 
-    //SETTINGS.UI
     public GameObject settingsScreen;
+
+    public void ShowSettingsScreen()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+
+        settingsScreen.SetActive(true);
+        creditsScreen.SetActive(false);
+
+        Cursor.visible = true;
+    }
+    public void HideSettingsScreen()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+
+        settingsScreen.SetActive(false);
+        creditsScreen.SetActive(false);
+
+        Cursor.visible = true;
+    }
 
     public void Settings()
     {
@@ -73,4 +91,26 @@ public class StartMenuScript : MonoBehaviour {
         //    player.GetComponent<PlayerController>().cameraSensitivity = sensitivity;
         //}
     }
+
+    //CREDITS
+    public GameObject creditsScreen;
+    public void ShowCreditsScreen()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+
+        settingsScreen.SetActive(false);
+        creditsScreen.SetActive(true);
+
+        Cursor.visible = true;
+    }
+    public void HideCreditsScreen()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+
+        settingsScreen.SetActive(false);
+        creditsScreen.SetActive(false);
+
+        Cursor.visible = true;
+    }
+
 }
