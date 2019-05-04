@@ -236,6 +236,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 872345640}
+        m_MethodName: PlayPosUISound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &103039354
@@ -592,6 +603,17 @@ MonoBehaviour:
           m_StringArgument: ShowSettingsScreen
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 872345640}
+        m_MethodName: PlayNegUISound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &329903807
@@ -998,6 +1020,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 872345640}
+        m_MethodName: PlayPosUISound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &608264077
@@ -1227,6 +1260,8 @@ GameObject:
   m_Component:
   - component: {fileID: 872345639}
   - component: {fileID: 872345638}
+  - component: {fileID: 872345640}
+  - component: {fileID: 872345641}
   m_Layer: 0
   m_Name: GameManager_StartMenu
   m_TagString: Untagged
@@ -1266,6 +1301,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &872345640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 872345637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30719208debbec04895c0b6933def7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playPositiveEvent:
+    ID: 2146170337
+    valueGuid: 5c8bb4aef18cc7438fab60675cf298bc
+  playNegativeEvent:
+    ID: -1523804527
+    valueGuid: 4acc040c791a9f47a155ab5d6670832a
+--- !u!114 &872345641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 872345637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb325a352563944b93dc37022844a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myBank:
+    ID: 1949491649
+    valueGuid: 7a1969754557bd41a25a52b3b2d31348
+    name: MinoSoundbankNew
+  myEvent:
+    ID: 2146170337
+    valueGuid: 5c8bb4aef18cc7438fab60675cf298bc
 --- !u!1 &872901346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,6 +1525,17 @@ MonoBehaviour:
           m_StringArgument: ShowSettingsScreen
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 872345640}
+        m_MethodName: PlayNegUISound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &968232247
@@ -2290,6 +2371,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 872345638}
         m_MethodName: MainMenu_Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 872345640}
+        m_MethodName: PlayNegUISound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3204,6 +3296,17 @@ MonoBehaviour:
           m_StringArgument: ShowSettingsScreen
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 872345640}
+        m_MethodName: PlayPosUISound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2062074172

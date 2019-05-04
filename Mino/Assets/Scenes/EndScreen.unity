@@ -408,6 +408,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 528546163}
   m_Script: {fileID: 11500000, guid: 9b20b91e52a16334b888c65ecdfe2ede, type: 3}
+--- !u!114 &528546165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114710949374545722, guid: 79a0244ba7b23eb47b2c69508b85b63e,
+    type: 2}
+  m_PrefabInternal: {fileID: 528546163}
+  m_Script: {fileID: 11500000, guid: 30719208debbec04895c0b6933def7b5, type: 3}
 --- !u!1 &1291923301
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +492,17 @@ MonoBehaviour:
       - m_Target: {fileID: 528546164}
         m_MethodName: LoadLevel
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 528546165}
+        m_MethodName: PlayPosUISound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -676,6 +693,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 528546164}
         m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 528546165}
+        m_MethodName: PlayNegUISound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
