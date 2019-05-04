@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour {
     public Text keyFragments;
     public Animator keyEffect;
     public Text stonecount;
-    public Text time;
+    //public Text time;
 
     //ANIMATOR
 
@@ -71,8 +71,8 @@ public class UIManager : MonoBehaviour {
         ingameUI.SetActive(false);
         pauseUI.SetActive(false);
         _fadeScreen.gameObject.SetActive(false);
-
-        //show reason of death!
+        settingsScreen.SetActive(false);
+        controlsScreen.SetActive(false);
         deathScreen.SetActive(true);
 
         Time.timeScale = 0f;
@@ -90,18 +90,35 @@ public class UIManager : MonoBehaviour {
         deathScreen.SetActive(false);
         settingsScreen.SetActive(true);
         _fadeScreen.gameObject.SetActive(false);
+        controlsScreen.SetActive(false);
 
         Cursor.visible = true;
     }
-    public void HideSettingsScreen()
+    //public void HideSettingsScreen()
+    //{
+    //    Cursor.lockState = CursorLockMode.Confined;
+
+    //    ingameUI.SetActive(false);
+    //    pauseUI.SetActive(true);
+    //    deathScreen.SetActive(false);
+    //    settingsScreen.SetActive(false);
+
+
+    //    Cursor.visible = true;
+    //}
+
+    //CONTROLS
+    public GameObject controlsScreen;
+    public void ShowControlsScreen()
     {
         Cursor.lockState = CursorLockMode.Confined;
 
         ingameUI.SetActive(false);
-        pauseUI.SetActive(true);
+        pauseUI.SetActive(false);
         deathScreen.SetActive(false);
         settingsScreen.SetActive(false);
-
+        _fadeScreen.gameObject.SetActive(false);
+        controlsScreen.SetActive(true);
 
         Cursor.visible = true;
     }

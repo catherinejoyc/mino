@@ -110,6 +110,7 @@ public class GameManager : MonoBehaviour {
         UIManager.MyInstance.deathScreen.SetActive(false);
         UIManager.MyInstance.settingsScreen.SetActive(false);
         UIManager.MyInstance._fadeScreen.gameObject.SetActive(false);
+        UIManager.MyInstance.controlsScreen.SetActive(false);
 
         Cursor.visible = true;
 
@@ -125,6 +126,7 @@ public class GameManager : MonoBehaviour {
         UIManager.MyInstance.pauseUI.SetActive(false);
         UIManager.MyInstance.deathScreen.SetActive(false);
         UIManager.MyInstance.settingsScreen.SetActive(false);
+        UIManager.MyInstance.controlsScreen.SetActive(false);
 
         Cursor.visible = false;
 
