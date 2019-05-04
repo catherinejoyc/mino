@@ -39,15 +39,21 @@ public class PressureDoor : SoundScript {
         {
             transform.position = Vector3.MoveTowards(transform.position, m_openStatePos, m_speed * Time.deltaTime);
 
-            if (transform.position == m_openStatePos) //if already open
-                stopEvent.Post(this.gameObject);
+            //if (transform.position.y == m_openStatePos.y) //if already open
+            //{
+            //    stopEvent.Post(this.gameObject);
+            //    Debug.Log("Stop Event; " + transform.position + " --- " + m_openStatePos);
+            //}
         }
         else
         {
             transform.position = Vector3.MoveTowards(transform.position, m_closedStatePos, m_speed * Time.deltaTime);
 
-            if (transform.position == m_closedStatePos) //if already closed
-                stopEvent.Post(this.gameObject);
+            //if (transform.position.y == m_closedStatePos.y) //if already closed
+            //{
+            //    stopEvent.Post(this.gameObject);
+            //    Debug.Log("Stop Event; " + transform.position + " --- " + m_openStatePos);
+            //}
         }
     }
 
@@ -58,6 +64,7 @@ public class PressureDoor : SoundScript {
         stateOpening.SetValue(this.gameObject);
         //post Sound Event
         m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+        Debug.Log("Play Event");
     }
 
     public void CloseDoor()
@@ -67,5 +74,6 @@ public class PressureDoor : SoundScript {
         stateClosing.SetValue(this.gameObject);
         //post Sound Event
         m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+        Debug.Log("Play Event");
     }
 }

@@ -80,8 +80,6 @@ public class BaseEnemyScript : MonoBehaviour {
                 break;
         }
 
-        Debug.Log(currState);
-
         FlickerSprite();
     }
 
