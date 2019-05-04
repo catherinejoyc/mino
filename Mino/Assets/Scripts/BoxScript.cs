@@ -28,6 +28,9 @@ public class BoxScript : SoundScript, IHittable {
     public Material scratchedMat;
     public GameObject destroyedBox;
 
+    //destroyed box particle system
+    public ParticleSystem destroyedBoxPS;
+
     //physics
     float _boxYPosition;
 
@@ -78,6 +81,7 @@ public class BoxScript : SoundScript, IHittable {
             DestroyedPlayEvent.Post(this.gameObject);
 
             //particle system (perfomance issues)
+            //destroyedBoxPS.Play();
 
             //change mesh
             Instantiate(destroyedBox, this.transform);
