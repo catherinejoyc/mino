@@ -359,16 +359,6 @@ MonoBehaviour:
   stopEvent:
     ID: 0
     valueGuid: 00000000000000000000000000000000
-  stateOpening:
-    ID: 0
-    valueGuid: 00000000000000000000000000000000
-    groupGuid: 00000000000000000000000000000000
-    groupID: 0
-  stateClosing:
-    ID: 0
-    valueGuid: 00000000000000000000000000000000
-    groupGuid: 00000000000000000000000000000000
-    groupID: 0
   m_speed: 4
   m_moveUp: 2
 --- !u!114 &114821236654898016
