@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898092215362574}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.53, y: -1.6686205, z: 0.82}
+  m_LocalPosition: {x: 9.82, y: -1.6686205, z: 0.82}
   m_LocalScale: {x: 0.0066299997, y: 0.0066299997, z: 0.0066299997}
   m_Children: []
   m_Father: {fileID: 0}
@@ -129,13 +129,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   sound:
-    ID: -1319871180
-    valueGuid: 92feca12e6577343b375dbc8ab377b2f
+    ID: -448802017
+    valueGuid: a35d542be6c4324eaf9098ec6281ed3d
   m_soundType: 1
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
-  stopSoundEvent:
-    ID: -1278895308
-    valueGuid: 7d0bf2bd4a5bcb469f5a72c9596c7c52
+  placePlayEvent:
+    ID: -275846389
+    valueGuid: 8db2b50238fd2440a6c8af11e9fe7dc6
   ScratchPlayEvent:
     ID: 1279939955
     valueGuid: 3828ec4640c2324ebbac81b1a24d2c78
