@@ -8,7 +8,8 @@ public class BoxScript : SoundScript, IHittable {
     bool isMoving = false;
 
     //audio
-    public AK.Wwise.Event stopSoundEvent;
+    // AK.Wwise.Event stopSoundEvent;
+    public AK.Wwise.Event placePlayEvent;
     public AK.Wwise.Event ScratchPlayEvent;
     public AK.Wwise.Event DestroyedPlayEvent;
 
@@ -44,14 +45,19 @@ public class BoxScript : SoundScript, IHittable {
         {
             if (!isMoving)
             {
-                StartMovingSound();
-                isMoving = true;
+                //play sound event
+                m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+                isMoving = true;             
             }
-            UIManager.MyInstance.VolumeIndicator.value = movingBoxVol;
         }
         else if (isMoving)
         {
-            stopSoundEvent.Post(this.gameObject);
+            //stopSoundEvent.Post(this.gameObject);
+            PlayPlaceSound();
+
+            //update volumeIndicator
+            Invoke("UpdateVITo0", 0.5f);
+
             isMoving = false;
         }
 
@@ -98,10 +104,22 @@ public class BoxScript : SoundScript, IHittable {
         }
     }
 
-    public void StartMovingSound()
+    //public void StartMovingSound()
+    //{
+    //    ChangeSoundType(SoundType.MovingBox);
+    //    m_SoundEvent.Invoke(transform.position, m_maxDistance);
+    //}
+    public void PlayPlaceSound()
     {
         ChangeSoundType(SoundType.MovingBox);
-        m_SoundEvent.Invoke(transform.position, m_maxDistance);
+        placePlayEvent.Post(this.gameObject);
+
+        //update volumeIndicator
+        UIManager.MyInstance.VolumeIndicator.value = movingBoxVol;
+    }
+    void UpdateVITo0()
+    {
+        UIManager.MyInstance.VolumeIndicator.value = 0;
     }
 
     public void ChangeMovingSound(int underGround)

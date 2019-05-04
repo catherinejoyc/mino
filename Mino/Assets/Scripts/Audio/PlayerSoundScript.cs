@@ -139,12 +139,12 @@ public class PlayerSoundScript : SoundScript {
                     lastStepTime = Time.time;
                 }
             }
-            if (!player.isPushingBox)
+            //if (!player.isPushingBox)
                 UIManager.MyInstance.VolumeIndicator.value = volume;
         }
         else
         {
-            if (!player.isPushingBox)
+            //if (!player.isPushingBox)
                 UIManager.MyInstance.VolumeIndicator.value = 0;
         }
     }

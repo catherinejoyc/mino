@@ -315,10 +315,8 @@ public class PlayerController : MonoBehaviour, IHittable {
                 currentObjectHolding.transform.parent = this.transform;
 
                 //snap box infront of player
-                //currentObjectHolding.transform.Translate(_boxXOffset, _boxYOffset, _boxZOffest, this.gameObject.transform);
-                //currentObjectHolding.transform.Translate(0, -0.25f, 1.25f, this.gameObject.transform);
-                currentObjectHolding.transform.position.Set(0, -0.25f, 0.25f);
-                //currentObjectHolding.transform.Translate(_boxXOffset, _boxYOffset, _boxZOffest, this.gameObject.transform);
+                Vector3 currObj_transform = new Vector3(0, -0.6f, 1f);
+                currentObjectHolding.transform.SetPositionAndRotation(transform.TransformPoint(currObj_transform), this.gameObject.transform.rotation);
                 currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
 
                 //turn on KISTENCOLLIDER

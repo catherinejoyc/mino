@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2215,11 +2215,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114515784332995832, guid: 93ad068101c5c334c8dda52bf643a671,
-        type: 2}
-      propertyPath: kistenCollider
-      value: 
-      objectReference: {fileID: 380078629}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93ad068101c5c334c8dda52bf643a671, type: 2}
   m_IsPrefabAsset: 0
@@ -8903,47 +8898,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &380078629
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 380078630}
-  - component: {fileID: 380078631}
-  m_Layer: 10
-  m_Name: KistenCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &380078630
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 380078629}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1408269334}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &380078631
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 380078629}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1270674, y: 1, z: 2.1980977}
-  m_Center: {x: 0.010937478, y: 0, z: 0.5710574}
 --- !u!1001 &381652838
 Prefab:
   m_ObjectHideFlags: 0
@@ -18023,6 +17977,11 @@ Prefab:
         type: 2}
       propertyPath: DestroyedPlayEvent.ID
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665818906219826, guid: 502e8d82835ff3b4b99561cc5ee040fd,
+        type: 2}
+      propertyPath: movingBoxVol
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502e8d82835ff3b4b99561cc5ee040fd, type: 2}
@@ -28021,11 +27980,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4161427974090384, guid: 81022f54f34681d4b9a5ff07148611fe,
     type: 2}
   m_PrefabInternal: {fileID: 1403352873}
---- !u!4 &1408269334 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4920812485733980, guid: 93ad068101c5c334c8dda52bf643a671,
-    type: 2}
-  m_PrefabInternal: {fileID: 97380278}
 --- !u!1001 &1415349957
 Prefab:
   m_ObjectHideFlags: 0
