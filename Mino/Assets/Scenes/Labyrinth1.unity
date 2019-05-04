@@ -28935,7 +28935,15 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1222040678333926, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
+    - target: {fileID: 1753333393538908, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808374594477260, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010247077373684, guid: 79a0244ba7b23eb47b2c69508b85b63e, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
