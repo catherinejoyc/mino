@@ -113,4 +113,19 @@ public class StartMenuScript : MonoBehaviour {
         Cursor.visible = true;
     }
 
+    //CONTROLS
+    public GameObject controlsScreen;
+    public void ShowControlsScreen()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+
+        controlsScreen.SetActive(true);
+
+        Cursor.visible = true;
+    }
+    public void HideControlsScreen()
+    {
+        controlsScreen.SetActive(false);
+    }
+
 }
