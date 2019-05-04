@@ -32,6 +32,8 @@
 				<Event Id="1279939955" Name="Play_Interactables_Kiste_scratch" ObjectPath="\Events\Default Work Unit\Play_Interactables_Kiste_scratch"/>
 				<Event Id="1032010903" Name="Play_Interactables_Schluesselfr" ObjectPath="\Events\Default Work Unit\Play_Interactables_Schluesselfr"/>
 				<Event Id="402628103" Name="Play_Interactables_Tueren" ObjectPath="\Events\Default Work Unit\Play_Interactables_Tueren"/>
+				<Event Id="3846165279" Name="Play_Kiste_aufheben" ObjectPath="\Events\Default Work Unit\Play_Kiste_aufheben"/>
+				<Event Id="4019120907" Name="Play_Kiste_platzieren" ObjectPath="\Events\Default Work Unit\Play_Kiste_platzieren"/>
 				<Event Id="98439365" Name="Play_Player_footsteps" ObjectPath="\Events\Default Work Unit\Play_Player_footsteps"/>
 				<Event Id="3200425469" Name="Play_Player_Footsteps_walk_stone" ObjectPath="\Events\Default Work Unit\Play_Player_Footsteps_walk_stone"/>
 				<Event Id="634024223" Name="Play_Player_jumps" ObjectPath="\Events\Default Work Unit\Play_Player_jumps"/>
