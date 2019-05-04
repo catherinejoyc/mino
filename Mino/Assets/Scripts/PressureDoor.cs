@@ -6,9 +6,6 @@ public class PressureDoor : SoundScript {
 
     //Stop Events
     public AK.Wwise.Event stopEvent;
-    //Switch (Open and Closing)
-    public AK.Wwise.Switch stateOpening;
-    public AK.Wwise.Switch stateClosing;
 
 
     public float m_speed;
@@ -60,8 +57,7 @@ public class PressureDoor : SoundScript {
     public void UnlockDoor()
     {
         m_isOpening = true;
-        //Set Switch on opening
-        stateOpening.SetValue(this.gameObject);
+
         //post Sound Event
         m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
         Debug.Log("Play Event");
@@ -70,8 +66,7 @@ public class PressureDoor : SoundScript {
     public void CloseDoor()
     {
         m_isOpening = false;
-        //Set Switch on closing
-        stateClosing.SetValue(this.gameObject);
+
         //post Sound Event
         m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
         Debug.Log("Play Event");
