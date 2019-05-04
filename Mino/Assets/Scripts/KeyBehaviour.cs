@@ -16,8 +16,14 @@ public class KeyBehaviour : MonoBehaviour {
 
         if(keyCount == 3)
         {
+            UIManager.MyInstance.PlayKeyfragmentEffect02();
+
             //activate door
             door.UnlockDoor();
+        }
+        else
+        {
+            UIManager.MyInstance.PlayKeyfragmentEffect01();
         }
     }
 }

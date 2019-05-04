@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour {
     public Image TutorialScreen;
     public Slider VolumeIndicator;
     public Text keyFragments;
+    public Animator keyEffect;
     public Text stonecount;
     public Text time;
 
@@ -42,6 +43,16 @@ public class UIManager : MonoBehaviour {
     {
         keyFragments.text = "0/3";
         TutorialScreen.enabled = false;
+    }
+
+    //play key effect
+    public void PlayKeyfragmentEffect01()
+    {
+        keyEffect.SetTrigger("keyfragmentEffect01");
+    }
+    public void PlayKeyfragmentEffect02()
+    {
+        keyEffect.SetTrigger("keyfragmentEffect02");
     }
 
     //PAUSE
