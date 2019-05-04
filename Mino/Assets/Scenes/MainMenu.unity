@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1249,8 +1249,8 @@ MonoBehaviour:
   startPressed_Animator: {fileID: 287090221}
   quitPressed_Animator: {fileID: 1197726832}
   volumeRTPC:
-    ID: 0
-    valueGuid: 00000000000000000000000000000000
+    ID: -703096226
+    valueGuid: 8df50f30a662be439f961574adae18b2
   settingsScreen: {fileID: 822816109}
   creditsScreen: {fileID: 1036530319}
 --- !u!4 &872345639

@@ -776,6 +776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4483693572547336}
   - component: {fileID: 65946144093626598}
+  - component: {fileID: 114608815579637282}
   m_Layer: 0
   m_Name: Kieselflaeche_Gang
   m_TagString: Untagged
@@ -15452,3 +15453,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.82, y: 1.07, z: 3.51}
   m_Center: {x: 2.22, y: 5.25, z: -0.21}
+--- !u!114 &114608815579637282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1266880814444652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19978abfde0215479acaffe40c77006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnderGroundIndex: 2
