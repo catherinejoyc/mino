@@ -313,8 +313,12 @@ public class PlayerController : MonoBehaviour, IHittable {
                 currentObjectHolding.GetComponent<Collider>().enabled = false;
 
                 currentObjectHolding.transform.parent = this.transform;
-                //currentObjectHolding.transform.Translate(0f, 0, 0.2f * Time.deltaTime, this.gameObject.transform);
-                currentObjectHolding.transform.Translate(_boxXOffset, _boxYOffset, _boxZOffest, this.gameObject.transform);
+
+                //snap box infront of player
+                //currentObjectHolding.transform.Translate(_boxXOffset, _boxYOffset, _boxZOffest, this.gameObject.transform);
+                //currentObjectHolding.transform.Translate(0, -0.25f, 1.25f, this.gameObject.transform);
+                currentObjectHolding.transform.position.Set(0, -0.25f, 0.25f);
+                //currentObjectHolding.transform.Translate(_boxXOffset, _boxYOffset, _boxZOffest, this.gameObject.transform);
                 currentObjectHolding.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
 
                 //turn on KISTENCOLLIDER
