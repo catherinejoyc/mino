@@ -80,6 +80,8 @@ public class BaseEnemyScript : MonoBehaviour {
                 break;
         }
 
+        Debug.Log(currState);
+
         FlickerSprite();
     }
 
@@ -124,6 +126,10 @@ public class BaseEnemyScript : MonoBehaviour {
             UpdateAlertState();
         }
         else if (currState == State.Alert)
+        {
+            UpdateHuntState(pos, maxDistance);
+        }
+        else if (currState == State.Hunt)
         {
             UpdateHuntState(pos, maxDistance);
         }
