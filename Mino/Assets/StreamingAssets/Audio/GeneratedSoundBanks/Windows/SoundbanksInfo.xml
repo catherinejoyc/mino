@@ -23,6 +23,10 @@
 			<IncludedEvents>
 				<Event Id="1165667864" Name="Play_Hagi_alert" ObjectPath="\Events\Default Work Unit\Play_Hagi_alert"/>
 				<Event Id="678858674" Name="Play_Hagi_attack" ObjectPath="\Events\Default Work Unit\Play_Hagi_attack"/>
+				<Event Id="3845282583" Name="Play_Hagi_footstep_busch_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_busch_02"/>
+				<Event Id="3289580336" Name="Play_Hagi_footstep_grass_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_grass_02"/>
+				<Event Id="573194927" Name="Play_Hagi_footstep_gravel_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_gravel_02"/>
+				<Event Id="3991313327" Name="Play_Hagi_footstep_stone_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_stone_02"/>
 				<Event Id="879053751" Name="Play_Hagi_footsteps_raum" ObjectPath="\Events\Default Work Unit\Play_Hagi_footsteps_raum"/>
 				<Event Id="86685327" Name="Play_Hagi_footstepsNew" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstepsNew"/>
 				<Event Id="2126903937" Name="Play_Hagi_hunt" ObjectPath="\Events\Default Work Unit\Play_Hagi_hunt"/>
@@ -40,6 +44,8 @@
 				<Event Id="1646878680" Name="Play_Player_sneak" ObjectPath="\Events\Default Work Unit\Play_Player_sneak"/>
 				<Event Id="2450182510" Name="Play_Player_Steinchen_aufheben" ObjectPath="\Events\Default Work Unit\Play_Player_Steinchen_aufheben"/>
 				<Event Id="3671174953" Name="Play_Player_Steinchen_aufprall" ObjectPath="\Events\Default Work Unit\Play_Player_Steinchen_aufprall"/>
+				<Event Id="2771162769" Name="Play_UI_negativ" ObjectPath="\Events\Default Work Unit\Play_UI_negativ"/>
+				<Event Id="2146170337" Name="Play_UI_positiv" ObjectPath="\Events\Default Work Unit\Play_UI_positiv"/>
 				<Event Id="1778537052" Name="Stop_Interactables_Kiste_stone" ObjectPath="\Events\Default Work Unit\Stop_Interactables_Kiste_stone"/>
 				<Event Id="3016071988" Name="Stop_Interactables_Kisten" ObjectPath="\Events\Default Work Unit\Stop_Interactables_Kisten"/>
 				<Event Id="873681583" Name="Stop_Interactables_Kistens" ObjectPath="\Events\Default Work Unit\Stop_Interactables_Kistens"/>
@@ -279,6 +285,10 @@
 					<ShortName>Hagibaer_Fs_Steinplatte7.wav</ShortName>
 					<Path>SFX\Hagibaer_Fs_Steinplatte7_56D34C19.wem</Path>
 				</File>
+				<File Id="468927740" Language="SFX">
+					<ShortName>Menuesound1.wav</ShortName>
+					<Path>SFX\Menuesound1_56D34C19.wem</Path>
+				</File>
 				<File Id="496078229" Language="SFX">
 					<ShortName>Playerjump_Kiesel2.wav</ShortName>
 					<Path>SFX\Playerjump_Kiesel2_56D34C19.wem</Path>
@@ -491,6 +501,10 @@
 					<ShortName>Playerjump_Steinplatte4.wav</ShortName>
 					<Path>SFX\Playerjump_Steinplatte4_56D34C19.wem</Path>
 				</File>
+				<File Id="832988673" Language="SFX">
+					<ShortName>Menuesound3.wav</ShortName>
+					<Path>SFX\Menuesound3_56D34C19.wem</Path>
+				</File>
 				<File Id="833086724" Language="SFX">
 					<ShortName>Hagibaer_Fs_Steinplatte2.wav</ShortName>
 					<Path>SFX\Hagibaer_Fs_Steinplatte2_56D34C19.wem</Path>
@@ -498,6 +512,10 @@
 				<File Id="833153599" Language="SFX">
 					<ShortName>Playersteps_Steinplatte8s.wav</ShortName>
 					<Path>SFX\Playersteps_Steinplatte8s_56D34C19.wem</Path>
+				</File>
+				<File Id="843533822" Language="SFX">
+					<ShortName>Menuesound2.wav</ShortName>
+					<Path>SFX\Menuesound2_56D34C19.wem</Path>
 				</File>
 				<File Id="862531704" Language="SFX">
 					<ShortName>Playersteps_Gras1s.wav</ShortName>
@@ -558,6 +576,10 @@
 				<File Id="928849311" Language="SFX">
 					<ShortName>Playersteps_Gras8.wav</ShortName>
 					<Path>SFX\Playersteps_Gras8_56D34C19.wem</Path>
+				</File>
+				<File Id="938096944" Language="SFX">
+					<ShortName>Menuesound4.wav</ShortName>
+					<Path>SFX\Menuesound4_56D34C19.wem</Path>
 				</File>
 				<File Id="947230610" Language="SFX">
 					<ShortName>Steinchen_aufheben4.wav</ShortName>

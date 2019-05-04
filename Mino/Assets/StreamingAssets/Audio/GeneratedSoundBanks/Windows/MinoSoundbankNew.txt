@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	86685327	Play_Hagi_footstepsNew			\Default Work Unit\Play_Hagi_footstepsNew	
 	98439365	Play_Player_footsteps			\Default Work Unit\Play_Player_footsteps	
 	402628103	Play_Interactables_Tueren			\Default Work Unit\Play_Interactables_Tueren	
+	573194927	Play_Hagi_footstep_gravel_02			\Default Work Unit\Play_Hagi_footstep_gravel_02	
 	634024223	Play_Player_jumps			\Default Work Unit\Play_Player_jumps	
 	678858674	Play_Hagi_attack			\Default Work Unit\Play_Hagi_attack	
 	873681583	Stop_Interactables_Kistens			\Default Work Unit\Stop_Interactables_Kistens	
@@ -13,15 +14,20 @@ Event	ID	Name			Wwise Object Path	Notes
 	1646878680	Play_Player_sneak			\Default Work Unit\Play_Player_sneak	
 	1778537052	Stop_Interactables_Kiste_stone			\Default Work Unit\Stop_Interactables_Kiste_stone	
 	2126903937	Play_Hagi_hunt			\Default Work Unit\Play_Hagi_hunt	
+	2146170337	Play_UI_positiv			\Default Work Unit\Play_UI_positiv	
 	2450182510	Play_Player_Steinchen_aufheben			\Default Work Unit\Play_Player_Steinchen_aufheben	
 	2683057547	Play_Interactables_Kiste_destroy			\Default Work Unit\Play_Interactables_Kiste_destroy	
+	2771162769	Play_UI_negativ			\Default Work Unit\Play_UI_negativ	
 	2975096116	Play_Interactables_Kiste			\Default Work Unit\Play_Interactables_Kiste	
 	3016071988	Stop_Interactables_Kisten			\Default Work Unit\Stop_Interactables_Kisten	
 	3200425469	Play_Player_Footsteps_walk_stone			\Default Work Unit\Play_Player_Footsteps_walk_stone	
 	3246801117	Stop_Interactables_Tueren			\Default Work Unit\Stop_Interactables_Tueren	
+	3289580336	Play_Hagi_footstep_grass_02			\Default Work Unit\Play_Hagi_footstep_grass_02	
 	3364721325	Play_Interactables_Druckplatte			\Default Work Unit\Play_Interactables_Druckplatte	
 	3671174953	Play_Player_Steinchen_aufprall			\Default Work Unit\Play_Player_Steinchen_aufprall	
+	3845282583	Play_Hagi_footstep_busch_02			\Default Work Unit\Play_Hagi_footstep_busch_02	
 	3846165279	Play_Kiste_aufheben			\Default Work Unit\Play_Kiste_aufheben	
+	3991313327	Play_Hagi_footstep_stone_02			\Default Work Unit\Play_Hagi_footstep_stone_02	
 	4019120907	Play_Kiste_platzieren			\Default Work Unit\Play_Kiste_platzieren	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -98,6 +104,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	444818352	Playersteps_Kiesel6	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Kiesel6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_kiesel\Playersteps_Kiesel6		115168
 	456883266	Playerjump_Busch2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playerjump_Busch2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_jumps\Player_jumps_busch\Playerjump_Busch2		121828
 	466367313	Hagibaer_Fs_Steinplatte7	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Steinplatte7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_stone\Hagibaer_Fs_Steinplatte7		175632
+	468927740	Menuesound1	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Menuesound1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_positiv\Menuesound1		104196
 	496078229	Playerjump_Kiesel2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playerjump_Kiesel2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_jumps\Player_jumps_kiesel\Playerjump_Kiesel2		208416
 	507415033	Hagibaer_Fs_Kiesel3	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Kiesel3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_gravel\Hagibaer_Fs_Kiesel3		214300
 	516846828	Steinchen_Aufprall5	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Steinchen_Aufprall5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Steinchen\Player_Steinchen_aufprall\Steinchen_Aufprall5		169196
@@ -151,8 +158,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	825929481	Playerjump_Kiesel1	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playerjump_Kiesel1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_jumps\Player_jumps_kiesel\Playerjump_Kiesel1		216056
 	827126712	Playersteps_Steinplatte6	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Steinplatte6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_stone\Playersteps_Steinplatte6		90412
 	829620978	Playerjump_Steinplatte4	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playerjump_Steinplatte4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_jumps\Player_jumps_stone\Playerjump_Steinplatte4		241496
+	832988673	Menuesound3	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Menuesound3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_positiv\Menuesound3		73520
 	833086724	Hagibaer_Fs_Steinplatte2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Fs_Steinplatte2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_footsteps\Hagi_footstep_stone\Hagibaer_Fs_Steinplatte2		112136
 	833153599	Playersteps_Steinplatte8s	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Steinplatte8s_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_sneak\Player_sneak_stone\Playersteps_Steinplatte8s		82572
+	843533822	Menuesound2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Menuesound2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_negativ\Menuesound2		74328
 	862531704	Playersteps_Gras1s	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Gras1s_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_sneak\Player_sneak_grass\Playersteps_Gras1s		164008
 	865597252	Playersteps_Busch1	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Busch1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_busch\Playersteps_Busch1		156876
 	880049150	foundationelements_1612_paving_stone_move	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\foundationelements_1612_paving_stone_move_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Interactables_Druckplatte\stone\foundationelements_1612_paving_stone_move		71284
@@ -168,6 +177,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	913856300	Playerjump_Steinplatte1	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playerjump_Steinplatte1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_jumps\Player_jumps_stone\Playerjump_Steinplatte1		228952
 	928651554	Steinchen_Aufprall1	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Steinchen_Aufprall1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Steinchen\Player_Steinchen_aufprall\Steinchen_Aufprall1		141736
 	928849311	Playersteps_Gras8	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Gras8_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_grass\Playersteps_Gras8		98900
+	938096944	Menuesound4	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Menuesound4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_negativ\Menuesound4		71100
 	947230610	Steinchen_aufheben4	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Steinchen_aufheben4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Steinchen\Player_Steinchen_aufheben\Steinchen_aufheben4		241944
 	949585595	Playersteps_Gras3	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Gras3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_grass\Playersteps_Gras3		125552
 	960773356	Playersteps_Kiesel3	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Kiesel3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_kiesel\Playersteps_Kiesel3		108500
