@@ -12,11 +12,25 @@ public class EnemySoundScript : SoundScript {
     float lastStepTime;
     float maxDistance;
 
-    [Header("Ak Switches")]//Switches
-    public AK.Wwise.Switch surfaceStone;
-    public AK.Wwise.Switch surfaceGravel;
-    public AK.Wwise.Switch surfaceGrass;
-    public AK.Wwise.Switch surfaceBush;
+    enum Underground
+    {
+        Stone,
+        Gravel,
+        Grass,
+        Bush
+    }
+    Underground currUnderground;
+
+    //[Header("Ak Switches")]//Switches
+    //public AK.Wwise.Switch surfaceStone;
+    //public AK.Wwise.Switch surfaceGravel;
+    //public AK.Wwise.Switch surfaceGrass;
+    //public AK.Wwise.Switch surfaceBush;
+
+    [Header("Footstep PlayEvents")]//footstep playevents
+    public AK.Wwise.Event footstepGravel;
+    public AK.Wwise.Event footstepGrass;
+    public AK.Wwise.Event footstepBush;
 
     [Header("State PlayEvents")]
     public AK.Wwise.Event playAlertState;
@@ -29,9 +43,11 @@ public class EnemySoundScript : SoundScript {
     // Use this for initialization
     void Awake () {
         m_agent = GetComponent<NavMeshAgent>();
-        surfaceStone.SetValue(this.gameObject);
+        //surfaceStone.SetValue(this.gameObject);
 
-        maxDistance = AkSoundEngine.GetMaxRadius(this.gameObject);       
+        maxDistance = AkSoundEngine.GetMaxRadius(this.gameObject);
+
+        currUnderground = Underground.Stone;
     }
 
 	// Update is called once per frame
@@ -41,7 +57,24 @@ public class EnemySoundScript : SoundScript {
         {
             if (Time.time > lastStepTime + stepIntervall)
             {
-                m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+                switch (currUnderground)
+                {
+                    case Underground.Stone:
+                        m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+                        break;
+                    case Underground.Gravel:
+                        footstepGravel.Post(this.gameObject);
+                        break;
+                    case Underground.Grass:
+                        footstepGrass.Post(this.gameObject);
+                        break;
+                    case Underground.Bush:
+                        footstepBush.Post(this.gameObject);
+                        break;
+                    default:
+                        m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+                        break;
+                }
                 lastStepTime = Time.time;
             }
         }
@@ -53,19 +86,24 @@ public class EnemySoundScript : SoundScript {
         switch (underGround)
         {
             case 1: //stone
-                surfaceStone.SetValue(this.gameObject);
+                //surfaceStone.SetValue(this.gameObject);
+                currUnderground = Underground.Stone;
                 break;
             case 2: //gravel
-                surfaceGravel.SetValue(this.gameObject);
+                //surfaceGravel.SetValue(this.gameObject);
+                currUnderground = Underground.Gravel;
                 break;
             case 3: //grass
-                surfaceGrass.SetValue(this.gameObject);
+                //surfaceGrass.SetValue(this.gameObject);
+                currUnderground = Underground.Grass;
                 break;
             case 4: //bush
-                surfaceBush.SetValue(this.gameObject);
+                //surfaceBush.SetValue(this.gameObject);
+                currUnderground = Underground.Bush;
                 break;
             default: //stone
-                surfaceStone.SetValue(this.gameObject);
+                //surfaceStone.SetValue(this.gameObject);
+                currUnderground = Underground.Stone;
                 break;
         }
         Debug.Log(underGround);
