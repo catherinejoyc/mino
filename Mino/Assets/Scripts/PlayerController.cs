@@ -229,14 +229,14 @@ public class PlayerController : MonoBehaviour, IHittable {
         {
             if (isPushingBox)
             {
-                if (Input.GetButton("Sneaking"))
+                if (Input.GetButton("Sneaking") || Input.GetAxis("Sneaking") > 0)
                     m_rb.AddRelativeForce(m_playerInput * sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
                 else
                     m_rb.AddRelativeForce(m_playerInput * boxMovingSpeed * Time.deltaTime, ForceMode.Impulse);
             }
             else
             {
-                if (Input.GetButton("Sneaking"))
+                if (Input.GetButton("Sneaking") || Input.GetAxis("Sneaking") > 0)
                     m_rb.AddRelativeForce(m_playerInput * sneakingSpeed * Time.deltaTime, ForceMode.Impulse);
                 else
                     m_rb.AddRelativeForce(m_playerInput * walkingSpeed * Time.deltaTime, ForceMode.Impulse);
