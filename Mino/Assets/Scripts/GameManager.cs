@@ -31,17 +31,19 @@ public class GameManager : MonoBehaviour {
         try
         {       
             player = FindObjectOfType<PlayerController>().gameObject;
+            Resume();
         }
         catch
         {
             Debug.Log("couldn't find playerController");
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
             
 
 
         //remainingTime += Time.timeSinceLevelLoad;
         //print(remainingTime);
-        Resume();
     }
 
     private void Update()
@@ -104,6 +106,9 @@ public class GameManager : MonoBehaviour {
     public void Pause()
     {
         Cursor.lockState = CursorLockMode.Confined;
+
+        //Select button
+        UIManager.MyInstance.SelectBtnFirst(UIManager.MyInstance.pauseFirstButton);
 
         UIManager.MyInstance.ingameUI.SetActive(false);
         UIManager.MyInstance.pauseUI.SetActive(true);
