@@ -89,6 +89,8 @@ public class PlayerController : MonoBehaviour, IHittable {
                 m_cam.transform.Rotate(Vector3.right * -mouseInput * cameraSensitivity * Time.deltaTime);
             }
         //}
+
+        Debug.Log(mouseInput);
         #endregion
 
         #region Shoot Stones
