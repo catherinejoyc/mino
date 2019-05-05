@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class DestroyAfterTriggerEnter : MonoBehaviour {
 
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.name == "Player")
+    //        this.gameObject.SetActive(false);
+    //}
+
+    void DisableThisGameObj()
     {
-        if (other.name == "Player")
-            this.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
     }
 }

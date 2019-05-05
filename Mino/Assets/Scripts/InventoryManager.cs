@@ -30,8 +30,12 @@ public class InventoryManager : MonoBehaviour {
         }
         set
         {
-            stones = value;
-            UIManager.MyInstance.stonecount.text = stones.ToString();
+            Debug.Log("stones " + value);
+            if (value <= 3)
+            {
+                stones = value;
+                UIManager.MyInstance.stonecount.text = stones.ToString();
+            }
         }
     }
 }
