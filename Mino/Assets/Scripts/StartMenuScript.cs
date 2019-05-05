@@ -8,6 +8,7 @@ public class StartMenuScript : MonoBehaviour {
 
     // Main Menu
     public int startLevelIndex;
+    public Button startBtn;
 
     //Animator
     public Animator startPressed_Animator;
@@ -51,12 +52,14 @@ public class StartMenuScript : MonoBehaviour {
 
     public GameObject settingsScreen;
 
-    public void ShowSettingsScreen()
+    public void ShowSettingsScreen(Button btn)
     {
         Cursor.lockState = CursorLockMode.Confined;
 
+
         settingsScreen.SetActive(true);
         creditsScreen.SetActive(false);
+        btn.Select();
 
         Cursor.visible = true;
     }
@@ -67,17 +70,19 @@ public class StartMenuScript : MonoBehaviour {
         settingsScreen.SetActive(false);
         creditsScreen.SetActive(false);
 
-        Cursor.visible = true;
-    }
-
-    public void Settings()
-    {
-        Cursor.lockState = CursorLockMode.Confined;
-
-        settingsScreen.SetActive(true);
+        startBtn.Select();
 
         Cursor.visible = true;
     }
+
+    //public void Settings()
+    //{
+    //    Cursor.lockState = CursorLockMode.Confined;
+
+    //    settingsScreen.SetActive(true);
+
+    //    Cursor.visible = true;
+    //}
     public void SetVolume(float volume)
     {
         //change volume in wwise
@@ -94,12 +99,14 @@ public class StartMenuScript : MonoBehaviour {
 
     //CREDITS
     public GameObject creditsScreen;
-    public void ShowCreditsScreen()
+    public void ShowCreditsScreen(Button btn)
     {
         Cursor.lockState = CursorLockMode.Confined;
 
         settingsScreen.SetActive(false);
         creditsScreen.SetActive(true);
+
+        btn.Select();
 
         Cursor.visible = true;
     }
@@ -110,22 +117,27 @@ public class StartMenuScript : MonoBehaviour {
         settingsScreen.SetActive(false);
         creditsScreen.SetActive(false);
 
+        startBtn.Select();
+
         Cursor.visible = true;
     }
 
     //CONTROLS
     public GameObject controlsScreen;
-    public void ShowControlsScreen()
+    public void ShowControlsScreen(Button btn)
     {
         Cursor.lockState = CursorLockMode.Confined;
 
         controlsScreen.SetActive(true);
+        btn.Select();
 
         Cursor.visible = true;
     }
     public void HideControlsScreen()
     {
         controlsScreen.SetActive(false);
+
+        startBtn.Select();
     }
 
 }

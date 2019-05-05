@@ -57,9 +57,11 @@ public class UIManager : MonoBehaviour {
 
     //PAUSE
     public GameObject pauseUI;
+    public Button pauseFirstButton;
 
     //DEATH
     public GameObject deathScreen;
+    public Button deathScreenRestartBtn;
     public void ShowDeathScreen()
     {
         //Death Screen
@@ -67,6 +69,8 @@ public class UIManager : MonoBehaviour {
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+
+        SelectBtnFirst(deathScreenRestartBtn);
 
         ingameUI.SetActive(false);
         pauseUI.SetActive(false);
@@ -121,6 +125,12 @@ public class UIManager : MonoBehaviour {
         controlsScreen.SetActive(true);
 
         Cursor.visible = true;
+    }
+
+    //BACK
+    public void SelectBtnFirst(Button backBtn)
+    {
+        backBtn.Select();
     }
 
     //FADE
