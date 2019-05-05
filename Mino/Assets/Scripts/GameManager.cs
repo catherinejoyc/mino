@@ -105,6 +105,9 @@ public class GameManager : MonoBehaviour {
     {
         Cursor.lockState = CursorLockMode.Confined;
 
+        //Select button
+        UIManager.MyInstance.SelectBtnFirst(UIManager.MyInstance.pauseFirstButton);
+
         UIManager.MyInstance.ingameUI.SetActive(false);
         UIManager.MyInstance.pauseUI.SetActive(true);
         UIManager.MyInstance.deathScreen.SetActive(false);
