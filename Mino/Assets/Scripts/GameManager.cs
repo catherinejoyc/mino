@@ -31,17 +31,19 @@ public class GameManager : MonoBehaviour {
         try
         {       
             player = FindObjectOfType<PlayerController>().gameObject;
+            Resume();
         }
         catch
         {
             Debug.Log("couldn't find playerController");
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
             
 
 
         //remainingTime += Time.timeSinceLevelLoad;
         //print(remainingTime);
-        Resume();
     }
 
     private void Update()
