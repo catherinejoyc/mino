@@ -57,7 +57,7 @@ public class EnemySoundScript : SoundScript {
         {
             if (Time.time > lastStepTime + stepIntervall)
             {
-                switch (currUnderground)
+                switch (currUnderground) //PLAYS SOUNDEVENT IN RELATION TO CURRENT UNDERGROUND
                 {
                     case Underground.Stone:
                         m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
@@ -80,7 +80,7 @@ public class EnemySoundScript : SoundScript {
         }
     }
 
-    public void ChangeFootstep(int underGround)
+    public void ChangeFootstep(int underGround) //CHANGES CURRENT UNDERGROUND TYPE
     {
         //set switches
         switch (underGround)
@@ -106,7 +106,6 @@ public class EnemySoundScript : SoundScript {
                 currUnderground = Underground.Stone;
                 break;
         }
-        Debug.Log(underGround);
     }
 
     //Play in BaseEnemyScript
