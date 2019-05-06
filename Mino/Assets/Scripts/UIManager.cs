@@ -9,9 +9,11 @@ public class UIManager : MonoBehaviour {
     public GameObject ingameUI;
     public Image TutorialScreen;
     public Slider VolumeIndicator;
-    public Text keyFragments;
+    //public Text keyFragments;
+    public UINumberSpriteSheetScript keyNumberSpriteSheet;
+    public UINumberSpriteSheetScript stoneNumberSpriteSheet;
     public Animator keyEffect;
-    public Text stonecount;
+    //public Text stonecount;
     //public Text time;
 
     //ANIMATOR
@@ -41,7 +43,8 @@ public class UIManager : MonoBehaviour {
 
     public void ResetUI()
     {
-        keyFragments.text = "0/3";
+        //keyFragments.text = "0/3";
+        keyNumberSpriteSheet.ChangeNumberSprite(0);
         TutorialScreen.enabled = false;
     }
 
@@ -53,6 +56,18 @@ public class UIManager : MonoBehaviour {
     public void PlayKeyfragmentEffect02()
     {
         keyEffect.SetTrigger("keyfragmentEffect02");
+    }
+
+    //ADD KEY TO COUNT
+    public void AddKey(int _keyCount)
+    {
+        keyNumberSpriteSheet.ChangeNumberSprite(_keyCount);
+    }
+
+    //ADD STONE TO COUNT
+    public void AddStone(int _stoneCount)
+    {
+        stoneNumberSpriteSheet.ChangeNumberSprite(_stoneCount);
     }
 
     //PAUSE

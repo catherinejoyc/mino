@@ -34,7 +34,10 @@ public class InventoryManager : MonoBehaviour {
             if (value <= 3)
             {
                 stones = value;
-                UIManager.MyInstance.stonecount.text = stones.ToString();
+
+                //CHANGE NUMBER SPRITE
+                UIManager.MyInstance.AddStone(stones);
+                //UIManager.MyInstance.stonecount.text = stones.ToString();
             }
         }
     }
