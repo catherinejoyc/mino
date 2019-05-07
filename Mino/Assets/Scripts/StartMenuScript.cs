@@ -17,6 +17,11 @@ public class StartMenuScript : MonoBehaviour {
     private void Awake()
     {
         Time.timeScale = 1;
+
+        SetVolume(optionsVariables.volume);
+        volume.value = optionsVariables.volume;
+        SetMouseSensitivity(optionsVariables.mouseSensitivity);
+        mouseSensitivity.value = optionsVariables.mouseSensitivity;
     }
 
     public void MainMenu_StartGame()
@@ -49,8 +54,11 @@ public class StartMenuScript : MonoBehaviour {
 
     //SETTINGS
     public AK.Wwise.RTPC volumeRTPC;
+    public OptionsMenuVariables optionsVariables;
 
     public GameObject settingsScreen;
+    public Slider volume;
+    public Slider mouseSensitivity;
 
     public void ShowSettingsScreen(Button btn)
     {
@@ -86,6 +94,7 @@ public class StartMenuScript : MonoBehaviour {
     public void SetVolume(float volume)
     {
         //change volume in wwise
+        optionsVariables.volume = volume;
         volumeRTPC.SetGlobalValue(volume);
     }
     public void SetMouseSensitivity(float sensitivity)
@@ -95,6 +104,7 @@ public class StartMenuScript : MonoBehaviour {
         //{
         //    player.GetComponent<PlayerController>().cameraSensitivity = sensitivity;
         //}
+        optionsVariables.mouseSensitivity = sensitivity;
     }
 
     //CREDITS

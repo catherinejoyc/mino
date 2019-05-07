@@ -1711,7 +1711,10 @@ MonoBehaviour:
   volumeRTPC:
     ID: 0
     valueGuid: 8df50f30a662be439f961574adae18b2
+  optionsVariables: {fileID: 11400000, guid: e077a68c7932de542b74af6a06dfc2de, type: 2}
   settingsScreen: {fileID: 822816109}
+  volume: {fileID: 872901348}
+  mouseSensitivity: {fileID: 1694741968}
   creditsScreen: {fileID: 1036530319}
   controlsScreen: {fileID: 119614126}
 --- !u!4 &872345639

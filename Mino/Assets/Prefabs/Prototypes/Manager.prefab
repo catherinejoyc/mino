@@ -2014,6 +2014,7 @@ MonoBehaviour:
   volumeRTPC:
     ID: 0
     valueGuid: 8df50f30a662be439f961574adae18b2
+  optionsVariables: {fileID: 11400000, guid: e077a68c7932de542b74af6a06dfc2de, type: 2}
 --- !u!114 &114170892101568440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3492,6 +3493,8 @@ MonoBehaviour:
   ingameUI: {fileID: 1868666756497862}
   TutorialScreen: {fileID: 114396234901181780}
   VolumeIndicator: {fileID: 114709761153988758}
+  mouseSensitivity: {fileID: 114455366328645614}
+  volume: {fileID: 114029199198089116}
   keyNumberSpriteSheet: {fileID: 114034290637066696}
   stoneNumberSpriteSheet: {fileID: 114086895923740990}
   keyEffect: {fileID: 95590265109949684}

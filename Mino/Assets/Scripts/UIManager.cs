@@ -9,6 +9,9 @@ public class UIManager : MonoBehaviour {
     public GameObject ingameUI;
     public Image TutorialScreen;
     public Slider VolumeIndicator;
+    //options
+    public Slider mouseSensitivity;
+    public Slider volume;
     //public Text keyFragments;
     public UINumberSpriteSheetScript keyNumberSpriteSheet;
     public UINumberSpriteSheetScript stoneNumberSpriteSheet;
@@ -46,6 +49,8 @@ public class UIManager : MonoBehaviour {
         //keyFragments.text = "0/3";
         keyNumberSpriteSheet.ChangeNumberSprite(0);
         TutorialScreen.enabled = false;
+        volume.value = GameManager.MyInstance.optionsVariables.volume;
+        mouseSensitivity.value = GameManager.MyInstance.optionsVariables.mouseSensitivity;
     }
 
     //play key effect
