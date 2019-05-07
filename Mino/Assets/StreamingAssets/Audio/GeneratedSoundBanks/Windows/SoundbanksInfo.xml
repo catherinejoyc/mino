@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\</ProjectRoot>
+		<SourceFilesRoot>C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1949491649" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\MinoSoundbankNew</ObjectPath>
+			<ShortName>MinoSoundbankNew</ShortName>
+			<Path>MinoSoundbankNew.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1165667864" Name="Play_Hagi_alert" ObjectPath="\Events\Default Work Unit\Play_Hagi_alert"/>
+				<Event Id="678858674" Name="Play_Hagi_attack" ObjectPath="\Events\Default Work Unit\Play_Hagi_attack"/>
+				<Event Id="3845282583" Name="Play_Hagi_footstep_busch_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_busch_02"/>
+				<Event Id="3289580336" Name="Play_Hagi_footstep_grass_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_grass_02"/>
+				<Event Id="573194927" Name="Play_Hagi_footstep_gravel_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_gravel_02"/>
+				<Event Id="3991313327" Name="Play_Hagi_footstep_stone_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_stone_02"/>
+				<Event Id="879053751" Name="Play_Hagi_footsteps_raum" ObjectPath="\Events\Default Work Unit\Play_Hagi_footsteps_raum"/>
+				<Event Id="86685327" Name="Play_Hagi_footstepsNew" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstepsNew"/>
+				<Event Id="2126903937" Name="Play_Hagi_hunt" ObjectPath="\Events\Default Work Unit\Play_Hagi_hunt"/>
+				<Event Id="3364721325" Name="Play_Interactables_Druckplatte" ObjectPath="\Events\Default Work Unit\Play_Interactables_Druckplatte"/>
+				<Event Id="2975096116" Name="Play_Interactables_Kiste" ObjectPath="\Events\Default Work Unit\Play_Interactables_Kiste"/>
+				<Event Id="2683057547" Name="Play_Interactables_Kiste_destroy" ObjectPath="\Events\Default Work Unit\Play_Interactables_Kiste_destroy"/>
+				<Event Id="1279939955" Name="Play_Interactables_Kiste_scratch" ObjectPath="\Events\Default Work Unit\Play_Interactables_Kiste_scratch"/>
+				<Event Id="1032010903" Name="Play_Interactables_Schluesselfr" ObjectPath="\Events\Default Work Unit\Play_Interactables_Schluesselfr"/>
+				<Event Id="402628103" Name="Play_Interactables_Tueren" ObjectPath="\Events\Default Work Unit\Play_Interactables_Tueren"/>
+				<Event Id="3846165279" Name="Play_Kiste_aufheben" ObjectPath="\Events\Default Work Unit\Play_Kiste_aufheben"/>
+				<Event Id="4019120907" Name="Play_Kiste_platzieren" ObjectPath="\Events\Default Work Unit\Play_Kiste_platzieren"/>
+				<Event Id="98439365" Name="Play_Player_footsteps" ObjectPath="\Events\Default Work Unit\Play_Player_footsteps"/>
+				<Event Id="3200425469" Name="Play_Player_Footsteps_walk_stone" ObjectPath="\Events\Default Work Unit\Play_Player_Footsteps_walk_stone"/>
+				<Event Id="634024223" Name="Play_Player_jumps" ObjectPath="\Events\Default Work Unit\Play_Player_jumps"/>
+				<Event Id="1646878680" Name="Play_Player_sneak" ObjectPath="\Events\Default Work Unit\Play_Player_sneak"/>
+				<Event Id="2450182510" Name="Play_Player_Steinchen_aufheben" ObjectPath="\Events\Default Work Unit\Play_Player_Steinchen_aufheben"/>
+				<Event Id="3671174953" Name="Play_Player_Steinchen_aufprall" ObjectPath="\Events\Default Work Unit\Play_Player_Steinchen_aufprall"/>
+				<Event Id="2771162769" Name="Play_UI_negativ" ObjectPath="\Events\Default Work Unit\Play_UI_negativ"/>
+				<Event Id="2146170337" Name="Play_UI_positiv" ObjectPath="\Events\Default Work Unit\Play_UI_positiv"/>
+				<Event Id="1778537052" Name="Stop_Interactables_Kiste_stone" ObjectPath="\Events\Default Work Unit\Stop_Interactables_Kiste_stone"/>
+				<Event Id="3016071988" Name="Stop_Interactables_Kisten" ObjectPath="\Events\Default Work Unit\Stop_Interactables_Kisten"/>
+				<Event Id="873681583" Name="Stop_Interactables_Kistens" ObjectPath="\Events\Default Work Unit\Stop_Interactables_Kistens"/>
+				<Event Id="3246801117" Name="Stop_Interactables_Tueren" ObjectPath="\Events\Default Work Unit\Stop_Interactables_Tueren"/>
+				<Event Id="1097980931" Name="testEvent" ObjectPath="\Events\Default Work Unit\testEvent"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="40106" Language="SFX">
+					<ShortName>Playerjump_Kiesel5.wav</ShortName>
+					<Path>SFX\Playerjump_Kiesel5_56D34C19.wem</Path>
+				</File>
+				<File Id="2199263" Language="SFX">
+					<ShortName>Playersteps_Kiesel2.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel2_56D34C19.wem</Path>
+				</File>
+				<File Id="18956420" Language="SFX">
+					<ShortName>Playersteps_Busch8.wav</ShortName>
+					<Path>SFX\Playersteps_Busch8_56D34C19.wem</Path>
+				</File>
+				<File Id="22171991" Language="SFX">
+					<ShortName>Playersteps_Steinplatte9s.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte9s_56D34C19.wem</Path>
+				</File>
+				<File Id="28426644" Language="SFX">
+					<ShortName>Hagibaer_Fs_Busch1.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Busch1_56D34C19.wem</Path>
+				</File>
+				<File Id="31512524" Language="SFX">
+					<ShortName>Playersneak_Busch4.wav</ShortName>
+					<Path>SFX\Playersneak_Busch4_56D34C19.wem</Path>
+				</File>
+				<File Id="46570087" Language="SFX">
+					<ShortName>Steinchen_aufheben3.wav</ShortName>
+					<Path>SFX\Steinchen_aufheben3_56D34C19.wem</Path>
+				</File>
+				<File Id="68404337" Language="SFX">
+					<ShortName>Playersteps_Gras4s.wav</ShortName>
+					<Path>SFX\Playersteps_Gras4s_56D34C19.wem</Path>
+				</File>
+				<File Id="95168318" Language="SFX">
+					<ShortName>Playersteps_Steinplatte2s.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte2s_56D34C19.wem</Path>
+				</File>
+				<File Id="103392220" Language="SFX">
+					<ShortName>Playersteps_Kiesel2s.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel2s_56D34C19.wem</Path>
+				</File>
+				<File Id="104389191" Language="SFX">
+					<ShortName>Playersteps_Kiesel7.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel7_56D34C19.wem</Path>
+				</File>
+				<File Id="113292309" Language="SFX">
+					<ShortName>Playersteps_Steinplatte2.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte2_56D34C19.wem</Path>
+				</File>
+				<File Id="120847297" Language="SFX">
+					<ShortName>Playerjump_Gras3.wav</ShortName>
+					<Path>SFX\Playerjump_Gras3_56D34C19.wem</Path>
+				</File>
+				<File Id="122495928" Language="SFX">
+					<ShortName>Hagibaer_Fs_Kiesel1.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Kiesel1_56D34C19.wem</Path>
+				</File>
+				<File Id="131914269" Language="SFX">
+					<ShortName>Playersteps_Kiesel6s.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel6s_56D34C19.wem</Path>
+				</File>
+				<File Id="137521643" Language="SFX">
+					<ShortName>Playersteps_Gras3s.wav</ShortName>
+					<Path>SFX\Playersteps_Gras3s_56D34C19.wem</Path>
+				</File>
+				<File Id="144498943" Language="SFX">
+					<ShortName>Playersteps_Gras8s.wav</ShortName>
+					<Path>SFX\Playersteps_Gras8s_56D34C19.wem</Path>
+				</File>
+				<File Id="149907379" Language="SFX">
+					<ShortName>Playerjump_Busch3.wav</ShortName>
+					<Path>SFX\Playerjump_Busch3_56D34C19.wem</Path>
+				</File>
+				<File Id="158972996" Language="SFX">
+					<ShortName>Hagibaer_Fs_Gras6.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Gras6_56D34C19.wem</Path>
+				</File>
+				<File Id="168026292" Language="SFX">
+					<ShortName>Playersteps_Kiesel5.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel5_56D34C19.wem</Path>
+				</File>
+				<File Id="185105243" Language="SFX">
+					<ShortName>Playerjump_Kiesel6.wav</ShortName>
+					<Path>SFX\Playerjump_Kiesel6_56D34C19.wem</Path>
+				</File>
+				<File Id="187638891" Language="SFX">
+					<ShortName>Playersteps_Gras7.wav</ShortName>
+					<Path>SFX\Playersteps_Gras7_56D34C19.wem</Path>
+				</File>
+				<File Id="188865465" Language="SFX">
+					<ShortName>Kiste_ScratchVonHagi.wav</ShortName>
+					<Path>SFX\Kiste_ScratchVonHagi_56D34C19.wem</Path>
+				</File>
+				<File Id="203266421" Language="SFX">
+					<ShortName>Playersteps_Busch6.wav</ShortName>
+					<Path>SFX\Playersteps_Busch6_56D34C19.wem</Path>
+				</File>
+				<File Id="207431544" Language="SFX">
+					<ShortName>Playersteps_Busch_mixdown.wav</ShortName>
+					<Path>SFX\Playersteps_Busch_mixdown_56D34C19.wem</Path>
+				</File>
+				<File Id="230146194" Language="SFX">
+					<ShortName>Hagibaer_Fs_Gras8.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Gras8_56D34C19.wem</Path>
+				</File>
+				<File Id="234959746" Language="SFX">
+					<ShortName>Playersneak_Busch2.wav</ShortName>
+					<Path>SFX\Playersneak_Busch2_56D34C19.wem</Path>
+				</File>
+				<File Id="241092223" Language="SFX">
+					<ShortName>Door.wav</ShortName>
+					<Path>SFX\Door_56D34C19.wem</Path>
+				</File>
+				<File Id="245966026" Language="SFX">
+					<ShortName>Kiste_Schieben3.wav</ShortName>
+					<Path>SFX\Kiste_Schieben3_56D34C19.wem</Path>
+				</File>
+				<File Id="247212520" Language="SFX">
+					<ShortName>Hagibaer_Fs_Kiesel4.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Kiesel4_56D34C19.wem</Path>
+				</File>
+				<File Id="257925673" Language="SFX">
+					<ShortName>Hagibaer_schnaufen.wav</ShortName>
+					<Path>SFX\Hagibaer_schnaufen_56D34C19.wem</Path>
+				</File>
+				<File Id="261597368" Language="SFX">
+					<ShortName>Playerjump_Kiesel7.wav</ShortName>
+					<Path>SFX\Playerjump_Kiesel7_56D34C19.wem</Path>
+				</File>
+				<File Id="265067354" Language="SFX">
+					<ShortName>Hagibaer_Fs_Steinplatte3.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Steinplatte3_56D34C19.wem</Path>
+				</File>
+				<File Id="266415452" Language="SFX">
+					<ShortName>Playersneak_Busch5.wav</ShortName>
+					<Path>SFX\Playersneak_Busch5_56D34C19.wem</Path>
+				</File>
+				<File Id="269313298" Language="SFX">
+					<ShortName>Playersteps_Kiesel8.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel8_56D34C19.wem</Path>
+				</File>
+				<File Id="272748376" Language="SFX">
+					<ShortName>Steinchen_Aufprall3.wav</ShortName>
+					<Path>SFX\Steinchen_Aufprall3_56D34C19.wem</Path>
+				</File>
+				<File Id="280341370" Language="SFX">
+					<ShortName>Hagibaer_Fs_Gras7.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Gras7_56D34C19.wem</Path>
+				</File>
+				<File Id="285240051" Language="SFX">
+					<ShortName>Hagibaer_Fs_Steinplatte6.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Steinplatte6_56D34C19.wem</Path>
+				</File>
+				<File Id="314666379" Language="SFX">
+					<ShortName>foundationelements_1623_paving_stone_move.wav</ShortName>
+					<Path>SFX\foundationelements_1623_paving_stone_move_56D34C19.wem</Path>
+				</File>
+				<File Id="316147558" Language="SFX">
+					<ShortName>Hagibaer_Fs_Steinplatte5.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Steinplatte5_56D34C19.wem</Path>
+				</File>
+				<File Id="338413626" Language="SFX">
+					<ShortName>Playersteps_Busch9.wav</ShortName>
+					<Path>SFX\Playersteps_Busch9_56D34C19.wem</Path>
+				</File>
+				<File Id="345755877" Language="SFX">
+					<ShortName>Playersteps_Kiesel3s.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel3s_56D34C19.wem</Path>
+				</File>
+				<File Id="357607925" Language="SFX">
+					<ShortName>Playerjump_Busch1.wav</ShortName>
+					<Path>SFX\Playerjump_Busch1_56D34C19.wem</Path>
+				</File>
+				<File Id="359092535" Language="SFX">
+					<ShortName>Playersteps_Kiesel1.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel1_56D34C19.wem</Path>
+				</File>
+				<File Id="363910679" Language="SFX">
+					<ShortName>Playersteps_Busch4.wav</ShortName>
+					<Path>SFX\Playersteps_Busch4_56D34C19.wem</Path>
+				</File>
+				<File Id="365323086" Language="SFX">
+					<ShortName>Steinchen_Aufprall2.wav</ShortName>
+					<Path>SFX\Steinchen_Aufprall2_56D34C19.wem</Path>
+				</File>
+				<File Id="377787644" Language="SFX">
+					<ShortName>Hagibaer_Fs_Busch5.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Busch5_56D34C19.wem</Path>
+				</File>
+				<File Id="381985465" Language="SFX">
+					<ShortName>Playersteps_Gras4.wav</ShortName>
+					<Path>SFX\Playersteps_Gras4_56D34C19.wem</Path>
+				</File>
+				<File Id="404194589" Language="SFX">
+					<ShortName>Steinchen_Aufprall4.wav</ShortName>
+					<Path>SFX\Steinchen_Aufprall4_56D34C19.wem</Path>
+				</File>
+				<File Id="406166912" Language="SFX">
+					<ShortName>Hagibaer_Fs_Busch2.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Busch2_56D34C19.wem</Path>
+				</File>
+				<File Id="410825152" Language="SFX">
+					<ShortName>Playerjump_Gras4.wav</ShortName>
+					<Path>SFX\Playerjump_Gras4_56D34C19.wem</Path>
+				</File>
+				<File Id="419385542" Language="SFX">
+					<ShortName>Hagibaer_Fs_Gras5.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Gras5_56D34C19.wem</Path>
+				</File>
+				<File Id="424749875" Language="SFX">
+					<ShortName>Playerjump_Steinplatte5.wav</ShortName>
+					<Path>SFX\Playerjump_Steinplatte5_56D34C19.wem</Path>
+				</File>
+				<File Id="427898294" Language="SFX">
+					<ShortName>Hagibaer_Fs_Gras4.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Gras4_56D34C19.wem</Path>
+				</File>
+				<File Id="436322829" Language="SFX">
+					<ShortName>Playersteps_Gras1.wav</ShortName>
+					<Path>SFX\Playersteps_Gras1_56D34C19.wem</Path>
+				</File>
+				<File Id="444818352" Language="SFX">
+					<ShortName>Playersteps_Kiesel6.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel6_56D34C19.wem</Path>
+				</File>
+				<File Id="456883266" Language="SFX">
+					<ShortName>Playerjump_Busch2.wav</ShortName>
+					<Path>SFX\Playerjump_Busch2_56D34C19.wem</Path>
+				</File>
+				<File Id="466367313" Language="SFX">
+					<ShortName>Hagibaer_Fs_Steinplatte7.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Steinplatte7_56D34C19.wem</Path>
+				</File>
+				<File Id="468927740" Language="SFX">
+					<ShortName>Menuesound1.wav</ShortName>
+					<Path>SFX\Menuesound1_56D34C19.wem</Path>
+				</File>
+				<File Id="496078229" Language="SFX">
+					<ShortName>Playerjump_Kiesel2.wav</ShortName>
+					<Path>SFX\Playerjump_Kiesel2_56D34C19.wem</Path>
+				</File>
+				<File Id="507415033" Language="SFX">
+					<ShortName>Hagibaer_Fs_Kiesel3.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Kiesel3_56D34C19.wem</Path>
+				</File>
+				<File Id="516846828" Language="SFX">
+					<ShortName>Steinchen_Aufprall5.wav</ShortName>
+					<Path>SFX\Steinchen_Aufprall5_56D34C19.wem</Path>
+				</File>
+				<File Id="517769603" Language="SFX">
+					<ShortName>Playersteps_Steinplatte6s.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte6s_56D34C19.wem</Path>
+				</File>
+				<File Id="531982696" Language="SFX">
+					<ShortName>Playersteps_Gras2.wav</ShortName>
+					<Path>SFX\Playersteps_Gras2_56D34C19.wem</Path>
+				</File>
+				<File Id="534125331" Language="SFX">
+					<ShortName>Playersneak_Busch1.wav</ShortName>
+					<Path>SFX\Playersneak_Busch1_56D34C19.wem</Path>
+				</File>
+				<File Id="540530326" Language="SFX">
+					<ShortName>Playersteps_Steinplatte5.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte5_56D34C19.wem</Path>
+				</File>
+				<File Id="541830790" Language="SFX">
+					<ShortName>Hagibaer_Fs_Gras1.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Gras1_56D34C19.wem</Path>
+				</File>
+				<File Id="542584911" Language="SFX">
+					<ShortName>Hagibaer_Fs_Busch6.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Busch6_56D34C19.wem</Path>
+				</File>
+				<File Id="549560690" Language="SFX">
+					<ShortName>Steinchen_aufheben1.wav</ShortName>
+					<Path>SFX\Steinchen_aufheben1_56D34C19.wem</Path>
+				</File>
+				<File Id="550345605" Language="SFX">
+					<ShortName>Playersteps_Kiesel4s.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel4s_56D34C19.wem</Path>
+				</File>
+				<File Id="551212603" Language="SFX">
+					<ShortName>Playersteps_Gras2s.wav</ShortName>
+					<Path>SFX\Playersteps_Gras2s_56D34C19.wem</Path>
+				</File>
+				<File Id="552032150" Language="SFX">
+					<ShortName>Hagibaer_Bruellen1.wav</ShortName>
+					<Path>SFX\Hagibaer_Bruellen1_56D34C19.wem</Path>
+				</File>
+				<File Id="553876457" Language="SFX">
+					<ShortName>Playersteps_Busch5.wav</ShortName>
+					<Path>SFX\Playersteps_Busch5_56D34C19.wem</Path>
+				</File>
+				<File Id="560640513" Language="SFX">
+					<ShortName>Playersteps_Steinplatte3.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte3_56D34C19.wem</Path>
+				</File>
+				<File Id="560708953" Language="SFX">
+					<ShortName>Playersteps_Kiesel8s.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel8s_56D34C19.wem</Path>
+				</File>
+				<File Id="572456262" Language="SFX">
+					<ShortName>Playersneak_Busch9.wav</ShortName>
+					<Path>SFX\Playersneak_Busch9_56D34C19.wem</Path>
+				</File>
+				<File Id="572589371" Language="SFX">
+					<ShortName>Hagibaer_Fs_Gras3.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Gras3_56D34C19.wem</Path>
+				</File>
+				<File Id="600580558" Language="SFX">
+					<ShortName>Playersneak_Busch3.wav</ShortName>
+					<Path>SFX\Playersneak_Busch3_56D34C19.wem</Path>
+				</File>
+				<File Id="604355001" Language="SFX">
+					<ShortName>Hagibaer_Fs_Kiesel6.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Kiesel6_56D34C19.wem</Path>
+				</File>
+				<File Id="605201416" Language="SFX">
+					<ShortName>Hagibaer_Fs_Steinplatte1.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Steinplatte1_56D34C19.wem</Path>
+				</File>
+				<File Id="606426266" Language="SFX">
+					<ShortName>Playerjump_Steinplatte7.wav</ShortName>
+					<Path>SFX\Playerjump_Steinplatte7_56D34C19.wem</Path>
+				</File>
+				<File Id="613134993" Language="SFX">
+					<ShortName>Playersteps_Busch3.wav</ShortName>
+					<Path>SFX\Playersteps_Busch3_56D34C19.wem</Path>
+				</File>
+				<File Id="614886470" Language="SFX">
+					<ShortName>Kiste_Schieben1.wav</ShortName>
+					<Path>SFX\Kiste_Schieben1_56D34C19.wem</Path>
+				</File>
+				<File Id="619556181" Language="SFX">
+					<ShortName>Playerjump_Gras2.wav</ShortName>
+					<Path>SFX\Playerjump_Gras2_56D34C19.wem</Path>
+				</File>
+				<File Id="623796480" Language="SFX">
+					<ShortName>Playersteps_Steinplatte4.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte4_56D34C19.wem</Path>
+				</File>
+				<File Id="630665602" Language="SFX">
+					<ShortName>Kiste_Destroy.wav</ShortName>
+					<Path>SFX\Kiste_Destroy_56D34C19.wem</Path>
+				</File>
+				<File Id="634717111" Language="SFX">
+					<ShortName>Playersteps_Kiesel9.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel9_56D34C19.wem</Path>
+				</File>
+				<File Id="646264480" Language="SFX">
+					<ShortName>Playersteps_Kiesel7s.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel7s_56D34C19.wem</Path>
+				</File>
+				<File Id="646704997" Language="SFX">
+					<ShortName>Playersteps_Gras6s.wav</ShortName>
+					<Path>SFX\Playersteps_Gras6s_56D34C19.wem</Path>
+				</File>
+				<File Id="654265611" Language="SFX">
+					<ShortName>Hagibaer_Fs_Busch4.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Busch4_56D34C19.wem</Path>
+				</File>
+				<File Id="657178837" Language="SFX">
+					<ShortName>Playersteps_Gras5.wav</ShortName>
+					<Path>SFX\Playersteps_Gras5_56D34C19.wem</Path>
+				</File>
+				<File Id="661150922" Language="SFX">
+					<ShortName>Playersteps_Steinplatte1s.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte1s_56D34C19.wem</Path>
+				</File>
+				<File Id="672259055" Language="SFX">
+					<ShortName>Playersteps_Steinplatte7s.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte7s_56D34C19.wem</Path>
+				</File>
+				<File Id="681302514" Language="SFX">
+					<ShortName>Playersteps_Kiesel9s.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel9s_56D34C19.wem</Path>
+				</File>
+				<File Id="691062410" Language="SFX">
+					<ShortName>Playerjump_Steinplatte6.wav</ShortName>
+					<Path>SFX\Playerjump_Steinplatte6_56D34C19.wem</Path>
+				</File>
+				<File Id="700226457" Language="SFX">
+					<ShortName>Playersteps_Steinplatte7.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte7_56D34C19.wem</Path>
+				</File>
+				<File Id="712528037" Language="SFX">
+					<ShortName>Playersteps_Gras6.wav</ShortName>
+					<Path>SFX\Playersteps_Gras6_56D34C19.wem</Path>
+				</File>
+				<File Id="720944192" Language="SFX">
+					<ShortName>Playersteps_Gras7s.wav</ShortName>
+					<Path>SFX\Playersteps_Gras7s_56D34C19.wem</Path>
+				</File>
+				<File Id="739625425" Language="SFX">
+					<ShortName>Hagibaer_Bruellen3.wav</ShortName>
+					<Path>SFX\Hagibaer_Bruellen3_56D34C19.wem</Path>
+				</File>
+				<File Id="743234211" Language="SFX">
+					<ShortName>Steinchen_aufheben5.wav</ShortName>
+					<Path>SFX\Steinchen_aufheben5_56D34C19.wem</Path>
+				</File>
+				<File Id="751375049" Language="SFX">
+					<ShortName>Steinchen_aufheben2.wav</ShortName>
+					<Path>SFX\Steinchen_aufheben2_56D34C19.wem</Path>
+				</File>
+				<File Id="758478484" Language="SFX">
+					<ShortName>Playersteps_Gras5s.wav</ShortName>
+					<Path>SFX\Playersteps_Gras5s_56D34C19.wem</Path>
+				</File>
+				<File Id="762452124" Language="SFX">
+					<ShortName>Hagibaer_Fs_Busch3.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Busch3_56D34C19.wem</Path>
+				</File>
+				<File Id="776986541" Language="SFX">
+					<ShortName>Playerjump_Gras1.wav</ShortName>
+					<Path>SFX\Playerjump_Gras1_56D34C19.wem</Path>
+				</File>
+				<File Id="779353539" Language="SFX">
+					<ShortName>Playersneak_Busch8.wav</ShortName>
+					<Path>SFX\Playersneak_Busch8_56D34C19.wem</Path>
+				</File>
+				<File Id="786254221" Language="SFX">
+					<ShortName>Playerjump_Kiesel3.wav</ShortName>
+					<Path>SFX\Playerjump_Kiesel3_56D34C19.wem</Path>
+				</File>
+				<File Id="819379860" Language="SFX">
+					<ShortName>Hagibaer_Fs_Steinplatte4.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Steinplatte4_56D34C19.wem</Path>
+				</File>
+				<File Id="821776360" Language="SFX">
+					<ShortName>Playersteps_Steinplatte4s.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte4s_56D34C19.wem</Path>
+				</File>
+				<File Id="822898991" Language="SFX">
+					<ShortName>Playersteps_Kiesel4.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel4_56D34C19.wem</Path>
+				</File>
+				<File Id="825929481" Language="SFX">
+					<ShortName>Playerjump_Kiesel1.wav</ShortName>
+					<Path>SFX\Playerjump_Kiesel1_56D34C19.wem</Path>
+				</File>
+				<File Id="827126712" Language="SFX">
+					<ShortName>Playersteps_Steinplatte6.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte6_56D34C19.wem</Path>
+				</File>
+				<File Id="829620978" Language="SFX">
+					<ShortName>Playerjump_Steinplatte4.wav</ShortName>
+					<Path>SFX\Playerjump_Steinplatte4_56D34C19.wem</Path>
+				</File>
+				<File Id="832988673" Language="SFX">
+					<ShortName>Menuesound3.wav</ShortName>
+					<Path>SFX\Menuesound3_56D34C19.wem</Path>
+				</File>
+				<File Id="833086724" Language="SFX">
+					<ShortName>Hagibaer_Fs_Steinplatte2.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Steinplatte2_56D34C19.wem</Path>
+				</File>
+				<File Id="833153599" Language="SFX">
+					<ShortName>Playersteps_Steinplatte8s.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte8s_56D34C19.wem</Path>
+				</File>
+				<File Id="843533822" Language="SFX">
+					<ShortName>Menuesound2.wav</ShortName>
+					<Path>SFX\Menuesound2_56D34C19.wem</Path>
+				</File>
+				<File Id="862531704" Language="SFX">
+					<ShortName>Playersteps_Gras1s.wav</ShortName>
+					<Path>SFX\Playersteps_Gras1s_56D34C19.wem</Path>
+				</File>
+				<File Id="865597252" Language="SFX">
+					<ShortName>Playersteps_Busch1.wav</ShortName>
+					<Path>SFX\Playersteps_Busch1_56D34C19.wem</Path>
+				</File>
+				<File Id="880049150" Language="SFX">
+					<ShortName>foundationelements_1612_paving_stone_move.wav</ShortName>
+					<Path>SFX\foundationelements_1612_paving_stone_move_56D34C19.wem</Path>
+				</File>
+				<File Id="884003525" Language="SFX">
+					<ShortName>Steinchen_Aufprall6.wav</ShortName>
+					<Path>SFX\Steinchen_Aufprall6_56D34C19.wem</Path>
+				</File>
+				<File Id="885173581" Language="SFX">
+					<ShortName>Playerjump_Steinplatte2.wav</ShortName>
+					<Path>SFX\Playerjump_Steinplatte2_56D34C19.wem</Path>
+				</File>
+				<File Id="885957944" Language="SFX">
+					<ShortName>Kiste_Schieben2.wav</ShortName>
+					<Path>SFX\Kiste_Schieben2_56D34C19.wem</Path>
+				</File>
+				<File Id="888033596" Language="SFX">
+					<ShortName>Hagibaer_Fs_Kiesel2.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Kiesel2_56D34C19.wem</Path>
+				</File>
+				<File Id="888833285" Language="SFX">
+					<ShortName>foundationelements_1627_paving_stone_move.wav</ShortName>
+					<Path>SFX\foundationelements_1627_paving_stone_move_56D34C19.wem</Path>
+				</File>
+				<File Id="892222868" Language="SFX">
+					<ShortName>Hagibaer_Fs_Gras2.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Gras2_56D34C19.wem</Path>
+				</File>
+				<File Id="892242472" Language="SFX">
+					<ShortName>Playersteps_Kiesel1s.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel1s_56D34C19.wem</Path>
+				</File>
+				<File Id="892595251" Language="SFX">
+					<ShortName>foundationelements_1628_paving_stone_move.wav</ShortName>
+					<Path>SFX\foundationelements_1628_paving_stone_move_56D34C19.wem</Path>
+				</File>
+				<File Id="909734942" Language="SFX">
+					<ShortName>Playerjump_Steinplatte3.wav</ShortName>
+					<Path>SFX\Playerjump_Steinplatte3_56D34C19.wem</Path>
+				</File>
+				<File Id="913856300" Language="SFX">
+					<ShortName>Playerjump_Steinplatte1.wav</ShortName>
+					<Path>SFX\Playerjump_Steinplatte1_56D34C19.wem</Path>
+				</File>
+				<File Id="928651554" Language="SFX">
+					<ShortName>Steinchen_Aufprall1.wav</ShortName>
+					<Path>SFX\Steinchen_Aufprall1_56D34C19.wem</Path>
+				</File>
+				<File Id="928849311" Language="SFX">
+					<ShortName>Playersteps_Gras8.wav</ShortName>
+					<Path>SFX\Playersteps_Gras8_56D34C19.wem</Path>
+				</File>
+				<File Id="938096944" Language="SFX">
+					<ShortName>Menuesound4.wav</ShortName>
+					<Path>SFX\Menuesound4_56D34C19.wem</Path>
+				</File>
+				<File Id="947230610" Language="SFX">
+					<ShortName>Steinchen_aufheben4.wav</ShortName>
+					<Path>SFX\Steinchen_aufheben4_56D34C19.wem</Path>
+				</File>
+				<File Id="949585595" Language="SFX">
+					<ShortName>Playersteps_Gras3.wav</ShortName>
+					<Path>SFX\Playersteps_Gras3_56D34C19.wem</Path>
+				</File>
+				<File Id="960773356" Language="SFX">
+					<ShortName>Playersteps_Kiesel3.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel3_56D34C19.wem</Path>
+				</File>
+				<File Id="965283688" Language="SFX">
+					<ShortName>Playersneak_Busch6.wav</ShortName>
+					<Path>SFX\Playersneak_Busch6_56D34C19.wem</Path>
+				</File>
+				<File Id="967327612" Language="SFX">
+					<ShortName>Hagibaer_Bruellen2.wav</ShortName>
+					<Path>SFX\Hagibaer_Bruellen2_56D34C19.wem</Path>
+				</File>
+				<File Id="1004338423" Language="SFX">
+					<ShortName>Playersteps_Busch2.wav</ShortName>
+					<Path>SFX\Playersteps_Busch2_56D34C19.wem</Path>
+				</File>
+				<File Id="1007653885" Language="SFX">
+					<ShortName>foundationelements_1624_paving_stone_move.wav</ShortName>
+					<Path>SFX\foundationelements_1624_paving_stone_move_56D34C19.wem</Path>
+				</File>
+				<File Id="1008854808" Language="SFX">
+					<ShortName>Playersteps_Steinplatte8.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte8_56D34C19.wem</Path>
+				</File>
+				<File Id="1009437216" Language="SFX">
+					<ShortName>Playerjump_Kiesel4.wav</ShortName>
+					<Path>SFX\Playerjump_Kiesel4_56D34C19.wem</Path>
+				</File>
+				<File Id="1015132907" Language="SFX">
+					<ShortName>Fackelsound.wav</ShortName>
+					<Path>SFX\Fackelsound_8956FC97.wem</Path>
+				</File>
+				<File Id="1025967180" Language="SFX">
+					<ShortName>Playersteps_Steinplatte9.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte9_56D34C19.wem</Path>
+				</File>
+				<File Id="1026384021" Language="SFX">
+					<ShortName>Playersteps_Busch7.wav</ShortName>
+					<Path>SFX\Playersteps_Busch7_56D34C19.wem</Path>
+				</File>
+				<File Id="1027828188" Language="SFX">
+					<ShortName>Playersteps_Steinplatte3s.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte3s_56D34C19.wem</Path>
+				</File>
+				<File Id="1032558954" Language="SFX">
+					<ShortName>Playersteps_Steinplatte1.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte1_56D34C19.wem</Path>
+				</File>
+				<File Id="1040087310" Language="SFX">
+					<ShortName>Schluesselfragmente_einsammeln.wav</ShortName>
+					<Path>SFX\Schluesselfragmente_einsammeln_56D34C19.wem</Path>
+				</File>
+				<File Id="1045254995" Language="SFX">
+					<ShortName>Playersteps_Kiesel5s.wav</ShortName>
+					<Path>SFX\Playersteps_Kiesel5s_56D34C19.wem</Path>
+				</File>
+				<File Id="1047075311" Language="SFX">
+					<ShortName>Hagibaer_Fs_Kiesel5.wav</ShortName>
+					<Path>SFX\Hagibaer_Fs_Kiesel5_56D34C19.wem</Path>
+				</File>
+				<File Id="1051016423" Language="SFX">
+					<ShortName>Playersteps_Steinplatte5s.wav</ShortName>
+					<Path>SFX\Playersteps_Steinplatte5s_56D34C19.wem</Path>
+				</File>
+				<File Id="1062962937" Language="SFX">
+					<ShortName>Playersneak_Busch7.wav</ShortName>
+					<Path>SFX\Playersneak_Busch7_56D34C19.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
