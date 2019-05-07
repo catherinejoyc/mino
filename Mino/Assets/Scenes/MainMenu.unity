@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -658,7 +658,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 872345638}
-        m_MethodName: ShowSettingsScreen
+        m_MethodName: ShowControlsScreen
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 968232246}
@@ -1320,7 +1320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22, y: -212}
+  m_AnchoredPosition: {x: -22, y: -196}
   m_SizeDelta: {x: 149, y: 69.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608264076
@@ -1709,7 +1709,7 @@ MonoBehaviour:
   startPressed_Animator: {fileID: 287090221}
   quitPressed_Animator: {fileID: 1197726832}
   volumeRTPC:
-    ID: 0
+    ID: -703096226
     valueGuid: 8df50f30a662be439f961574adae18b2
   optionsVariables: {fileID: 11400000, guid: e077a68c7932de542b74af6a06dfc2de, type: 2}
   settingsScreen: {fileID: 822816109}
@@ -1742,10 +1742,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playPositiveEvent:
-    ID: 0
+    ID: 2146170337
     valueGuid: 5c8bb4aef18cc7438fab60675cf298bc
   playNegativeEvent:
-    ID: 0
+    ID: -1523804527
     valueGuid: 4acc040c791a9f47a155ab5d6670832a
 --- !u!114 &872345641
 MonoBehaviour:
@@ -1763,7 +1763,7 @@ MonoBehaviour:
     valueGuid: 7a1969754557bd41a25a52b3b2d31348
     name: MinoSoundbankNew
   myEvent:
-    ID: 0
+    ID: 2146170337
     valueGuid: 5c8bb4aef18cc7438fab60675cf298bc
 --- !u!1 &872901346
 GameObject:
