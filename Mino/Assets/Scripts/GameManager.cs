@@ -39,8 +39,10 @@ public class GameManager : MonoBehaviour {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
         }
-            
 
+        //set options variables
+        SetVolume(optionsVariables.volume);
+        SetMouseSensitivity(optionsVariables.mouseSensitivity);
 
         //remainingTime += Time.timeSinceLevelLoad;
         //print(remainingTime);
@@ -147,6 +149,7 @@ public class GameManager : MonoBehaviour {
 
     //SETTINGS
     public AK.Wwise.RTPC volumeRTPC;
+    public OptionsMenuVariables optionsVariables;
     public void Settings()
     {
         UIManager.MyInstance.ShowSettingsScreen();
@@ -156,13 +159,15 @@ public class GameManager : MonoBehaviour {
     }
     public void SetVolume(float volume)
     {
-        //change volume in wwise
+        //save change in SO and change volume in wwise
+        optionsVariables.volume = volume;
         volumeRTPC.SetGlobalValue(volume);
     }
     public void SetMouseSensitivity(float sensitivity)
     {
         if (player != null)
         {
+            optionsVariables.mouseSensitivity = sensitivity;
             player.GetComponent<PlayerController>().cameraSensitivity = sensitivity;          
         }
     }

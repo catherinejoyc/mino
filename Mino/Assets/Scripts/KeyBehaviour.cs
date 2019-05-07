@@ -11,8 +11,11 @@ public class KeyBehaviour : MonoBehaviour {
     public void AddKeyCount()
     {
         keyCount++;
-        UIManager.MyInstance.keyFragments.enabled = true;
-        UIManager.MyInstance.keyFragments.text = keyCount.ToString() + "/3";
+
+        //UPDATE UI
+        UIManager.MyInstance.AddKey(keyCount);
+        //UIManager.MyInstance.keyFragments.enabled = true;
+        //UIManager.MyInstance.keyFragments.text = keyCount.ToString() + "/3";
 
         if(keyCount == 3)
         {
