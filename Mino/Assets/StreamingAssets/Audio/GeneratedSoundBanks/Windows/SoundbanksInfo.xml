@@ -24,9 +24,13 @@
 				<Event Id="1165667864" Name="Play_Hagi_alert" ObjectPath="\Events\Default Work Unit\Play_Hagi_alert"/>
 				<Event Id="678858674" Name="Play_Hagi_attack" ObjectPath="\Events\Default Work Unit\Play_Hagi_attack"/>
 				<Event Id="3845282583" Name="Play_Hagi_footstep_busch_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_busch_02"/>
+				<Event Id="3845282582" Name="Play_Hagi_footstep_busch_03" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_busch_03"/>
 				<Event Id="3289580336" Name="Play_Hagi_footstep_grass_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_grass_02"/>
+				<Event Id="3289580337" Name="Play_Hagi_footstep_grass_03" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_grass_03"/>
 				<Event Id="573194927" Name="Play_Hagi_footstep_gravel_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_gravel_02"/>
+				<Event Id="573194926" Name="Play_Hagi_footstep_gravel_03" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_gravel_03"/>
 				<Event Id="3991313327" Name="Play_Hagi_footstep_stone_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_stone_02"/>
+				<Event Id="3991313326" Name="Play_Hagi_footstep_stone_03" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_stone_03"/>
 				<Event Id="879053751" Name="Play_Hagi_footsteps_raum" ObjectPath="\Events\Default Work Unit\Play_Hagi_footsteps_raum"/>
 				<Event Id="86685327" Name="Play_Hagi_footstepsNew" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstepsNew"/>
 				<Event Id="2126903937" Name="Play_Hagi_hunt" ObjectPath="\Events\Default Work Unit\Play_Hagi_hunt"/>
