@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1698,8 +1698,9 @@ MonoBehaviour:
   dead: 0
   gameIsPaused: 0
   volumeRTPC:
-    ID: 0
+    ID: -703096226
     valueGuid: 8df50f30a662be439f961574adae18b2
+  optionsVariables: {fileID: 11400000, guid: e077a68c7932de542b74af6a06dfc2de, type: 2}
 --- !u!114 &528546165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1713,10 +1714,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playPositiveEvent:
-    ID: 0
+    ID: 2146170337
     valueGuid: 5c8bb4aef18cc7438fab60675cf298bc
   playNegativeEvent:
-    ID: 0
+    ID: -1523804527
     valueGuid: 4acc040c791a9f47a155ab5d6670832a
 --- !u!1 &545913764
 GameObject:
@@ -3347,6 +3348,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1127560415}
   - component: {fileID: 528546164}
+  - component: {fileID: 1127560417}
+  - component: {fileID: 1127560416}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3368,6 +3371,40 @@ Transform:
   m_Father: {fileID: 2049241079}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1127560416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127560414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662688d61e47cbd4ca0fa17c58bea2ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &1127560417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127560414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7596b6d20c7ecd6458fb981e77bfb5fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1211955684
 GameObject:
   m_ObjectHideFlags: 0
@@ -3401,9 +3438,11 @@ MonoBehaviour:
   ingameUI: {fileID: 1910439963}
   TutorialScreen: {fileID: 1433494620}
   VolumeIndicator: {fileID: 1570663072}
-  keyFragments: {fileID: 1595000650}
+  mouseSensitivity: {fileID: 1236369121}
+  volume: {fileID: 545913766}
+  keyNumberSpriteSheet: {fileID: 0}
+  stoneNumberSpriteSheet: {fileID: 0}
   keyEffect: {fileID: 580815603}
-  stonecount: {fileID: 71356919}
   pauseUI: {fileID: 1981345075}
   pauseFirstButton: {fileID: 1717373586}
   deathScreen: {fileID: 615762277}
@@ -3781,14 +3820,14 @@ RectTransform:
   m_GameObject: {fileID: 1291923301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3606825, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1830370112}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -66.7, y: -40.8}
+  m_AnchoredPosition: {x: -92.5, y: -50.2}
   m_SizeDelta: {x: 117.8, y: 38.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1291923303
@@ -4956,14 +4995,14 @@ RectTransform:
   m_GameObject: {fileID: 1605172895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3319, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1830370112}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63.5, y: -40.1}
+  m_AnchoredPosition: {x: 88.9, y: -51.6}
   m_SizeDelta: {x: 120, y: 36.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605172897

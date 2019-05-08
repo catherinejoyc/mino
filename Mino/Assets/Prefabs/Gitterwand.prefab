@@ -37,7 +37,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4147987089802702}
   - component: {fileID: 65709265106196264}
-  - component: {fileID: 208653752741903500}
+  - component: {fileID: 33483530720979830}
+  - component: {fileID: 114793915913155350}
   m_Layer: 0
   m_Name: Gitterwand
   m_TagString: Untagged
@@ -115,8 +116,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1814788689962004}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -3.22, y: -3.2515, z: -5.11}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.4962, y: -3.2515, z: 19.559301}
   m_LocalScale: {x: 0.67505, y: 0.76907784, z: 1}
   m_Children:
   - {fileID: 4325483863876024}
@@ -125,7 +126,7 @@ Transform:
   - {fileID: 4874585542870492}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4325483863876024
 Transform:
   m_ObjectHideFlags: 1
@@ -326,6 +327,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1901368780275622}
   m_Mesh: {fileID: 4300000, guid: d77f6194820a5f041afe1d0f62ba7291, type: 3}
+--- !u!33 &33483530720979830
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1814788689962004}
+  m_Mesh: {fileID: 0}
 --- !u!33 &33567864135535358
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -343,20 +351,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4870834, y: 3.9159014, z: 0.36680603}
-  m_Center: {x: 0.96241254, y: 3.5847414, z: -12.331053}
---- !u!208 &208653752741903500
-NavMeshObstacle:
+  m_Size: {x: 1.4870834, y: 0.48994184, z: 0.36680603}
+  m_Center: {x: 0.96241254, y: 1.8717619, z: -12.331053}
+--- !u!114 &114793915913155350
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1814788689962004}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08b1f78e7a8da5746ab7cbbc3a084097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AcousticTexture:
+    ID: 0
+    valueGuid: 00000000000000000000000000000000
+  EnableDiffraction: 0
+  EnableDiffractionOnBoundaryEdges: 0

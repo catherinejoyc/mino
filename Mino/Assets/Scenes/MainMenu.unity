@@ -1318,9 +1318,9 @@ RectTransform:
   m_Father: {fileID: 711996965}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22, y: -191}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -16, y: 37}
   m_SizeDelta: {x: 149, y: 69.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608264076
@@ -1686,6 +1686,8 @@ GameObject:
   - component: {fileID: 872345638}
   - component: {fileID: 872345640}
   - component: {fileID: 872345641}
+  - component: {fileID: 872345643}
+  - component: {fileID: 872345642}
   m_Layer: 0
   m_Name: GameManager_StartMenu
   m_TagString: Untagged
@@ -1709,7 +1711,7 @@ MonoBehaviour:
   startPressed_Animator: {fileID: 287090221}
   quitPressed_Animator: {fileID: 1197726832}
   volumeRTPC:
-    ID: 0
+    ID: -703096226
     valueGuid: 8df50f30a662be439f961574adae18b2
   optionsVariables: {fileID: 11400000, guid: e077a68c7932de542b74af6a06dfc2de, type: 2}
   settingsScreen: {fileID: 822816109}
@@ -1742,10 +1744,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playPositiveEvent:
-    ID: 0
+    ID: 2146170337
     valueGuid: 5c8bb4aef18cc7438fab60675cf298bc
   playNegativeEvent:
-    ID: 0
+    ID: -1523804527
     valueGuid: 4acc040c791a9f47a155ab5d6670832a
 --- !u!114 &872345641
 MonoBehaviour:
@@ -1763,8 +1765,42 @@ MonoBehaviour:
     valueGuid: 7a1969754557bd41a25a52b3b2d31348
     name: MinoSoundbankNew
   myEvent:
-    ID: 0
+    ID: 2146170337
     valueGuid: 5c8bb4aef18cc7438fab60675cf298bc
+--- !u!114 &872345642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 872345637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662688d61e47cbd4ca0fa17c58bea2ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &872345643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 872345637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7596b6d20c7ecd6458fb981e77bfb5fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &872901346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4019,7 +4055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -291, y: 101.00003}
+  m_AnchoredPosition: {x: -291, y: 101.00004}
   m_SizeDelta: {x: 84.5, y: 66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2062074171
