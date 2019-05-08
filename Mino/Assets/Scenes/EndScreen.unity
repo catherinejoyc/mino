@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -475,7 +475,7 @@ MonoBehaviour:
   dead: 0
   gameIsPaused: 0
   volumeRTPC:
-    ID: 0
+    ID: -703096226
     valueGuid: 8df50f30a662be439f961574adae18b2
   optionsVariables: {fileID: 11400000, guid: e077a68c7932de542b74af6a06dfc2de, type: 2}
 --- !u!1 &1127560414
@@ -490,6 +490,8 @@ GameObject:
   - component: {fileID: 528546164}
   - component: {fileID: 1127560417}
   - component: {fileID: 1127560416}
+  - component: {fileID: 1127560419}
+  - component: {fileID: 1127560418}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -545,6 +547,41 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &1127560418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127560414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30719208debbec04895c0b6933def7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playPositiveEvent:
+    ID: 2146170337
+    valueGuid: 5c8bb4aef18cc7438fab60675cf298bc
+  playNegativeEvent:
+    ID: -1523804527
+    valueGuid: 4acc040c791a9f47a155ab5d6670832a
+--- !u!114 &1127560419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127560414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb325a352563944b93dc37022844a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myBank:
+    ID: 1949491649
+    valueGuid: 7a1969754557bd41a25a52b3b2d31348
+    name: MinoSoundbankNew
+  myEvent:
+    ID: 2146170337
+    valueGuid: 5c8bb4aef18cc7438fab60675cf298bc
 --- !u!1 &1291923301
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,8 +658,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 528546164}
-        m_MethodName: LoadLevel
-        m_Mode: 3
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1127560418}
+        m_MethodName: PlayNegUISound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -812,7 +860,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 528546164}
-        m_MethodName: Quit
+        m_MethodName: LoadLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1127560418}
+        m_MethodName: PlayPosUISound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
