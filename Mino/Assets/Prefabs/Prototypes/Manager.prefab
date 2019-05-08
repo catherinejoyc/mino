@@ -3267,10 +3267,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playPositiveEvent:
-    ID: 0
+    ID: 2146170337
     valueGuid: 5c8bb4aef18cc7438fab60675cf298bc
   playNegativeEvent:
-    ID: 0
+    ID: -1523804527
     valueGuid: 4acc040c791a9f47a155ab5d6670832a
 --- !u!114 &114735129615257612
 MonoBehaviour:
@@ -3642,12 +3642,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114806267530363056}
-        m_MethodName: SelectBtnFirst
-        m_Mode: 2
+      - m_Target: {fileID: 114710949374545722}
+        m_MethodName: PlayPosUISound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 114283207277717360}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3733,7 +3733,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114710949374545722}
-        m_MethodName: PlayUISound
+        m_MethodName: PlayNegUISound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4795,7 +4795,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1377875403953526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224871328732051706}
@@ -5521,7 +5521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -70}
+  m_AnchoredPosition: {x: 0, y: -44}
   m_SizeDelta: {x: 300, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224664421207665402
