@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
         catch
         {
             Debug.Log("couldn't find playerController");
-            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
 
@@ -76,7 +76,8 @@ public class GameManager : MonoBehaviour {
     public void LoadLevel(int lvlIndex) //Event draus machen?
     {
         //Reset all UI elements
-        UIManager.MyInstance.ResetUI();
+        if (FindObjectOfType<UIManager>() != null)
+            UIManager.MyInstance.ResetUI();
 
         //Reset time
         //remainingTime = timeOutInSeconds;
