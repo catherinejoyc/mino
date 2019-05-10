@@ -21,6 +21,7 @@
 			<ShortName>MinoSoundbankNew</ShortName>
 			<Path>MinoSoundbankNew.bnk</Path>
 			<IncludedEvents>
+				<Event Id="4064212188" Name="Play_atmos" ObjectPath="\Events\Default Work Unit\Play_atmos"/>
 				<Event Id="1165667864" Name="Play_Hagi_alert" ObjectPath="\Events\Default Work Unit\Play_Hagi_alert"/>
 				<Event Id="678858674" Name="Play_Hagi_attack" ObjectPath="\Events\Default Work Unit\Play_Hagi_attack"/>
 				<Event Id="3845282583" Name="Play_Hagi_footstep_busch_02" ObjectPath="\Events\Default Work Unit\Play_Hagi_footstep_busch_02"/>
@@ -293,6 +294,10 @@
 					<ShortName>Menuesound1.wav</ShortName>
 					<Path>SFX\Menuesound1_56D34C19.wem</Path>
 				</File>
+				<File Id="481375768" Language="SFX">
+					<ShortName>cricket3.wav</ShortName>
+					<Path>SFX\cricket3_56D34C19.wem</Path>
+				</File>
 				<File Id="496078229" Language="SFX">
 					<ShortName>Playerjump_Kiesel2.wav</ShortName>
 					<Path>SFX\Playerjump_Kiesel2_56D34C19.wem</Path>
@@ -381,6 +386,10 @@
 					<ShortName>Playerjump_Steinplatte7.wav</ShortName>
 					<Path>SFX\Playerjump_Steinplatte7_56D34C19.wem</Path>
 				</File>
+				<File Id="607164504" Language="SFX">
+					<ShortName>cricket.wav</ShortName>
+					<Path>SFX\cricket_56D34C19.wem</Path>
+				</File>
 				<File Id="613134993" Language="SFX">
 					<ShortName>Playersteps_Busch3.wav</ShortName>
 					<Path>SFX\Playersteps_Busch3_56D34C19.wem</Path>
@@ -404,6 +413,10 @@
 				<File Id="634717111" Language="SFX">
 					<ShortName>Playersteps_Kiesel9.wav</ShortName>
 					<Path>SFX\Playersteps_Kiesel9_56D34C19.wem</Path>
+				</File>
+				<File Id="636397849" Language="SFX">
+					<ShortName>cricket2.wav</ShortName>
+					<Path>SFX\cricket2_56D34C19.wem</Path>
 				</File>
 				<File Id="646264480" Language="SFX">
 					<ShortName>Playersteps_Kiesel7s.wav</ShortName>
@@ -596,6 +609,10 @@
 				<File Id="960773356" Language="SFX">
 					<ShortName>Playersteps_Kiesel3.wav</ShortName>
 					<Path>SFX\Playersteps_Kiesel3_56D34C19.wem</Path>
+				</File>
+				<File Id="961198658" Language="SFX">
+					<ShortName>wind.wav</ShortName>
+					<Path>SFX\wind_56D34C19.wem</Path>
 				</File>
 				<File Id="965283688" Language="SFX">
 					<ShortName>Playersneak_Busch6.wav</ShortName>

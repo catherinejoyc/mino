@@ -184,8 +184,8 @@ MonoBehaviour:
         ObjectType: 15
   AuxBusWwu:
   - Guid: '{0B42F357-7073-4512-85BF-905D310E6DE3}'
-    m_lastTimePart2: -1999199520
-    m_lastTimePsrt1: -251517585
+    m_lastTimePart2: -1999188623
+    m_lastTimePsrt1: -971204999
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List:
@@ -213,8 +213,8 @@ MonoBehaviour:
         ObjectType: 1
   BankWwu:
   - Guid: '{3B973840-8C60-4F06-BCC6-7C8ABF33C1F5}'
-    m_lastTimePart2: -1999202098
-    m_lastTimePsrt1: -1682878391
+    m_lastTimePart2: -1999186625
+    m_lastTimePsrt1: -1211859807
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -229,11 +229,23 @@ MonoBehaviour:
         ObjectType: 7
   EventWwu:
   - Guid: '{1BA305F7-2B70-4C37-AABC-887CD819E702}'
-    m_lastTimePart2: -1999198091
-    m_lastTimePsrt1: 121993997
+    m_lastTimePart2: -1999186625
+    m_lastTimePsrt1: -1431027131
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
+    - Guid: d7aedd6ee9adb540a9656c295f796235
+      ID: -230755108
+      Name: Play_atmos
+      Path: Default Work Unit\Play_atmos
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_atmos
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: e71faa712a726341af86b44f9c3f688a
       ID: 1165667864
       Name: Play_Hagi_alert
@@ -243,7 +255,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Hagi_alert
         ObjectType: 3
-      maxAttenuation: 10
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - Guid: 1a44df8601f0434e9c607e43f0a7d689
@@ -255,7 +267,115 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Hagi_attack
         ObjectType: 3
-      maxAttenuation: 10
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: d4520a4ed1ca35489f3977e1abfdd6b7
+      ID: -449684713
+      Name: Play_Hagi_footstep_busch_02
+      Path: Default Work Unit\Play_Hagi_footstep_busch_02
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_footstep_busch_02
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: d227e4c8a6b27e458635a72e8929d45e
+      ID: -449684714
+      Name: Play_Hagi_footstep_busch_03
+      Path: Default Work Unit\Play_Hagi_footstep_busch_03
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_footstep_busch_03
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 81e7d6a9fbfbb2468da4c9a78a277bf5
+      ID: -1005386960
+      Name: Play_Hagi_footstep_grass_02
+      Path: Default Work Unit\Play_Hagi_footstep_grass_02
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_footstep_grass_02
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 60597f00ce768445a3c3c571850dc518
+      ID: -1005386959
+      Name: Play_Hagi_footstep_grass_03
+      Path: Default Work Unit\Play_Hagi_footstep_grass_03
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_footstep_grass_03
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 51c44a6990c95d49a7ad362d0d4303ab
+      ID: 573194927
+      Name: Play_Hagi_footstep_gravel_02
+      Path: Default Work Unit\Play_Hagi_footstep_gravel_02
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_footstep_gravel_02
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 26fc54645611dd40872ff6358b5e8692
+      ID: 573194926
+      Name: Play_Hagi_footstep_gravel_03
+      Path: Default Work Unit\Play_Hagi_footstep_gravel_03
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_footstep_gravel_03
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: f890ee44773cf3499acdd179224e9328
+      ID: -303653969
+      Name: Play_Hagi_footstep_stone_02
+      Path: Default Work Unit\Play_Hagi_footstep_stone_02
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_footstep_stone_02
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: c4075169e1545a4faff3d0cd37e3998a
+      ID: -303653970
+      Name: Play_Hagi_footstep_stone_03
+      Path: Default Work Unit\Play_Hagi_footstep_stone_03
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_footstep_stone_03
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: fe7f045912202d44ad868053e258b8dc
+      ID: 879053751
+      Name: Play_Hagi_footsteps_raum
+      Path: Default Work Unit\Play_Hagi_footsteps_raum
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Hagi_footsteps_raum
+        ObjectType: 3
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - Guid: af884fea453a9240b93484ec8ad9fccf
@@ -267,7 +387,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Hagi_footstepsNew
         ObjectType: 3
-      maxAttenuation: 10
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - Guid: b8d4aa3740a7ea4dacb652e9a83664ac
@@ -279,7 +399,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Hagi_hunt
         ObjectType: 3
-      maxAttenuation: 10
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - Guid: 9a12ec8fc371b941865f4eaf96f94b0e
@@ -291,29 +411,101 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Interactables_Druckplatte
         ObjectType: 3
-      maxAttenuation: 15
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - Guid: 3808ab19e5fca64f8fa4b4dd1a2623d7
-      ID: 1540274354
-      Name: Play_Interactables_Kisten
-      Path: Default Work Unit\Play_Interactables_Kisten
+    - Guid: 92feca12e6577343b375dbc8ab377b2f
+      ID: -1319871180
+      Name: Play_Interactables_Kiste
+      Path: Default Work Unit\Play_Interactables_Kiste
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Interactables_Kisten
+      - ElementName: Play_Interactables_Kiste
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - Guid: ffff5a3efec87b46828ce8eea872c658
-      ID: 946651205
-      Name: Play_Interactables_Kistens
-      Path: Default Work Unit\Play_Interactables_Kistens
+    - Guid: 5f90b3a13e24834f8ef6eac93d5f4dba
+      ID: -1611909749
+      Name: Play_Interactables_Kiste_destroy
+      Path: Default Work Unit\Play_Interactables_Kiste_destroy
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Interactables_Kistens
+      - ElementName: Play_Interactables_Kiste_destroy
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 3828ec4640c2324ebbac81b1a24d2c78
+      ID: 1279939955
+      Name: Play_Interactables_Kiste_scratch
+      Path: Default Work Unit\Play_Interactables_Kiste_scratch
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Interactables_Kiste_scratch
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 59cf3170c74f974ca3c2fc7d8e5065d4
+      ID: 1032010903
+      Name: Play_Interactables_Schluesselfr
+      Path: Default Work Unit\Play_Interactables_Schluesselfr
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Interactables_Schluesselfr
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 7126b30b00d338479690d4c265cbdc75
+      ID: 402628103
+      Name: Play_Interactables_Tueren
+      Path: Default Work Unit\Play_Interactables_Tueren
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Interactables_Tueren
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: a35d542be6c4324eaf9098ec6281ed3d
+      ID: -448802017
+      Name: Play_Kiste_aufheben
+      Path: Default Work Unit\Play_Kiste_aufheben
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Kiste_aufheben
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 8db2b50238fd2440a6c8af11e9fe7dc6
+      ID: -275846389
+      Name: Play_Kiste_platzieren
+      Path: Default Work Unit\Play_Kiste_platzieren
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Kiste_platzieren
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: b585e262d659a243b6e1c38145a7c665
+      ID: 1713645458
+      Name: Play_Player_Fackel
+      Path: Default Work Unit\Play_Player_Fackel
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Player_Fackel
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -378,14 +570,50 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - Guid: f7e77af022b4c24ea5ccf1b5e15e6479
-      ID: 1735280649
-      Name: Play_Player_Steinchen_schiessen
-      Path: Default Work Unit\Play_Player_Steinchen_schiessen
+    - Guid: 4d4fa4e9d5eab043af0d6839ccee9e87
+      ID: -623792343
+      Name: Play_Player_Steinchen_aufprall
+      Path: Default Work Unit\Play_Player_Steinchen_aufprall
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Player_Steinchen_schiessen
+      - ElementName: Play_Player_Steinchen_aufprall
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 4acc040c791a9f47a155ab5d6670832a
+      ID: -1523804527
+      Name: Play_UI_negativ
+      Path: Default Work Unit\Play_UI_negativ
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_UI_negativ
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 5c8bb4aef18cc7438fab60675cf298bc
+      ID: 2146170337
+      Name: Play_UI_positiv
+      Path: Default Work Unit\Play_UI_positiv
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_UI_positiv
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 047ed60b2da2c248abca688e5d992a40
+      ID: 1778537052
+      Name: Stop_Interactables_Kiste_stone
+      Path: Default Work Unit\Stop_Interactables_Kiste_stone
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Interactables_Kiste_stone
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -414,15 +642,36 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: e35771fad01acc46afc3b5ccde210a1b
+      ID: -1048166179
+      Name: Stop_Interactables_Tueren
+      Path: Default Work Unit\Stop_Interactables_Tueren
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Interactables_Tueren
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 67fa797dcf71da4bb072b20ae7ebe78a
+      ID: 1097980931
+      Name: testEvent
+      Path: Default Work Unit\testEvent
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: testEvent
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   ExpandedItems:
   - /MinoWwise
-  - /MinoWwise/Switches
-  - /MinoWwise/Switches/Default Work Unit
-  - /MinoWwise/Switches/Default Work Unit/Groundtextures
   RtpcWwu:
   - Guid: '{F8AD97F4-2CDF-4753-A863-CAC1087CEEF7}'
-    m_lastTimePart2: -1999198514
-    m_lastTimePsrt1: -2086003291
+    m_lastTimePart2: -1999187219
+    m_lastTimePsrt1: 1647766896
     ParentPhysicalPath: 
     PhysicalPath: Game Parameters\Default Work Unit.wwu
     List:
@@ -434,6 +683,15 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: rtpcOcclusion
+        ObjectType: 13
+    - Guid: 8df50f30a662be439f961574adae18b2
+      ID: -703096226
+      Name: rtpcVolume
+      Path: Default Work Unit\rtpcVolume
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: rtpcVolume
         ObjectType: 13
   - Guid: '{D7135222-D1DB-42D0-ADC0-930743567776}'
     m_lastTimePart2: -1999235109

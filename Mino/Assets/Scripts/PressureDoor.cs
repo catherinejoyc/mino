@@ -6,7 +6,7 @@ public class PressureDoor : SoundScript {
 
     //Stop Events
     public AK.Wwise.Event stopEvent;
-
+    public AK.Wwise.Event startEvent;
 
     public float m_speed;
     public float m_moveUp;
@@ -60,6 +60,7 @@ public class PressureDoor : SoundScript {
 
         //post Sound Event
         m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+        startEvent.Post(this.gameObject);
         Debug.Log("Play Event");
     }
 
@@ -69,6 +70,7 @@ public class PressureDoor : SoundScript {
 
         //post Sound Event
         m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+        startEvent.Post(this.gameObject);
         Debug.Log("Play Event");
     }
 }
