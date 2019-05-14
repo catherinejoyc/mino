@@ -622,6 +622,10 @@
 					<ShortName>Hagibaer_Bruellen2.wav</ShortName>
 					<Path>SFX\Hagibaer_Bruellen2_56D34C19.wem</Path>
 				</File>
+				<File Id="972390579" Language="SFX">
+					<ShortName>schimmer.wav</ShortName>
+					<Path>SFX\schimmer_56D34C19.wem</Path>
+				</File>
 				<File Id="1004338423" Language="SFX">
 					<ShortName>Playersteps_Busch2.wav</ShortName>
 					<Path>SFX\Playersteps_Busch2_56D34C19.wem</Path>

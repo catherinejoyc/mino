@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898092215362574}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.82, y: -1.6686205, z: 0.82}
+  m_LocalPosition: {x: 10.34158, y: -1.66862, z: 7.552887}
   m_LocalScale: {x: 0.0066299997, y: 0.0066299997, z: 0.0066299997}
   m_Children: []
   m_Father: {fileID: 0}
@@ -133,6 +133,9 @@ MonoBehaviour:
     valueGuid: a35d542be6c4324eaf9098ec6281ed3d
   m_soundType: 1
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
+  pickUpPlayEvent:
+    ID: -448802017
+    valueGuid: a35d542be6c4324eaf9098ec6281ed3d
   placePlayEvent:
     ID: -275846389
     valueGuid: 8db2b50238fd2440a6c8af11e9fe7dc6
@@ -166,3 +169,4 @@ MonoBehaviour:
   scratchedMat: {fileID: 2100000, guid: 9b114695a53d1194981357897de16c63, type: 2}
   destroyedBox: {fileID: 1123389731954516, guid: 1c261664ea44ae9409bf41b1748232d5,
     type: 2}
+  destroyedBoxPS: {fileID: 0}

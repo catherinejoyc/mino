@@ -48,6 +48,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2554442747	rtpcOcclusion			\Default Work Unit\rtpcOcclusion	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	385039818	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Interactables_Druckplatte\silence\Wwise Silence	
 	927985750	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Environment\atmos\crickets\silence\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -192,6 +193,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	961198658	wind	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\wind_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\atmos\wind\wind		1723524
 	965283688	Playersneak_Busch6	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersneak_Busch6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_sneak\Player_sneak_busch\Playersneak_Busch6		119200
 	967327612	Hagibaer_Bruellen2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Hagibaer_Bruellen2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hagi\Hagi_hunt\Hagibaer_Bruellen2		1034864
+	972390579	schimmer	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\schimmer_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Interactables_Druckplatte\schimmer		898012
 	1004338423	Playersteps_Busch2	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Busch2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_busch\Playersteps_Busch2		123584
 	1007653885	foundationelements_1624_paving_stone_move	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\foundationelements_1624_paving_stone_move_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Interactables_Druckplatte\stone\foundationelements_1624_paving_stone_move		56644
 	1008854808	Playersteps_Steinplatte8	C:\Schule\SJ1819\Jahresprojekt\MinoWwise\MinoWwise\.cache\Windows\SFX\Playersteps_Steinplatte8_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_footsteps\Player_Footsteps_walk_stone\Playersteps_Steinplatte8		82572

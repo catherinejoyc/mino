@@ -9,6 +9,7 @@ public class BoxScript : SoundScript, IHittable {
 
     //audio
     // AK.Wwise.Event stopSoundEvent;
+    public AK.Wwise.Event pickUpPlayEvent;
     public AK.Wwise.Event placePlayEvent;
     public AK.Wwise.Event ScratchPlayEvent;
     public AK.Wwise.Event DestroyedPlayEvent;
@@ -49,7 +50,10 @@ public class BoxScript : SoundScript, IHittable {
             if (!isMoving)
             {
                 //play sound event
-                m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+                ChangeSoundType(SoundType.PickUpStone);
+                //m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+                PlayPickUpSound();
+                //Debug.Log("Aufheben, played - " + m_maxDistance);
                 isMoving = true;             
             }
         }
@@ -121,6 +125,12 @@ public class BoxScript : SoundScript, IHittable {
         //update volumeIndicator
         UIManager.MyInstance.VolumeIndicator.value = movingBoxVol;
     }
+    public void PlayPickUpSound()
+    {
+        ChangeSoundType(SoundType.PickUpStone);
+        pickUpPlayEvent.Post(this.gameObject);
+    }
+
     void UpdateVITo0()
     {
         UIManager.MyInstance.VolumeIndicator.value = 0;
