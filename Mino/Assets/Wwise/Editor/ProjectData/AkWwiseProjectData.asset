@@ -213,8 +213,8 @@ MonoBehaviour:
         ObjectType: 1
   BankWwu:
   - Guid: '{3B973840-8C60-4F06-BCC6-7C8ABF33C1F5}'
-    m_lastTimePart2: -1999186625
-    m_lastTimePsrt1: -1211859807
+    m_lastTimePart2: -1999185224
+    m_lastTimePsrt1: -653728195
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -229,8 +229,8 @@ MonoBehaviour:
         ObjectType: 7
   EventWwu:
   - Guid: '{1BA305F7-2B70-4C37-AABC-887CD819E702}'
-    m_lastTimePart2: -1999186625
-    m_lastTimePsrt1: -1431027131
+    m_lastTimePart2: -1999185224
+    m_lastTimePsrt1: -742362585
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -462,14 +462,14 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - Guid: 7126b30b00d338479690d4c265cbdc75
-      ID: 402628103
-      Name: Play_Interactables_Tueren
-      Path: Default Work Unit\Play_Interactables_Tueren
+    - Guid: 9080bc26b466e84a9f41e63e200bdb9e
+      ID: 1031146482
+      Name: Play_Interactables_Tuer
+      Path: Default Work Unit\Play_Interactables_Tuer
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Interactables_Tueren
+      - ElementName: Play_Interactables_Tuer
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -638,6 +638,18 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Stop_Interactables_Kistens
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: fe5ce1c7b0eae448b77cc2e30859fbbd
+      ID: -1216054676
+      Name: Stop_Interactables_Tuer
+      Path: Default Work Unit\Stop_Interactables_Tuer
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Interactables_Tuer
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0

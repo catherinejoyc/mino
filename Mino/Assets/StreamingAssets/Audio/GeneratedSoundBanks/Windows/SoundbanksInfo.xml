@@ -40,7 +40,7 @@
 				<Event Id="2683057547" Name="Play_Interactables_Kiste_destroy" ObjectPath="\Events\Default Work Unit\Play_Interactables_Kiste_destroy"/>
 				<Event Id="1279939955" Name="Play_Interactables_Kiste_scratch" ObjectPath="\Events\Default Work Unit\Play_Interactables_Kiste_scratch"/>
 				<Event Id="1032010903" Name="Play_Interactables_Schluesselfr" ObjectPath="\Events\Default Work Unit\Play_Interactables_Schluesselfr"/>
-				<Event Id="402628103" Name="Play_Interactables_Tueren" ObjectPath="\Events\Default Work Unit\Play_Interactables_Tueren"/>
+				<Event Id="1031146482" Name="Play_Interactables_Tuer" ObjectPath="\Events\Default Work Unit\Play_Interactables_Tuer"/>
 				<Event Id="3846165279" Name="Play_Kiste_aufheben" ObjectPath="\Events\Default Work Unit\Play_Kiste_aufheben"/>
 				<Event Id="4019120907" Name="Play_Kiste_platzieren" ObjectPath="\Events\Default Work Unit\Play_Kiste_platzieren"/>
 				<Event Id="98439365" Name="Play_Player_footsteps" ObjectPath="\Events\Default Work Unit\Play_Player_footsteps"/>
@@ -54,7 +54,7 @@
 				<Event Id="1778537052" Name="Stop_Interactables_Kiste_stone" ObjectPath="\Events\Default Work Unit\Stop_Interactables_Kiste_stone"/>
 				<Event Id="3016071988" Name="Stop_Interactables_Kisten" ObjectPath="\Events\Default Work Unit\Stop_Interactables_Kisten"/>
 				<Event Id="873681583" Name="Stop_Interactables_Kistens" ObjectPath="\Events\Default Work Unit\Stop_Interactables_Kistens"/>
-				<Event Id="3246801117" Name="Stop_Interactables_Tueren" ObjectPath="\Events\Default Work Unit\Stop_Interactables_Tueren"/>
+				<Event Id="3078912620" Name="Stop_Interactables_Tuer" ObjectPath="\Events\Default Work Unit\Stop_Interactables_Tuer"/>
 				<Event Id="1097980931" Name="testEvent" ObjectPath="\Events\Default Work Unit\testEvent"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -641,6 +641,10 @@
 				<File Id="1009437216" Language="SFX">
 					<ShortName>Playerjump_Kiesel4.wav</ShortName>
 					<Path>SFX\Playerjump_Kiesel4_56D34C19.wem</Path>
+				</File>
+				<File Id="1012338835" Language="SFX">
+					<ShortName>chainsFinal.wav</ShortName>
+					<Path>SFX\chainsFinal_56D34C19.wem</Path>
 				</File>
 				<File Id="1015132907" Language="SFX">
 					<ShortName>Fackelsound.wav</ShortName>

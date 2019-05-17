@@ -425,16 +425,16 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   sound:
-    ID: 402628103
-    valueGuid: 7126b30b00d338479690d4c265cbdc75
+    ID: 1031146482
+    valueGuid: 9080bc26b466e84a9f41e63e200bdb9e
   m_soundType: 0
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   stopEvent:
-    ID: -1048166179
-    valueGuid: e35771fad01acc46afc3b5ccde210a1b
+    ID: -1216054676
+    valueGuid: fe5ce1c7b0eae448b77cc2e30859fbbd
   startEvent:
-    ID: 402628103
-    valueGuid: 7126b30b00d338479690d4c265cbdc75
+    ID: 1031146482
+    valueGuid: 9080bc26b466e84a9f41e63e200bdb9e
   m_speed: 0.5
   m_moveUp: 2
 --- !u!114 &114821236654898016
