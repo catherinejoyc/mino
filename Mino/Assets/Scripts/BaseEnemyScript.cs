@@ -221,6 +221,8 @@ public class BaseEnemyScript : MonoBehaviour {
         {
             GetComponent<EnemySoundScript>().PlayAttackSound();
 
+            UIManager.MyInstance.StartBleedingScreen(waitSecBeforeAttack);
+
             //enable sounds for next play
             huntSoundPlaying = false;
             alertSoundPlaying = false;
@@ -247,9 +249,12 @@ public class BaseEnemyScript : MonoBehaviour {
                 hit.collider.GetComponent<IHittable>().ReactToHit();
             }
         }
+
+        UIManager.MyInstance.AttackBleedingScreen();
     }
     void UpdateIdleState()
     {
+
         //continue patrol
         Go();
         GoToNextPoint();
