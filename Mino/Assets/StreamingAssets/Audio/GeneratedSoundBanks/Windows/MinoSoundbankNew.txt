@@ -47,6 +47,9 @@ Switch	ID	Name	Switch Group			Notes
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2554442747	rtpcOcclusion			\Default Work Unit\rtpcOcclusion	
 
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	830046530	FootstepMod			\Default Work Unit\FootstepMod	
+
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	385039818	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Interactables_Druckplatte\silence\Wwise Silence	
 	927985750	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Environment\atmos\crickets\silence\Wwise Silence	
