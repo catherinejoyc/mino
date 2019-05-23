@@ -189,21 +189,30 @@ public class UIManager : MonoBehaviour {
                 bleedingScreen.color = new Color(1, 1, 1, i);
                 yield return null;
             }
+
+            // loop over 1 second backwards
+            for (float i = fadeTime; i >= 0; i -= Time.deltaTime)
+            {
+                // set color with i as alpha
+                bleedingScreen.color = new Color(1, 1, 1, i);
+                yield return null;
+            }
         }
     }
 
     public void StartBleedingScreen(float fadeTime)
     {
         StartCoroutine(FadeBleedingScreen(false, fadeTime));
+        print("bleed");
     }
     //public void StopBleedingScreen(float fadeTime)
     //{
     //    StartCoroutine(FadeBleedingScreen(true, fadeTime));
     //}
-    public void AttackBleedingScreen()
+    public void AttackBleedingScreen(float fadeTime)
     {
-        StopCoroutine(FadeBleedingScreen(false, 0));
-        bleedingScreen.color = new Color(1, 1, 1, 0);
+        StartCoroutine(FadeBleedingScreen(true, fadeTime));
+        print("stop bleed");
 
         //StartCoroutine(FadeBleedingScreen(false, 0.5f));
         //StartCoroutine(FadeBleedingScreen(true, 0.1f));

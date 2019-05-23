@@ -47,11 +47,16 @@ public class BaseEnemyScript : MonoBehaviour {
     public float cooldownSprite;
     bool _showingSprite;
 
+    //Player
+    PlayerController player;
+    bool closeToPlayer;
+
 	// Use this for initialization
 	void Start () {
         m_agent = GetComponent<NavMeshAgent>();
         m_agent.autoBraking = false;
 
+        player = FindObjectOfType<PlayerController>();
 	}
 	
 	// Update is called once per frame
@@ -221,14 +226,15 @@ public class BaseEnemyScript : MonoBehaviour {
         {
             GetComponent<EnemySoundScript>().PlayAttackSound();
 
-            UIManager.MyInstance.StartBleedingScreen(waitSecBeforeAttack);
-
             //enable sounds for next play
             huntSoundPlaying = false;
             alertSoundPlaying = false;
 
             attackSoundPlaying = true;
         }
+
+
+        UIManager.MyInstance.StartBleedingScreen(waitSecBeforeAttack);
 
         //Raycast in front of Enemy
         Invoke("Hit", waitSecBeforeAttack);
@@ -243,18 +249,14 @@ public class BaseEnemyScript : MonoBehaviour {
         {
             Debug.Log("Did Hit");
 
-            //React to hit
             if (hit.collider.GetComponent<IHittable>() != null)
             {
                 hit.collider.GetComponent<IHittable>().ReactToHit();
             }
         }
-
-        UIManager.MyInstance.AttackBleedingScreen();
     }
     void UpdateIdleState()
     {
-
         //continue patrol
         Go();
         GoToNextPoint();
