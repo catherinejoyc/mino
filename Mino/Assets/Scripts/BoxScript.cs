@@ -34,6 +34,8 @@ public class BoxScript : SoundScript, IHittable {
 
     //physics
     float _boxYPosition;
+    bool destroyed = false;
+    Vector3 deathPos;
 
     private void Start()
     {
@@ -73,6 +75,13 @@ public class BoxScript : SoundScript, IHittable {
             //set pos back
             this.gameObject.transform.Translate(Vector3.up*Time.deltaTime);
         }
+
+        if (destroyed)
+        {
+            //position
+            transform.position = deathPos;
+            
+        }
     }
 
     public void ReactToHit()
@@ -96,8 +105,9 @@ public class BoxScript : SoundScript, IHittable {
             {
                 b.size = new Vector3(0.1f, 10f, 10f);
             }
-
             //Destroy(this.gameObject);
+            destroyed = true;
+            deathPos = this.transform.position;
         }
         else
         {
