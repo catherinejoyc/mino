@@ -90,7 +90,6 @@ public class PlayerController : MonoBehaviour, IHittable {
             }
         //}
 
-        Debug.Log(mouseInput);
         #endregion
 
         #region Shoot Stones

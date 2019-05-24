@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour {
     public UINumberSpriteSheetScript keyNumberSpriteSheet;
     public UINumberSpriteSheetScript stoneNumberSpriteSheet;
     public Animator keyEffect;
+    public Image bleedingScreen;
     //public Text stonecount;
     //public Text time;
 
@@ -163,5 +164,57 @@ public class UIManager : MonoBehaviour {
     {
         _fadeScreen.SetTrigger("fadeFromBlack");
     }
-    
+
+
+    IEnumerator FadeBleedingScreen(bool fadeAway, float fadeTime)
+    {
+        // fade from opaque to transparent
+        if (fadeAway)
+        {
+            // loop over 1 second backwards
+            for (float i = fadeTime; i >= 0; i -= Time.deltaTime)
+            {
+                // set color with i as alpha
+                bleedingScreen.color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+        }
+        // fade from transparent to opaque
+        else
+        {
+            // loop over 1 second
+            for (float i = 0; i <= fadeTime; i += Time.deltaTime)
+            {
+                // set color with i as alpha
+                bleedingScreen.color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+
+            // loop over 1 second backwards
+            for (float i = fadeTime; i >= 0; i -= Time.deltaTime)
+            {
+                // set color with i as alpha
+                bleedingScreen.color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+        }
+    }
+
+    public void StartBleedingScreen(float fadeTime)
+    {
+        StartCoroutine(FadeBleedingScreen(false, fadeTime));
+        print("bleed");
+    }
+    //public void StopBleedingScreen(float fadeTime)
+    //{
+    //    StartCoroutine(FadeBleedingScreen(true, fadeTime));
+    //}
+    public void AttackBleedingScreen(float fadeTime)
+    {
+        StartCoroutine(FadeBleedingScreen(true, fadeTime));
+        print("stop bleed");
+
+        //StartCoroutine(FadeBleedingScreen(false, 0.5f));
+        //StartCoroutine(FadeBleedingScreen(true, 0.1f));
+    }
 }

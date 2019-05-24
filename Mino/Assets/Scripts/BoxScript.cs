@@ -9,6 +9,7 @@ public class BoxScript : SoundScript, IHittable {
 
     //audio
     // AK.Wwise.Event stopSoundEvent;
+    public AK.Wwise.Event pickUpPlayEvent;
     public AK.Wwise.Event placePlayEvent;
     public AK.Wwise.Event ScratchPlayEvent;
     public AK.Wwise.Event DestroyedPlayEvent;
@@ -33,6 +34,8 @@ public class BoxScript : SoundScript, IHittable {
 
     //physics
     float _boxYPosition;
+    bool destroyed = false;
+    Vector3 deathPos;
 
     private void Start()
     {
@@ -49,7 +52,10 @@ public class BoxScript : SoundScript, IHittable {
             if (!isMoving)
             {
                 //play sound event
-                m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+                ChangeSoundType(SoundType.PickUpStone);
+                //m_SoundEvent.Invoke(this.transform.position, m_maxDistance);
+                PlayPickUpSound();
+                //Debug.Log("Aufheben, played - " + m_maxDistance);
                 isMoving = true;             
             }
         }
@@ -68,6 +74,15 @@ public class BoxScript : SoundScript, IHittable {
         {
             //set pos back
             this.gameObject.transform.Translate(Vector3.up*Time.deltaTime);
+        }
+
+        if (destroyed)
+        {
+            if (Vector3.Distance(transform.position, deathPos) > 1.5f) //box moved
+            {
+                deathPos = transform.position;
+            }
+            transform.position = deathPos;
         }
     }
 
@@ -92,8 +107,9 @@ public class BoxScript : SoundScript, IHittable {
             {
                 b.size = new Vector3(0.1f, 10f, 10f);
             }
-
             //Destroy(this.gameObject);
+            destroyed = true;
+            deathPos = this.transform.position;
         }
         else
         {
@@ -121,6 +137,12 @@ public class BoxScript : SoundScript, IHittable {
         //update volumeIndicator
         UIManager.MyInstance.VolumeIndicator.value = movingBoxVol;
     }
+    public void PlayPickUpSound()
+    {
+        ChangeSoundType(SoundType.PickUpStone);
+        pickUpPlayEvent.Post(this.gameObject);
+    }
+
     void UpdateVITo0()
     {
         UIManager.MyInstance.VolumeIndicator.value = 0;
