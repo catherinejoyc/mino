@@ -39,17 +39,17 @@ public class PressureDoor : SoundScript {
             if (transform.position.y == m_openStatePos.y) //if already open
             {
                 stopEvent.Post(this.gameObject);
-                Debug.Log("Stop Event; " + transform.position + " --- " + m_openStatePos);
+                //Debug.Log("Stop Event; " + transform.position + " --- " + m_openStatePos);
             }
         }
         else
         {
             transform.position = Vector3.MoveTowards(transform.position, m_closedStatePos, m_speed * Time.deltaTime);
-            print(string.Format("{0} == {1}", transform.position, m_closedStatePos));
+            //print(string.Format("{0} == {1}", transform.position, m_closedStatePos));
             if (transform.position.y == m_closedStatePos.y) //if already closed
             {
                 stopEvent.Post(this.gameObject);
-                Debug.Log("Stop Event; " + transform.position + " --- " + m_closedStatePos);
+                //Debug.Log("Stop Event; " + transform.position + " --- " + m_closedStatePos);
             }
         }
     }
