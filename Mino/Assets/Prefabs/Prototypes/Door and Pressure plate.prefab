@@ -472,6 +472,9 @@ MonoBehaviour:
   soundValues: {fileID: 11400000, guid: e1b541e35e2580343ac905c5d1b99f03, type: 2}
   door: {fileID: 114150176923379766}
   particleScript: {fileID: 114821236654898016}
+  activator:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!198 &198676162127700326
 ParticleSystem:
   m_ObjectHideFlags: 1
