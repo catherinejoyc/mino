@@ -80,9 +80,9 @@ public class BoxScript : SoundScript, IHittable {
         {
             if (Vector3.Distance(transform.position, deathPos) > 1.5f) //box moved
             {
-                deathPos = transform.position;
+                //deactivate
+                this.gameObject.SetActive(false);
             }
-            transform.position = deathPos;
         }
     }
 
