@@ -79,15 +79,22 @@ public class PlayerController : MonoBehaviour, IHittable {
         //Look around
         //if (!isPushingBox) //if not pushing something
         //{
+        float mouseInputX = Input.GetAxis("Mouse X");
+        if (Mathf.Abs(mouseInputX) >= 0.1)
             m_go.transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime);
 
-            float mouseInput = Input.GetAxis("Mouse Y");
-
+            float mouseInputY = Input.GetAxis("Mouse Y");
+        if (Mathf.Abs(mouseInputY) >= 0.1)
+        {
+            print("rotate");
             float maxAngle = 20;
-            if ((mouseInput > 0 && alpha < maxAngle) || (mouseInput < 0 && alpha > -maxAngle))
+            if ((mouseInputY > 0 && alpha < maxAngle) || (mouseInputY < 0 && alpha > -maxAngle))
             {
-                m_cam.transform.Rotate(Vector3.right * -mouseInput * cameraSensitivity * Time.deltaTime);
+                m_cam.transform.Rotate(Vector3.right * -mouseInputY * cameraSensitivity * Time.deltaTime);
             }
+        }
+
+
         //}
 
         #endregion
